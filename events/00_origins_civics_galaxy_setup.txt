@@ -1,0 +1,72 @@
+namespace = origins_civics_galaxy_setup
+# by cbshing
+
+### Hidden Game Start Event
+# Generates or setups galactic features including:
+#  - Sol System
+#  - NPC Fallen Colony
+#  - NPC Primitive Lost Colony
+#  - NPC Primitive Fallen Colony
+#  - Ring of Gaia system
+#  - Fallen Graveyard
+#  - Fallen Patrol
+#  - 
+
+###  - Extrasolar home system (Lost/Exiled Colony, Refugee)
+#  -Slow Zone bonus ystem
+#  -Ring of Gaia bonus system
+
+# Create Sol System if missing
+# Runs prior to event game_start.1 to force Origins Civics' custom "sol_system"s to replace "com_sol_system" spawning
+event = {
+	id = origins_civics_galaxy_setup.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = sol_system_exists }
+	}
+	
+	immediate = {
+		if = {
+			limit = { any_country = { origins_civics_requires_npc_sol = yes } }
+			if = {
+				limit = { origins_civic_requires_default_npc_sol = yes }
+				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
+				random_list = {
+					90 = { create_human_une_empire = yes }
+					10 = { create_human_hte_empire = yes }
+				}
+				default_empire_setup = yes
+			}
+			else_if = {
+				limit = { origins_civics_requires_primitive_early_space_age_sol = yes }
+				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
+			}
+			else_if = {
+				limit = { origins_civics_requires_nuked_sol = yes }
+				random_system = { spawn_system = { initializer = "special_init_04" } }
+				set_global_flag = earth_was_nuked
+			}
+			else = { # random sol
+			random_list = {
+					60 = { # random primitive Earth
+						random_system = { spawn_system = { initializer = "special_init_03" } } 
+					} 
+					30 = { # random OC default Earth (UNE or HTE)
+						random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
+						random_list = {
+							90 = { create_human_une_empire = yes }
+							10 = { create_human_hte_empire = yes }
+						}
+						default_empire_setup = yes
+					} 
+					10 = { # random tomb world Earth
+						random_system = { spawn_system = { initializer = "special_init_04" } } 
+					}  
+				}
+			}
+			set_global_flag = sol_system_exists
+		}
+	}
+}

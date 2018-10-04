@@ -1,0 +1,211 @@
+namespace = origins_civics_empire_setup
+# by cbshing
+
+### Hidden Game Start Event
+# Handles setup of civics
+# Handles setup of each civic in various subsections
+# Handles by galaxy changes, cluster changes, system changes, colony setup, pop setup, planet setup, relationships setup, quest setup
+
+# Handles setup of civics that require modifications to the galaxy
+# -None at the moment
+country_event = {
+	id = origins_civics_empire_setup.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_galaxy_setup = yes
+	}
+	
+	immediate = {
+		
+	}
+}
+
+# Handles setup of civics that require modifications to the galatic cluster
+# -Requires Cluster Isolation
+# ->N-Cluster
+# -Requires Advanced Start
+# ->Sublight Empire
+# ->Sublight Conqueror
+# -Requires Hostile Neighbors
+# ->?
+country_event = {
+	id = origins_civics_empire_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_cluster_setup = yes
+	}
+	
+	immediate = {
+		if = {
+			limit = { oc_requires_isolate_cluster = yes }
+			
+		}
+		if = {
+			limit = { oc_requires_advanced_start = yes }
+			# tags neighboring planets for future setup in planet setup
+		}
+		if = {
+			limit = { oc_requires_hostile_neighbors = yes }
+			
+		}
+	}
+}
+
+# Handles setup of civics that require modifications to the star system
+# -Requires Star Isolation
+# ->Dyson Engineers
+# -Requires Megastructures (Habitats, Dyson Sphere, Gateways, Sentry Array, Science Nexus)
+# ->Voidborne
+# ->Dyson Engineers
+# -Requires Galactic Feature (Wormhole)
+# ->Wormhole Travelers
+# -Requires Star Class Modification
+# ->Worm Loved
+# -Requires Homeworld Class Modification
+# ->Nuclear Vault
+# ->Nuclear Mutation
+# ->Robo Nuclear Start
+# -Requires Second Habitable Planet Creation
+# ->Voidborne
+# ->Post War of the Worlds
+country_event = {
+	id = origins_civics_empire_setup.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_solar_system_setup = yes
+	}
+	
+	immediate = {
+		capital_scope.solar_system = { # scope to capital
+		
+			# isolate star system
+			if = { limit = { oc_requires_isolate_star = yes } 
+				isolate_system = yes
+			}	
+			
+			# setup megastructures
+			if = { limit = { oc_requires_megastruture_dyson_sphere = yes }  
+				if = { limit = { oc_requires_megastruture_dyson_sphere_tier1 = yes } 
+			
+				}
+				if = { limit = { oc_requires_megastruture_dyson_sphere_tier5 = yes } 
+			
+				}
+			
+			}
+			
+			if = { limit = { oc_requires_megastruture_habitat = yes } 
+			
+			}
+			
+			if = { limit = { oc_requires_megastruture_gateway = yes } 
+			
+				if = { limit = { oc_requires_megastruture_gateway_ruined = yes } 
+			
+				}
+				
+				if = { limit = { oc_requires_megastruture_gateway_construction = yes } 
+			
+				}
+				
+				if = { limit = { oc_requires_megastruture_gateway_complete = yes } 
+			
+				}
+			
+			}
+			
+			if = { limit = { oc_requires_megastruture_l_gate = yes } 
+			
+			}
+			
+			if = { limit = { oc_requires_megastruture_sentry_array = yes } 
+			
+			}
+			
+			if = { limit = { oc_requires_megastruture_science_nexus = yes } 
+			
+			}
+			
+			# setup galactic feature
+			if = { limit = { oc_requires_natural_wormhole = yes }
+				
+			}	
+			
+			if = { limit = { oc_requires_star_class_to_change = yes }
+				if = { limit = { oc_requires_star_class_change_to_blackhole = yes }
+				
+				}
+			}
+			
+			if = { limit = { oc_requires_homeworld_class_to_change = yes }
+				
+			}
+			
+			if = { limit = { oc_requires_second_habitable_planet = yes }
+				
+			}
+			
+			if = { limit = { oc_requires_all_planets_habitable = yes }
+				
+			}
+		
+		}
+	}
+}
+
+# Handles setup of civics that require modifications of the species
+# -Requires species have a new homeworld type
+# ->Voidborne
+# ->Nuclear Mutation
+# -Requires species to have a special trait
+# ->
+# -Requires species to have a different homeworld
+# ->Colonies of Earth
+# ->Colonies of Man
+country_event = {
+	id = origins_civics_empire_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_species_setup = yes
+	}
+	
+	immediate = {
+		
+	}
+}
+
+# Handles setup of civics that require making the empire a colony of another empire
+# -Find an empire with the same species and pair that empire up
+# ->Lost Colony
+# -Change the homeworld of the species to match that of a paired species
+country_event = {
+	id = origins_civics_empire_setup.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_colony_setup = yes
+	}
+	
+	immediate = {
+		
+	}
+}
+
+# Pop
+
+# Planet
+
+# Leaders
+
+# Ships
+
+# Quests

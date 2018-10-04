@@ -1,0 +1,212 @@
+# Origins Civics Setup Triggers
+# by cbshing
+#
+# These triggers are referenced in the 01_origins_civics_empire_setup.txt
+# These triggers are used to setup the galaxy.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### setup master event triggers
+
+# scope: country 
+oc_requires_galaxy_setup = {
+	# None at the moment
+}
+
+# scope: country 
+oc_requires_cluster_setup = {
+	OR = {
+		oc_requires_isolate_cluster = yes
+		oc_requires_advanced_start = yes
+		oc_requires_hostile_neighbors = yes
+	}
+}
+
+# scope: country 
+oc_requires_solar_system_setup = {
+	OR = {
+		oc_requires_isolate_star = yes
+		oc_requires_megastruture_dyson_sphere = yes
+		oc_requires_hostile_neighbors = yes
+	}
+}
+
+
+### setup archetypes triggers
+
+# scope: country 
+oc_requires_advanced_start = {
+	OR = {
+		oc_advanced_start_civics = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere = {
+	OR = {
+		oc_requires_megastruture_dyson_sphere_tier1 = yes
+		oc_requires_megastruture_dyson_sphere_tier5 = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway = {
+	OR = {
+		oc_requires_megastruture_gateway_ruined = yes
+		oc_requires_megastruture_gateway_construction = yes
+		oc_requires_megastruture_gateway_complete = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_star_class_to_change = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+### individual civics triggers
+
+# scope: country 
+oc_requires_isolate_cluster = {
+	OR = {
+		has_oc_n_cluster_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_hostile_neighbors = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_isolate_star = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere_tier1 = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere_tier5 = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_habitat = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_habitat_life_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_ruined = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_construction = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_complete = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_l_gate = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_sentry_array = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_science_nexus = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_natural_wormhole = {
+	OR = {
+		has_oc_wormhole_travelers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_star_class_change_to_blackhole = {
+	OR = {
+		has_oc_worm_loved_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change = {
+	OR = {
+		
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_second_habitable_planet = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_all_planets_habitable = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}

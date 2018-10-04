@@ -1,0 +1,61 @@
+# Origins Civics Civic Archetypes Triggers
+# by cbshing
+#
+# Each of these triggers represents various civic archetypes that may trigger varying gameplay elements
+# This is used for story quests
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### civic archetype triggers
+
+# scope: country 
+oc_advanced_start_civics = {
+	OR = {
+		has_oc_sublight_empire_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_fallen_ancients_civics = {
+	OR = {
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_isolated_civics = {
+	OR = {
+		has_oc_n_cluster_civic = yes
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_search_quest_on_start_civics = {
+	OR = {
+		has_oc_alien_message_civic = yes
+		has_oc_alien_invaded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
