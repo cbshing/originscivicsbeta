@@ -247,6 +247,10 @@ has_oc_wormhole_travelers_civic = {
 
 ### hive empires
 
+has_oc_hive_nuclear_vault_civic = {
+	#has_valid_civic = civic_oc_hive_nuclear_vault
+}
+
 has_oc_hive_nuclear_mutation_civic = {
 	has_valid_civic = civic_oc_hive_nuclear_mutation
 }
