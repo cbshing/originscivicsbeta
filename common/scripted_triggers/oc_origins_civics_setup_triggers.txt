@@ -77,6 +77,16 @@ oc_requires_megastruture_gateway = {
 # scope: country 
 oc_requires_star_class_to_change = {
 	OR = {
+		oc_requires_star_class_change_to_blackhole = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change = {
+	OR = {
+		oc_requires_homeworld_class_to_change_to_random = yes
+		oc_requires_homeworld_class_to_change_to_nuked = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -126,6 +136,7 @@ oc_requires_megastruture_habitat = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_habitat_life_civic = yes
+		has_oc_hive_habitat_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -190,9 +201,31 @@ oc_requires_star_class_change_to_blackhole = {
 }
 
 # scope: country 
-oc_requires_homeworld_class_to_change = {
+oc_requires_homeworld_class_to_change_to_random = {
 	OR = {
-		
+		has_oc_climate_shift_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_nuked = {
+	OR = {
+		has_oc_nuclear_vault_civic = yes
+		has_oc_nuclear_mutation_civic  = yes
+		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_oc_robo_nuked_start_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_gaia = {
+	OR = {
+		has_oc_paradise_life_civic = yes
+		has_oc_hive_paradise_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -200,6 +233,7 @@ oc_requires_homeworld_class_to_change = {
 # scope: country 
 oc_requires_second_habitable_planet = {
 	OR = {
+		has_oc_post_war_of_worlds_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -207,6 +241,7 @@ oc_requires_second_habitable_planet = {
 # scope: country 
 oc_requires_all_planets_habitable = {
 	OR = {
+		has_oc_worm_loved_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }

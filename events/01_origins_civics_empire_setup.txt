@@ -143,11 +143,12 @@ country_event = {
 				}
 			}
 			
-			if = { limit = { oc_requires_homeworld_class_to_change = yes }
+			
+			if = { limit = { oc_requires_second_habitable_planet = yes }
 				
 			}
 			
-			if = { limit = { oc_requires_second_habitable_planet = yes }
+			if = { limit = { oc_requires_homeworld_class_to_change = yes }
 				
 			}
 			

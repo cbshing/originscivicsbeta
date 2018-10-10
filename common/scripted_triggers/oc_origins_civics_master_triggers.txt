@@ -184,6 +184,13 @@ has_oc_habitat_life_civic = {
 	}
 }
 
+# scope: country 
+has_oc_paradise_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_paradise_life
+		has_country_flag = invalid_oc_country
+	}
+}
 
 # scope: country 
 has_oc_ringborne_civic = {
@@ -247,12 +254,36 @@ has_oc_wormhole_travelers_civic = {
 
 ### hive empires
 
+# scope: country 
 has_oc_hive_nuclear_vault_civic = {
-	#has_valid_civic = civic_oc_hive_nuclear_vault
+	OR = {
+		#has_valid_civic = civic_oc_hive_nuclear_vault
+		has_country_flag = invalid_oc_country
+	}
 }
 
+# scope: country 
 has_oc_hive_nuclear_mutation_civic = {
-	has_valid_civic = civic_oc_hive_nuclear_mutation
+	OR = {
+		has_valid_civic = civic_oc_hive_nuclear_mutation
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_hive_habitat_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_hive_habitat_life
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_hive_paradise_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_hive_paradise_life
+		has_country_flag = invalid_oc_country
+	}
 }
 
 
@@ -260,18 +291,30 @@ has_oc_hive_nuclear_mutation_civic = {
 
 # scope: country 
 has_oc_robo_nuked_start_civic = {
-	has_valid_civic = civic_oc_robo_nuked_start
+	OR = {
+		has_valid_civic = civic_oc_robo_nuked_start
+		has_country_flag = invalid_oc_country
+	}
 }
 
 # scope: country 
 has_oc_machine_world_civic = {
-	has_valid_civic = civic_oc_machine_world
+	OR = {
+		has_valid_civic = civic_oc_machine_world
+		has_country_flag = invalid_oc_country
+	}
 }
 
 # scope: country 
 has_oc_abandoned_terraformers_civic = {
-	has_valid_civic = civic_oc_abandoned_terraformers
+	OR = {
+		#has_valid_civic = civic_oc_abandoned_terraformers
+		has_country_flag = invalid_oc_country
+	}
 }
+
+### non-player empires
+
 
 ### primitive empires
 
