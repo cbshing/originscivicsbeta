@@ -92,7 +92,7 @@ country_event = {
 			# setup megastructures
 			if = { limit = { oc_requires_megastruture_dyson_sphere = yes }  
 				if = { limit = { oc_requires_megastruture_dyson_sphere_tier1 = yes } 
-			
+					spawn_megastructure_oc_dyson_sphere_tier1 = yes
 				}
 				if = { limit = { oc_requires_megastruture_dyson_sphere_tier5 = yes } 
 			
@@ -101,21 +101,21 @@ country_event = {
 			}
 			
 			if = { limit = { oc_requires_megastruture_habitat = yes } 
-			
+				
 			}
 			
 			if = { limit = { oc_requires_megastruture_gateway = yes } 
 			
 				if = { limit = { oc_requires_megastruture_gateway_ruined = yes } 
-			
+					spawn_megastructure_gateway_ruined = yes
 				}
 				
 				if = { limit = { oc_requires_megastruture_gateway_construction = yes } 
-			
+					spawn_megastructure_gateway_construction = yes
 				}
 				
 				if = { limit = { oc_requires_megastruture_gateway_complete = yes } 
-			
+					spawn_megastructure_gateway_complete = yes
 				}
 			
 			}
@@ -197,7 +197,8 @@ country_event = {
 	}
 	
 	immediate = {
-		
+		#find similar species
+		#add flags effects
 	}
 }
 
