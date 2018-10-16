@@ -1,0 +1,142 @@
+sb_primitive_fallen_colony = {
+	icon = "gfx/interface/icons/modules/sb_oc_primitive_fallen_colony.dds"
+	construction_days = 360
+	
+	potential = {
+		exists = owner
+		OR = {
+			owner = { has_country_flag = primitive_fallen_colony_intro }
+			solar_system = { has_star_flag = primitive_fallen_colony }
+		}	
+		owner = {
+			NOR = { 
+				has_valid_civic = civic_fanatic_purifiers 
+				has_valid_civic = civic_hive_devouring_swarm 
+				has_valid_civic = civic_machine_terminator 
+			}
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_primitive_fallen_colony"
+			solar_system = {
+				has_star_flag = primitive_fallen_colony
+				any_planet = {
+					exists = owner
+					owner = {
+						has_country_flag = primitive_fallen_colony_country
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_primitive_fallen_colony_agreement"
+			solar_system = {
+				has_star_flag = primitive_fallen_colony
+				any_planet = {
+					exists = owner
+					owner = {
+						has_country_flag = primitive_fallen_colony_country
+						has_country_flag = primitive_fallen_colony@root.owner
+					}
+				}
+			}
+		}
+	}
+
+	cost = {
+		minerals = 200
+	}
+	
+	produced_resources = {
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	
+	upkeep_resources = {
+		energy = 2
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 150
+	}
+}
+
+sb_primitive_lost_colony = {
+	icon = "gfx/interface/icons/modules/sb_oc_primitive_lost_colony.dds"
+	construction_days = 360
+	
+	potential = {
+		exists = owner
+		OR = {
+			owner = { has_country_flag = primitive_lost_colony_intro }
+			solar_system = { has_star_flag = primitive_lost_colony }
+		}	
+		owner = {
+			NOR = { 
+				has_valid_civic = civic_fanatic_purifiers 
+				has_valid_civic = civic_hive_devouring_swarm 
+				has_valid_civic = civic_machine_terminator 
+			}
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_primitive_lost_colony"
+			solar_system = {
+				has_star_flag = primitive_lost_colony
+				any_planet = {
+					exists = owner
+					owner = {
+						has_country_flag = primitive_lost_colony_country
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_primitive_lost_colony_agreement"
+			solar_system = {
+				has_star_flag = primitive_lost_colony
+				any_planet = {
+					exists = owner
+					owner = {
+						has_country_flag = primitive_lost_colony_country
+						has_country_flag = primitive_lost_colony@root.owner
+					}
+				}
+			}
+		}
+	}
+
+	cost = {
+		minerals = 200
+	}
+	
+	produced_resources = {
+		food = 3
+		energy = 2
+	}
+	
+	upkeep_resources = {
+		
+	}
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 150
+	}
+}
