@@ -1,4 +1,4 @@
-# Origins Civics Setup Triggers
+# Origins Civics Requiress Setup Triggers
 # by cbshing
 #
 # These triggers are referenced in the 01_origins_civics_empire_setup.txt
@@ -48,14 +48,6 @@ oc_requires_solar_system_setup = {
 ### setup archetypes triggers
 
 # scope: country 
-oc_requires_advanced_start = {
-	OR = {
-		oc_advanced_start_civics = yes
-		has_country_flag = invalid_oc_country
-	}
-}
-
-# scope: country 
 oc_requires_megastruture_dyson_sphere = {
 	OR = {
 		oc_requires_megastruture_dyson_sphere_tier1 = yes
@@ -91,7 +83,25 @@ oc_requires_homeworld_class_to_change = {
 	}
 }
 
+# scope: country 
+oc_has_nearby_systems_surveyed_country = {
+	OR = {
+		oc_requires_advanced_start = yes
+		oc_is_fallen_colonies_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
 ### individual civics triggers
+
+# scope: country 
+oc_requires_advanced_start = {
+	OR = {
+		has_oc_sublight_empire_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
 
 # scope: country 
 oc_requires_isolate_cluster = {

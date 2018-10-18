@@ -1,0 +1,130 @@
+##########################################################################
+# Planet edicts
+##########################################################################
+
+# Sets the edict-cost for all edicts with this variable
+@planetEdictCost = 100
+@planetEdictDuration = 3600
+
+# Habitat Upgrade > 12
+# Habitat Upgrade after Voidborne
+planet_edict = {
+	name = "oc_void_habitat_upgrade"
+	cost = { influence = 30 minerals = 3000 }
+	length = 0
+	
+	potential = {
+		habitable_structure = yes
+		is_planet_class = pc_habitat
+		planet_size < 15
+		#planet_size >= 12
+		owner = {
+			oc_is_habitat_country = yes
+			has_ascension_perk = ap_voidborn
+		}
+		#has_planet_flag = oc_void_hab_upgrade_max_12
+		NOT = { has_planet_flag = oc_void_hab_upgrade_max }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = hab_upgrade_not_max_size
+			planet_size < 15
+			#planet_size >= 11
+		}		
+	}
+	
+	effect = {
+		custom_tooltip = hab_upgrade_increase_size_3
+		hidden_effect = { change_planet_size = 3 }
+		if = {
+			limit = {
+				planet_size >= 15
+			}
+			hidden_effect = { set_planet_flag = oc_void_hab_upgrade_max }
+		}
+		
+		#if = {
+		#	limit = {
+		#		planet_size < 12
+		#	}
+		#	custom_tooltip = hab_upgrade_increase_size_6
+		#	hidden_effect = { change_planet_size = 6 }						
+		#	else = {
+		#		if = {
+		#			limit = {
+		#				planet_size < 15
+		#			}
+		#			custom_tooltip = hab_upgrade_increase_size_3
+		#			hidden_effect = { change_planet_size = 3 }			
+		#			else = {	
+		#				custom_tooltip = hab_upgrade_increase_size_1
+		#				hidden_effect = { change_planet_size = 1 }
+		#			}
+		#		}			
+		#	}
+		#}
+		#hidden_effect = { set_planet_flag = oc_void_hab_upgrade_max }
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			num_pops > 12
+		}
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+	}
+}
+
+# Habitat Upgrade < 6
+# Habitat Upgrade before Voidborne
+planet_edict = {
+	name = "oc_void_habitat_upgrade_6"
+	cost = { influence = 50 minerals = 5000 }
+	length = 0
+	
+	potential = {
+		habitable_structure = yes
+		is_planet_class = pc_habitat
+		planet_size < 6
+		owner = {
+			oc_is_habitat_country = yes
+			NOT = { has_ascension_perk = ap_voidborn }
+		}
+		NOT = { has_planet_flag = oc_void_hab_upgrade_max_6 }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = hab_upgrade_not_max_size
+			planet_size < 6
+		}		
+	}
+	
+	effect = {
+		custom_tooltip = hab_upgrade_increase_size_2_6
+		hidden_effect = { change_planet_size = 2 }
+		if = {
+			limit = {
+				planet_size >= 6
+			}
+			hidden_effect = { set_planet_flag = oc_void_hab_upgrade_max_6 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			num_pops > 6
+		}
+		modifier = {
+			factor = 0
+			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+	}
+}

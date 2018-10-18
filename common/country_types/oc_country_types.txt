@@ -90,10 +90,14 @@ primitive_fallen_colony = {
 		construction = no
 	}
 	faction = {
+		primitive = no
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = yes
 	}
+	
+	hide_names_if_no_communication = yes
+	
 	custom_diplomacy = yes
 	custom_opinion = yes
 	
@@ -117,17 +121,46 @@ primitive_lost_colony = {
 		construction = no
 	}
 	faction = {
-		hostile = no
+		primitive = no
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = yes
 	}
+	
+	hide_names_if_no_communication = yes
+	
 	custom_diplomacy = yes
 	custom_opinion = yes
 	
 	modules = {
 		standard_event_module = {}
 		basic_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = script_only
+		}
+	}
+}
+
+guardian_fallen_patrol = {
+	show_in_contacts_list = yes
+	government = no
+	blocks_piracy = yes
+	destroys_starbases = yes
+	
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = yes
+		pirate = yes
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+	}
+	
+	modules = {
+		standard_event_module = {}
+		all_technology_module = {}
 		exclusive_diplomacy_module = {
 			contact_rule = script_only
 		}

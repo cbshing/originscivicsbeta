@@ -210,4 +210,8 @@ country_event = {
 
 # Ships
 
+# Technologies
+
+# Flags
+
 # Quests

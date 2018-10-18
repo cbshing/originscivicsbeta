@@ -1,0 +1,144 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@feupkeep = 4
+@feproduction = 12
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+### Game Start Event Generated
+
+# Nuclear Vault Start Building
+building_oc_vault_start = {
+	is_listed = no
+	icon = "building_primitive_farm"
+	
+	cost = {
+	}
+
+	required_resources = {
+	}
+	
+	produced_resources = {
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.03
+	}
+
+	upgrades = {
+	}
+	
+	ai_replace = no
+	event_building = yes
+
+	ai_allow = {
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no
+	}
+}
+
+### Event Generated
+
+# Eternal Leader Death
+building_oc_eternal_leader_tomb = {
+	icon = "building_akx_worm_3"
+	base_buildtime = 720
+	is_listed = yes
+	empire_unique = yes
+	
+	cost = {
+		minerals = 500
+	}
+	
+	potential = {
+		planet.owner = {
+			has_oc_eternal_leader_civic = yes
+			has_country_flag = built_oc_eternal_leader_tomb
+		}
+	}	
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+
+	produced_resources = {
+		unity = 12
+	}
+	
+	country_modifier = {
+		country_resource_unity_mult = 0.10
+		pop_ethic_spiritualist_attraction_mult = 0.1
+	}
+
+	planet_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.5
+	}
+	
+	required_resources = {
+		energy = 4
+	}
+	
+	prerequisites = {
+
+	}
+	
+	destroy_if = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	ai_allow = {
+		is_slave_tile_or_planet = no
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+	
+	ai_replace = no
+	event_building = yes
+}

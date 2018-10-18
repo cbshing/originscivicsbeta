@@ -24,20 +24,22 @@
 
 ### civic archetype triggers
 
+# is type of country
+
 # scope: country 
-oc_advanced_start_civics = {
+oc_is_fallen_colonies_country = {
 	OR = {
-		has_oc_sublight_empire_civic = yes
-		has_oc_sublight_conquerer_civic = yes
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
 
 # scope: country 
-oc_fallen_ancients_civics = {
+oc_is_habitat_country = {
 	OR = {
-		has_oc_fallen_colony_civic = yes
-		has_oc_fallen_enclave_civic = yes
+		has_oc_voidborne_civic = yes
+		has_oc_habitat_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -51,8 +53,10 @@ oc_is_isolated_civics = {
 	}
 }
 
+# has type of country
+
 # scope: country 
-oc_search_quest_on_start_civics = {
+oc_has_search_quest_on_start_civics = {
 	OR = {
 		has_oc_alien_message_civic = yes
 		has_oc_alien_invaded_civic = yes
