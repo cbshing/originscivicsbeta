@@ -22,68 +22,99 @@
 
 ### Generic Governments
 
-# Despotic Empire
-gov_despotic_empire = {
-	ruler_title = RT_EMPEROR
-	ruler_title_female = RT_EMPRESS
-	heir_title = HT_CROWN_PRINCE
-	heir_title_female = HT_CROWN_PRINCESS
+# Fallen Dukedom
+gov_oc_fallen_dukedom = {
+	ruler_title = RT_DUKE
+	ruler_title_female = RT_DUCHESS
+	heir_title = HT_LORD
+	heir_title_female = HT_LADY
 
 	use_regnal_names = yes
 	dynastic_last_names = yes
 
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_technocracy
+		has_oc_fallen_enclave_civic = yes
 	}
 
 	weight = {
-		base = 1
+		base = 2000
 	}
 }
 
-# Constitutional Dictatorship
-gov_constitutional_dictatorship = {
-	ruler_title = RT_EXECUTOR
-	ruler_title_female = RT_EXECUTOR_FEMALE
+# Fallen Barony
+gov_oc_fallen_barony = {
+	ruler_title = RT_BARON
+	ruler_title_female = RT_BARONESS
+	heir_title = HT_SIR
+	heir_title_female = HT_LADY
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		has_authority = auth_imperial
+		OR = {
+			has_oc_fallen_colony_civic = yes
+			has_oc_primitive_lost_colony_civic = yes
+		}
+	}
+
+	weight = {
+		base = 2000
+	}
+}
+
+# Fallen Colony
+gov_oc_fallen_colony = {
+	ruler_title = RT_GOVERNOR_GENERAL
+	ruler_title_female = RT_GOVERNOR_GENERAL_FEMALE
 
 	possible = {
 		has_authority = auth_dictatorial
-		has_valid_civic = civic_technocracy
+		OR = {
+			oc_is_fallen_colonies_country = yes
+			has_oc_primitive_lost_colony_civic = yes
+		}
 	}
 
 	weight = {
-		base = 1
+		base = 2000
 	}
 }
 
-# Plutocratic Oligarchy
+# Fallen Colony Oligarchy
 gov_plutocratic_oligarchy = {
-	ruler_title = RT_HIGH_COMMISSIONER
-	ruler_title_female = RT_HIGH_COMMISSIONER_FEMALE
-
+	ruler_title = RT_GOVERNOR_GENERAL
+	ruler_title_female = RT_GOVERNOR_GENERAL_FEMALE
 	possible = {
 		has_authority = auth_oligarchic
-		has_valid_civic = civic_technocracy
+		OR = {
+			oc_is_fallen_colonies_country = yes
+			has_oc_primitive_lost_colony_civic = yes
+		}
 	}
 
 	weight = {
-		base = 1
+		base = 2000
 	}
 }
 
-# Representative Democracy
+# Fallen Colony Democracy
 gov_representative_democracy = {
-	ruler_title = RT_PRESIDENT
-	ruler_title_female = RT_PRESIDENT_FEMALE
+	ruler_title = RT_GOVERNOR_GENERAL
+	ruler_title_female = RT_GOVERNOR_GENERAL_FEMALE
 
 	possible = {
 		has_authority = auth_democratic
-		has_valid_civic = civic_technocracy
+		OR = {
+			oc_is_fallen_colonies_country = yes
+			has_oc_primitive_lost_colony_civic = yes
+		}
 	}
 
 	weight = {
-		base = 1
+		base = 2000
 	}
 }
 
