@@ -1,0 +1,167 @@
+#gov_example = {
+#	possible = {}							# Determines if a government name can be chosen. AND trigger, scope: country; valid triggers: has_ethic, has_authority, has_valid_civic; everything else is undefined behavior!
+#	weight = {								# scriptable value, scope: country; the (possible) government type with the biggest weight is assigned to the country
+#		base = 100
+#	}
+#
+#	ruler_title = RT_KING					# translation tag for male ruler's title
+#	ruler_title_female = RT_QUEEN			# translation tag for female ruler's title
+#	heir_title = HT_CROWN_PRINCE			# translation tag for male heir's title
+#	heir_title_female = HT_CROWN_PRINCESS	# translation tag for female heir's title
+#	use_regnal_names = yes / no				# default: no
+#	dynastic_last_names = yes / no			# default: no
+#	should_force_rename = yes / no			# default: no - if set to yes, empires changing to or from this government will be renamed even if authority type does not change
+#	
+#	election_candidates = {					# scriptable value to weight election candidates for oligarchic elections, scope: leader
+#		modifier = {
+#			add = 100
+#			leader_class = ruler
+#		}
+#	}
+#}
+
+### Generic Governments
+
+# Despotic Empire
+gov_despotic_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		has_authority = auth_imperial
+		has_valid_civic = civic_technocracy
+	}
+
+	weight = {
+		base = 1
+	}
+}
+
+# Constitutional Dictatorship
+gov_constitutional_dictatorship = {
+	ruler_title = RT_EXECUTOR
+	ruler_title_female = RT_EXECUTOR_FEMALE
+
+	possible = {
+		has_authority = auth_dictatorial
+		has_valid_civic = civic_technocracy
+	}
+
+	weight = {
+		base = 1
+	}
+}
+
+# Plutocratic Oligarchy
+gov_plutocratic_oligarchy = {
+	ruler_title = RT_HIGH_COMMISSIONER
+	ruler_title_female = RT_HIGH_COMMISSIONER_FEMALE
+
+	possible = {
+		has_authority = auth_oligarchic
+		has_valid_civic = civic_technocracy
+	}
+
+	weight = {
+		base = 1
+	}
+}
+
+# Representative Democracy
+gov_representative_democracy = {
+	ruler_title = RT_PRESIDENT
+	ruler_title_female = RT_PRESIDENT_FEMALE
+
+	possible = {
+		has_authority = auth_democratic
+		has_valid_civic = civic_technocracy
+	}
+
+	weight = {
+		base = 1
+	}
+}
+
+
+
+# Fragmented Nation States
+gov_fragmented_nation_states = {
+	ruler_title = RT_SECRETARY
+	ruler_title_female = RT_SECRETARY_FEMALE
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_increasing_urbanization
+		has_valid_civic = civic_atmospheric_pollution
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+# Curator Enclave
+gov_curator_enclave = {
+	ruler_title = RT_HIGH_CURATOR
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_ancient_preservers
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+# Trader Enclave
+gov_trader_enclave = {
+	ruler_title = RT_HIGH_TRADER
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_trading_conglomerate
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+# Artist Enclave
+gov_artist_enclave = {
+	ruler_title = RT_HIGH_ARTIST
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_artist_collective
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+# Marauder Clans
+gov_marauder_clans = {
+	ruler_title = RT_RELUCTANT_EMISSARY
+	
+	should_force_rename = yes
+
+	possible = {
+		has_civic = civic_anarcho_tribalism
+	}
+
+	weight = {
+		base = 100000
+	}
+}

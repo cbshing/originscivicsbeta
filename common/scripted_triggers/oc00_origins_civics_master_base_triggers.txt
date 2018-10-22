@@ -32,6 +32,22 @@ has_oc_codominant_evolution_civic = {
 }
 
 # scope: country 
+has_oc_syncretic_mechanists_civic = {
+	OR = {
+		has_valid_civic = civic_oc_syncretic_mechanists
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_codominant_mechanists_civic = {
+	OR = {
+		has_valid_civic = civic_oc_codominant_mechanists
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 has_oc_alien_message_civic = {
 	OR = {
 		has_valid_civic = civic_oc_alien_message
@@ -252,6 +268,51 @@ has_oc_wormhole_travelers_civic = {
 	}
 }
 
+# scope: country 
+has_oc_cybernetic_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_cybernetic
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_latent_psionic_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_latent_psionic
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_synthetics_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_synthetics
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_psionics_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_psionics
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_symbiotic_evolution_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_symbiotic_evolution
+		has_country_flag = invalid_oc_country
+	}
+}
+
 ### hive empires
 
 # scope: country 
@@ -271,6 +332,14 @@ has_oc_hive_nuclear_mutation_civic = {
 }
 
 # scope: country 
+has_oc_hive_voidborne_civic = {
+	OR = {
+		has_valid_civic = civic_oc_hive_voidborne
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 has_oc_hive_habitat_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_hive_habitat_life
@@ -282,6 +351,14 @@ has_oc_hive_habitat_life_civic = {
 has_oc_hive_paradise_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_hive_paradise_life
+		has_country_flag = invalid_oc_country
+	}
+}
+# scope: country 
+has_oc_hive_dyson_builders_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_hive_dyson_builders
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -298,17 +375,33 @@ has_oc_robo_nuked_start_civic = {
 }
 
 # scope: country 
-has_oc_machine_world_civic = {
+has_oc_robo_machine_world_civic = {
 	OR = {
-		has_valid_civic = civic_oc_machine_world
+		has_valid_civic = civic_oc_robo_machine_world
 		has_country_flag = invalid_oc_country
 	}
 }
 
 # scope: country 
-has_oc_abandoned_terraformers_civic = {
+has_oc_robo_abandoned_terraformers_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_abandoned_terraformers
+		#has_valid_civic = civic_oc_robo_abandoned_terraformers
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_robo_voidborne_mechanisms_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_robo_voidborne_mechanisms
+		has_country_flag = invalid_oc_country
+	}
+}
+# scope: country 
+has_oc_robo_dyson_builders_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_robo_dyson_builders
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -321,7 +414,7 @@ has_oc_abandoned_terraformers_civic = {
 # scope: country 
 has_oc_primitive_lost_colony_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_primitive_lost_colony
+		has_valid_civic = civic_oc_primitive_lost_colony
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -329,7 +422,7 @@ has_oc_primitive_lost_colony_civic = {
 # scope: country 
 has_oc_primitive_fallen_colony_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_primitive_fallen_colony
+		has_valid_civic = civic_oc_primitive_fallen_colony
 		has_country_flag = invalid_oc_country
 	}
 }

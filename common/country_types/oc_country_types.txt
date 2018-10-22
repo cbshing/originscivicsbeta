@@ -141,7 +141,7 @@ primitive_lost_colony = {
 	}
 }
 
-guardian_fallen_patrol = {
+fallen_patrol = {
 	show_in_contacts_list = yes
 	government = no
 	blocks_piracy = yes

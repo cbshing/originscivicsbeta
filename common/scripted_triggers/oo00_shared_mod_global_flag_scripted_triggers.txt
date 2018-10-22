@@ -1,0 +1,131 @@
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+#Comment: 
+#this document stores the global flags used by different mods. The flags are stored as scripted #triggers. To use them in your own mod, copy the scripted triggers you require into a txt file and #save it under common/scripted_triggers. You can then use the scripted triggers by doing #trigger_name = yes in any scope. Example: planet_enhanced_enabled = yes.
+
+#Alphamod
+alphamod_enabled = { has_global_flag = gf_alphamod_activated }
+
+#Guilli’s Planet Modifiers
+gpm_enabled = { has_global_flag = guillis_planet_modifiers_active }
+
+#Guilli’s Ship Components (crystallis)
+crystallis_enabled = { has_global_flag = has_crystallis_component_mod }
+
+#TFW’s BOSP
+bosp_enabled = { has_global_flag = has_tfw_bosp }
+
+#CGM: Buildings
+cgm_buildings_enabled = { has_global_flag = core_game_mechanics_and_ai }
+
+#CGM: Planets Enhanced (to be released)
+planets_enhanced_enabled = { has_global_flag = planets_enhanced_active }
+
+#Realspace
+real_space_enabled = { has_global_flag = has_real_space_mod }
+
+#Realspace: Stellar Expedition
+stellar_expedition_enabled = { has_global_flag = has_stellar_expedition_mod }
+
+#Realspace: Astrogeology
+astrogeology_enabled = { has_global_flag = has_astrogeology_mod }
+
+#Ethos Unique Techs and Buildings
+eutab_enabled = { has_global_flag = eutab_active }
+
+#Planetary Diversity (beta version to be released)
+planetary_diversity_enabled = { has_global_flag = planetary_diversity_active }
+
+#New Worlds (beta version to be released)
+new_worlds_enabled = { has_global_flag = new_worlds_active }
+
+#EAC New Additions
+eac_enabled = { has_global_flag = eac_new_additions_installed }
+
+#EAC At War
+eac_aw_enabled = { has_global_flag = eac_at_war_installed }
+
+#EAC Empire University
+eac_eu_enabled = { has_global_flag = eac_empire_university_installed }
+
+#EAC At War Patch for CGM
+eac_aw_p_cgm_enabled = { has_global_flag = eac_at_war_patch_cgm_installed }
+
+#Svafa’s Expanded Traits
+svafas_traits_enabled = { has_global_flag = svafa_expanded_traits_active }
+
+#Additional Traits
+additional_traits_enabled = { has_global_flag = additrait_active }
+
+#Extra Ship Components
+esc_enabled = { has_global_flag = nhsc_v20 }
+
+#Gigastructural Engineering
+gse_enabled = { has_global_flag = gigastructures_enabled }
+
+#Origins Civics
+origin_civics_enabled = { has_global_flag = has_cbshing_origins_civics_enabled }
+
+#Cultural Overhaul
+cultural_overhaul_enabled = { has_global_flag = cultural_overhaul_active }
+
+#Kugelring Megastructures
+kugelring_enabled = { has_global_flag = kugelring_active }
+
+#Legendary Worlds
+legw_enabled = { has_global_flag = legw_active }
+
+#Expanded Stellaris Ascension Perks
+esap_enabled = { has_global_flag = expanded_stellaris_ascension_perks_mod_in_use } 
+
+#Expanded Stellaris Traditions
+est_enabled = { has_global_flag = expanded_stellaris_traditions_mod_in_use } 
+
+#Artefacts, Planetary and Space Resources (APSR)
+apsr_enabled = { has_global_flag = apsr_mod_on } 
+
+#More Star Classes
+msc_enabled = { has_global_flag = using_kepler68_morestarclasses }
+
+#Potent Rebellions
+potent_rebellions_enabled = { has_global_flag = potent_rebellions_expanded_active }
+
+#Dynamic Political Events
+dpe_enabled = { has_global_flag = dynamic_political_events_active }
+
+#Planet Development Overhaul
+pdo_enabled = { has_global_flag = planet_development_overhaul_active }
+
+#Animated Synthetic Portraits: Extended
+aspe_enabled = { has_global_flag = extended_synths_on }
+
+# Imperial Routine
+irm_main_enabled = { has_global_flag = "irm_main_on" }
+
+# GwenKnight’s Species Mod
+gwen_species_enabled = { has_global_flag = gwen_species_mod_active }
+
+# Stellaris Tycoon Redux
+tycoon_enabled = { has_global_flag = ty_redux_active }
+
+# Expanded Strategic Resources
+exp_strat_re_enabled = { has_global_flag = expstratre_enabled }
+
+# Strategic Facilities 1
+strategic_facilities_mod_in_use
+
+# Strategic Facilities 2
+strategic_facilities_2_mod_active

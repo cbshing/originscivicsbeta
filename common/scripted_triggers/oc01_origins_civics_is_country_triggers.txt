@@ -56,10 +56,44 @@ oc_is_isolated_civics = {
 # has type of country
 
 # scope: country 
+oc_has_encountered_other_species = {
+	OR = {
+		has_oc_alien_message_civic = yes
+		has_oc_alien_invaded_civic = yes
+		oc_has_secondary_species_civics = yes
+		oc_is_fallen_colonies_country = yes
+		has_oc_fallen_tributary_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 oc_has_search_quest_on_start_civics = {
 	OR = {
 		has_oc_alien_message_civic = yes
 		has_oc_alien_invaded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_secondary_species_civics = {
+	OR = {
+		has_oc_codominant_evolution_civic = yes
+		has_oc_syncretic_mechanists_civic = yes
+		has_oc_codominant_mechanists_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_oc_refugee_saviour_civic = yes
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_robot_pops_on_start_civics = {
+	OR = {
+		has_oc_syncretic_mechanists_civic = yes
+		has_oc_codominant_mechanists_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }

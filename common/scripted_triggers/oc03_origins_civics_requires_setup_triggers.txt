@@ -146,6 +146,7 @@ oc_requires_megastruture_habitat = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_habitat_life_civic = yes
+		has_oc_hive_voidborne_civic = yes
 		has_oc_hive_habitat_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}

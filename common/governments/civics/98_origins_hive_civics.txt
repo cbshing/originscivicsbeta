@@ -1,0 +1,143 @@
+# 05_origins_colonies_civics.txt
+
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_oc_hive_nuclear_vault = {
+	playable = { host_has_dlc = "Apocalypse" }
+	modification = no
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_mutation # base OC
+				value = civic_oc_hive_voidborne # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.2
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+
+	description = "civic_tooltip_oc_hive_nuclear_vault_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_hive_nuclear_mutation = {
+	playable = { host_has_dlc = "Apocalypse" }
+	modification = no
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_voidborne # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_oc_hive_nuclear_mutation_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.4
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_hive_voidborne = {
+	playable = { 
+		host_has_dlc = "Utopia" 
+	}
+	modification = no
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_nuclear_mutation # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.2
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		#megastructure_build_speed_mult = 0.3
+		#country_starbase_capacity_add = 2
+		#country_starbase_influence_cost_mult = -0.10
+		#mod_megastructure_build_cost_mult = -0.3 
+		#starbase_upgrade_cost_mult = -0.05
+		#country_ship_upgrade_cost_mult = -0.1
+		#shipsize_corvette_build_cost_mult = -0.1
+		#shipsize_destroyer_build_cost_mult = -0.1
+		#shipsize_cruiser_build_cost_mult = -0.1
+		#shipsize_battleship_build_cost_mult = -0.1
+		#Built for Space
+		#starbase_module_build_cost_mult = -0.25
+		#shipsize_research_station_build_cost_mult = -0.25
+		#shipsize_mining_station_build_cost_mult = -0.25
+		#shipsize_starbase_outpost_build_cost_mult = -0.25
+		#shipsize_military_station_small_build_cost_mult = -0.25
+		#starbase_shipyard_build_cost_mult = -0.25
+		#shipsize_colonizer_build_cost_mult = -0.25
+		#shipsize_constructor_build_cost_mult = -0.25
+		#shipsize_science_build_cost_mult = -0.25
+		#ship_upkeep_mult = -0.25
+		#country_starbase_upkeep_mult = -0.25
+		#Space Travelers
+		#ship_speed_mult = 0.1
+		country_resource_minerals_mult = 0.05
+		
+		# change to reduce consumer goods, increase energy & trade output, decrease ability to conquer, allow to build tall
+		
+		pop_consumer_goods_mult = -0.10
+		army_damage_mult = -0.2
+	}
+	
+	description = "civic_tooltip_civic_oc_hive_voidborne_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.4
+	#see 01_origins_civics_empire_setup.7
+}
