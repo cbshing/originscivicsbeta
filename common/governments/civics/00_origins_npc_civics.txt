@@ -63,3 +63,71 @@ civic_oc_primitive_fallen_colony = {
 		pop_consumer_goods_add = 0.15
 	}
 }
+
+# Fallen Empires
+
+civic_oc_fallen_imperium_ruler = { # e.g. emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+civic_oc_fallen_imperium_pretender = { # e.g. senate
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+civic_oc_fallen_imperium_papacy = { # e.g. church
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+civic_oc_fallen_imperium_archieves = { # e.g. library
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}

@@ -62,7 +62,7 @@ gov_fallen_colonial_government = {
 	}
 }
 
-
+### NPC Governments
 
 # Primitive Colonial Government
 gov_primitive_colonial_government = {
@@ -74,6 +74,42 @@ gov_primitive_colonial_government = {
 	possible = {
 		has_oc_primitive_colonial_administration_civic = yes
 		oc_is_primitive_colonies_civics = yes
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+## Fallen Imperium
+# Imperium Successor
+gov_imperium_successor = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_lethargic_leadership
+		has_valid_civic = civic_empire_in_decline
+		has_valid_civic = civic_oc_fallen_imperium_ruler
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_imperium_pretender = {
+	ruler_title = RT_EXARCH
+	ruler_title_female = RT_EMPRESS
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_lethargic_leadership
+		has_valid_civic = civic_empire_in_decline
+		has_valid_civic = civic_oc_fallen_imperium_ruler
 	}
 
 	weight = {
