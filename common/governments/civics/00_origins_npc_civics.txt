@@ -78,7 +78,7 @@ civic_oc_fallen_imperium_ruler = { # e.g. emperor
 	}
 }
 
-civic_oc_fallen_imperium_pretender = { # e.g. senate
+civic_oc_fallen_imperium_senate = { # e.g. senate
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
@@ -92,7 +92,7 @@ civic_oc_fallen_imperium_pretender = { # e.g. senate
 
 civic_oc_fallen_imperium_papacy = { # e.g. church
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
 	potential = {
 		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -101,7 +101,6 @@ civic_oc_fallen_imperium_papacy = { # e.g. church
 		ethics = {
 			OR = {
 				text = civic_tooltip_spiritualist
-				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
 		}
@@ -111,9 +110,9 @@ civic_oc_fallen_imperium_papacy = { # e.g. church
 	}
 }
 
-civic_oc_fallen_imperium_archieves = { # e.g. library
+civic_oc_fallen_imperium_archives = { # e.g. library
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_technocracy.dds"
 	potential = {
 		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -122,7 +121,6 @@ civic_oc_fallen_imperium_archieves = { # e.g. library
 		ethics = {
 			OR = {
 				text = civic_tooltip_materialist
-				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
 		}
