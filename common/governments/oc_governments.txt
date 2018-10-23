@@ -82,17 +82,17 @@ gov_primitive_colonial_government = {
 }
 
 ## Fallen Imperium
-# Imperium Successor
-gov_imperium_successor = {
-	ruler_title = RT_EMPEROR
-	ruler_title_female = RT_EMPRESS
+# Imperium Exarch
+gov_imperium_exarch = {
+	ruler_title = RT_EXARCH
+	ruler_title_female = RT_EXARCH
 	
 	should_force_rename = yes
 
 	possible = {
 		has_valid_civic = civic_lethargic_leadership
 		has_valid_civic = civic_empire_in_decline
-		has_valid_civic = civic_oc_fallen_imperium_ruler
+		has_valid_civic = civic_oc_fallen_imperium_exarch
 	}
 
 	weight = {
@@ -100,16 +100,50 @@ gov_imperium_successor = {
 	}
 }
 
-gov_imperium_pretender = {
-	ruler_title = RT_EXARCH
-	ruler_title_female = RT_EMPRESS
+gov_imperium_senate = {
+	ruler_title = RT_HIGH_CHANCELLOR
+	ruler_title_female = RT_HIGH_CHANCELLOR_FEMALE
 	
 	should_force_rename = yes
 
 	possible = {
 		has_valid_civic = civic_lethargic_leadership
 		has_valid_civic = civic_empire_in_decline
-		has_valid_civic = civic_oc_fallen_imperium_ruler
+		has_valid_civic = civic_oc_fallen_imperium_senate
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_imperium_papacy = {
+	ruler_title = RT_ARCHPOPE
+	ruler_title_female = RT_ARCHPOPE_FEMALE
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_lethargic_leadership
+		has_valid_civic = civic_empire_in_decline
+		has_valid_civic = civic_oc_fallen_imperium_papacy
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_imperium_archives = {
+	ruler_title = RT_HEAD_LIBRARIAN
+	ruler_title_female = RT_HEAD_LIBRARIAN_FEMALE
+	
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_lethargic_leadership
+		has_valid_civic = civic_empire_in_decline
+		has_valid_civic = civic_oc_fallen_imperium_archives
 	}
 
 	weight = {
