@@ -19,6 +19,23 @@
 
 # Advance "Primitive" Colonies
 
+civic_oc_primitive_colonial_administration = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_colonial_administration.dds"
+	potential = {
+		country_type = { 
+			OR = {
+				value = primitive_lost_colony 
+				value = primitive_fallen_colony 
+			}
+		}
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { 
+	}
+}
+
 civic_oc_primitive_lost_colony = {
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_lost_colony.dds"

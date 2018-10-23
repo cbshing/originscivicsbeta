@@ -14,6 +14,13 @@
 # value = civic_agrarian_idyll # base game civic
 # value = civic_inwards_perfection # base game civic
 
+#########################################
+# NPC Civics (00_origins_npc_civics.txt)
+#########################################
+# value = civic_oc_primitive_lost_colony  # base OC
+# value = civic_oc_primitive_fallen_colony # base OC
+# value = civic_oc_primitive_colonial_administration # base OC
+
 ############################################################
 # Systems Civics (03_origins_systems_civics.txt)
 ############################################################

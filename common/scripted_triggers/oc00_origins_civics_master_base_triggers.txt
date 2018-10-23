@@ -412,6 +412,14 @@ has_oc_robo_dyson_builders_civic = {
 ### primitive empires
 
 # scope: country 
+has_oc_primitive_colonial_administration_civic = {
+	OR = {
+		has_valid_civic = civic_oc_primitive_colonial_administration
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 has_oc_primitive_lost_colony_civic = {
 	OR = {
 		has_valid_civic = civic_oc_primitive_lost_colony

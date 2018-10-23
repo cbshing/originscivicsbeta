@@ -53,6 +53,15 @@ oc_is_isolated_civics = {
 	}
 }
 
+# scope: country 
+oc_is_primitive_colonies_civics = {
+	OR = {
+		has_oc_primitive_lost_colony_civic = yes
+		has_oc_primitive_fallen_colony_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
 # has type of country
 
 # scope: country 
