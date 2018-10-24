@@ -24,8 +24,8 @@
 
 # Fallen Imperial Colonial Government
 gov_fallen_imperial_colonial_government = {
-	ruler_title = RT_LORD_GOVERNOR
-	ruler_title_female = RT_LADY_GOVERNOR_FEMALE
+	ruler_title = RT_LORD_GOVERNOR_GENERAL
+	ruler_title_female = RT_LADY_GOVERNOR_GENERAL_FEMALE
 	
 	should_force_rename = yes
 
@@ -43,8 +43,8 @@ gov_fallen_imperial_colonial_government = {
 
 # Fallen Colonial Government
 gov_fallen_colonial_government = {
-	ruler_title = RT_GOVERNOR
-	ruler_title_female = RT_GOVERNOR_FEMALE
+	ruler_title = RT_GOVERNOR_GENERAL
+	ruler_title_female = RT_GOVERNOR_GENERAL_FEMALE
 	
 	should_force_rename = yes
 
@@ -90,8 +90,12 @@ gov_fallen_imperium_exarch = {
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_lethargic_leadership
-		has_valid_civic = civic_empire_in_decline
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
 		has_valid_civic = civic_oc_fallen_imperium_exarch
 	}
 
@@ -101,14 +105,18 @@ gov_fallen_imperium_exarch = {
 }
 
 gov_fallen_imperium_senate = {
-	ruler_title = RT_HIGH_CHANCELLOR
-	ruler_title_female = RT_HIGH_CHANCELLOR_FEMALE
+	ruler_title = RT_GRAND_CHANCELLOR
+	ruler_title_female = RT_GRAND_CHANCELLOR_FEMALE
 	
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_lethargic_leadership
-		has_valid_civic = civic_empire_in_decline
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
 		has_valid_civic = civic_oc_fallen_imperium_senate
 	}
 
@@ -124,8 +132,12 @@ gov_fallen_imperium_papacy = {
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_lethargic_leadership
-		has_valid_civic = civic_empire_in_decline
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
 		has_valid_civic = civic_oc_fallen_imperium_papacy
 	}
 
@@ -135,14 +147,18 @@ gov_fallen_imperium_papacy = {
 }
 
 gov_fallen_imperium_archives = {
-	ruler_title = RT_HEAD_LIBRARIAN
-	ruler_title_female = RT_HEAD_LIBRARIAN_FEMALE
+	ruler_title = RT_HIGH_LIBRARIAN
+	ruler_title_female = RT_HIGH_LIBRARIAN_FEMALE
 	
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_lethargic_leadership
-		has_valid_civic = civic_empire_in_decline
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
 		has_valid_civic = civic_oc_fallen_imperium_archives
 	}
 

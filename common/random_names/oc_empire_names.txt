@@ -1,0 +1,323 @@
+##############
+# NAME PARTS #
+##############
+
+# Fallen Colonial Government
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen"
+	parts = {
+		"Government" = 4
+		"Administration" = 4
+		"Territories" = 2
+		"Charter" = 3
+		"Holdings" = 2
+	}
+}
+
+### Descriptives
+
+# Imperial Fallen Colonial Government Descriptive
+empire_name_parts_list = {
+	key = "oc_imperial_fallen_colonial_gen_desc"
+	parts = {
+		"Imperial" = 4
+		"Royal" = 2
+	}
+}
+
+# Imperial Fallen Colonial Government Middle Descriptive
+empire_name_parts_list = {
+	key = "oc_imperial_fallen_colonial_gen_mid_desc"
+	parts = {
+		"Imperial" = 4
+		"Royal" = 2
+	}
+}
+
+# Fallen Colonial Government Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen_desc"
+	parts = {
+		"Colonial" = 4
+		"Sector" = 2
+	}
+}
+
+# Fallen Colonial Government Middle Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen_mid_desc"
+	parts = {
+		"Colonial" = 4
+		"Sector" = 2
+	}
+}
+
+################
+# NAME FORMATS #
+################
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Sol Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.2"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Government of Sol
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.3"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Sol Colonial Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 4
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.4"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	# Earth Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.5"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	noun = "[This.Capital.GetName]"
+	# Government of Earth
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 8
+			has_government = "gov_fallen_colonial_government"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.6"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	noun = "[This.Capital.GetName]"
+	# Earth Colonial Government
+}
+
+############################## NPC Empires ##############################
+
+##############
+# NAME PARTS #
+##############
+
+# Primitive Colonial Government
+empire_name_parts_list = {
+	key = "oc_primitive_colonial_gen"
+	parts = {
+		"Colonial Government" = 1
+	}
+}
+
+### FALLEN EMPIRE NAMES
+
+# Xenophobe
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_names_1"
+	parts = {
+		"Shard" = 10		
+		"Remnant" = 10
+		"Vestige" = 10
+	}
+}
+
+# Materialist
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_names_2"
+	parts = {
+		"Archivists" = 10		
+		"Conservers" = 10
+		"Chroniclers" = 10
+	}
+}
+
+# Xenophile
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_names_3"
+	parts = {		
+		"Progenitors" = 10
+		"Forerunners" = 10		
+		"Ancients" = 10
+	}
+}
+
+# Fallen Imperium Papacy
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_papacy_names"
+	parts = {	
+		"States" = 10		
+		"See" = 10
+		"Realms" = 10
+	}
+}
+
+# Fallen Imperium Papacy Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_papacy_desc"
+	parts = {
+		"Holy" = 10
+		"Episcopal" = 10
+		"Heavenly" = 10
+	}
+}
+
+# Fallen Imperium Papacy Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_papacy_mid_desc"
+	parts = {
+		"Holy" = 10
+		"Episcopal" = 10
+		"Heavenly" = 10
+	}
+}
+
+################
+# NAME FORMATS #
+################
+
+# Primitive Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 10000
+			has_government = "gov_primitive_colonial_government"
+		}
+	}
+	format = "format.oc_primitive_colonial.1"
+	noun = "[This.Capital.GetName]"
+	# Earth Colonial Government
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	format = "format.fallen.1"
+	noun = "[This.GetSpeciesName]"
+	# Human Core Worlds
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_materialist		
+		}
+	}
+	format = "format.fallen.2"
+	noun = "[This.GetSpeciesName]"
+	# Human Remnant
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	format = "format.fallen.3"
+	noun = "[This.GetSpeciesName]"
+	# Human Ancients
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_spiritualist
+			has_government = "gov_fallen_imperium_papacy"
+		}
+	}
+	format = "format.oc_fallen_papacy.1"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_papacy_names>"
+	# Holy See of Earth
+}
