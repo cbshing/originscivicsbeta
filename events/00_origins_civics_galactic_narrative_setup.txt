@@ -11,17 +11,59 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		
+		NOT = { has_global_flag =oc_ galactive_narrative_set }
 	}
 	
 	immediate = {
 		random_country = {
 			limit = { is_country_type = global_event }
 			random_list = {
-				10 = { }
-				20 = { set_global_flag = oc_fallen_imperium_generic_narrative }	
-				40 = { set_global_flag = oc_fallen_imperium_one_species_narrative }	
-				30 = { set_global_flag = oc_fallen_imperium_two_emperors_narrative }	
+				10 = { ### Generic Galactic Imperium 
+					modifier = {
+						factor = 0
+						NOT = {
+							any_country = {
+								OR = {
+									is_country_type = fallen_empire
+									is_country_type = awakened_empire
+								}
+							}
+						}
+					}
+					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = oc_generic_galactic_imperium_narrative
+				}
+				10 = { ### Generic Galactic Imperium 
+					modifier = {
+						factor = 0
+						NOT = {
+							any_country = {
+								OR = {
+									is_country_type = fallen_empire
+									is_country_type = awakened_empire
+								}
+							}
+						}
+					}
+					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = oc_generic_galactic_imperium_narrative
+				}
+				10 = { ### Generic Galactic Imperium 
+					modifier = {
+						factor = 0
+						NOT = {
+							any_country = {
+								OR = {
+									is_country_type = fallen_empire
+									is_country_type = awakened_empire
+								}
+							}
+						}
+					}
+					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = oc_generic_galactic_imperium_narrative
+				}
+				120 = { }
 			}
 		}
 	}
