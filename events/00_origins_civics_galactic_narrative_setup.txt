@@ -4,9 +4,9 @@ namespace = origins_civics_galactic_narrative_setup
 ### Galactic Narrative Setup
 # Determines the Galactic Narrative
 
-# First Contact
+# Gatekeeper
 event = {
-	id = origins_civics_communication_events.1
+	id = origins_civics_galactic_narrative_setup.1
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -15,6 +15,14 @@ event = {
 	}
 	
 	immediate = {
-		
+		random_country = {
+			limit = { is_country_type = global_event }
+			random_list = {
+				10 = { }
+				20 = { set_global_flag = oc_fallen_imperium_generic_narrative }	
+				40 = { set_global_flag = oc_fallen_imperium_one_species_narrative }	
+				30 = { set_global_flag = oc_fallen_imperium_two_emperors_narrative }	
+			}
+		}
 	}
 }
