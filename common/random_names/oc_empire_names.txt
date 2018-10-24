@@ -186,19 +186,49 @@ empire_name_parts_list = {
 
 ### FALLEN EMPIRE NAMES
 
-# Xenophobe
+# Fallen Imperium Ruler
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_names_1"
+	key = "oc_fallen_imperium_ruler_names"
 	parts = {
-		"Shard" = 10		
-		"Remnant" = 10
-		"Vestige" = 10
+		"Realms" = 10
+		"Dominion" = 10
+		"Holdings" = 10
+	}
+}
+
+# Fallen Imperium Ruler Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_ruler_desc"
+	parts = {
+		"Imperial" = 10
+		"Crown" = 10
+		"Imperium" = 10
+	}
+}
+
+# Fallen Imperium Ruler Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_ruler_mid_desc"
+	parts = {
+		"Imperial" = 10
+		"Crown" = 10
+		"Imperium" = 10
 	}
 }
 
 # Xenophile
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_names_3"
+	key = "oc_fallen_imperium_senate_names"
+	parts = {		
+		"Progenitors" = 10
+		"Forerunners" = 10		
+		"Ancients" = 10
+	}
+}
+
+# Xenophile
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_exarch_names"
 	parts = {		
 		"Progenitors" = 10
 		"Forerunners" = 10		
