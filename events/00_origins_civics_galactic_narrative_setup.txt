@@ -1,0 +1,20 @@
+namespace = origins_civics_galactic_narrative_setup
+# by cbshing
+
+### Galactic Narrative Setup
+# Determines the Galactic Narrative
+
+# First Contact
+event = {
+	id = origins_civics_communication_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+}

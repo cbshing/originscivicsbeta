@@ -196,16 +196,6 @@ empire_name_parts_list = {
 	}
 }
 
-# Materialist
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_names_2"
-	parts = {
-		"Archivists" = 10		
-		"Conservers" = 10
-		"Chroniclers" = 10
-	}
-}
-
 # Xenophile
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_names_3"
@@ -213,6 +203,39 @@ empire_name_parts_list = {
 		"Progenitors" = 10
 		"Forerunners" = 10		
 		"Ancients" = 10
+	}
+}
+
+# Fallen Imperium Archives
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_archives_names"
+	parts = {
+		"Archives" = 10		
+		"Library" = 10
+		"University" = 10
+		"Museum" = 5
+	}
+}
+
+# Fallen Imperium Archives Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_archives_desc"
+	parts = {
+		"Imperial" = 10
+		"Royal" = 10
+		"Great" = 10
+		"Grand" = 10
+	}
+}
+
+# Fallen Imperium Archives Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_archives_mid_desc"
+	parts = {
+		"Imperial" = 10
+		"Royal" = 10
+		"Great" = 10
+		"Grand" = 10
 	}
 }
 
@@ -284,20 +307,6 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_materialist		
-		}
-	}
-	format = "format.fallen.2"
-	noun = "[This.GetSpeciesName]"
-	# Human Remnant
-}
-
-empire_name_format = {
-	random_weight = {
-		factor = 0
-		modifier = {
-			add = 100
-			is_country_type = fallen_empire
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
@@ -320,4 +329,20 @@ empire_name_format = {
 	noun = "[This.Capital.GetName]"
 	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_papacy_names>"
 	# Holy See of Earth
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_materialist
+			has_government = "gov_fallen_imperium_archives"
+		}
+	}
+	format = "format.oc_fallen_archives.1"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <gov_fallen_imperium_archives_names>"
+	# Great Library of Earth
 }
