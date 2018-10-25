@@ -66,6 +66,18 @@ civic_oc_primitive_fallen_colony = {
 
 # Fallen Empires
 
+civic_oc_fallen_imperium_ruler = { # e.g. emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
 civic_oc_fallen_imperium_exarch = { # e.g. exarch
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"

@@ -190,9 +190,10 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_ruler_names"
 	parts = {
-		"Realms" = 10
-		"Dominion" = 10
-		"Holdings" = 10
+		"Realm" = 5
+		"Domain" = 5
+		"Holdings" = 5
+		"Worlds" = 10
 	}
 }
 
@@ -201,8 +202,9 @@ empire_name_parts_list = {
 	key = "oc_fallen_imperium_ruler_desc"
 	parts = {
 		"Imperial" = 10
-		"Crown" = 10
-		"Imperium" = 10
+		"Royal" = 5
+		"Crown" = 5
+		"Core" = 10
 	}
 }
 
@@ -211,28 +213,45 @@ empire_name_parts_list = {
 	key = "oc_fallen_imperium_ruler_mid_desc"
 	parts = {
 		"Imperial" = 10
-		"Crown" = 10
-		"Imperium" = 10
+		"Royal" = 5
+		"Crown" = 5
+		"Core" = 10
 	}
 }
 
-# Xenophile
+# Fallen Imperium Senate
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_senate_names"
 	parts = {		
-		"Progenitors" = 10
-		"Forerunners" = 10		
-		"Ancients" = 10
+		"Senate" = 10
+		"Congress" = 10		
+		"Parliament" = 10
 	}
 }
 
-# Xenophile
+# Fallen Imperium Senate Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_senate_desc"
+	parts = {
+		"Imperial" = 10
+		"Grand" = 5
+	}
+}
+
+# Fallen Imperium Senate Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_senate_mid_desc"
+	parts = {
+		"Imperial" = 10s
+		"Grand" = 5
+	}
+}
+
+# Fallen Imperium Exarch
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_exarch_names"
 	parts = {		
-		"Progenitors" = 10
-		"Forerunners" = 10		
-		"Ancients" = 10
+		"Exarchate" = 10
 	}
 }
 
@@ -323,12 +342,13 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_xenophobe
+			has_government = "gov_fallen_imperium_ruler"
 		}
 	}
-	format = "format.fallen.1"
+	format = "format.gov_fallen_imperium_ruler.1"
 	noun = "[This.GetSpeciesName]"
-	# Human Core Worlds
+	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_ruler_names>"
+	# Human Imperial Worlds
 }
 
 empire_name_format = {
@@ -337,12 +357,29 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_xenophile
+			has_government = "gov_fallen_imperium_senate"
 		}
 	}
-	format = "format.fallen.3"
+	format = "format.gov_fallen_imperium_senate.1"
 	noun = "[This.GetSpeciesName]"
-	# Human Ancients
+	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_senate_names>"
+	# Human Imperial Senate
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = fallen_empire
+			has_ethic = ethic_fanatic_spiritualist
+			has_government = "gov_fallen_imperium_exarch"
+		}
+	}
+	format = "format.oc_fallen_exarch.1"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_exarch_names>"
+	# Exarchate of Earth
 }
 
 empire_name_format = {

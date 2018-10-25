@@ -82,7 +82,7 @@ country_event = {
 	}
 	
 	immediate = {
-		capital_scope.solar_system = { # scope to capital
+		capital_scope.solar_system = { # scope to capital system
 		
 			# isolate star system
 			if = { limit = { oc_requires_isolate_star = yes } 
@@ -101,7 +101,18 @@ country_event = {
 			}
 			
 			if = { limit = { oc_requires_megastruture_habitat = yes } 
-				
+				if = { limit = { oc_requires_megastruture_habitat_over_homeworld = yes }  
+					random_owned_planet = {
+						limit = { is_capital = yes }
+						spawn_megastructure_habitat = yes
+					}
+				}
+				else = {
+					random_system_planet = {
+						limit = { is_irregular_planet = no }
+						spawn_megastructure_habitat = yes
+					}
+				}
 			}
 			
 			if = { limit = { oc_requires_megastruture_gateway = yes } 
@@ -149,16 +160,94 @@ country_event = {
 			}
 			
 			if = { limit = { oc_requires_homeworld_class_to_change = yes }
+				if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }
 				
+				}
+				if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
+					random_owned_planet = {
+						limit = { is_capital = yes }
+						change_pc = pc_nuked
+					}
+				}
+				if = { limit = { oc_requires_homeworld_class_to_change_to_gaia = yes }
+				
+				}
 			}
 			
 			if = { limit = { oc_requires_all_planets_habitable = yes }
-				
+				if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
+					random_owned_planet = {
+						limit = { is_irregular_planet = no }
+						change_pc = pc_nuked
+					}
+				}
 			}
 		
 		}
 	}
 }
+
+# Planet
+country_event = {
+	id = origins_civics_empire_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_planet_setup = yes
+	}
+	
+	immediate = {
+		if = { limit = { oc_requires_generic_planet_setup = yes } 
+			every_planet_within_border = {
+				limit = { NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_generic = yes
+				add_pops_on_planet = yes
+			}
+		}
+		if = { limit = { oc_requires_hive_planet_setup = yes } 
+			every_planet_within_border = {
+				limit = { NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_hive = yes
+				add_pops_on_planet = yes
+			}
+		}
+		if = { limit = { oc_requires_machine_planet_setup = yes } 
+			every_planet_within_border = {
+				limit = { NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_machine = yes
+				add_pops_on_planet = yes
+			}
+		}
+		if = { limit = { oc_requires_tomb_planet_setup = yes } 
+			every_planet_within_border = {
+				limit = { NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_post_apoc = yes
+				add_pops_on_planet = yes
+			}
+		}
+		if = { limit = { oc_requires_gaia_planet_setup = yes } 
+			every_planet_within_border = {
+				limit = { NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_post_apoc = yes
+				add_pops_on_planet = yes
+			}
+		}
+		if = { limit = { oc_requires_generic_habitat_setup = yes } 
+			every_planet_within_border = {
+				limit = { is_planet_class = pc_habitat  NOT = { has_planet_flag = advanced_colony } }
+				reset_start_buildings_and_blockers_habitat = yes
+				add_pops_on_planet = yes
+			}
+			every_planet_within_border = {
+				limit = { is_planet_class = pc_habitat  has_planet_flag = advanced_colony }
+				reset_start_buildings_and_blockers_advanced_colony_habitat = yes
+				add_advanced_colony_pops_on_planet = yes
+			}
+		}
+	}
+}
+
 
 # Handles setup of civics that require modifications of the species
 # -Requires species have a new homeworld type
@@ -170,7 +259,7 @@ country_event = {
 # ->Colonies of Earth
 # ->Colonies of Man
 country_event = {
-	id = origins_civics_empire_setup.4
+	id = origins_civics_empire_setup.5
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -179,7 +268,7 @@ country_event = {
 	}
 	
 	immediate = {
-		
+		if = { }
 	}
 }
 
@@ -188,7 +277,7 @@ country_event = {
 # ->Lost Colony
 # -Change the homeworld of the species to match that of a paired species
 country_event = {
-	id = origins_civics_empire_setup.5
+	id = origins_civics_empire_setup.6
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -203,8 +292,6 @@ country_event = {
 }
 
 # Pop
-
-# Planet
 
 # Leaders
 

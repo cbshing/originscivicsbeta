@@ -83,6 +83,27 @@ gov_primitive_colonial_government = {
 
 ## Fallen Imperium
 # Imperium Exarch
+gov_fallen_imperium_ruler = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	
+	should_force_rename = yes
+
+	possible = {
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
+		has_valid_civic = civic_oc_fallen_imperium_ruler
+	}
+
+	weight = {
+		base = 100000
+	
+
+# Imperium Exarch
 gov_fallen_imperium_exarch = {
 	ruler_title = RT_EXARCH
 	ruler_title_female = RT_EXARCH
