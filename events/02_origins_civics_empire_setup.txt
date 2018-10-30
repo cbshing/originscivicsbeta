@@ -187,9 +187,90 @@ country_event = {
 	}
 }
 
-# Planet
+# Handles setup of civics that require modifications of the species
+# -Requires species have a new homeworld type
+# ->Voidborne
+# ->Nuclear Mutation
+# ->Colonies of Man
+# -Requires species to have a special trait
+# ->Cybernetic
+# ->Latent Psionic
+# ->Synthetic
+# ->Psionic
+# ->Brain Slug
+# -Requires species to have a different homeworld
+# ->Colonies of Earth
+# ->Colonies of Man
 country_event = {
 	id = origins_civics_empire_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_species_setup = yes
+	}
+	
+	immediate = {
+		if = { limit = { oc_is_habitat_preference = yes } 
+		
+		}
+		if = { limit = { oc_is_nuked_preference = yes } 
+		
+		}
+		if = { limit = { oc_is_continental_preference = yes } 
+		
+		}
+		
+		if = { limit = { oc_has_cybernetic_species_trait = yes } 
+		
+		}
+		if = { limit = { oc_has_latent_psionic_species_trait = yes } 
+		
+		}
+		if = { limit = { oc_has_synthetic_species_trait = yes } 
+		
+		}
+		if = { limit = { oc_has_psionic_species_trait = yes } 
+		
+		}
+		if = { limit = { oc_has_brain_slug_species_trait = yes } 
+		
+		}
+		
+		if = { limit = { oc_is_from_earth = yes } 
+		
+		}
+	}
+}
+
+# Handles setup of civics that require making the empire a colony of another empire
+# -Find an empire with the same species and pair that empire up
+# ->Lost Colony
+# -Change the homeworld of the species to match that of a paired species
+country_event = {
+	id = origins_civics_empire_setup.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_colony_setup = yes
+	}
+	
+	immediate = {
+		#find similar species
+		#add flags effects
+	}
+}
+
+# Planet
+# -Resets Buildings and Blockers on Planets
+# ->Generic Empire
+# ->Hive Empire
+# ->Machine Empire
+# -Adds Special Buildings and Blockers to Planets
+# -Setup Colony Homeworld
+country_event = {
+	id = origins_civics_empire_setup.6
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -229,11 +310,11 @@ country_event = {
 		if = { limit = { oc_requires_gaia_planet_setup = yes } 
 			every_planet_within_border = {
 				limit = { NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings_and_blockers_post_apoc = yes
+				reset_start_buildings_and_blockers_gaia = yes
 				add_pops_on_planet = yes
 			}
 		}
-		if = { limit = { oc_requires_generic_habitat_setup = yes } 
+		if = { limit = { oc_requires_habitat_setup = yes } 
 			every_planet_within_border = {
 				limit = { is_planet_class = pc_habitat  NOT = { has_planet_flag = advanced_colony } }
 				reset_start_buildings_and_blockers_habitat = yes
@@ -245,49 +326,6 @@ country_event = {
 				add_advanced_colony_pops_on_planet = yes
 			}
 		}
-	}
-}
-
-
-# Handles setup of civics that require modifications of the species
-# -Requires species have a new homeworld type
-# ->Voidborne
-# ->Nuclear Mutation
-# -Requires species to have a special trait
-# ->
-# -Requires species to have a different homeworld
-# ->Colonies of Earth
-# ->Colonies of Man
-country_event = {
-	id = origins_civics_empire_setup.5
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		oc_requires_species_setup = yes
-	}
-	
-	immediate = {
-		if = { }
-	}
-}
-
-# Handles setup of civics that require making the empire a colony of another empire
-# -Find an empire with the same species and pair that empire up
-# ->Lost Colony
-# -Change the homeworld of the species to match that of a paired species
-country_event = {
-	id = origins_civics_empire_setup.6
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		oc_requires_colony_setup = yes
-	}
-	
-	immediate = {
-		#find similar species
-		#add flags effects
 	}
 }
 
