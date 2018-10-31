@@ -126,8 +126,8 @@ gov_fallen_imperium_exarch = {
 }
 
 gov_fallen_imperium_senate = {
-	ruler_title = RT_GRAND_CHANCELLOR
-	ruler_title_female = RT_GRAND_CHANCELLOR_FEMALE
+	ruler_title = RT_LORD_CHANCELLOR
+	ruler_title_female = RT_LORD_CHANCELLOR_FEMALE
 	
 	should_force_rename = yes
 
@@ -147,8 +147,8 @@ gov_fallen_imperium_senate = {
 }
 
 gov_fallen_imperium_papacy = {
-	ruler_title = RT_ARCHPOPE
-	ruler_title_female = RT_ARCHPOPE_FEMALE
+	ruler_title = RT_ECCLESIARCH
+	ruler_title_female = RT_ECCLESIARCH_FEMALE
 	
 	should_force_rename = yes
 
@@ -168,8 +168,8 @@ gov_fallen_imperium_papacy = {
 }
 
 gov_fallen_imperium_archives = {
-	ruler_title = RT_HIGH_LIBRARIAN
-	ruler_title_female = RT_HIGH_LIBRARIAN_FEMALE
+	ruler_title = RT_LORD_LIBRARIAN
+	ruler_title_female = RT_LORD_LIBRARIAN_FEMALE
 	
 	should_force_rename = yes
 

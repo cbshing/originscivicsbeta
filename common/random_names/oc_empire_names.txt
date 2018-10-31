@@ -16,24 +16,6 @@ empire_name_parts_list = {
 
 ### Descriptives
 
-# Imperial Fallen Colonial Government Descriptive
-empire_name_parts_list = {
-	key = "oc_imperial_fallen_colonial_gen_desc"
-	parts = {
-		"Imperial" = 4
-		"Royal" = 2
-	}
-}
-
-# Imperial Fallen Colonial Government Middle Descriptive
-empire_name_parts_list = {
-	key = "oc_imperial_fallen_colonial_gen_mid_desc"
-	parts = {
-		"Imperial" = 4
-		"Royal" = 2
-	}
-}
-
 # Fallen Colonial Government Descriptive
 empire_name_parts_list = {
 	key = "oc_fallen_colonial_gen_desc"
@@ -62,7 +44,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -81,7 +66,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -100,7 +88,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -119,7 +110,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 4
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -138,7 +132,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -157,7 +154,10 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 8
-			has_government = "gov_fallen_colonial_government"
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+				has_government = "gov_fallen_imperial_colonial_government"
+			}
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -192,7 +192,6 @@ empire_name_parts_list = {
 	parts = {
 		"Realm" = 5
 		"Domain" = 5
-		"Holdings" = 5
 		"Worlds" = 10
 	}
 }
@@ -201,10 +200,8 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_ruler_desc"
 	parts = {
-		"Imperial" = 10
-		"Royal" = 5
-		"Crown" = 5
-		"Core" = 10
+		"Imperial Core" = 10
+		"Imperial Crown" = 5
 	}
 }
 
@@ -212,10 +209,8 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_ruler_mid_desc"
 	parts = {
-		"Imperial" = 10
-		"Royal" = 5
-		"Crown" = 5
-		"Core" = 10
+		"Imperial Core" = 10
+		"Imperial Crown" = 5
 	}
 }
 
@@ -223,9 +218,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_senate_names"
 	parts = {		
-		"Senate" = 10
-		"Congress" = 10		
-		"Parliament" = 10
+		"Sector" = 10
+		"Domain" = 10
+		"Worlds" = 5
 	}
 }
 
@@ -233,8 +228,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_senate_desc"
 	parts = {
-		"Imperial" = 10
-		"Grand" = 5
+		"Galactic Senate" = 10
+		"Imperial Senate" = 10
+		"Galactic Congress" = 5
 	}
 }
 
@@ -242,8 +238,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_senate_mid_desc"
 	parts = {
-		"Imperial" = 10s
-		"Grand" = 5
+		"Galactic Senate" = 10
+		"Imperial Senate" = 10
+		"Galactic Congress" = 5
 	}
 }
 
@@ -252,6 +249,25 @@ empire_name_parts_list = {
 	key = "oc_fallen_imperium_exarch_names"
 	parts = {		
 		"Exarchate" = 10
+		"Exarchy" = 5
+	}
+}
+
+# Fallen Imperium Exarch Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_exarch_desc"
+	parts = {
+		"Galactic" = 10
+		"Imperial" = 10
+	}
+}
+
+# Fallen Imperium Exarch Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_imperium_exarch_mid_desc"
+	parts = {
+		"Galactic" = 10
+		"Imperial" = 10
 	}
 }
 
@@ -259,10 +275,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_archives_names"
 	parts = {
-		"Archives" = 10		
-		"Library" = 10
-		"University" = 10
-		"Museum" = 5
+		"Sector" = 10
+		"Domain" = 5
+		"Worlds" = 10
 	}
 }
 
@@ -270,10 +285,12 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_archives_desc"
 	parts = {
-		"Imperial" = 10
-		"Royal" = 10
-		"Great" = 10
-		"Grand" = 10
+		"Galactic Archives" = 10
+		"Imperial Archives" = 10
+		"Galactic Library" = 10
+		"Imperial Library" = 10
+		"Galactic University" = 5
+		"Imperial University" = 10
 	}
 }
 
@@ -281,10 +298,12 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_archives_mid_desc"
 	parts = {
-		"Imperial" = 10
-		"Royal" = 10
-		"Great" = 10
-		"Grand" = 10
+		"Galactic Archives" = 10
+		"Imperial Archives" = 10
+		"Galactic Library" = 10
+		"Imperial Library" = 10
+		"Galactic University" = 5
+		"Imperial University" = 10
 	}
 }
 
@@ -293,7 +312,7 @@ empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_names"
 	parts = {	
 		"States" = 10		
-		"See" = 10
+		"Worlds" = 10
 		"Realms" = 10
 	}
 }
@@ -302,9 +321,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_desc"
 	parts = {
-		"Holy" = 10
+		"Holy See" = 10
 		"Episcopal" = 10
-		"Heavenly" = 10
+		"Ecclesiarchy" = 10
 	}
 }
 
@@ -312,9 +331,9 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_mid_desc"
 	parts = {
-		"Holy" = 10
+		"Holy See" = 10
 		"Episcopal" = 10
-		"Heavenly" = 10
+		"Ecclesiarchy" = 10
 	}
 }
 
@@ -348,7 +367,7 @@ empire_name_format = {
 	format = "format.gov_fallen_imperium_ruler.1"
 	noun = "[This.GetSpeciesName]"
 	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_ruler_names>"
-	# Human Imperial Worlds
+	# Imperial Core Worlds
 }
 
 empire_name_format = {
@@ -363,7 +382,7 @@ empire_name_format = {
 	format = "format.gov_fallen_imperium_senate.1"
 	noun = "[This.GetSpeciesName]"
 	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_senate_names>"
-	# Human Imperial Senate
+	# Imperial Senate Worlds
 }
 
 empire_name_format = {
@@ -379,7 +398,7 @@ empire_name_format = {
 	format = "format.oc_fallen_exarch.1"
 	noun = "[This.Capital.GetName]"
 	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_exarch_names>"
-	# Exarchate of Earth
+	# Imperial Exarchate of Earth
 }
 
 empire_name_format = {
@@ -393,9 +412,9 @@ empire_name_format = {
 		}
 	}
 	format = "format.oc_fallen_papacy.1"
-	noun = "[This.Capital.GetName]"
-	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_papacy_names>"
-	# Holy See of Earth
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_papacy_names>"
+	# Holy See Worlds
 }
 
 empire_name_format = {
@@ -409,7 +428,7 @@ empire_name_format = {
 		}
 	}
 	format = "format.oc_fallen_archives.1"
-	noun = "[This.Capital.GetName]"
-	prefix_format = "[This.Capital.GetName] <gov_fallen_imperium_archives_names>"
-	# Great Library of Earth
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_archives_names>"
+	# Galactic Archives Worlds
 }

@@ -48,6 +48,14 @@ oc_requires_solar_system_setup = {
 ### setup archetypes triggers
 
 # scope: country 
+oc_requires_megastruture_habitat = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 oc_requires_megastruture_dyson_sphere = {
 	OR = {
 		oc_requires_megastruture_dyson_sphere_tier1 = yes
@@ -137,18 +145,6 @@ oc_requires_megastruture_dyson_sphere_tier1 = {
 # scope: country 
 oc_requires_megastruture_dyson_sphere_tier5 = {
 	OR = {
-		has_country_flag = invalid_oc_country
-	}
-}
-
-# scope: country 
-oc_requires_megastruture_habitat = {
-	OR = {
-		has_oc_voidborne_civic = yes
-		has_oc_habitat_life_civic = yes
-		has_oc_hive_voidborne_civic = yes
-		has_oc_hive_habitat_life_civic = yes
-		has_oc_robo_voidborne_mechanisms_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -248,6 +244,7 @@ oc_requires_homeworld_class_to_change_to_nuked = {
 oc_requires_homeworld_class_to_change_to_gaia = {
 	OR = {
 		has_oc_paradise_life_civic = yes
+		has_oc_hive_life_seeded_civic = yes
 		has_oc_hive_paradise_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}
