@@ -11,7 +11,7 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag =oc_ galactive_narrative_set }
+		NOT = { has_global_flag = has_oc_galactive_narrative }
 	}
 	
 	immediate = {
@@ -30,7 +30,7 @@ event = {
 							}
 						}
 					}
-					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = has_oc_galactive_narrative
 					set_global_flag = oc_generic_galactic_imperium_narrative
 				}
 				10 = { ### Generic Galactic Imperium 
@@ -45,7 +45,7 @@ event = {
 							}
 						}
 					}
-					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = has_oc_galactive_narrative
 					set_global_flag = oc_generic_galactic_imperium_narrative
 				}
 				10 = { ### Generic Galactic Imperium 
@@ -60,11 +60,34 @@ event = {
 							}
 						}
 					}
-					set_global_flag = oc_galactive_narrative_set
+					set_global_flag = has_oc_galactive_narrative
 					set_global_flag = oc_generic_galactic_imperium_narrative
 				}
 				120 = { }
 			}
+		}
+	}
+}
+
+country_event = {
+	id = origins_civics_galaxy_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = has_oc_galactive_narrative
+		is_country_type = fallen_empire
+		NOT = { has_country_flag = species_changed }
+	}
+	
+	immediate = {
+		owner_species = { save_event_target_as : primary_fallen_species }
+		every_country = {
+			limit = {
+				is_country_type = fallen_empire
+				NOT = { has_country_flag = species_changed }
+			}
+			speci
 		}
 	}
 }
