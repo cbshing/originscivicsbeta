@@ -82,8 +82,8 @@ gov_primitive_colonial_government = {
 }
 
 ## Fallen Imperium
-# Imperium Exarch
-gov_fallen_imperium_ruler = {
+# Imperium Successor
+gov_fallen_imperium_successor = {
 	ruler_title = RT_EMPEROR
 	ruler_title_female = RT_EMPRESS
 	
@@ -93,20 +93,18 @@ gov_fallen_imperium_ruler = {
 		OR = {
 			has_valid_civic = civic_lethargic_leadership
 			has_valid_civic = civic_empire_in_decline
-			has_valid_civic = civic_revanchist_fervor
-			has_valid_civic = civic_ancient_caches_of_technology
 		}
-		has_valid_civic = civic_oc_fallen_imperium_ruler
+		has_valid_civic = civic_oc_fallen_imperium_successor
 	}
 
 	weight = {
 		base = 100000
+}
 	
-
-# Imperium Exarch
-gov_fallen_imperium_exarch = {
-	ruler_title = RT_EXARCH
-	ruler_title_female = RT_EXARCH
+# Imperium Rump States
+gov_fallen_imperium_rump_state = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
 	
 	should_force_rename = yes
 
@@ -114,8 +112,25 @@ gov_fallen_imperium_exarch = {
 		OR = {
 			has_valid_civic = civic_lethargic_leadership
 			has_valid_civic = civic_empire_in_decline
-			has_valid_civic = civic_revanchist_fervor
-			has_valid_civic = civic_ancient_caches_of_technology
+		}
+		has_valid_civic = civic_oc_fallen_imperium_rump_state
+	}
+
+	weight = {
+		base = 100000
+}
+
+# Imperium Exarch
+gov_fallen_imperium_exarch = {
+	ruler_title = RT_EXARCH
+	ruler_title_female = RT_EXARCH_FEMALE
+	
+	should_force_rename = yes
+
+	possible = {
+		OR = {
+			has_valid_civic = civic_lethargic_leadership
+			has_valid_civic = civic_empire_in_decline
 		}
 		has_valid_civic = civic_oc_fallen_imperium_exarch
 	}
@@ -125,30 +140,10 @@ gov_fallen_imperium_exarch = {
 	}
 }
 
-gov_fallen_imperium_senate = {
-	ruler_title = RT_LORD_CHANCELLOR
-	ruler_title_female = RT_LORD_CHANCELLOR_FEMALE
-	
-	should_force_rename = yes
-
-	possible = {
-		OR = {
-			has_valid_civic = civic_lethargic_leadership
-			has_valid_civic = civic_empire_in_decline
-			has_valid_civic = civic_revanchist_fervor
-			has_valid_civic = civic_ancient_caches_of_technology
-		}
-		has_valid_civic = civic_oc_fallen_imperium_senate
-	}
-
-	weight = {
-		base = 100000
-	}
-}
-
+# Imperium Papacy
 gov_fallen_imperium_papacy = {
-	ruler_title = RT_ECCLESIARCH
-	ruler_title_female = RT_ECCLESIARCH_FEMALE
+	ruler_title = RT_ARCHPOPE
+	ruler_title_female = RT_ARCHPOPE_FEMALE
 	
 	should_force_rename = yes
 
@@ -156,8 +151,6 @@ gov_fallen_imperium_papacy = {
 		OR = {
 			has_valid_civic = civic_lethargic_leadership
 			has_valid_civic = civic_empire_in_decline
-			has_valid_civic = civic_revanchist_fervor
-			has_valid_civic = civic_ancient_caches_of_technology
 		}
 		has_valid_civic = civic_oc_fallen_imperium_papacy
 	}
@@ -167,20 +160,38 @@ gov_fallen_imperium_papacy = {
 	}
 }
 
-gov_fallen_imperium_archives = {
-	ruler_title = RT_LORD_LIBRARIAN
-	ruler_title_female = RT_LORD_LIBRARIAN_FEMALE
+# Imperium Awakened Successor
+gov_awakened_imperium = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
 	
 	should_force_rename = yes
 
 	possible = {
 		OR = {
-			has_valid_civic = civic_lethargic_leadership
-			has_valid_civic = civic_empire_in_decline
 			has_valid_civic = civic_revanchist_fervor
 			has_valid_civic = civic_ancient_caches_of_technology
 		}
-		has_valid_civic = civic_oc_fallen_imperium_archives
+		has_valid_civic = civic_oc_awakened_imperium
+	}
+
+	weight = {
+		base = 100000
+}
+
+# Imperium Papacy
+gov_awakened_imperium_papacy = {
+	ruler_title = RT_HOLY_EMPEROR
+	ruler_title_female = RT_HOLY_EMPRESS
+	
+	should_force_rename = yes
+
+	possible = {
+		OR = {
+			has_valid_civic = civic_revanchist_fervor
+			has_valid_civic = civic_ancient_caches_of_technology
+		}
+		has_valid_civic = civic_oc_awakened_imperium_papacy
 	}
 
 	weight = {

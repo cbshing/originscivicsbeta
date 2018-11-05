@@ -186,9 +186,9 @@ empire_name_parts_list = {
 
 ### FALLEN EMPIRE NAMES
 
-# Fallen Imperium Ruler
+# Fallen Imperium Successor
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_ruler_names"
+	key = "oc_fallen_imperium_successor_names"
 	parts = {
 		"Realm" = 5
 		"Domain" = 5
@@ -196,51 +196,28 @@ empire_name_parts_list = {
 	}
 }
 
-# Fallen Imperium Ruler Descriptive
+# Fallen Imperium Successor Descriptive
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_ruler_desc"
+	key = "oc_fallen_imperium_successor_desc"
 	parts = {
-		"Imperial Core" = 10
-		"Imperial Crown" = 5
+		"Imperial" = 10
 	}
 }
 
-# Fallen Imperium Ruler Descriptive
+# Fallen Imperium Successor Descriptive
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_ruler_mid_desc"
+	key = "oc_fallen_imperium_successor_mid_desc"
 	parts = {
-		"Imperial Core" = 10
-		"Imperial Crown" = 5
+		"Imperial" = 10
 	}
 }
 
-# Fallen Imperium Senate
+# Fallen Imperium Rump State
 empire_name_parts_list = {
-	key = "oc_fallen_imperium_senate_names"
+	key = "oc_fallen_imperium_rump_state_names"
 	parts = {		
-		"Sector" = 10
 		"Domain" = 10
-		"Worlds" = 5
-	}
-}
-
-# Fallen Imperium Senate Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_senate_desc"
-	parts = {
-		"Galactic Senate" = 10
-		"Imperial Senate" = 10
-		"Galactic Congress" = 5
-	}
-}
-
-# Fallen Imperium Senate Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_senate_mid_desc"
-	parts = {
-		"Galactic Senate" = 10
-		"Imperial Senate" = 10
-		"Galactic Congress" = 5
+		"Kingdom" = 10
 	}
 }
 
@@ -248,62 +225,8 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_exarch_names"
 	parts = {		
-		"Exarchate" = 10
-		"Exarchy" = 5
-	}
-}
-
-# Fallen Imperium Exarch Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_exarch_desc"
-	parts = {
-		"Galactic" = 10
-		"Imperial" = 10
-	}
-}
-
-# Fallen Imperium Exarch Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_exarch_mid_desc"
-	parts = {
-		"Galactic" = 10
-		"Imperial" = 10
-	}
-}
-
-# Fallen Imperium Archives
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_archives_names"
-	parts = {
-		"Sector" = 10
-		"Domain" = 5
-		"Worlds" = 10
-	}
-}
-
-# Fallen Imperium Archives Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_archives_desc"
-	parts = {
-		"Galactic Archives" = 10
-		"Imperial Archives" = 10
-		"Galactic Library" = 10
-		"Imperial Library" = 10
-		"Galactic University" = 5
-		"Imperial University" = 10
-	}
-}
-
-# Fallen Imperium Archives Descriptive
-empire_name_parts_list = {
-	key = "oc_fallen_imperium_archives_mid_desc"
-	parts = {
-		"Galactic Archives" = 10
-		"Imperial Archives" = 10
-		"Galactic Library" = 10
-		"Imperial Library" = 10
-		"Galactic University" = 5
-		"Imperial University" = 10
+		"Exarchate" = 5
+		"Exarchy" = 10
 	}
 }
 
@@ -311,7 +234,7 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_names"
 	parts = {	
-		"States" = 10		
+		"Domain" = 10		
 		"Worlds" = 10
 		"Realms" = 10
 	}
@@ -321,7 +244,7 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_desc"
 	parts = {
-		"Holy See" = 10
+		"Holy" = 10
 		"Episcopal" = 10
 		"Ecclesiarchy" = 10
 	}
@@ -331,9 +254,123 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "oc_fallen_imperium_papacy_mid_desc"
 	parts = {
-		"Holy See" = 10
+		"Holy" = 10
 		"Episcopal" = 10
 		"Ecclesiarchy" = 10
+	}
+}
+
+### AWAKENED EMPIRE NAMES
+
+# Awakened Imperium
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_names"
+	parts = {
+		"Empire" = 10
+		"Imperium" = 5
+	}
+}
+
+# Awakened Imperium Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_names_desc"
+	parts = {
+		"Restored" = 10
+		"Revived" = 10
+		"Renewed" = 10
+	}
+}
+
+# Awakened Imperium Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_names_mid_desc"
+	parts = {
+		"Restored" = 10
+		"Revived" = 10
+		"Renewed" = 10
+	}
+}
+
+# Awakened Imperium Xenophiles
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_xenophile_names"
+	parts = {
+		"Empire" = 10
+		"Imperium" = 5
+	}
+}
+
+# Awakened Imperium Xenophiles Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_xenophile_names_desc"
+	parts = {
+		"Reunited" = 10
+		"Reunified" = 10
+	}
+}
+
+# Awakened Imperium Xenophiles Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_names_xenophile_mid_desc"
+	parts = {
+		"Reunited" = 10
+		"Reunified" = 10
+	}
+}
+
+# Awakened Imperium Xenophobes
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_xenophobes_names"
+	parts = {
+		"Empire" = 10
+		"Imperium" = 5
+	}
+}
+
+# Awakened Imperium Xenophobes Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_xenophobes_names_desc"
+	parts = {
+		"Reclaimed" = 5
+		"Galactic" = 10
+		"Great" = 10
+	}
+}
+
+# Awakened Imperium Xenophobes Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_xenophobes_names_mid_desc"
+	parts = {
+		"Reclaimed" = 5
+		"Galactic" = 10
+		"Great" = 10
+	}
+}
+
+# Awakened Imperium Papacy
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_papacy_names"
+	parts = {	
+		"Empire" = 10
+		"Imperium" = 5
+	}
+}
+
+# Awakened Imperium Papacy Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_papacy_desc"
+	parts = {
+		"Holy" = 10
+		"Divine" = 10
+	}
+}
+
+# Awakened Imperium Papacy Descriptive
+empire_name_parts_list = {
+	key = "oc_awakened_imperium_papacy_mid_desc"
+	parts = {
+		"Holy" = 10
+		"Divine" = 10
 	}
 }
 
@@ -355,19 +392,21 @@ empire_name_format = {
 	# Earth Colonial Government
 }
 
+### FALLEN EMPIRE NAMES
+
 empire_name_format = {
 	random_weight = {
 		factor = 0
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_government = "gov_fallen_imperium_ruler"
+			has_government = "gov_fallen_imperium_successor"
 		}
 	}
-	format = "format.gov_fallen_imperium_ruler.1"
+	format = "format.gov_fallen_imperium_successor.1"
 	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_ruler_names>"
-	# Imperial Core Worlds
+	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_successor_names>"
+	# Human Imperial Worlds
 }
 
 empire_name_format = {
@@ -376,13 +415,13 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_government = "gov_fallen_imperium_senate"
+			has_government = "gov_fallen_imperium_rump_state"
 		}
 	}
-	format = "format.gov_fallen_imperium_senate.1"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_senate_names>"
-	# Imperial Senate Worlds
+	format = "format.gov_fallen_imperium_rump_state.1"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_rump_state_names>"
+	# Kingdom of Earth
 }
 
 empire_name_format = {
@@ -391,14 +430,13 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_spiritualist
 			has_government = "gov_fallen_imperium_exarch"
 		}
 	}
 	format = "format.oc_fallen_exarch.1"
 	noun = "[This.Capital.GetName]"
 	prefix_format = "[This.Capital.GetName] <oc_fallen_imperium_exarch_names>"
-	# Imperial Exarchate of Earth
+	# Exarchate of Earth
 }
 
 empire_name_format = {
@@ -414,7 +452,7 @@ empire_name_format = {
 	format = "format.oc_fallen_papacy.1"
 	noun = "[This.GetSpeciesName]"
 	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_papacy_names>"
-	# Holy See Worlds
+	# Human Holy Worlds
 }
 
 empire_name_format = {
@@ -422,13 +460,60 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 100
-			is_country_type = fallen_empire
-			has_ethic = ethic_fanatic_materialist
-			has_government = "gov_fallen_imperium_archives"
+			is_country_type = awakened_fallen_empire
+			has_government = "gov_awakened_imperium"
 		}
 	}
-	format = "format.oc_fallen_archives.1"
+	format = "format.oc_awakened_imperium.1"
 	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <oc_fallen_imperium_archives_names>"
-	# Galactic Archives Worlds
+	prefix_format = "[This.GetSpeciesName] <oc_awakened_imperium_names>"
+	# Restored Human Empire
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_xenophile
+			has_government = "gov_awakened_imperium"
+		}
+	}
+	format = "format.oc_awakened_imperium_xenophile.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <oc_awakened_imperium_xenophile_names>"
+	# Reunited Human Empire
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_xenophobe
+			has_government = "gov_awakened_imperium"
+		}
+	}
+	format = "format.oc_awakened_imperium_xenophobes.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <oc_awakened_imperium_xenophobes_names>"
+	# Galactic Human Empire
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = awakened_fallen_empire
+			has_ethic = ethic_fanatic_spiritualist
+			has_government = "gov_awakened_imperium_papacy"
+		}
+	}
+	format = "format.oc_awakened_imperium.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <oc_awakened_imperium_papacy_names>"
+	# Holy Human Empire
 }

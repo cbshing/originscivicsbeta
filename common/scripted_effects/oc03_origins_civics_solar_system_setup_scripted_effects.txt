@@ -1,0 +1,146 @@
+# Origins Civics Solar System Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ########################
+# # Solar System Effects #
+# ########################
+
+### Stars & Planets ###
+# remove deposits and stations on planet (stars)
+# Scope: Planet
+clear_deposits_and_stations = {
+	clear_deposits = yes
+	if = { limit = { has_mining_station = yes } 
+		mining_station = { dismantle = yes }
+	}
+}
+
+### Megastructures ###
+# spawns habitat
+# Scope: Planet
+# root: Country
+spawn_megastructure_habitat = {
+	spawn_megastructure = {
+		type = habitat_0
+		location = this
+		owner = root
+	}
+}
+
+# spawns custom OC Dyson Sphere Tier2
+# Scope: Planet
+# root: Country
+spawn_megastructure_oc_dyson_sphere_tier2 = {
+	spawn_megastructure = { 
+		type = oc_dyson_sphere_2 
+		location = this
+		owner = root
+	}
+}
+
+# spawns custom OC Dyson Sphere Tier5
+# Scope: Planet
+# root: Country
+spawn_megastructure_oc_dyson_sphere_tier5 = {
+	spawn_megastructure = { 
+		type = oc_dyson_sphere_5
+		location = this
+		owner = root
+	}
+}
+
+### Gateways ###
+# spawns deactivated gateway
+# Scope: Solar System
+spawn_megastructure_gateway_ruined = {
+	spawn_megastructure = {
+		type = gateway_ruined
+		random_pos = yes
+		orbit_angle = 360
+	}
+}
+
+# activate random gateway
+# Scope: Any
+activate_megastructure_random_gateway = {
+	random_megastructure = {
+		limit = { is_megastructure_type = gateway_ruined }
+		upgrade_megastructure_to = gateway_restored
+		finish_upgrade = yes
+	}
+}
+
+# spawns under construction gateway with owner
+# Scope: Solar System
+# root: Country
+spawn_megastructure_gateway_construction = {
+	spawn_megastructure = {
+		type = gateway_0
+		random_pos = yes
+		orbit_angle = 360
+		owner = root
+	}
+}
+
+# spawns completed gateway with owner
+# Scope: Solar System
+# root: Country
+spawn_megastructure_gateway_complete = {
+	spawn_megastructure = {
+		type = gateway_final
+		random_pos = yes
+		orbit_angle = 360
+		owner = root
+	}
+}
+
+# spawns deactivated gateway
+# Scope: Solar System
+spawn_megastructure_l_gateway = {
+	spawn_megastructure = {
+		type = lgate_base 
+		random_pos = yes
+		orbit_angle = 30
+	}
+}
+
+### Wormholes ###
+# spawns wormhole to a random star at least Eucledian distance 50 away and max distance 200
+# Scope: Solar System
+spawn_linked_natural_wormhole = {
+	set_star_flag = has_wormhole
+	random_system = {
+		limit = { 
+			NOT = { has_natural_wormhole = yes } 
+			distance = {
+				source = prev
+				min_distance >= 50
+				max_distance <= 200
+			}
+		}
+		prev = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)		
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+		}
+		spawn_natural_wormhole = {
+			bypass_type = wormhole
+			random_pos = yes
+			orbit_angle = 360
+		}
+		link_wormholes = prev
+	}
+}

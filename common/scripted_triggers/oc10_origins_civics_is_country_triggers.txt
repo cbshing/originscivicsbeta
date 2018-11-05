@@ -1,0 +1,116 @@
+# Origins Civics Is Country Type Triggers
+# by cbshing
+#
+# Each of these triggers represents various civic archetypes that may trigger varying gameplay elements
+# This is used for story quests
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+# is type of country
+
+# scope: country 
+oc_is_from_earth = {
+	OR = {
+		oc_is_same_species_as_earth = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_same_species_as_earth = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_fallen_colonies_country = {
+	OR = {
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_habitat_country = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_habitat_life_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_oc_hive_habitat_life_civic = yes
+		has_oc_robo_voidborne_mechanisms_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_habitat_preference_country = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_gaia_preference_country = {
+	OR = {
+		has_valid_civic = civic_life_seeded
+		has_oc_hive_life_seeded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_nuked_preference_country = {
+	OR = {
+		has_valid_civic = civic_post_apocalyptic
+		has_oc_nuclear_mutation_civic  = yes
+		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_ringworld_preference_country = {
+	OR = {
+		has_oc_ringborne_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_isolated_civics = {
+	OR = {
+		has_oc_n_cluster_civic = yes
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_is_primitive_colonies_civics = {
+	OR = {
+		has_oc_primitive_lost_colony_civic = yes
+		has_oc_primitive_fallen_colony_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}

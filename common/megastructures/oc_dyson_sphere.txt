@@ -85,6 +85,7 @@ oc_dyson_sphere_0 = {
 		}
 	}
 	
+	# cannot be made
 	# root = system
 	# from = country	
 	#ai_weight = {
@@ -233,6 +234,8 @@ oc_dyson_sphere_5 = {
 			}
 			change_pc = pc_barren_cold
 		}
+		
+		#kill system planets
 		every_system_planet = {
 			limit = {
 				OR = {

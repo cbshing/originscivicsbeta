@@ -1,4 +1,4 @@
-# Origins Civics Requiress Setup Triggers
+# Origins Civics Requires Country Setup Triggers
 # by cbshing
 #
 # These triggers are referenced in the 01_origins_civics_empire_setup.txt
@@ -19,7 +19,7 @@
 #	}
 #
 
-### setup master event triggers
+### setup country triggers
 
 # scope: country 
 oc_requires_galaxy_setup = {
@@ -40,7 +40,23 @@ oc_requires_solar_system_setup = {
 	OR = {
 		oc_requires_isolate_star = yes
 		oc_requires_megastruture_dyson_sphere = yes
-		oc_requires_hostile_neighbors = yes
+		oc_requires_megastruture_habitat = yes
+		oc_requires_megastruture_gateway = yes
+		oc_requires_megastruture_l_gate = yes
+		oc_requires_megastruture_sentry_array = yes
+		oc_requires_megastruture_science_nexus = yes
+		oc_requires_natural_wormhole = yes
+		oc_requires_star_class_to_change = yes
+		oc_requires_second_habitable_planet = yes
+	}
+}
+
+# scope: country 
+oc_requires_species_setup = {
+	OR = {
+		oc_requires_homeworld_preference_to_change = yes
+		oc_requires_species_have_new_trait = yes
+		oc_requires_species_earth_setup = yes
 	}
 }
 
@@ -58,7 +74,7 @@ oc_requires_megastruture_habitat = {
 # scope: country 
 oc_requires_megastruture_dyson_sphere = {
 	OR = {
-		oc_requires_megastruture_dyson_sphere_tier1 = yes
+		oc_requires_megastruture_dyson_sphere_tier2 = yes
 		oc_requires_megastruture_dyson_sphere_tier5 = yes
 		has_country_flag = invalid_oc_country
 	}
@@ -75,10 +91,80 @@ oc_requires_megastruture_gateway = {
 }
 
 # scope: country 
+oc_requires_megastruture_sentry_array = {
+	OR = {
+		oc_requires_megastruture_sentry_array_tier2 = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_science_nexus = {
+	OR = {
+		oc_requires_megastruture_science_nexus_tier2 = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 oc_requires_star_class_to_change = {
 	OR = {
 		oc_requires_star_class_change_to_blackhole = yes
 		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_all_planets_habitable = {
+	OR = {
+		oc_requires_all_planets_class_to_change_to_nuked = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_preference_to_change = {
+	OR = {
+		oc_requires_habitat_preference = yes
+		oc_requires_gaia_preference = yes
+		oc_requires_nuked_preference = yes
+		oc_requires_continental_preference = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_species_have_new_trait = {
+	OR = {
+		oc_has_cybernetic_species_trait = yes
+		oc_has_latent_psionic_species_trait = yes
+		oc_has_synthetic_species_trait = yes
+		oc_has_psionic_species_trait = yes
+		oc_has_brain_slug_species_trait = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_colony_setup = {
+	OR = {
+		has_oc_lost_colony_civic = yes
+		has_oc_exiled_colony_civic = yes
+		has_oc_sublight_empire_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_oc_refugee_saviour_civic = yes
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_new_homeworld = {
+	OR = {
+		oc_requires_new_homeworld_is_secondary_planet = yes
+		oc_requires_new_homeworld_is_habitat = yes
+		oc_is_from_earth = yes
 	}
 }
 
@@ -135,7 +221,7 @@ oc_requires_isolate_star = {
 }
 
 # scope: country 
-oc_requires_megastruture_dyson_sphere_tier1 = {
+oc_requires_megastruture_dyson_sphere_tier2 = {
 	OR = {
 		has_oc_dyson_engineers_civic = yes
 		has_country_flag = invalid_oc_country
@@ -179,14 +265,14 @@ oc_requires_megastruture_l_gate = {
 }
 
 # scope: country 
-oc_requires_megastruture_sentry_array = {
+oc_requires_megastruture_sentry_array_tier2 = {
 	OR = {
 		has_country_flag = invalid_oc_country
 	}
 }
 
 # scope: country 
-oc_requires_megastruture_science_nexus = {
+oc_requires_megastruture_science_nexus_tier2 = {
 	OR = {
 		has_country_flag = invalid_oc_country
 	}
@@ -259,16 +345,87 @@ oc_requires_second_habitable_planet = {
 }
 
 # scope: country 
-oc_requires_all_planets_habitable = {
+oc_requires_all_planets_class_to_change_to_nuked = {
 	OR = {
 		has_oc_worm_loved_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
 
-oc_requires_all_planets_class_to_change_to_nuked = {
+# scope: country 
+oc_requires_habitat_preference = {
 	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_gaia_preference = {
+	OR = {
+		has_oc_hive_life_seeded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_nuked_preference = {
+	OR = {
+		has_oc_nuclear_mutation_civic = yes
 		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_continental_preference = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_continental_preference = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_new_homeworld_is_habitat = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_new_homeworld_is_secondary_planet = {
+	OR = {
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_secondary_species_colony_setup = {
+	OR = {
+		has_oc_refugee_saviour_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_secondary_species_preference_change = {
+	OR = {
+		has_valid_civic = civic_syncretic_evolution
+		has_valid_civic = civic_machine_assimilator 
+		has_valid_civic = civic_machine_servitor 
+		
+		has_oc_syncretic_mechanists_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }

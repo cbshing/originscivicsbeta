@@ -66,7 +66,19 @@ civic_oc_primitive_fallen_colony = {
 
 # Fallen Empires
 
-civic_oc_fallen_imperium_ruler = { # e.g. emperor
+civic_oc_fallen_imperium_successor = { # e.g. emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+civic_oc_fallen_imperium_rump_state = { # e.g. rump state
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
@@ -90,19 +102,7 @@ civic_oc_fallen_imperium_exarch = { # e.g. exarch
 	}
 }
 
-civic_oc_fallen_imperium_senate = { # e.g. senate
-	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
-	potential = {
-		country_type = { value = fallen_empire }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-	}
-	random_weight = { base = 5 }
-	modifier = {
-	}
-}
-
-civic_oc_fallen_imperium_papacy = { # e.g. church
+civic_oc_fallen_imperium_papacy = { # e.g. pope
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
 	potential = {
@@ -117,15 +117,29 @@ civic_oc_fallen_imperium_papacy = { # e.g. church
 	}
 }
 
-civic_oc_fallen_imperium_archives = { # e.g. library
+# Awakened Empires
+
+civic_oc_awakened_imperium = { # e.g. emperor
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_technocracy.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
-		country_type = { value = fallen_empire }
+		country_type = { value = awakened_fallen_empire  }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+civic_oc_awakened_imperium_papacy = { # e.g. holy emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
+	potential = {
+		country_type = { value = awakened_fallen_empire  }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	possible = {
-		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_fanatic_spiritualist	
 	}
 	random_weight = { base = 5 }
 	modifier = {

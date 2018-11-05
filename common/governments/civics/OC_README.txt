@@ -24,23 +24,13 @@
 ############################################################
 # Systems Civics (03_origins_systems_civics.txt)
 ############################################################
-# value = civic_oc_dyson_engineers # OC Fallen Dreams Addon, also incompatible with Colonies civics
+# value = civic_oc_dyson_engineers # OC Fresh Start Addon, also incompatible with Colonies civics
 
-# value = civic_oc_n_cluster # OC Untested Addon
-# value = has_oc_wormhole_travelers_civic # OC Untested Addon
-
-#############################################
-# Traits Civics (04_origins_traits_civics.txt)
-#############################################
-# value = civic_oc_cybernetic # OC Fallen Dreams Addon
-# value = civic_oc_latent_psionic # OC Fallen Dreams Addon
-# value = civic_oc_cybernetic # OC Fallen Dreams Addon
-# value = civic_oc_psionics # OC Fallen Dreams Addon
-
-# value = civic_oc_symbiotic_evolution # OC Untested Addon
+# value = civic_oc_n_cluster # OC Fallen Dreams Addon
+# value = has_oc_wormhole_travelers_civic # OC Fresh Start Addon
 
 ################################################
-# Colonies Civics (05_origins_colonies_civics.txt)
+# Colonies Civics (04_origins_colonies_civics.txt)
 ################################################
 # value = civic_oc_lost_colony # base OC
 # value = civic_oc_exiled_colony # base OC tbd - Unknown Update
@@ -50,6 +40,17 @@
 # value = civic_oc_fallen_colony  # OC Fallen Dreams Addon
 # value = civic_oc_fallen_enclave # OC Fallen Dreams Addon
 
+
+#############################################
+# Traits Civics (05_origins_traits_civics.txt)
+#############################################
+# value = civic_oc_cybernetic # OC Fresh Start Addon
+# value = civic_oc_latent_psionic # OC Fresh Start Addon
+# value = civic_oc_synthetic # OC Fallen Dreams Addon
+# value = civic_oc_psionics # OC Fallen Dreams Addon
+
+# value = civic_oc_symbiotic_evolution # OC Fresh Start Addon
+
 ##################################################################
 # Secondary Species Civics (06_origins_secondary_species_civics.txt)
 ##################################################################
@@ -58,8 +59,8 @@
 
 # value = civic_oc_codominant_evolution # base OC
 
-# value = civic_oc_syncretic_mechanists # OC Untested Addon
-# value = civic_oc_codominant_mechanists # OC Untested Addon
+# value = civic_oc_syncretic_mechanists # OC Fresh Start Addon
+# value = civic_oc_codominant_mechanists # OC Fresh Start Addon
 
 # value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
 # value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
@@ -76,10 +77,10 @@
 # value = civic_oc_nuclear_mutation # base OC
 # value = civic_oc_voidborne # base OC
 
-# value = civic_oc_worm_loved # OC Ancients Addon
-# value = civic_oc_habitat_life # OC Ancients Addon
-# value = civic_oc_paradise_life  # OC Ancients Addon
-# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
+# value = civic_oc_worm_loved # OC Fallen Dreams Addon
+# value = civic_oc_habitat_life # OC Fresh Start Addon
+# value = civic_oc_paradise_life  # OC Fresh Start Addon
+# value = civic_oc_ringborne # OC Fresh Start Addon, does not actually change start planet
 
 #############################################
 # Leaders Civics (08_origins_leaders_civics.txt)
@@ -95,7 +96,7 @@
 # value = civic_oc_alien_invaded # base OC
 # value = civic_oc_ecological_disaster # base OC
 
-# value = civic_oc_living_with_titans # OC Disasters Addon
+# value = civic_oc_living_with_titans # OC Disasters Update
 
 # value = civic_oc_fallen_tributary # OC Fallen Dreams Addon
 
@@ -106,10 +107,10 @@
 # value = civic_oc_hive_nuclear_mutation # base OC
 # value = civic_oc_hive_voidborne # base OC
 
-# value = civic_oc_hive_habitat_life # OC Ancients Addon
-# value = civic_oc_hive_paradise_life # OC Ancients Addon
+# value = civic_oc_hive_habitat_life # OC Fresh Start Addon
+# value = civic_oc_hive_paradise_life # OC Fresh Start Addon
 
-# value = civic_oc_hive_dyson_builders # OC Fallen Dreams Addon
+# value = civic_oc_hive_dyson_builders # OC Fresh Start Addon
 
 #####################################################
 # Synthetic Dawn Civics (99_origins_syn_dawn_civics.txt)
@@ -119,7 +120,7 @@
 
 # value = civic_oc_robo_nuked_start # base OC
 # value = civic_oc_robo_machine_world # base OC
+# value = civic_oc_robo_abandoned_terraformers # OC Unknown Update
 
-# value = civic_oc_robo_abandoned_terraformers # OC Ancients Addon
-# value = civic_oc_robo_voidborne_mechanisms # OC Ancients Addon
-# value = civic_oc_robo_dyson_builders # OC Ancients Addon
+# value = civic_oc_robo_voidborne_mechanisms # OC Fresh Start Addon
+# value = civic_oc_robo_dyson_builders # OC Fresh Start Addon
