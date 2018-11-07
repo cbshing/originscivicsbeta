@@ -106,6 +106,7 @@
 # value = civic_oc_hive_nuclear_vault # base OC
 # value = civic_oc_hive_nuclear_mutation # base OC
 # value = civic_oc_hive_voidborne # base OC
+# value = civic_oc_hive_life_seeded # base OC
 
 # value = civic_oc_hive_habitat_life # OC Fresh Start Addon
 # value = civic_oc_hive_paradise_life # OC Fresh Start Addon
