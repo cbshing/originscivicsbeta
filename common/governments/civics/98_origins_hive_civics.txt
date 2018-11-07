@@ -20,12 +20,14 @@
 civic_oc_hive_nuclear_vault = {
 	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
 				value = civic_oc_hive_nuclear_mutation # base OC
 				value = civic_oc_hive_voidborne # base OC
+				value = civic_oc_hive_life_seeded # base OC
 			}
 		}
 	}
@@ -50,12 +52,14 @@ civic_oc_hive_nuclear_vault = {
 civic_oc_hive_nuclear_mutation = {
 	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
 				value = civic_oc_hive_nuclear_vault # base OC
 				value = civic_oc_hive_voidborne # base OC
+				value = civic_oc_hive_life_seeded # base OC
 			}
 		}
 	}
@@ -77,17 +81,49 @@ civic_oc_hive_nuclear_mutation = {
 	#see 01_origins_civics_empire_setup.7
 }
 
-civic_oc_hive_voidborne = {
-	playable = { 
-		host_has_dlc = "Utopia" 
-	}
+civic_oc_hive_life_seeded= {
+	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
 				value = civic_oc_hive_nuclear_vault # base OC
 				value = civic_oc_hive_nuclear_mutation # base OC
+				value = civic_oc_hive_voidborne # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_life_seeded_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.4
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_hive_voidborne = {
+	playable = { host_has_dlc = "Utopia" }
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_voidborne.dds"
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_nuclear_mutation # base OC
+				value = civic_oc_hive_life_seeded # base OC
 			}
 		}
 	}
