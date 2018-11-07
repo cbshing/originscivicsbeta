@@ -13,16 +13,20 @@
 #	}
 
 # ########################
-# # Solar System Effects #
+# # Species Effects #
 # ########################
 
-### Stars & Planets ###
+### Planet Preference ###
 # remove deposits and stations on planet (stars)
 # Scope: Planet
-clear_deposits_and_stations = {
-	clear_deposits = yes
-	if = { limit = { has_mining_station = yes } 
-		mining_station = { dismantle = yes }
+change_species_habitat_preference = {
+	every_owned_pop = {
+		limit = { is_exact_same_species_as = event_target:species_to_change }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_habitat
+			base = none # makes this replace parent species
+		}
 	}
 }
 
