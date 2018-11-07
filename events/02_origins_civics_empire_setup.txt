@@ -302,16 +302,16 @@ country_event = {
 		# change species homeworld type
 		if = { limit = { oc_requires_homeworld_preference_to_change = yes } 
 			if = { limit = { oc_requires_habitat_preference = yes } 
-				oc_give_species_habitat_preference = yes
+				change_species_habitat_preference = yes
 			}
 			if = { limit = { oc_requires_gaia_preference = yes } 
-				oc_give_species_gaia_preference = yes
+				change_species_gaia_preference = yes
 			}
 			if = { limit = { oc_requires_nuked_preference = yes } 
-				oc_give_species_nuked_preference = yes
+				change_species_nuked_preference = yes
 			}
 			if = { limit = { oc_requires_continental_preference = yes } 
-				oc_give_species_continental_preference = yes
+				change_species_continental_preference = yes
 			}
 		}
 		
