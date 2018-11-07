@@ -149,7 +149,7 @@ has_oc_voidborne_civic = {
 # scope: country 
 has_oc_hive_nuclear_vault_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_hive_nuclear_vault
+		has_valid_civic = civic_oc_hive_nuclear_vault
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -173,7 +173,15 @@ has_oc_hive_voidborne_civic = {
 # scope: country 
 has_oc_hive_life_seeded_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_hive_life_seeded
+		has_valid_civic = civic_oc_hive_life_seeded
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_hive_paradise_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_hive_paradise_life
 		has_country_flag = invalid_oc_country
 	}
 }
