@@ -387,13 +387,6 @@ oc_requires_continental_preference = {
 }
 
 # scope: country 
-oc_requires_continental_preference = {
-	OR = {
-		has_country_flag = invalid_oc_country
-	}
-}
-
-# scope: country 
 oc_requires_new_homeworld_is_habitat = {
 	OR = {
 		has_oc_voidborne_civic = yes
