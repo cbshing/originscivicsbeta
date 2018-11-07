@@ -113,7 +113,7 @@ country_event = {
 				}
 				else = {
 					random_system_planet = { # scope to random planet not homeworld
-						limit = { is_irregular_planet = no is_star = no has_owner = no }
+						limit = { is_a_planet = yes has_owner = no }
 						spawn_megastructure_habitat = yes
 					}
 				}
@@ -140,14 +140,14 @@ country_event = {
 			
 			if = { limit = { oc_requires_megastruture_sentry_array = yes } 
 				random_system_planet = { # scope to random planet not homeworld
-					limit = { is_irregular_planet = no is_star = no has_owner = no }
+					limit = { is_a_planet = yes has_owner = no }
 					#spawn_megastructure_sentry_array_tier2 = yes
 				}
 			}
 			
 			if = { limit = { oc_requires_megastruture_science_nexus = yes } 
 				random_system_planet = { # scope to random planet not homeworld
-					limit = { is_irregular_planet = no is_star = no has_owner = no }
+					limit = { is_a_planet = yes has_owner = no }
 					#spawn_megastructure_science_nexus_tier2 = yes
 				}
 			}
@@ -170,7 +170,7 @@ country_event = {
 			# setup secondary planets in system
 			if = { limit = { oc_requires_second_habitable_planet = yes }
 				random_system_planet = {
-					limit = { is_irregular_planet = no is_star = no has_owner = no planet_size > 10 }
+					limit = { is_a_planet = yes has_owner = no planet_size > 10 }
 					set_planet_flag = oc_second_homeworld_planet
 					change_to_pc_owner = yes
 				}
@@ -178,7 +178,7 @@ country_event = {
 			
 			if = { limit = { oc_requires_all_planets_habitable = yes }
 				every_system_planet = { # scope to every random planet not homeworld
-					limit = { is_irregular_planet = no is_star = no has_owner = no } 
+					limit = { is_a_planet = yes has_owner = no } 
 					if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
 						change_to_pc_nuked = yes
 					}
@@ -380,7 +380,7 @@ country_event = {
 			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
-					change_to_pc_random = yes
+					change_to_pc_random_habitable = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
@@ -393,6 +393,18 @@ country_event = {
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_gaia = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_machine = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_machine = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_city = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_city = yes
 				}
 			}
 		}

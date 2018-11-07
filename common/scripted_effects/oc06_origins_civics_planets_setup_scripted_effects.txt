@@ -1,0 +1,50 @@
+# Origins Civics PLanet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ########################
+# #    Planet Effects    #
+# ########################
+
+### Planets ###
+# change to planet type nuked
+# Scope: Planet
+change_to_pc_nuked = {
+	change_pc = pc_nuked
+}
+
+# change to planet type gaia
+# Scope: Planet
+change_to_pc_gaia = {
+	change_pc = pc_gaia
+}
+
+# change to planet type machine
+# Scope: Planet
+change_to_pc_machine = {
+	change_pc = pc_machine
+}
+
+# change to planet type city
+# Scope: Planet
+change_to_pc_city = {
+	#change_pc = pc_city
+}
+
+# change to planet type random habitable
+# Scope: Planet
+change_to_pc_random_habitable = {
+	if = { limit = { is_hot_dry_category_planet = yes }
+	
+	change_pc = pc_nuked
+}
