@@ -21,7 +21,7 @@
 # Scope: Country
 make_species_habitat_preference = {
 	every_owned_pop = {
-		limit = { is_exact_same_species_as = event_target:species_to_change }
+		limit = { is_exact_same_species_as = owner_species }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_habitat
@@ -35,7 +35,7 @@ make_species_habitat_preference = {
 # Scope: Country
 make_species_gaia_preference = {
 	every_owned_pop = {
-		limit = { is_exact_same_species_as = event_target:species_to_change }
+		limit = { is_exact_same_species_as = owner_species }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_gaia
@@ -49,7 +49,7 @@ make_species_gaia_preference = {
 # Scope: Country
 make_species_nuked_preference = {
 	every_owned_pop = {
-		limit = { is_exact_same_species_as = event_target:species_to_change }
+		limit = { is_exact_same_species_as = owner_species }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_nuked
@@ -63,7 +63,7 @@ make_species_nuked_preference = {
 # Scope: Country
 make_species_continental_preference = {
 	every_owned_pop = {
-		limit = { is_exact_same_species_as = event_target:species_to_change }
+		limit = { is_exact_same_species_as = owner_species }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_continental
@@ -77,7 +77,7 @@ make_species_continental_preference = {
 # Scope: Country
 make_species_ringworld_preference = {
 	every_owned_pop = {
-		limit = { is_exact_same_species_as = event_target:species_to_change }
+		limit = { is_exact_same_species_as = owner_species }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_ringworld_habitable
