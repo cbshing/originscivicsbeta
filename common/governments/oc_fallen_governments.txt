@@ -41,25 +41,6 @@ gov_fallen_imperium_successor = {
 	weight = {
 		base = 100000
 }
-	
-# Imperium Rump States
-gov_fallen_imperium_rump_state = {
-	ruler_title = RT_KING
-	ruler_title_female = RT_QUEEN
-	
-	should_force_rename = yes
-
-	possible = {
-		OR = {
-			has_valid_civic = civic_lethargic_leadership
-			has_valid_civic = civic_empire_in_decline
-		}
-		has_valid_civic = civic_oc_fallen_imperium_rump_state
-	}
-
-	weight = {
-		base = 100000
-}
 
 # Imperium Exarch
 gov_fallen_imperium_exarch = {
