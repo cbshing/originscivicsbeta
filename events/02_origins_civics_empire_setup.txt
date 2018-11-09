@@ -303,15 +303,19 @@ country_event = {
 		if = { limit = { oc_requires_homeworld_preference_to_change = yes } 
 			if = { limit = { oc_requires_habitat_preference = yes } 
 				make_species_habitat_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { limit = { oc_requires_gaia_preference = yes } 
 				make_species_gaia_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { limit = { oc_requires_nuked_preference = yes } 
 				make_species_nuked_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { limit = { oc_requires_continental_preference = yes } 
 				make_species_continental_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { 
 				limit = { 
@@ -319,6 +323,7 @@ country_event = {
 					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
 				} 
 				make_species_ringworld_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 		}
 		
@@ -353,7 +358,8 @@ country_event = {
 					}
 				}
 			}
-			if = { limit = { oc_is_from_earth = yes } 
+			if = { limit = { oc_is_from_earth = yes }
+				
 				if = { limit = { oc_is_same_species_as_earth = yes } 
 			
 				}
