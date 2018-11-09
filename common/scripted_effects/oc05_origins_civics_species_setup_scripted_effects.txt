@@ -30,7 +30,6 @@ make_species_habitat_preference = {
 	}
 }
 
-### Planet Preference ###
 # change species planet preference to gaia
 # Scope: Country
 make_species_gaia_preference = {
@@ -44,7 +43,6 @@ make_species_gaia_preference = {
 	}
 }
 
-### Planet Preference ###
 # change species planet preference to nuked
 # Scope: Country
 make_species_nuked_preference = {
@@ -58,7 +56,6 @@ make_species_nuked_preference = {
 	}
 }
 
-### Planet Preference ###
 # change species planet preference to continental
 # Scope: Country
 make_species_continental_preference = {
@@ -72,12 +69,77 @@ make_species_continental_preference = {
 	}
 }
 
-### Planet Preference ###
 # change species planet preference to ringworld
 # Scope: Country
 make_species_ringworld_preference = {
 	every_owned_pop = {
 		limit = { is_exact_same_species_as = owner_species }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_ringworld_habitable
+			base = none # makes this replace parent species
+		}
+	}
+}
+
+### Secondary Species Preference ###
+# change secondary species planet preference to habitat
+# Scope: Country
+make_secondary_species_habitat_preference = {
+	every_owned_pop = {
+		limit = { NOT = { is_exact_same_species_as = owner_species } }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_habitat
+			base = none # makes this replace parent species
+		}
+	}
+}
+
+# change secondary species planet preference to gaia
+# Scope: Country
+make_secondary_species_gaia_preference = {
+	every_owned_pop = {
+		limit = { NOT = { is_exact_same_species_as = owner_species } }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_gaia
+			base = none # makes this replace parent species
+		}
+	}
+}
+
+# change secondary species planet preference to nuked
+# Scope: Country
+make_secondary_species_nuked_preference = {
+	every_owned_pop = {
+		limit = { NOT = { is_exact_same_species_as = owner_species } }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_nuked
+			base = none # makes this replace parent species
+		}
+	}
+}
+
+# change secondary species planet preference to continental
+# Scope: Country
+make_secondary_species_continental_preference = {
+	every_owned_pop = {
+		limit = { NOT = { is_exact_same_species_as = owner_species } }
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_continental
+			base = none # makes this replace parent species
+		}
+	}
+}
+
+# change secondary species planet preference to ringworld
+# Scope: Country
+make_secondary_species_ringworld_preference = {
+	every_owned_pop = {
+		limit = { NOT = { is_exact_same_species_as = owner_species } }
 		modify_species = {
 			species = this
 			ideal_planet_class = pc_ringworld_habitable
