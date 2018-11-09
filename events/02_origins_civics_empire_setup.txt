@@ -313,7 +313,11 @@ country_event = {
 			if = { limit = { oc_requires_continental_preference = yes } 
 				make_species_continental_preference = yes
 			}
-			if = { limit = { oc_requires_ringworld_preference = yes } 
+			if = { 
+				limit = { 
+					oc_requires_ringworld_preference = yes 
+					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				} 
 				make_species_ringworld_preference = yes
 			}
 		}
