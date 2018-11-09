@@ -1,4 +1,4 @@
-# 05_origins_colonies_civics.txt
+# 00_origins_npc_civics.txt
 
 #civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
@@ -67,18 +67,6 @@ civic_oc_primitive_fallen_colony = {
 # Fallen Empires
 
 civic_oc_fallen_imperium_successor = { # e.g. emperor
-	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
-	potential = {
-		country_type = { value = fallen_empire }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-	}
-	random_weight = { base = 5 }
-	modifier = {
-	}
-}
-
-civic_oc_fallen_imperium_rump_state = { # e.g. rump state
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
