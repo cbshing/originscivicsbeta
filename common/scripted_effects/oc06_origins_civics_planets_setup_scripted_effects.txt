@@ -41,10 +41,306 @@ change_to_pc_city = {
 	#change_pc = pc_city
 }
 
+### Planetary Diversity Related Below ###
+# Code will need to be modified to be compatible with PD
+
+
 # change to planet type random habitable
 # Scope: Planet
 change_to_pc_random_habitable = {
 	if = { limit = { is_hot_dry_category_planet = yes }
-	
-	change_pc = pc_nuked
+		random_list = {
+			5 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			35 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			35 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_wetter 
+					} 
+				} 
+				modifier = { factor = 0 planetary_diversity_enabled = no }
+			}
+		}
+	}
+	else_if = { limit = { is_hot_wet_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			5 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			15 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_dryer
+					} 
+				}
+			}
+			35 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no }
+			}
+		}
+	}
+	else_if = { limit = { is_cold_dry_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter }
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_wetter 
+					} 
+				}
+			}
+			5 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			35 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no }
+			}
+		}
+	}
+	else_if = { limit = { is_cold_wet_category_planet = yes }
+		random_list = {
+			15 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_dryer 
+					} 
+				}
+			}
+			35 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			35 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			5 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no }
+			}
+		}
+	}
+	else = {
+		#do nothing
+	}
+}
+
+change_to_pc_random_hot_dry_planet = {
+	random_list = {
+		12 = { 
+			change_pc = pc_arid
+			set_entity_arid = yes
+			modifier = { factor = 0 is_planet_class = pc_arid }
+		}
+		12 = { 
+			change_pc = pc_desert
+			set_entity_desert = yes
+			modifier = { factor = 0 is_planet_class = pc_desert }
+		}
+		12 = { 
+			change_pc = pc_savannah
+			set_entity_savannah = yes
+			modifier = { factor = 0 is_planet_class = pc_savannah }
+			modifier = { factor = 2 is_planet_class = pc_tropical }
+		}
+		#12 = { 
+		#	change_pc = pc_sandsea
+		#	set_entity_sandsea = yes
+		#	modifier = { factor = 0 is_planet_class_pc_sandsea = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_mesa
+		#	set_entity_mesa = yes
+		#	modifier = { factor = 0 is_planet_class_pc_mesa = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_oasis
+		#	set_entity_oasis = yes
+		#	modifier = { factor = 0 is_planet_class_pc_oasis = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_geocrystalline
+		#	set_entity_geocrystalline = yes
+		#	modifier = { factor = 0 is_planet_class_pc_geocrystalline = yes }
+		#}
+	}
+}
+
+change_to_pc_random_hot_wet_planet = {
+	random_list = {
+		12 = { 
+			change_pc = pc_continental
+			set_entity_continental = yes
+			modifier = { factor = 0 is_planet_class = pc_continental }
+		}
+		12 = { 
+			change_pc = pc_ocean
+			set_entity_ocean = yes
+			modifier = { factor = 0 is_planet_class = pc_ocean }
+		}
+		12 = { 
+			change_pc = pc_tropical
+			set_entity_tropical = yes
+			modifier = { factor = 0 is_planet_class = pc_tropical }
+		}
+		#12 = { 
+		#	change_pc = pc_mangrove
+		#	set_entity_mangrove = yes
+		#	modifier = { factor = 0 is_planet_class_pc_mangrove = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_hajungle
+		#	set_entity_hajungle = yes
+		#	modifier = { factor = 0 is_planet_class_pc_hajungle = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_desertislands
+		#	set_entity_desertislands = yes
+		#	modifier = { factor = 0 is_planet_class_pc_desertislands = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_lush
+		#	set_entity_lush = yes
+		#	modifier = { factor = 0 is_planet_class_pc_lush = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_marginal
+		#	set_entity_marginal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_marginal = yes }
+		#}
+	}
+}
+
+change_to_pc_random_cold_dry_planet = {
+	random_list = {
+		12 = { 
+			change_pc = pc_tundra 
+			set_entity_tundra = yes
+			modifier = { factor = 0 is_planet_class = pc_tundra }
+		}
+		12 = { 
+			change_pc = pc_alpine
+			set_entity_alpine = yes
+			modifier = { factor = 0 is_planet_class = pc_alpine }
+		}
+		12 = { 
+			change_pc = pc_arctic
+			set_entity_artic = yes
+			modifier = { factor = 0 is_planet_class = pc_arctic }
+			modifier = { factor = 5 is_planet_class = pc_continental has_planet_flag = planet_earth }
+		}
+		#12 = { 
+		#	change_pc = pc_frozen_desert
+		#	set_entity_frozen_desert = yes
+		#	modifier = { factor = 0 is_planet_class_pc_frozen_desert = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_steppe
+		#	set_entity_steppe = yes
+		#	modifier = { factor = 0 is_planet_class_pc_steppe = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_hadesert
+		#	set_entity_hadesert = yes
+		#	modifier = { factor = 0 is_planet_class_pc_hadesert = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_antarctic
+		#	set_entity_antarctic = yes
+		#	modifier = { factor = 0 is_planet_class_pc_antarctic = yes }
+		#}
+	}
+}
+
+change_to_pc_random_cold_wet_planet = {
+	random_list = {
+		#12 = { 
+		#	change_pc = pc_swamp
+		#	set_entity_swamp = yes
+		#	modifier = { factor = 0 is_planet_class_pc_swamp = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_cascadian
+		#	set_entity_cascadian = yes
+		#	modifier = { factor = 0 is_planet_class_pc_cascadian = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_geothermal
+		#	set_entity_geothermal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_geothermal = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_glacial
+		#	set_entity_glacial = yes
+		#	modifier = { factor = 0 is_planet_class_pc_glacial = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_subarctic 
+		#	set_entity_subartic = yes
+		#	modifier = { factor = 0 is_planet_class_pc_subarctic  = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_marginal_cold
+		#	set_entity_marginal_cold = yes
+		#	modifier = { factor = 0 is_planet_class_pc_marginal_cold  = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_retinal
+		#	set_entity_retinal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_retinal = yes }
+		#}
+		#12 = { 
+		#	change_pc = pc_boreal
+		#	set_entity_boreal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_boreal = yes }
+		#}
+	}
 }
