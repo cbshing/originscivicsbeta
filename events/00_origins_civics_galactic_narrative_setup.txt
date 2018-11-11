@@ -18,7 +18,9 @@ event = {
 		random_country = {
 			limit = { is_country_type = global_event }
 			random_list = {
-				10 = { ### Generic Galactic Imperium 
+				5 = { ### Grand Galactic Imperium 
+					set_global_flag = has_oc_galactive_narrative
+					set_global_flag = oc_galactic_imperium_narrative
 					modifier = {
 						factor = 0
 						NOT = {
@@ -30,45 +32,23 @@ event = {
 							}
 						}
 					}
-					set_global_flag = has_oc_galactive_narrative
-					set_global_flag = oc_generic_galactic_imperium_narrative
-				}
-				10 = { ### Generic Galactic Imperium 
-					modifier = {
-						factor = 0
-						NOT = {
-							any_country = {
-								OR = {
-									is_country_type = fallen_empire
-									is_country_type = awakened_empire
-								}
-							}
-						}
+					modifier = { # if less then 4 empires, more likely to spawn
+						factor = 10
+						num_fallen_empires = < 3
 					}
-					set_global_flag = has_oc_galactive_narrative
-					set_global_flag = oc_generic_galactic_imperium_narrative
-				}
-				10 = { ### Generic Galactic Imperium 
-					modifier = {
-						factor = 0
-						NOT = {
-							any_country = {
-								OR = {
-									is_country_type = fallen_empire
-									is_country_type = awakened_empire
-								}
-							}
-						}
+					random_country = {
+						limit = { is_country_type = fallen_empire }
+						country_event = { id = origins_civics_galaxy_setup.2 } 
 					}
-					set_global_flag = has_oc_galactive_narrative
-					set_global_flag = oc_generic_galactic_imperium_narrative
+					
 				}
-				120 = { }
+				5 = { }
 			}
 		}
 	}
 }
 
+# make all fallen empires the same species
 country_event = {
 	id = origins_civics_galaxy_setup.2
 	hide_window = yes
@@ -81,13 +61,29 @@ country_event = {
 	}
 	
 	immediate = {
-		owner_species = { save_event_target_as : primary_fallen_species }
+		random_list = {
+			70 = { owner_species = { save_event_target_as = species_to_change_to } }
+			30 = { 
+				create_human_species = yes
+				last_created = { save_event_target_as = species_to_change_to } }
+				modifier = { # prevent spawn if any human player
+					factor = 0
+					any_country = {
+						OR = {
+							has_country_flag = human1
+							has_country_flag = human2
+							species_portrait = human
+						}
+					}
+				}
+			}
+		}
 		every_country = {
 			limit = {
 				is_country_type = fallen_empire
 				NOT = { has_country_flag = species_changed }
 			}
-			speci
+			change_species_to = yes
 		}
 	}
 }

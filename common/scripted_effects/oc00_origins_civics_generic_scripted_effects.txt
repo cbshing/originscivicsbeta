@@ -1,0 +1,166 @@
+# Origins Civics Generic Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ########################
+# # Generic Effects #
+# ########################
+
+# searches for Earth and adds planet flag if missing
+# Scope: Country
+find_earth = {
+	#find Earth
+	random_system = {
+		limit = { has_star_flag = sol }
+		#check for planet_earth flag
+		if = { 
+			limit = { any_planet = { has_planet_flag = planet_earth } } 
+			random_system_planet = {
+				limit = {
+					has_planet_flag = planet_earth
+				}
+			}
+			set_global_flag = sol_system_exists
+		}
+		#for CoM Earth, Tomb Earth or other Earths without planet_flag
+		else = {
+			random_system_planet = {
+				limit = {
+					OR = {
+						is_colonizable = yes
+						is_homeworld = yes
+					}
+					is_asteroid = no
+					is_star = no
+				}
+				set_planet_flag = planet_earth
+			}
+			set_global_flag = sol_system_exists
+		}
+	}
+}
+
+# Creates the United Nations of Earth Empire
+# Scope: None
+create_human_une_empire = {
+	if = { limit = { any_planet = { has_planet_flag = planet_earth } }
+		random_planet = {
+			limit = { has_planet_flag = planet_earth } 
+			this = { save_event_target_as = earth_home }
+		}
+	}
+	create_species = {
+		is_mod = no
+		name = "PRESCRIPTED_species_name_humans1"
+		namelist = "HUMAN1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		class = "HUM"
+		portrait = "human"
+		traits = {
+			trait = "trait_adaptive"
+			trait = "trait_nomadic"
+			trait = "trait_wasteful"
+		}
+		homeworld = event_target:earth_home
+	}
+	create_country = {
+		name = "NAME_United_Nations_of_Earth"
+		authority = auth_democratic
+		civics = {
+			civic = civic_beacon_of_liberty
+			civic = civic_idealistic_foundation
+		}
+		species = last_created
+		name_list = "HUMAN1"
+		ethos = {
+			ethic = "ethic_xenophile"
+			ethic = "ethic_fanatic_egalitarian"
+		}
+		flag = {
+			icon = {
+				category = "human"
+				file = "flag_human_9.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"blue"
+				"black"
+				"null"
+				"null"
+			}
+		}
+		type = default
+	}
+}
+
+# Creates the Holy Terran Empire
+# Scope: None
+create_human_hte_empire = {
+	if = { limit = { any_planet = { has_planet_flag = planet_earth } }
+		random_planet = {
+			limit = { has_planet_flag = planet_earth } 
+			this = { save_event_target_as = earth_home }
+		}
+	}
+	create_species = {
+		is_mod = no
+		name = "PRESCRIPTED_species_name_humans1"
+		namelist = "HUMAN3"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		class = "HUM"
+		portrait = "human"
+		traits = {
+			trait = "trait_adaptive"
+			trait = "trait_nomadic"
+			trait = "trait_wasteful"
+		}
+		homeworld = event_target:earth_home
+	}
+	create_country = {
+		name = "NAME_Holy_Terran_Empire"
+		authority = auth_imperial
+		civics = {
+			civic = civic_imperial_cult
+			civic = civic_aristocratic_elite
+		}
+		species = last_created
+		name_list = "HUMAN3"
+		ethos = {
+			ethic = "ethic_fanatic_authoritarian"
+			ethic = "ethic_spiritualist"
+		}
+		flag = {
+			icon = {
+				category = "human"
+				file = "flag_human_2.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors = {
+				"red"
+				"black"
+				"null"
+				"null"
+			}
+		}
+		type = default
+	}
+}
+

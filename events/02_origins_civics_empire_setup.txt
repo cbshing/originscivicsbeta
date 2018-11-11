@@ -47,6 +47,7 @@ country_event = {
 		if = {
 			limit = { oc_requires_advanced_start = yes }
 			# tags neighboring planets for future setup in planet setup
+			# sets country as owner of planets
 		}
 		if = {
 			limit = { oc_requires_hostile_neighbors = yes }
@@ -110,6 +111,11 @@ country_event = {
 						set_planet_flag = "oc_old_habitat_capital"
 						spawn_megastructure_habitat = yes
 					}
+					random_system_planet ={
+						limit = { is_planet_class = pc_habitat }
+						set_owner = ROOT
+						set_capital = yes
+					}
 				}
 				else = {
 					random_system_planet = { # scope to random planet not homeworld
@@ -170,9 +176,10 @@ country_event = {
 			# setup secondary planets in system
 			if = { limit = { oc_requires_second_habitable_planet = yes }
 				random_system_planet = {
-					limit = { is_a_planet = yes has_owner = no planet_size > 10 }
+					limit = { is_a_planet = yes has_owner = no planet_size > 7 planet_size < 20 }
 					set_planet_flag = oc_second_homeworld_planet
-					change_to_pc_owner = yes
+					set_owner = ROOT
+					change_to_pc_owner_class = yes
 				}
 			}
 			
@@ -200,7 +207,10 @@ country_event = {
 	
 	trigger = {
 		oc_requires_colony_setup = yes
-		NOT = { has_country_flag = oc_homeworld_set }
+		NOR = { 
+			has_country_flag = oc_homeworld_set 
+			has_country_flag = oc_home_empire 
+		}
 	}
 	
 	immediate = {		
@@ -233,6 +243,7 @@ country_event = {
 					oc_is_ringworld_preference_country = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
 				}
+				set_country_flag = oc_home_empire
 				oc_set_colony_homeworld_flag = yes
 				oc_create_colony_species = yes
 				oc_change_pops_and_leaders_to_new_species = yes
@@ -299,31 +310,87 @@ country_event = {
 	}
 	
 	immediate = {
-		# change species homeworld type
+		# change primary species homeworld type
 		if = { limit = { oc_requires_homeworld_preference_to_change = yes } 
 			if = { limit = { oc_requires_habitat_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
 				make_species_habitat_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
+				# set_capital_as_homeworld = yes # needs to be done after game start for localisation text
 			}
 			if = { limit = { oc_requires_gaia_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
 				make_species_gaia_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { limit = { oc_requires_nuked_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
 				make_species_nuked_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
 			}
 			if = { limit = { oc_requires_continental_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
 				make_species_continental_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
+				
 			}
 			if = { 
 				limit = { 
 					oc_requires_ringworld_preference = yes 
 					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
 				} 
+				owner_species = { save_event_target_as = species_to_modify }
 				make_species_ringworld_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
+			}
+		}
+		# change secondary species homeworld type
+		if = { 
+			limit = { 
+				oc_requires_secondary_species_preference_change = yes 
+				OR = {
+					oc_is_habitat_country = yes
+					oc_is_gaia_country = yes
+					oc_is_nuked_country = yes
+					oc_is_ringworld_country = yes
+					has_authority = auth_machine_intelligence
+				}
+			} 
+			if = { limit = { oc_is_habitat_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_habitat_preference = yes
+				set_capital_as_homeworld = yes
+			}
+			if = { limit = { oc_is_gaia_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_gaia_preference = yes
+				set_capital_as_homeworld = yes
+			}
+			if = { limit = { oc_is_nuked_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_nuked_preference = yes
+				set_capital_as_homeworld = yes
+			}
+			if = { 
+				limit = { 
+					oc_is_ringworld_country = yes 
+					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				} 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_ringworld_preference = yes
+				set_capital_as_homeworld = yes
 			}
 		}
 		
@@ -348,21 +415,38 @@ country_event = {
 		
 		# change species homeworld location
 		if = { limit = { oc_requires_new_homeworld = yes }
-			if = { limit = { oc_requires_new_homeworld_is_habitat = yes } 
-			
-			}
+			#if = { limit = { oc_requires_new_homeworsld_is_habitat = yes } # to be done after game start
+			#	set_capital_as_homeworld = yes
+			#}
 			if = { limit = { oc_requires_new_homeworld_is_secondary_planet = yes } 
 				capital_scope.solar_system = { # scope to capital system
 					random_system_planet = {
 						limit = { has_planet_flag = oc_second_homeworld_planet }
+						this = { save_event_target_as = new_homeworld }
 					}
 				}
-			}
-			if = { limit = { oc_is_from_earth = yes }
-				
-				if = { limit = { oc_is_same_species_as_earth = yes } 
-			
+				random_owned_pop = { # only for secondary pop
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
 				}
+				set_new_planet_as_homeworld = yes
+			}
+			if = { limit = { oc_is_from_earth = yes } # only for owner species
+				capital_scope.solar_system = { # scope to capital system
+					random_system_planet = {
+						limit = { has_planet_flag = planet_earth }
+						this = { save_event_target_as = new_homeworld }
+					}
+				}
+				owner_species = { save_event_target_as = species_to_modify }
+				set_new_planet_as_homeworld = yes
+			}
+			if = { limit = { oc_is_same_species_as_earth = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_same_species_as_earth = yes
+				set_country_flag = oc_homeworld_set
+				oc_set_colony_flag = yes
+				change_dominant_species = { species = last_created change_all = yes }
 			}
 		}
 	}
@@ -389,39 +473,6 @@ country_event = {
 	}
 	
 	immediate = {
-		if = { limit = { oc_requires_homeworld_class_to_change = yes }
-			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					change_to_pc_random_habitable = yes
-				}
-			}
-			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					change_to_pc_nuked = yes
-				}
-			}
-			if = { limit = { oc_requires_homeworld_class_to_change_to_gaia = yes }
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					change_to_pc_gaia = yes
-				}
-			}
-			if = { limit = { oc_requires_homeworld_class_to_change_to_machine = yes }
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					change_to_pc_machine = yes
-				}
-			}
-			if = { limit = { oc_requires_homeworld_class_to_change_to_city = yes }
-				random_owned_planet = {
-					limit = { is_capital = yes }
-					change_to_pc_city = yes
-				}
-			}
-		}
-	
 		if = { limit = { oc_requires_planet_size_change = yes }
 			if = { limit = { oc_requires_planet_size_change_to_25 = yes }
 			
@@ -440,54 +491,81 @@ country_event = {
 			}
 		}		
 		
-		if = { limit = { oc_requires_tomb_planet_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings_and_blockers_post_apoc = yes
-				move_pops_on_planet = yes
+		if = { limit = { oc_requires_homeworld_class_to_change = yes }
+			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_random_habitable = yes
+					reset_start_buildings = yes
+					reset_blockers = yes
+					add_pops_on_planet = yes
+				}
 			}
-		}
-		if = { limit = { oc_requires_gaia_planet_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings_and_blockers_gaia = yes
-				move_pops_on_planet = yes
+			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_nuked = yes
+					reset_start_buildings = yes
+					reset_blockers = yes
+					add_pops_on_planet = yes
+				}
 			}
-		}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_gaia = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_gaia = yes
+					reset_start_buildings = yes
+					reset_blockers = yes
+					add_pops_on_planet = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_machine = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_machine = yes
+					reset_start_buildings = yes
+					reset_blockers = yes
+					add_pops_on_planet = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_city = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_city = yes
+					reset_start_buildings = yes
+					reset_blockers = yes
+					add_pops_on_planet = yes
+				}
+			}
+		}		
 		if = { limit = { oc_requires_habitat_setup = yes } 
 			every_planet_within_border = {
 				limit = { is_planet_class = pc_habitat  NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings_and_blockers_habitat = yes
+				reset_start_buildings = yes
+				reset_blockers = yes
 				add_pops_on_planet = yes
 			}
 			every_planet_within_border = {
 				limit = { is_planet_class = pc_habitat  has_planet_flag = advanced_colony }
-				reset_start_buildings_and_blockers_advanced_colony_habitat = yes
+				reset_colony_start_buildings = yes
+				reset_blockers = yes
 				add_advanced_colony_pops_on_planet = yes
 			}
 		}
-		if = { limit = { oc_requires_generic_planet_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings_and_blockers_generic = yes
+		if = { limit = { oc_requires_ringworld_setup = yes } 
+			random_owned_planet = {
+				limit = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				reset_start_buildings = yes
+				reset_blockers = yes
 				add_pops_on_planet = yes
 			}
 		}
-		
-		
-		if = { limit = { oc_requires_update_to_hive_setup = yes } 
+		if = { limit = { oc_requires_reset_blockers_setup = yes } 
 			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
-				update_buildings_and_blockers_hive = yes
+				limit = { NOT = { has_planet_flag = advanced_colony } NOT = { is_capital = yes } }
+				reset_blockers = yes
 			}
-		}
-		if = { limit = { oc_requires_update_to_machine_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
-				update_buildings_and_blockers_machine = yes
-			}
-		}
-		
+		}		
 		if = { limit = { oc_requires_additional_blockers_setup = yes } 
 			every_planet_within_border = {
 				limit = { NOT = { has_planet_flag = advanced_colony } }

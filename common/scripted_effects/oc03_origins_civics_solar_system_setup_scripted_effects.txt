@@ -16,6 +16,13 @@
 # # Solar System Effects #
 # ########################
 
+### Solar System ###
+# remove deposits and stations on planet (stars)
+# Scope: Solar System
+spawn_fallen_empire_debris = {
+
+}
+
 ### Stars & Planets ###
 # remove deposits and stations on planet (stars)
 # Scope: Planet

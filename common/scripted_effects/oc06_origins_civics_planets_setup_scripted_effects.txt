@@ -1,4 +1,4 @@
-# Origins Civics PLanet Setup Scripted Effects
+# Origins Civics Planet Setup Scripted Effects
 # by cbshing
 #	Example:
 #
@@ -343,4 +343,10 @@ change_to_pc_random_cold_wet_planet = {
 		#	modifier = { factor = 0 is_planet_class_pc_boreal = yes }
 		#}
 	}
+}
+
+# change to planet type city
+# Scope: Planet
+change_to_pc_owner_class = {
+	#change_pc = pc_city
 }

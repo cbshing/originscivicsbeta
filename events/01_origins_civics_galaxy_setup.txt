@@ -50,7 +50,7 @@ event = {
 			}
 			else = { # random sol
 			random_list = {
-					60 = { # random primitive Earth
+					50 = { # random primitive Earth
 						random_system = { spawn_system = { initializer = "special_init_03" } } 
 					} 
 					30 = { # random OC default Earth (UNE or HTE)
@@ -64,6 +64,13 @@ event = {
 					10 = { # random tomb world Earth
 						random_system = { spawn_system = { initializer = "special_init_04" } } 
 					}  
+					10 = { # fallen tomb world Earth
+						random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
+						random_planet = { limit = { has_planet_flag = planet_earth }
+							change_to_pc_nuked = yes
+							spawn_fallen_empire_debris = yes
+						}
+					} 
 				}
 			}
 			set_global_flag = sol_system_exists
