@@ -221,15 +221,15 @@ country_event = {
 				save_event_target_as = oc_colony_species 
 			}
 		}
+		if = { limit = { oc_is_fallen_colonies_country = yes }
+			# make fallen empires setup
+			
+		}
 		#make lost colony
 		if = {
 			limit = {
 				any_country = { 
 					oc_requires_colony_setup = no
-					oc_is_habitat_preference_country = no
-					oc_is_gaia_preference_country = no
-					oc_is_nuked_preference_country = no
-					oc_is_ringworld_preference_country = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
 				}
 			}
@@ -237,10 +237,6 @@ country_event = {
 			every_country = {
 				limit = { 
 					oc_requires_colony_setup = no
-					oc_is_habitat_preference_country = no
-					oc_is_gaia_preference_country = no
-					oc_is_nuked_preference_country = no
-					oc_is_ringworld_preference_country = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
 				}
 				set_country_flag = oc_home_empire

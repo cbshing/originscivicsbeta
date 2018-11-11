@@ -21,7 +21,7 @@ event = {
 				5 = { ### Grand Galactic Imperium 
 					set_global_flag = has_oc_galactive_narrative
 					set_global_flag = oc_galactic_imperium_narrative
-					modifier = {
+					modifier = { # if no fallen empires, don't use
 						factor = 0
 						NOT = {
 							any_country = {
@@ -32,9 +32,24 @@ event = {
 							}
 						}
 					}
+					modifier = { # if only machine fallen empire don't use
+						factor = 0
+						num_fallen_empires = 1
+						any_country = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_empire
+							}
+							has_authority = auth_machine_intelligence 
+						}
+					}
+					modifier = { # if two or more empires are oc_fallen_colonies don't use
+						factor = 0
+						any_country = { count = 2 oc_is_fallen_colonies_country = yes is_ai = no }
+					}
 					modifier = { # if less then 4 empires, more likely to spawn
 						factor = 10
-						num_fallen_empires = < 3
+						num_fallen_empires < 4
 					}
 					random_country = {
 						limit = { is_country_type = fallen_empire }
@@ -61,18 +76,26 @@ country_event = {
 	}
 	
 	immediate = {
-		random_list = {
-			70 = { owner_species = { save_event_target_as = species_to_change_to } }
-			30 = { 
-				create_human_species = yes
-				last_created = { save_event_target_as = species_to_change_to } }
-				modifier = { # prevent spawn if any human player
-					factor = 0
-					any_country = {
-						OR = {
-							has_country_flag = human1
-							has_country_flag = human2
-							species_portrait = human
+		if = {
+		
+		}
+		else = {
+			random_list = {
+				70 = { 
+					owner_species = { save_event_target_as = species_to_change_to } 
+					
+				}
+				30 = { 
+					create_human_species = yes
+					last_created = { save_event_target_as = species_to_change_to } }
+					modifier = { # prevent spawn if any human player
+						factor = 0
+						any_country = {
+							OR = {
+								has_country_flag = human1
+								has_country_flag = human2
+								species_portrait = human
+							}
 						}
 					}
 				}
@@ -80,10 +103,13 @@ country_event = {
 		}
 		every_country = {
 			limit = {
-				is_country_type = fallen_empire
+				OR = {
+					is_country_type = fallen_empire
+					oc_is_fallen_colonies_country = yes
+				}
 				NOT = { has_country_flag = species_changed }
 			}
-			change_species_to = yes
+			change_species_to_this = yes
 		}
 	}
 }

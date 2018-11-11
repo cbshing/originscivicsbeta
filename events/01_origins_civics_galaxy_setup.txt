@@ -77,3 +77,25 @@ event = {
 		}
 	}
 }
+
+# Add Fallen Empire Abandoned Colonies Modifier
+event = {
+	id = origins_civics_galaxy_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_fallen_empires > 0
+		any_country = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_empire
+			}
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
+	
+	immediate = {
+	
+	}
+}

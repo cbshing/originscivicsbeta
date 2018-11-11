@@ -50,6 +50,51 @@ find_earth = {
 	}
 }
 
+create_human_species = {
+	if = { limit = { any_planet = { has_planet_flag = planet_earth } }
+		random_planet = {
+			limit = { has_planet_flag = planet_earth } 
+			this = { save_event_target_as = earth_home }
+		}
+	}
+	random_list = {
+		50 = { # Create UNE Humans
+			create_species = {
+				is_mod = no
+				name = "PRESCRIPTED_species_name_humans1"
+				namelist = "HUMAN1"
+				plural = "PRESCRIPTED_species_plural_humans1"
+				adjective = "PRESCRIPTED_species_adjective_humans1"
+				class = "HUM"
+				portrait = "human"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_wasteful"
+				}
+				homeworld = event_target:earth_home
+			}
+		}
+		50 = { # create Roman Humans
+			create_species = {
+				is_mod = no
+				name = "PRESCRIPTED_species_name_humans1"
+				namelist = "HUMAN3"
+				plural = "PRESCRIPTED_species_plural_humans1"
+				adjective = "PRESCRIPTED_species_adjective_humans1"
+				class = "HUM"
+				portrait = "human"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_wasteful"
+				}
+				homeworld = event_target:earth_home
+			}
+		}
+	}
+}
+
 # Creates the United Nations of Earth Empire
 # Scope: None
 create_human_une_empire = {
