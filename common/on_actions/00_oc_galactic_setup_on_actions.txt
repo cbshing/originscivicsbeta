@@ -1,0 +1,7 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		origins_civics_galaxy_setup.1
+		origins_civics_galaxy_setup.2
+	}
+}

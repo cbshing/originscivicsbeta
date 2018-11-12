@@ -53,7 +53,7 @@ event = {
 					}
 					random_country = {
 						limit = { is_country_type = fallen_empire }
-						country_event = { id = origins_civics_galaxy_setup.2 } 
+						country_event = { id = origins_civics_galactic_narrative_setup.2 } 
 					}
 					
 				}
@@ -65,7 +65,7 @@ event = {
 
 # make all fallen empires the same species
 country_event = {
-	id = origins_civics_galaxy_setup.2
+	id = origins_civics_galactic_narrative_setup.2
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -87,7 +87,7 @@ country_event = {
 				}
 				30 = { 
 					create_human_species = yes
-					last_created = { save_event_target_as = species_to_change_to } }
+					#last_created = { save_event_target_as = species_to_change_to } }
 					modifier = { # prevent spawn if any human player
 						factor = 0
 						any_country = {

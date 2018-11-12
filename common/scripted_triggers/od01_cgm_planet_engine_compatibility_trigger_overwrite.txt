@@ -1,19 +1,5 @@
 #copies from cgm / planetary diversity mod
 
-# checks if is a planet
-# Scope: Planet
-is_a_planet = {
-	NOR = {
-		is_star = yes
-		is_gas_giant = yes
-		is_asteroid = yes
-		is_planet_class = pc_habitat
-		is_planet_class = pc_shrouded
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_ringworld_habitable_damaged
-	}
-}
-
 is_hot_dry_category_planet = {
 	OR = {
 		is_planet_class = pc_arid

@@ -35,34 +35,37 @@ clear_deposits_and_stations = {
 
 ### Megastructures ###
 # spawns habitat
+# input event_target:megastructure_planet
 # Scope: Planet
 # root: Country
 spawn_megastructure_habitat = {
 	spawn_megastructure = {
 		type = habitat_0
-		location = this
+		location = event_target:megastructure_planet
 		owner = root
 	}
 }
 
 # spawns custom OC Dyson Sphere Tier2
+# input event_target:megastructure_star
 # Scope: Planet
 # root: Country
 spawn_megastructure_oc_dyson_sphere_tier2 = {
 	spawn_megastructure = { 
 		type = oc_dyson_sphere_2 
-		location = this
+		location = event_target:megastructure_star
 		owner = root
 	}
 }
 
 # spawns custom OC Dyson Sphere Tier5
+# input event_target:megastructure_star
 # Scope: Planet
 # root: Country
 spawn_megastructure_oc_dyson_sphere_tier5 = {
 	spawn_megastructure = { 
 		type = oc_dyson_sphere_5
-		location = this
+		location = event_target:megastructure_star
 		owner = root
 	}
 }

@@ -29,9 +29,9 @@ event = {
 	
 	immediate = {
 		if = {
-			limit = { any_country = { origins_civics_requires_npc_sol = yes } }
+			limit = { any_country = { oc_requires_npc_sol = yes } }
 			if = {
-				limit = { origins_civic_requires_default_npc_sol = yes }
+				limit = { oc_requires_default_npc_sol = yes }
 				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
 				random_list = {
 					90 = { create_human_une_empire = yes }
@@ -40,11 +40,11 @@ event = {
 				default_empire_setup = yes
 			}
 			else_if = {
-				limit = { origins_civics_requires_primitive_early_space_age_sol = yes }
+				limit = { oc_requires_primitive_early_space_age_sol = yes }
 				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
 			}
 			else_if = {
-				limit = { origins_civics_requires_nuked_sol = yes }
+				limit = { oc_requires_nuked_sol = yes }
 				random_system = { spawn_system = { initializer = "special_init_04" } }
 				set_global_flag = earth_was_nuked
 			}
@@ -85,7 +85,6 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		num_fallen_empires > 0
 		any_country = {
 			OR = {
 				is_country_type = fallen_empire
@@ -96,6 +95,21 @@ event = {
 	}
 	
 	immediate = {
-	
+		every_country = {
+			limit = { is_country_type = fallen_empire NOT = { has_authority = auth_machine_intelligence } }
+			every_system_within_border = {
+				every_neighbor_system = { 
+					ignore_hyperlanes = no 
+					limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
+					random_system_planet = {
+						limit = { is_a_planet = yes }
+						random_list = {
+							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+							50 = { }
+						}
+					}
+				}
+			}
+		}
 	}
 }

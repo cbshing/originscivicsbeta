@@ -56,7 +56,7 @@ oc_requires_species_setup = {
 	OR = {
 		oc_requires_homeworld_preference_to_change = yes
 		oc_requires_species_have_new_trait = yes
-		oc_requires_species_earth_setup = yes
+		oc_is_from_earth = yes
 	}
 }
 
@@ -65,6 +65,14 @@ oc_requires_species_setup = {
 
 # scope: country 
 oc_requires_megastruture_habitat = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_habitat_over_homeworld = {
 	OR = {
 		oc_is_habitat_country = yes
 		has_country_flag = invalid_oc_country
@@ -171,7 +179,8 @@ oc_requires_new_homeworld = {
 # scope: country 
 oc_requires_homeworld_class_to_change = {
 	OR = {
-		oc_requires_homeworld_class_to_change_to_random = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable = yes
+		oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes
 		oc_requires_homeworld_class_to_change_to_nuked = yes
 		has_country_flag = invalid_oc_country
 	}
@@ -332,7 +341,7 @@ oc_requires_homeworld_class_to_change_to_gaia = {
 # scope: country 
 oc_requires_homeworld_class_to_change_to_machine = {
 	OR = {
-		oc_is_machine_world_countryv = yes
+		oc_is_machine_world_country = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -436,6 +445,37 @@ oc_requires_secondary_species_preference_change = {
 		has_valid_civic = civic_machine_servitor 
 		
 		has_oc_syncretic_mechanists_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+
+
+
+# scope: country 
+oc_requires_npc_sol = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_default_npc_sol = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_primitive_early_space_age_sol = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_nuked_sol = {
+	OR = {
 		has_country_flag = invalid_oc_country
 	}
 }

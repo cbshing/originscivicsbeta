@@ -40,6 +40,7 @@ gov_fallen_imperium_successor = {
 
 	weight = {
 		base = 100000
+	}
 }
 
 # Imperium Exarch

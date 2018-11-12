@@ -79,36 +79,40 @@ country_event = {
 		oc_requires_solar_system_setup = yes
 	}
 	
-	immediate = {
-		capital_scope.solar_system = { # scope to capital system
-		
-			# isolate star system
-			if = { limit = { oc_requires_isolate_star = yes } 
+	immediate = {	
+		# isolate star system
+		if = { limit = { oc_requires_isolate_star = yes } 
+			capital_scope.solar_system = { # scope to capital system
 				isolate_system = yes
-			}	
+			}
+		}	
 			
-			# setup megastructures
-			if = { limit = { oc_requires_megastruture_dyson_sphere = yes }  
+		# setup megastructures
+		if = { limit = { oc_requires_megastruture_dyson_sphere = yes }  
+			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # remove mining stations & deposits around primary star (if multi-star system)
 					limit = { is_star = yes is_primary_star = yes }
 					clear_deposits_and_stations = yes
+					this = { save_event_target_as = megastructure_star }
 					# tier 1 custom oc dyson sphere
-					if = { limit = { oc_requires_megastruture_dyson_sphere_tier2 = yes } 
-						spawn_megastructure_oc_dyson_sphere_tier2 = yes
-					}
-					# tier 5 custom oc dyson sphere
-					if = { limit = { oc_requires_megastruture_dyson_sphere_tier5 = yes } 
-						spawn_megastructure_oc_dyson_sphere_tier5 = yes
-					}
 				}
-			
+				if = { limit = { oc_requires_megastruture_dyson_sphere_tier2 = yes } 
+					spawn_megastructure_oc_dyson_sphere_tier2 = yes
+				}
+				# tier 5 custom oc dyson sphere
+				if = { limit = { oc_requires_megastruture_dyson_sphere_tier5 = yes } 
+					spawn_megastructure_oc_dyson_sphere_tier5 = yes
+				}
 			}
-			
-			if = { limit = { oc_requires_megastruture_habitat = yes } 
-				if = { limit = { oc_requires_megastruture_habitat_over_homeworld = yes }  
-					random_owned_planet = { # scope to homeworld planet
+		}
+		
+		if = { limit = { oc_requires_megastruture_habitat = yes } 
+			if = { limit = { oc_requires_megastruture_habitat_over_homeworld = yes }  
+				capital_scope.solar_system = { # scope to capital system
+					random_system_planet = { # scope to homeworld planet
 						limit = { is_capital = yes }
 						set_planet_flag = "oc_old_habitat_capital"
+						this = { save_event_target_as = megastructure_planet }
 						spawn_megastructure_habitat = yes
 					}
 					random_system_planet ={
@@ -117,53 +121,72 @@ country_event = {
 						set_capital = yes
 					}
 				}
-				else = {
+			}
+			else = {
+				capital_scope.solar_system = { # scope to capital system
 					random_system_planet = { # scope to random planet not homeworld
 						limit = { is_a_planet = yes has_owner = no }
+						this = { save_event_target_as = megastructure_planet }
 						spawn_megastructure_habitat = yes
 					}
 				}
 			}
-			
-			if = { limit = { oc_requires_megastruture_gateway = yes } 
-				if = { limit = { oc_requires_megastruture_gateway_ruined = yes } 
+		}
+		
+		if = { limit = { oc_requires_megastruture_gateway = yes } 
+			if = { limit = { oc_requires_megastruture_gateway_ruined = yes } 
+				capital_scope.solar_system = { # scope to capital system
 					spawn_megastructure_gateway_ruined = yes
 				}
-				
-				if = { limit = { oc_requires_megastruture_gateway_construction = yes } 
+			}
+			
+			if = { limit = { oc_requires_megastruture_gateway_construction = yes } 
+				capital_scope.solar_system = { # scope to capital system
 					spawn_megastructure_gateway_construction = yes
 				}
-				
-				if = { limit = { oc_requires_megastruture_gateway_complete = yes } 
+			}
+			
+			if = { limit = { oc_requires_megastruture_gateway_complete = yes } 
+				capital_scope.solar_system = { # scope to capital system
 					spawn_megastructure_gateway_complete = yes
 					activate_megastructure_random_gateway = yes
 				}
 			}
-			
-			if = { limit = { oc_requires_megastruture_l_gate = yes } 
+		}
+		
+		if = { limit = { oc_requires_megastruture_l_gate = yes } 
+			capital_scope.solar_system = { # scope to capital system
 				spawn_megastructure_l_gateway = yes
 			}
-			
-			if = { limit = { oc_requires_megastruture_sentry_array = yes } 
+		}
+		
+		if = { limit = { oc_requires_megastruture_sentry_array = yes } 
+			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # scope to random planet not homeworld
 					limit = { is_a_planet = yes has_owner = no }
 					#spawn_megastructure_sentry_array_tier2 = yes
 				}
 			}
-			
-			if = { limit = { oc_requires_megastruture_science_nexus = yes } 
+		}
+		
+		if = { limit = { oc_requires_megastruture_science_nexus = yes } 
+			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # scope to random planet not homeworld
 					limit = { is_a_planet = yes has_owner = no }
 					#spawn_megastructure_science_nexus_tier2 = yes
 				}
 			}
-			
-			# setup galactic system features
-			if = { limit = { oc_requires_natural_wormhole = yes }
+		}
+		
+		# setup galactic system features
+		if = { limit = { oc_requires_natural_wormhole = yes }
+			capital_scope.solar_system = { # scope to capital system
 				spawn_linked_natural_wormhole = yes
-			}	
-			
-			if = { limit = { oc_requires_star_class_to_change = yes }
+			}
+		}	
+		
+		if = { limit = { oc_requires_star_class_to_change = yes }
+			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # remove mining stations & deposits around primary star (if multi-star system)
 					limit = { is_star = yes is_primary_star = yes }
 					clear_deposits_and_stations = yes
@@ -172,9 +195,11 @@ country_event = {
 					}
 				}
 			}
-			
-			# setup secondary planets in system
-			if = { limit = { oc_requires_second_habitable_planet = yes }
+		}
+		
+		# setup secondary planets in system
+		if = { limit = { oc_requires_second_habitable_planet = yes }
+			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = {
 					limit = { is_a_planet = yes has_owner = no planet_size > 7 planet_size < 20 }
 					set_planet_flag = oc_second_homeworld_planet
@@ -182,8 +207,10 @@ country_event = {
 					change_to_pc_owner_class = yes
 				}
 			}
-			
-			if = { limit = { oc_requires_all_planets_habitable = yes }
+		}
+		
+		if = { limit = { oc_requires_all_planets_habitable = yes }
+			capital_scope.solar_system = { # scope to capital system
 				every_system_planet = { # scope to every random planet not homeworld
 					limit = { is_a_planet = yes has_owner = no } 
 					if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
@@ -191,7 +218,6 @@ country_event = {
 					}
 				}
 			}
-		
 		}
 	}
 }
