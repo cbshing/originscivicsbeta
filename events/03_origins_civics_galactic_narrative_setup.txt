@@ -45,7 +45,13 @@ event = {
 					}
 					modifier = { # if two or more empires are oc_fallen_colonies don't use
 						factor = 0
-						any_country = { count = 2 oc_is_fallen_colonies_country = yes is_ai = no }
+						any_country = { 
+							oc_is_fallen_colonies_country = yes
+							any_country = { 
+								oc_is_fallen_colonies_country = yes
+								NOT = { is_same_species = prev }
+							}
+						}
 					}
 					modifier = { # if less then 4 empires, more likely to spawn
 						factor = 10
@@ -70,14 +76,21 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_global_flag = has_oc_galactive_narrative
+		has_global_flag = oc_galactic_imperium_narrative
 		is_country_type = fallen_empire
 		NOT = { has_country_flag = species_changed }
 	}
 	
 	immediate = {
 		if = {
-		
+			limit = { 
+				any_country = { is_country_type = fallen_empire has_country_flag = oc_home_empire }
+			}
+			random_country = { 
+				limit = { is_country_type = fallen_empire has_country_flag = oc_home_empire }
+				owner_species = { save_event_target_as = species_to_change_to } 
+				set_country_flag = species_changed
+			}
 		}
 		else = {
 			random_list = {
@@ -109,7 +122,9 @@ country_event = {
 				}
 				NOT = { has_country_flag = species_changed }
 			}
+			owner_species = { save_event_target_as = changing_species } 
 			change_species_to_this = yes
+			set_country_flag = species_changed
 		}
 	}
 }

@@ -208,4 +208,3 @@ create_human_hte_empire = {
 		type = default
 	}
 }
-

@@ -186,6 +186,14 @@ oc_requires_homeworld_class_to_change = {
 	}
 }
 
+oc_requires_planet_size_change = {
+	OR = {
+		oc_requires_new_homeworld_is_secondary_planet = yes
+		oc_requires_new_homeworld_is_habitat = yes
+		oc_is_from_earth = yes
+	}
+}
+
 # scope: country 
 oc_has_nearby_systems_surveyed_country = {
 	OR = {
@@ -194,6 +202,7 @@ oc_has_nearby_systems_surveyed_country = {
 		has_country_flag = invalid_oc_country
 	}
 }
+
 
 ### individual civics triggers
 
@@ -311,6 +320,7 @@ oc_requires_homeworld_class_to_change_to_random_habitable = {
 	}
 }
 
+# scope: country 
 oc_requires_homeworld_class_to_change_to_random_uninhabitable = {
 	OR = {
 		has_oc_voidborne_civic = yes
@@ -419,6 +429,7 @@ oc_requires_new_homeworld_is_habitat = {
 		has_oc_hive_voidborne_civic = yes
 		has_country_flag = invalid_oc_country
 	}
+	NOT = { has_country_flag = oc_homeworld_set }
 }
 
 # scope: country 
@@ -430,27 +441,40 @@ oc_requires_new_homeworld_is_secondary_planet = {
 }
 
 # scope: country 
-oc_requires_secondary_species_colony_setup = {
+oc_requires_planet_size_change_to_25 = {
 	OR = {
-		has_oc_refugee_saviour_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
 
 # scope: country 
-oc_requires_secondary_species_preference_change = {
+oc_requires_planet_size_change_to_12 = {
 	OR = {
-		has_valid_civic = civic_syncretic_evolution
-		has_valid_civic = civic_machine_assimilator 
-		has_valid_civic = civic_machine_servitor 
-		
-		has_oc_syncretic_mechanists_civic = yes
+		has_oc_robo_machine_world_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
 
+# scope: country 
+oc_requires_planet_size_change_to_8 = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
 
+# scope: country 
+oc_requires_planet_size_change_to_6 = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
 
+# scope: country 
+oc_requires_planet_size_change_to_4 = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
 
 # scope: country 
 oc_requires_npc_sol = {

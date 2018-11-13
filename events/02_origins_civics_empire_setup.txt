@@ -113,8 +113,8 @@ country_event = {
 						limit = { is_capital = yes }
 						set_planet_flag = "oc_old_habitat_capital"
 						this = { save_event_target_as = megastructure_planet }
-						spawn_megastructure_habitat = yes
 					}
+					spawn_megastructure_habitat = yes
 					random_system_planet ={
 						limit = { is_planet_class = pc_habitat }
 						set_owner = ROOT
@@ -127,7 +127,12 @@ country_event = {
 					random_system_planet = { # scope to random planet not homeworld
 						limit = { is_a_planet = yes has_owner = no }
 						this = { save_event_target_as = megastructure_planet }
-						spawn_megastructure_habitat = yes
+					}
+					spawn_megastructure_habitat = yes
+					random_system_planet ={
+						limit = { is_planet_class = pc_habitat }
+						set_owner = ROOT
+						set_capital = yes
 					}
 				}
 			}
@@ -164,8 +169,9 @@ country_event = {
 			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # scope to random planet not homeworld
 					limit = { is_a_planet = yes has_owner = no }
-					#spawn_megastructure_sentry_array_tier2 = yes
+					this = { save_event_target_as = megastructure_planet }
 				}
+				#spawn_megastructure_sentry_array_tier2 = yes
 			}
 		}
 		
@@ -173,8 +179,9 @@ country_event = {
 			capital_scope.solar_system = { # scope to capital system
 				random_system_planet = { # scope to random planet not homeworld
 					limit = { is_a_planet = yes has_owner = no }
-					#spawn_megastructure_science_nexus_tier2 = yes
+					this = { save_event_target_as = megastructure_planet }
 				}
+				#spawn_megastructure_science_nexus_tier2 = yes
 			}
 		}
 		
@@ -191,7 +198,7 @@ country_event = {
 					limit = { is_star = yes is_primary_star = yes }
 					clear_deposits_and_stations = yes
 					if = { limit = { oc_requires_star_class_change_to_blackhole = yes }
-						change_pc = sc_black_hole
+						change_pc = pc_black_hole
 					}
 				}
 			}
@@ -338,7 +345,9 @@ country_event = {
 				owner_species = { save_event_target_as = species_to_modify }
 				make_species_habitat_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
-				# set_capital_as_homeworld = yes # needs to be done after game start for localisation text
+				if = { limit = { oc_requires_new_homeworld_is_habitat = yes }
+					set_capital_as_homeworld = yes
+				}
 			}
 			if = { limit = { oc_requires_gaia_preference = yes } 
 				owner_species = { save_event_target_as = species_to_modify }
@@ -419,27 +428,41 @@ country_event = {
 		# add new trait to species
 		if = { limit = { oc_requires_species_have_new_trait = yes } 
 			if = { limit = { oc_has_cybernetic_species_trait = yes } 
-			
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_cybernetic = yes
 			}
 			if = { limit = { oc_has_latent_psionic_species_trait = yes } 
-			
+				# only impacts leaders, so see origins_civics_empire_setup.8
 			}
 			if = { limit = { oc_has_synthetic_species_trait = yes } 
-			
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_synthetic = yes
 			}
 			if = { limit = { oc_has_psionic_species_trait = yes } 
-			
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_psionic = yes
 			}
 			if = { limit = { oc_has_brain_slug_species_trait = yes } 
-			
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_brain_slug = yes
 			}
 		}
 		
 		# change species homeworld location
 		if = { limit = { oc_requires_new_homeworld = yes }
-			#if = { limit = { oc_requires_new_homeworsld_is_habitat = yes } # to be done after game start
-			#	set_capital_as_homeworld = yes
-			#}
+
 			if = { limit = { oc_requires_new_homeworld_is_secondary_planet = yes } 
 				capital_scope.solar_system = { # scope to capital system
 					random_system_planet = {
@@ -468,7 +491,6 @@ country_event = {
 				make_same_species_as_earth = yes
 				set_country_flag = oc_homeworld_set
 				oc_set_colony_flag = yes
-				change_dominant_species = { species = last_created change_all = yes }
 			}
 		}
 	}
@@ -497,19 +519,19 @@ country_event = {
 	immediate = {
 		if = { limit = { oc_requires_planet_size_change = yes }
 			if = { limit = { oc_requires_planet_size_change_to_25 = yes }
-			
+				set_planet_size = 25
 			}
 			if = { limit = { oc_requires_planet_size_change_to_12 = yes }
-			
+				set_planet_size = 12
 			}
 			if = { limit = { oc_requires_planet_size_change_to_8 = yes }
-			
+				set_planet_size = 8
 			}
 			if = { limit = { oc_requires_planet_size_change_to_6 = yes }
-			
+				set_planet_size = 6
 			}
 			if = { limit = { oc_requires_planet_size_change_to_4 = yes }
-			
+				set_planet_size = 4
 			}
 		}		
 		

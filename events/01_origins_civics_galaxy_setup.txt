@@ -78,7 +78,7 @@ event = {
 	}
 }
 
-# Add Fallen Empire Abandoned Colonies Modifier
+# Add Fallen Empire Abandoned Colonies Modifier up to 3 planets away
 event = {
 	id = origins_civics_galaxy_setup.2
 	hide_window = yes
@@ -102,12 +102,42 @@ event = {
 					ignore_hyperlanes = no 
 					limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 					random_system_planet = {
-						limit = { is_a_planet = yes }
+						limit = { is_a_planet = yes is_colonizable = yes }
 						random_list = {
 							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
 							50 = { }
 						}
 					}
+					random_system_planet = {
+						limit = { is_a_planet = yes is_colonizable = yes }
+						random_list = {
+							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+							50 = { }
+						}
+					}
+					every_neighbor_system = { 
+						ignore_hyperlanes = no 
+						limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
+						random_system_planet = {
+							limit = { is_a_planet = yes is_colonizable = yes }
+							random_list = {
+								50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+								50 = { }
+							}
+						}
+						every_neighbor_system = { 
+							ignore_hyperlanes = no 
+							limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
+							random_system_planet = {
+								limit = { is_a_planet = yes is_colonizable = yes }
+								random_list = {
+									50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+									50 = { }
+								}
+							}
+						}
+					}
+					
 				}
 			}
 		}
