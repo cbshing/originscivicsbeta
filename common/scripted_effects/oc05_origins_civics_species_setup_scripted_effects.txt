@@ -203,7 +203,7 @@ mod_species_synthetic = {
 				name_list = ascension_list
 			}
 			
-			save_event_target_as = new_robotic_species
+			save_event_target_as = species_to_change_to
 		}
 	}
 	change_species_to_this = yes

@@ -345,9 +345,6 @@ country_event = {
 				owner_species = { save_event_target_as = species_to_modify }
 				make_species_habitat_preference = yes
 				change_dominant_species = { species = last_created change_all = yes }
-				if = { limit = { oc_requires_new_homeworld_is_habitat = yes }
-					set_capital_as_homeworld = yes
-				}
 			}
 			if = { limit = { oc_requires_gaia_preference = yes } 
 				owner_species = { save_event_target_as = species_to_modify }
@@ -401,7 +398,6 @@ country_event = {
 					this = { save_event_target_as = species_to_modify }
 				}
 				make_species_gaia_preference = yes
-				set_capital_as_homeworld = yes
 			}
 			if = { limit = { oc_is_nuked_country = yes } 
 				random_owned_pop = { 
@@ -409,7 +405,6 @@ country_event = {
 					this = { save_event_target_as = species_to_modify }
 				}
 				make_species_nuked_preference = yes
-				set_capital_as_homeworld = yes
 			}
 			if = { 
 				limit = { 
@@ -421,7 +416,6 @@ country_event = {
 					this = { save_event_target_as = species_to_modify }
 				}
 				make_species_ringworld_preference = yes
-				set_capital_as_homeworld = yes
 			}
 		}
 		
@@ -462,7 +456,11 @@ country_event = {
 		
 		# change species homeworld location
 		if = { limit = { oc_requires_new_homeworld = yes }
-
+			if = { limit = { oc_requires_new_homeworld_is_habitat = yes }
+				owner_species = { save_event_target_as = species_to_modify }
+				set_capital_as_homeworld = yes
+			}
+			
 			if = { limit = { oc_requires_new_homeworld_is_secondary_planet = yes } 
 				capital_scope.solar_system = { # scope to capital system
 					random_system_planet = {

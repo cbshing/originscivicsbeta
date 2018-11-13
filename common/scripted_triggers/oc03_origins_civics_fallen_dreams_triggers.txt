@@ -42,7 +42,7 @@ has_oc_fallen_colony_civic = {
 # scope: country 
 has_oc_fallen_tributary_civic = {
 	OR = {
-		has_valid_civic = civic_oc_fallen_tributary
+		#has_valid_civic = civic_oc_fallen_tributary
 		has_country_flag = invalid_oc_country
 	}
 }

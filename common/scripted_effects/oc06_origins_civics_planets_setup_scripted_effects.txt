@@ -50,7 +50,7 @@ change_to_pc_city = {
 change_to_pc_random_habitable = {
 	if = { limit = { is_hot_dry_category_planet = yes }
 		random_list = {
-			5 = { 
+			15 = { 
 				change_to_pc_random_hot_dry_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
@@ -60,7 +60,7 @@ change_to_pc_random_habitable = {
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
 				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
 			}
-			35 = { 
+			25 = { 
 				change_to_pc_random_cold_dry_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
@@ -85,7 +85,7 @@ change_to_pc_random_habitable = {
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
 			}
-			5 = { 
+			15 = { 
 				change_to_pc_random_hot_wet_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
 				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
@@ -100,7 +100,7 @@ change_to_pc_random_habitable = {
 					} 
 				}
 			}
-			35 = { 
+			25 = { 
 				change_to_pc_random_cold_wet_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
 				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
@@ -110,7 +110,7 @@ change_to_pc_random_habitable = {
 	}
 	else_if = { limit = { is_cold_dry_category_planet = yes }
 		random_list = {
-			35 = { 
+			25 = { 
 				change_to_pc_random_hot_dry_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter }
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
@@ -125,7 +125,7 @@ change_to_pc_random_habitable = {
 					} 
 				}
 			}
-			5 = { 
+			15 = { 
 				change_to_pc_random_cold_dry_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
@@ -150,7 +150,7 @@ change_to_pc_random_habitable = {
 					} 
 				}
 			}
-			35 = { 
+			25 = { 
 				change_to_pc_random_hot_wet_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
 				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
@@ -160,7 +160,7 @@ change_to_pc_random_habitable = {
 				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
 				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
 			}
-			5 = { 
+			15 = { 
 				change_to_pc_random_cold_wet_planet = yes 
 				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
 				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
@@ -273,7 +273,7 @@ change_to_pc_random_cold_dry_planet = {
 		}
 		12 = { 
 			change_pc = pc_arctic
-			set_entity_artic = yes
+			set_entity_arctic = yes
 			modifier = { factor = 0 is_planet_class = pc_arctic }
 			modifier = { factor = 5 is_planet_class = pc_continental has_planet_flag = planet_earth }
 		}
