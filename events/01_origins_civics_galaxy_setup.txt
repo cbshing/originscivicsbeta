@@ -31,7 +31,21 @@ event = {
 				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
 				random_list = {
 					90 = { create_human_une_empire = yes }
-					10 = { create_human_hte_empire = yes }
+					10 = { 
+						create_human_hte_empire = yes 
+						modifier = { # if no fallen empires, don't use
+							factor = 0
+							any_country = { 
+								OR = {
+									has_country_flag = human_2 
+									has_country_flag = human_3
+									has_country_flag = human_4
+									has_country_flag = human_5
+									has_country_flag = human_6
+								}
+							}	
+						}
+					}
 				}
 				default_empire_setup = yes
 			}
