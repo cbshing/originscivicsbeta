@@ -4,17 +4,13 @@ namespace = origins_civics_galaxy_setup
 ### Hidden Game Start Event
 # Generates or setups galactic features including:
 #  - Sol System
-#  - NPC Fallen Colony
-#  - NPC Primitive Lost Colony
-#  - NPC Primitive Fallen Colony
+#  - Add Abandoned Colony Modifiers
 #  - Ring of Gaia system
 #  - Fallen Graveyard
 #  - Fallen Patrol
-#  - 
-
-###  - Extrasolar home system (Lost/Exiled Colony, Refugee)
-#  -Slow Zone bonus ystem
-#  -Ring of Gaia bonus system
+#  - NPC Fallen Colony
+#  - NPC Primitive Lost Colony
+#  - NPC Primitive Fallen Colony
 
 # Create Sol System if missing
 # Runs prior to event game_start.1 to force Origins Civics' custom "sol_system"s to replace "com_sol_system" spawning
@@ -79,6 +75,7 @@ event = {
 }
 
 # Add Fallen Empire Abandoned Colonies Modifier up to 3 planets away
+# Run before game start
 event = {
 	id = origins_civics_galaxy_setup.2
 	hide_window = yes
@@ -102,14 +99,14 @@ event = {
 					ignore_hyperlanes = no 
 					limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 					random_system_planet = {
-						limit = { is_a_planet = yes is_colonizable = yes }
+						limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
 						random_list = {
 							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
 							50 = { }
 						}
 					}
 					random_system_planet = {
-						limit = { is_a_planet = yes is_colonizable = yes }
+						limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
 						random_list = {
 							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
 							50 = { }
@@ -119,7 +116,7 @@ event = {
 						ignore_hyperlanes = no 
 						limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 						random_system_planet = {
-							limit = { is_a_planet = yes is_colonizable = yes }
+							limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
 							random_list = {
 								50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
 								50 = { }
@@ -129,7 +126,7 @@ event = {
 							ignore_hyperlanes = no 
 							limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 							random_system_planet = {
-								limit = { is_a_planet = yes is_colonizable = yes }
+								limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
 								random_list = {
 									50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
 									50 = { }
