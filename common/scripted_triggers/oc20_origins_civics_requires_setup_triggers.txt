@@ -176,21 +176,39 @@ oc_requires_new_homeworld = {
 	}
 }
 
+# scope: country
+oc_requires_homeworld_size_change = {
+	OR = {
+		oc_is_machine_world_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
 # scope: country 
 oc_requires_homeworld_class_to_change = {
 	OR = {
 		oc_requires_homeworld_class_to_change_to_random_habitable = yes
 		oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes
 		oc_requires_homeworld_class_to_change_to_nuked = yes
+		oc_requires_homeworld_class_to_change_to_gaia = yes
+		oc_requires_homeworld_class_to_change_to_machine = yes 
+		oc_requires_homeworld_class_to_change_to_city = yes
 		has_country_flag = invalid_oc_country
 	}
 }
 
-oc_requires_planet_size_change = {
+# scope: country 
+oc_requires_reset_capital_setup = {
 	OR = {
-		oc_requires_new_homeworld_is_secondary_planet = yes
-		oc_requires_new_homeworld_is_habitat = yes
-		oc_is_from_earth = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable = yes
+		oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes
+		oc_requires_homeworld_class_to_change_to_nuked = yes
+		oc_requires_homeworld_class_to_change_to_gaia = yes
+		oc_requires_homeworld_class_to_change_to_machine = yes 
+		oc_requires_homeworld_class_to_change_to_city = yes
+		oc_requires_habitat_setup = yes
+		oc_requires_ringworld_setup = yes
+		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -443,6 +461,7 @@ oc_requires_new_homeworld_is_secondary_planet = {
 # scope: country 
 oc_requires_planet_size_change_to_25 = {
 	OR = {
+		has_oc_hive_life_seeded_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -477,8 +496,28 @@ oc_requires_planet_size_change_to_4 = {
 }
 
 # scope: country 
+oc_requires_additional_blockers_setup = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_special_building_setup = {
+	OR = {
+		has_oc_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+
+# scope: country 
 oc_requires_npc_sol = {
 	OR = {
+		oc_requires_default_npc_sol = yes
+		oc_requires_primitive_early_space_age_sol = yes
+		oc_requires_nuked_sol = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -486,6 +525,12 @@ oc_requires_npc_sol = {
 # scope: country 
 oc_requires_default_npc_sol = {
 	OR = {
+		has_country_flag = human_2
+		has_country_flag = human_3
+		has_country_flag = human_4
+		has_country_flag = human_5
+		has_country_flag = human_6
+		has_country_flag = human_7
 		has_country_flag = invalid_oc_country
 	}
 }
