@@ -111,7 +111,7 @@ country_event = {
 				capital_scope.solar_system = { # scope to capital system
 					random_system_planet = { # scope to homeworld planet
 						limit = { is_capital = yes }
-						set_planet_flag = "oc_old_habitat_capital"
+						set_planet_flag = "oc_old_homeworld"
 						this = { save_event_target_as = megastructure_planet }
 					}
 					spawn_megastructure_habitat = yes
@@ -515,21 +515,36 @@ country_event = {
 	}
 	
 	immediate = {
-		if = { limit = { oc_requires_planet_size_change = yes }
-			if = { limit = { oc_requires_planet_size_change_to_25 = yes }
-				set_planet_size = 25
+		if = { limit = { oc_requires_homeworld_size_change = yes }
+			if = { limit = { oc_requires_homeworld_size_change_to_25 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					set_planet_size = 25
+				}
 			}
-			if = { limit = { oc_requires_planet_size_change_to_12 = yes }
-				set_planet_size = 12
+			if = { limit = { oc_requires_homeworld_size_change_to_12 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					set_planet_size = 12
+				}
 			}
-			if = { limit = { oc_requires_planet_size_change_to_8 = yes }
-				set_planet_size = 8
+			if = { limit = { oc_requires_homeworld_size_change_to_8 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					set_planet_size = 8
+				}
 			}
-			if = { limit = { oc_requires_planet_size_change_to_6 = yes }
-				set_planet_size = 6
+			if = { limit = { oc_requires_homeworld_size_change_to_6 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					set_planet_size = 6
+				}
 			}
-			if = { limit = { oc_requires_planet_size_change_to_4 = yes }
-				set_planet_size = 4
+			if = { limit = { oc_requires_homeworld_size_change_to_4 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					set_planet_size = 4
+				}
 			}
 		}		
 		
@@ -538,86 +553,68 @@ country_event = {
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_random_habitable = yes
-					reset_start_buildings = yes
-					reset_blockers = yes
-					add_pops_on_planet = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_nuked = yes
-					reset_start_buildings = yes
-					reset_blockers = yes
-					add_pops_on_planet = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_gaia = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_gaia = yes
-					reset_start_buildings = yes
-					reset_blockers = yes
-					add_pops_on_planet = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_machine = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_machine = yes
-					reset_start_buildings = yes
-					reset_blockers = yes
-					add_pops_on_planet = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_city = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_city = yes
-					reset_start_buildings = yes
-					reset_blockers = yes
-					add_pops_on_planet = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes }
+				random_owned_planet = {
+					limit = { has_planet_flag = oc_old_homeworld }
+					remove_planet_flag = oc_old_homeworld
+					if = { limit = { from { has_country_flag = aavardwerk_empire } }
+						change_pc = pc_shattered
+					}
+					else = {
+						change_to_pc_random_uninhabitable = yes
+					}
 				}
 			}
 		}		
-		if = { limit = { oc_requires_habitat_setup = yes } 
-			every_planet_within_border = {
-				limit = { is_planet_class = pc_habitat  NOT = { has_planet_flag = advanced_colony } }
-				reset_start_buildings = yes
-				reset_blockers = yes
-				add_pops_on_planet = yes
-			}
-			every_planet_within_border = {
-				limit = { is_planet_class = pc_habitat  has_planet_flag = advanced_colony }
-				reset_colony_start_buildings = yes
-				reset_blockers = yes
-				add_advanced_colony_pops_on_planet = yes
-			}
-		}
-		if = { limit = { oc_requires_ringworld_setup = yes } 
+		if = { limit = { oc_requires_reset_capital_setup = yes } 
 			random_owned_planet = {
-				limit = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				limit = { is_capital = yes }
 				reset_start_buildings = yes
-				reset_blockers = yes
+				reset_start_blockers = yes
 				add_pops_on_planet = yes
 			}
 		}
-		if = { limit = { oc_requires_reset_blockers_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } NOT = { is_capital = yes } }
-				reset_blockers = yes
-			}
-		}		
 		if = { limit = { oc_requires_additional_blockers_setup = yes } 
-			every_planet_within_border = {
-				limit = { NOT = { has_planet_flag = advanced_colony } }
+			random_owned_planet = {
+				limit = { is_capital = yes }
 				add_additional_blockers = yes
 			}
 		}
 		
-		# Destroy original homeworld
 		
 		# Destroy every colony except capital
+		if = { limit = { oc_requires_original_homeworld_destroy = yes } 
+			every_owned_planet = {
+				limit = { is_capital = no }
+				kill_pops_and_buildings = yes
+			}
+		}
 	}
 }
 
@@ -630,5 +627,7 @@ country_event = {
 # Technologies
 
 # Flags
+
+# Advanced Colonies
 
 # Quests
