@@ -159,6 +159,7 @@ create_human_hte_empire = {
 		random_planet = {
 			limit = { has_planet_flag = planet_earth } 
 			this = { save_event_target_as = earth_home }
+			set_name = "NAME_Holy_Terra"
 		}
 	}
 	create_species = {
