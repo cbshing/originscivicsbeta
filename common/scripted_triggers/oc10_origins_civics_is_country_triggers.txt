@@ -39,6 +39,19 @@ oc_is_same_species_as_earth = {
 	}
 }
 
+# for Ulysses Initiative Addon
+# scope: country 
+oc_is_ulysses_initiative_country = {
+	OR = {
+		has_country_flag = human_2
+		has_country_flag = human_3
+		has_country_flag = human_4
+		has_country_flag = human_5
+		has_country_flag = human_6
+	}
+}
+
+
 # scope: country 
 oc_is_fallen_colonies_country = {
 	OR = {
