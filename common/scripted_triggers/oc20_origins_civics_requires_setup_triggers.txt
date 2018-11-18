@@ -428,6 +428,7 @@ oc_requires_nuked_preference = {
 # scope: country 
 oc_requires_continental_preference = {
 	OR = {
+		has_oc_colony_of_man_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -538,6 +539,10 @@ oc_requires_default_npc_sol = {
 # scope: country 
 oc_requires_primitive_early_space_age_sol = {
 	OR = {
+		AND = {
+			has_oc_alien_message_civic = yes
+			species_portrait = fun12
+		}
 		has_country_flag = invalid_oc_country
 	}
 }

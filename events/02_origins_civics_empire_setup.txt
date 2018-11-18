@@ -207,11 +207,26 @@ country_event = {
 		# setup secondary planets in system
 		if = { limit = { oc_requires_second_habitable_planet = yes }
 			capital_scope.solar_system = { # scope to capital system
-				random_system_planet = {
-					limit = { is_a_planet = yes has_owner = no planet_size > 7 planet_size < 20 }
-					set_planet_flag = oc_second_homeworld_planet
-					set_owner = ROOT
-					change_to_pc_owner_class = yes
+				if = { limit = { has_star_flag = sol }
+					random_system_planet = {
+						limit = { 
+							OR = {
+								has_planet_flag = planet_mars 
+								is_planet_class = pc_barren
+							}
+						}
+						set_planet_flag = oc_second_homeworld_planet
+						set_owner = ROOT
+						change_to_pc_owner_class = yes
+					}
+				}
+				else = {
+					random_system_planet = {
+						limit = { is_a_planet = yes has_owner = no planet_size > 7 planet_size < 20 }
+						set_planet_flag = oc_second_homeworld_planet
+						set_owner = ROOT
+						change_to_pc_owner_class = yes
+					}
 				}
 			}
 		}

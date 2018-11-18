@@ -345,8 +345,14 @@ change_to_pc_random_cold_wet_planet = {
 	}
 }
 
-# change to planet type city
+# change to planet type owner class
 # Scope: Planet
 change_to_pc_owner_class = {
 	#change_pc = pc_city
 }
+
+
+### Blockers ###
+
+
+### Buildings ###

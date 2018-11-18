@@ -55,7 +55,6 @@ has_oc_lost_colony_civic = {
 		has_country_flag = human_3
 		has_country_flag = human_4
 		has_country_flag = human_5
-		has_country_flag = human_6
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -63,7 +62,8 @@ has_oc_lost_colony_civic = {
 # scope: country 
 has_oc_exiled_colony_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_exiled_colony
+		has_valid_civic = civic_oc_exiled_colony
+		has_country_flag = human_6
 		has_country_flag = human_7
 		has_country_flag = invalid_oc_country
 	}
@@ -205,6 +205,24 @@ has_oc_robo_machine_world_civic = {
 has_oc_robo_abandoned_terraformers_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_robo_abandoned_terraformers
+		has_country_flag = invalid_oc_country
+	}
+}
+
+### Colonies of Earth
+
+# scope: country 
+has_oc_colony_of_earth_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_colony_of_earth
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+has_oc_colony_of_man_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_colony_of_man
 		has_country_flag = invalid_oc_country
 	}
 }

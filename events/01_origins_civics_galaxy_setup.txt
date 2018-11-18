@@ -20,7 +20,7 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = sol_system_exists }
+		NOT = { any_system = { has_star_flag = sol } }
 	}
 	
 	immediate = {
@@ -48,10 +48,9 @@ event = {
 			else_if = {
 				limit = { oc_requires_nuked_sol = yes }
 				random_system = { spawn_system = { initializer = "special_init_04" } }
-				set_global_flag = earth_was_nuked
 			}
 			else = { # random sol
-			random_list = {
+				random_list = {
 					50 = { # random primitive Earth
 						random_system = { spawn_system = { initializer = "special_init_03" } } 
 					} 
@@ -67,11 +66,7 @@ event = {
 						random_system = { spawn_system = { initializer = "special_init_04" } } 
 					}  
 					10 = { # fallen tomb world Earth
-						random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
-						random_planet = { limit = { has_planet_flag = planet_earth }
-							change_to_pc_nuked = yes
-							spawn_fallen_empire_debris = yes
-						}
+						random_system = { spawn_system = { initializer = "origins_fallen_sol_system" } }
 					} 
 				}
 			}
@@ -80,10 +75,50 @@ event = {
 	}
 }
 
+# Create Abandoned Habitats
+# Adds Abandoned Habitats to Galaxy, Scales with Number of Habitatable planets
+event = {
+	id = origins_civics_galaxy_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = oc_random_habitats_spawned }
+		host_has_dlc = "Utopia"
+	}
+	
+	immediate = {
+		get_galaxy_setup_value = { 
+			setting = num_habitable_worlds
+			which = local_habitats_num
+			scale_by = 3
+		}
+		while = {
+			count = local_habitats_num
+			random_system = {
+				limit = {
+					NOR = {
+						has_star_flag = oc_has_abandoned_habitat
+						starting_system = yes
+						has_star_flag = empire_cluster
+					}
+				}
+				random_system_planet = { # scope to random planet not homeworld
+					limit = { is_a_planet = yes has_owner = no }
+					this = { save_event_target_as = megastructure_planet }
+				}
+				spawn_megastructure_habitat = yes
+			}
+		}
+		set_global_flag = oc_random_habitats_spawned
+	}
+	
+}
+
 # Add Fallen Empire Abandoned Colonies Modifier up to 3 planets away
 # Run before game start
 event = {
-	id = origins_civics_galaxy_setup.2
+	id = origins_civics_galaxy_setup.10
 	hide_window = yes
 	is_triggered_only = yes
 	
