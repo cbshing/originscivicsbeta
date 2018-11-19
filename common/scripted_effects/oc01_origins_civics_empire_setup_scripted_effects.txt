@@ -1,0 +1,116 @@
+# Origins Civics Planet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ########################
+# #    Empire Effects    #
+# ########################
+
+### Ships ###
+# Create Science Ship
+# Scope: Country
+create_science_ship = {
+	#science
+	create_fleet = {
+		effect = {
+			set_owner = prev
+
+			create_ship = {
+				name = random
+				random_existing_design = science
+			}
+
+			set_fleet_stance = evasive				
+			#set_location = prev.capital_star
+			set_location = prev.capital_scope.star
+			
+			owner = {
+				create_leader = {
+					type = scientist
+					sub_type = survey
+					name = random
+					species = owner_main_species
+				}
+			}
+			set_leader = last_created_leader
+		}			
+	}
+}
+# Create Constructor Ship
+# Scope: Country
+create_constructor_ship = {
+	#constructor
+	create_fleet = {
+		effect = {
+			set_owner = prev
+			
+			create_ship = {
+				name = random
+				random_existing_design = constructor
+			}
+			
+			set_fleet_stance = evasive
+			set_location = prev.capital_star
+		}
+	}
+}
+# Create Default Start Navy
+# Scope: Country
+create_start_navy = {
+	#military
+	create_fleet = {
+		set_take_point = yes
+		effect = {
+			set_owner = prev
+			
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					random_existing_design = corvette
+				}
+			}
+			
+			set_location = prev.capital_star
+		}
+	}
+}
+# Create Fallen Colony Start Navy
+# Scope: Country
+create_fallen_colony_start_navy = {
+	delete_all_corvettes = yes
+	#military
+	create_fleet = {
+		set_take_point = yes
+		effect = {
+			set_owner = prev
+			
+			while = {
+				count = 1
+				create_ship = {
+					name = random
+					random_existing_design = small_ship_fallen_empire 
+				}
+			}
+			
+			set_location = prev.capital_star
+		}
+	}
+}
+# delete every corvette
+# Scope: Country
+delete_all_corvettes = {
+	every_ship = { limit = { is_ship_size = corvette } 
+		delete_ship = this
+	}	
+}

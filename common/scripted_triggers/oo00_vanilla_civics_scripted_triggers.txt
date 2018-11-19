@@ -30,3 +30,18 @@ has_syncretic_evolution_civic = {
 	}
 }
 
+# scope: country 
+has_machine_assimilator_civic = {
+	OR = {
+		has_valid_civic = civic_machine_assimilator
+		has_country_flag = invalid_country
+	}
+}
+
+# scope: country 
+has_machine_servitor_civic = {
+	OR = {
+		has_valid_civic = civic_machine_servitor
+		has_country_flag = invalid_country
+	}
+}

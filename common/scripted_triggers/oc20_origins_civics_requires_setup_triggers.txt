@@ -55,11 +55,29 @@ oc_requires_solar_system_setup = {
 oc_requires_species_setup = {
 	OR = {
 		oc_requires_homeworld_preference_to_change = yes
+		oc_requires_secondary_species_preference_change = yes
 		oc_requires_species_have_new_trait = yes
 		oc_is_from_earth = yes
 	}
 }
+# scope: country 
+oc_requires_planet_setup = {
+	OR = {
+		oc_requires_homeworld_size_change = yes
+		oc_requires_homeworld_class_to_change = yes
+		oc_requires_reset_capital_setup = yes
+		oc_requires_reset_capital_setup = yes
+		oc_requires_original_homeworld_destroy = yes
+	}
+}
 
+# scope: country 
+oc_requires_leader_setup = {
+	OR = {
+		oc_requires_leader_ruler_traits = yes
+		oc_requires_all_leader_traits = yes
+	}
+}
 
 ### setup archetypes triggers
 
@@ -75,7 +93,7 @@ oc_requires_megastruture_habitat = {
 oc_requires_megastruture_habitat_over_homeworld = {
 	OR = {
 		oc_is_habitat_country = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = habitat_country_setup
 	}
 }
 
@@ -212,6 +230,24 @@ oc_requires_reset_capital_setup = {
 	}
 }
 
+# scope: country
+oc_requires_leader_ruler_traits = {
+	OR = {
+		oc_requires_eternal_leader_ruler_trait = yes
+		oc_requires_digitally_eternal_ruler_trait = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country
+oc_requires_all_leader_traits = {
+	OR = {
+		oc_requires_clinically_eternal_leader_trait = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+
 # scope: country 
 oc_has_nearby_systems_surveyed_country = {
 	OR = {
@@ -220,6 +256,7 @@ oc_has_nearby_systems_surveyed_country = {
 		has_country_flag = invalid_oc_country
 	}
 }
+
 
 
 ### individual civics triggers
@@ -252,7 +289,7 @@ oc_requires_hostile_neighbors = {
 oc_requires_isolate_star = {
 	OR = {
 		has_oc_dyson_engineers_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = isolated_star_country_setup
 	}
 }
 
@@ -260,21 +297,21 @@ oc_requires_isolate_star = {
 oc_requires_megastruture_dyson_sphere_tier2 = {
 	OR = {
 		has_oc_dyson_engineers_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = dyson_home_star_tier2_country_setup
 	}
 }
 
 # scope: country 
 oc_requires_megastruture_dyson_sphere_tier5 = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = dyson_home_star_tier5_country_setup
 	}
 }
 
 # scope: country 
 oc_requires_megastruture_gateway_ruined = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = gateway_ruined_country_setup
 	}
 }
 
@@ -282,21 +319,21 @@ oc_requires_megastruture_gateway_ruined = {
 oc_requires_megastruture_gateway_construction = {
 	OR = {
 		has_oc_dyson_engineers_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = gateway_construction_country_setup
 	}
 }
 
 # scope: country 
 oc_requires_megastruture_gateway_complete = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = gateway_complete_country_setup
 	}
 }
 
 # scope: country 
 oc_requires_megastruture_l_gate = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = l_gateway_country_setup
 	}
 }
 
@@ -318,7 +355,7 @@ oc_requires_megastruture_science_nexus_tier2 = {
 oc_requires_natural_wormhole = {
 	OR = {
 		has_oc_wormhole_travelers_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = wormhole_start_country_setup
 	}
 }
 
@@ -326,7 +363,7 @@ oc_requires_natural_wormhole = {
 oc_requires_star_class_change_to_blackhole = {
 	OR = {
 		has_oc_worm_loved_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = blackhole_start_country_setup
 	}
 }
 
@@ -334,7 +371,7 @@ oc_requires_star_class_change_to_blackhole = {
 oc_requires_homeworld_class_to_change_to_random_habitable = {
 	OR = {
 		has_oc_climate_shift_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = random_planet_type_country_setup
 	}
 }
 
@@ -346,7 +383,7 @@ oc_requires_homeworld_class_to_change_to_random_uninhabitable = {
 		has_oc_hive_voidborne_civic = yes
 		has_oc_hive_habitat_life_civic = yes
 		has_oc_robo_voidborne_mechanisms_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = ruined_homeworld_country_setup
 	}
 }
 
@@ -354,7 +391,7 @@ oc_requires_homeworld_class_to_change_to_random_uninhabitable = {
 oc_requires_homeworld_class_to_change_to_nuked = {
 	OR = {
 		oc_is_nuked_country = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = nuked_homeworld_country_setup
 	}
 }
 
@@ -362,7 +399,7 @@ oc_requires_homeworld_class_to_change_to_nuked = {
 oc_requires_homeworld_class_to_change_to_gaia = {
 	OR = {
 		oc_is_gaia_country = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = gaia_homeworld_country_setup
 	}
 }
 
@@ -370,7 +407,23 @@ oc_requires_homeworld_class_to_change_to_gaia = {
 oc_requires_homeworld_class_to_change_to_machine = {
 	OR = {
 		oc_is_machine_world_country = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = machine_homeworld_country_setup
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_city = {
+	OR = {
+		#oc_is_city_world_country = yes
+		has_country_flag = machine_homeworld_country_setup
+	}
+}
+
+# scope: country 
+oc_requires_habitat_setup = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = ringworld_homeworld_country_setup
 	}
 }
 
@@ -378,7 +431,7 @@ oc_requires_homeworld_class_to_change_to_machine = {
 oc_requires_ringworld_setup = {
 	OR = {
 		oc_is_ringworld_country = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = ringworld_homeworld_country_setup
 	}
 }
 
@@ -386,7 +439,7 @@ oc_requires_ringworld_setup = {
 oc_requires_second_habitable_planet = {
 	OR = {
 		has_oc_post_war_of_worlds_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = two_habitable_worlds_country_setup
 	}
 }
 
@@ -403,7 +456,7 @@ oc_requires_habitat_preference = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_hive_voidborne_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = habitat_preference_country_setup
 	}
 }
 
@@ -411,7 +464,7 @@ oc_requires_habitat_preference = {
 oc_requires_gaia_preference = {
 	OR = {
 		has_oc_hive_life_seeded_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = gaia_preference_country_setup
 	}
 }
 
@@ -421,7 +474,7 @@ oc_requires_nuked_preference = {
 		has_oc_nuclear_mutation_civic = yes
 		has_oc_worm_loved_civic = yes
 		has_oc_hive_nuclear_mutation_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = nuked_preference_country_setup
 	}
 }
 
@@ -429,7 +482,7 @@ oc_requires_nuked_preference = {
 oc_requires_continental_preference = {
 	OR = {
 		has_oc_colony_of_man_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = continental_preference_country_setup
 	}
 }
 
@@ -437,7 +490,16 @@ oc_requires_continental_preference = {
 oc_requires_ringworld_preference = {
 	OR = {
 		has_oc_ringborne_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = ringworld_preference_country_setup
+	}
+}
+# scope: country 
+oc_requires_secondary_species_preference_change = {
+	OR = {
+		has_syncretic_evolution_civic = yes
+		has_machine_assimilator_civic = yes
+		has_machine_servitor_civic = yes
+		has_country_flag = secondary_species_preference_country_setup
 	}
 }
 
@@ -446,7 +508,7 @@ oc_requires_new_homeworld_is_habitat = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_hive_voidborne_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = habitat_is_homeworld_country_setup
 	}
 	NOT = { has_country_flag = oc_homeworld_set }
 }
@@ -455,44 +517,44 @@ oc_requires_new_homeworld_is_habitat = {
 oc_requires_new_homeworld_is_secondary_planet = {
 	OR = {
 		has_oc_post_war_of_worlds_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = homeworld_is_second_habitable_world_country_setup
 	}
 }
 
 # scope: country 
-oc_requires_planet_size_change_to_25 = {
+oc_requires_homeworld_size_change_to_25 = {
 	OR = {
 		has_oc_hive_life_seeded_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = size25_homeworld_country_setup
 	}
 }
 
 # scope: country 
-oc_requires_planet_size_change_to_12 = {
+oc_requires_homeworld_size_change_to_12 = {
 	OR = {
 		has_oc_robo_machine_world_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = size12_homeworld_country_setup
 	}
 }
 
 # scope: country 
-oc_requires_planet_size_change_to_8 = {
+oc_requires_homeworld_size_change_to_8 = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = size8_homeworld_country_setup
 	}
 }
 
 # scope: country 
-oc_requires_planet_size_change_to_6 = {
+oc_requires_homeworld_size_change_to_6 = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = size6_homeworld_country_setup
 	}
 }
 
 # scope: country 
-oc_requires_planet_size_change_to_4 = {
+oc_requires_homeworld_size_change_to_4 = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = size4_homeworld_country_setup
 	}
 }
 
@@ -504,6 +566,15 @@ oc_requires_additional_blockers_setup = {
 }
 
 # scope: country 
+oc_requires_lonely_capital = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_oc_hive_life_seeded_civic = yes
+		has_country_flag = original_homeworld_destroyed_country_setup
+	}
+}
+# scope: country 
 oc_requires_special_building_setup = {
 	OR = {
 		has_oc_nuclear_vault_civic = yes
@@ -511,6 +582,33 @@ oc_requires_special_building_setup = {
 		has_country_flag = invalid_oc_country
 	}
 }
+
+# scope: country 
+oc_requires_eternal_leader_ruler_trait = {
+	OR = {
+		has_oc_eternal_leader_civic = yes
+		has_country_flag = eternal_leader_country
+	}
+}
+
+# scope: country 
+oc_requires_digitally_eternal_ruler_trait = {
+	OR = {
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = digitally_eternal_leader_country
+	}
+}
+
+# scope: country 
+oc_requires_clinically_eternal_leader_trait = {
+	OR = {
+		has_oc_clinically_eternal_civic = yes
+		has_country_flag = clinically_eternal_leader_country
+	}
+}
+
+
+
 
 
 # scope: country 

@@ -32,6 +32,107 @@ clear_deposits_and_stations = {
 		mining_station = { dismantle = yes }
 	}
 }
+# spawns habitat
+# input event_target:megastructure_planet
+# Scope: Planet
+# root: Galactic Object
+spawn_planet_habitat = {
+	spawn_planet = {
+		class = "pc_habitat"
+		location = event_target:megastructure_planet
+		orbit_location = yes
+		orbit_angle_offset = 45
+		orbit_distance_offset = 9.899
+		size = 12
+		has_ring = no
+		
+		init_effect = {
+			set_name = "OC_HABITAT_PLANET_NAME"
+			random_list = {
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = humanoid_01
+					}
+					modifier = { 
+						factor = 0 
+						NOT  = { host_has_dlc = "Humanoids Species Pack" }
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = plantoid_01
+					}
+					modifier = { 
+						factor = 0 
+						NOT  = { host_has_dlc = "Plantoid" }
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = mammalian_01
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = reptilian_01
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = avian_01
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = molluscoid_01
+					}
+				}
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = fungoid_01
+					}
+				}		
+				10 = {
+					set_planet_entity = {
+						entity = "orbital_habitat_entity"
+						graphical_culture = arthropoid_01
+					}
+				}
+			}
+			
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+			if = {
+				limit = {
+					event_target:megastructure_planet = {
+						colonizeable_planet = no
+					}
+				}
+				copy_orbital_tile = event_target:megastructure_planet
+			}
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			remove_orbital_deposit = yes
+		}
+	}
+	event_target:megastructure_planet = {
+		set_planet_flag = has_megastructure
+	}
+}
 
 ### Megastructures ###
 # spawns habitat
@@ -42,7 +143,7 @@ spawn_megastructure_habitat = {
 	spawn_megastructure = {
 		type = habitat_0
 		location = event_target:megastructure_planet
-		owner = root
+		owner = fromfrom
 	}
 }
 
@@ -54,7 +155,7 @@ spawn_megastructure_oc_dyson_sphere_tier2 = {
 	spawn_megastructure = { 
 		type = oc_dyson_sphere_2 
 		location = event_target:megastructure_star
-		owner = root
+		owner = fromfrom
 	}
 }
 
@@ -66,7 +167,7 @@ spawn_megastructure_oc_dyson_sphere_tier5 = {
 	spawn_megastructure = { 
 		type = oc_dyson_sphere_5
 		location = event_target:megastructure_star
-		owner = root
+		owner = fromfrom
 	}
 }
 
@@ -99,7 +200,7 @@ spawn_megastructure_gateway_construction = {
 		type = gateway_0
 		random_pos = yes
 		orbit_angle = 360
-		owner = root
+		owner = fromfrom
 	}
 }
 
@@ -111,7 +212,7 @@ spawn_megastructure_gateway_complete = {
 		type = gateway_final
 		random_pos = yes
 		orbit_angle = 360
-		owner = root
+		owner = fromfrom
 	}
 }
 

@@ -348,7 +348,72 @@ change_to_pc_random_cold_wet_planet = {
 # change to planet type owner class
 # Scope: Planet
 change_to_pc_owner_class = {
-	#change_pc = pc_city
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_nuked_preference }
+		}
+		change_pc = pc_nuked
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_desert_preference }
+		}
+		change_pc = pc_desert
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_arid_preference }
+		}
+		change_pc = pc_arid
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_savannah_preference }
+		}
+		change_pc = pc_savannah
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_tropical_preference }
+		}
+		change_pc = pc_tropical
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_ocean_preference }
+		}
+		change_pc = pc_ocean
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_arctic_preference }
+		}
+		change_pc = pc_arctic
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_tundra_preference }
+		}
+		change_pc = pc_tundra
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_alpine_preference }
+		}
+		change_pc = pc_alpine
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_continental_preference }
+		}
+		change_pc = pc_continental
+	}
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_gaia_preference }
+		}
+		change_pc = pc_gaia
+	}
 }
 
 

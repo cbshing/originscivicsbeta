@@ -16,6 +16,45 @@
 # # Generic Effects #
 # ########################
 
+### Graphical Culture Effects
+set_random_graphical_culture = {
+	random_list = {
+		10 = { 
+			set_graphical_culture = humanoid_01 
+			modifier = { 
+				factor = 0 
+				NOT  = { host_has_dlc = "Humanoids Species Pack" }
+			}
+		}
+		10 = { 
+			set_graphical_culture = plantoid_01 
+			modifier = { 
+				factor = 0 
+				NOT  = { host_has_dlc = "Plantoid" }
+			}
+		}
+		10 = { 
+			set_graphical_culture = mammalian_01 
+		}
+		10 = { 
+			set_graphical_culture = reptilian_01 
+		}
+		10 = { 
+			set_graphical_culture = avian_01 
+		}
+		10 = { 
+			set_graphical_culture = molluscoid_01 
+		}
+		10 = { 
+			set_graphical_culture = fungoid_01 
+		}
+		10 = { 
+			set_graphical_culture = arthropoid_01 
+		}
+	}
+}
+
+### Sol Effects
 # searches for Earth and adds planet flag if missing
 # Scope: Country
 find_earth = {
@@ -50,6 +89,8 @@ find_earth = {
 	}
 }
 
+# Creates the Human Species
+# Scope: None
 create_human_species = {
 	if = { limit = { any_planet = { has_planet_flag = planet_earth } }
 		random_planet = {

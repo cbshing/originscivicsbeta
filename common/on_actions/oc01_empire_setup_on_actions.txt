@@ -7,5 +7,6 @@ on_game_start_country = {
 		#origins_civics_empire_setup.4 # civic colony setup
 		origins_civics_empire_setup.5 # civic species setup
 		origins_civics_empire_setup.6 # civic homeworld setup
+		origins_civics_empire_setup.8 # civic leader setup
 	}
 }

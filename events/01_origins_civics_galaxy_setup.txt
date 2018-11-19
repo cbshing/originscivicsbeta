@@ -33,7 +33,7 @@ event = {
 					90 = { create_human_une_empire = yes }
 					10 = { 
 						create_human_hte_empire = yes 
-						modifier = { # if no fallen empires, don't use
+						modifier = { # if not a Ulysses Initiative (e.g. CoM) empires, don't use
 							factor = 0
 							any_country = { oc_is_ulysses_initiative_country = yes }	
 						}
@@ -84,30 +84,74 @@ event = {
 	
 	trigger = {
 		NOT = { has_global_flag = oc_random_habitats_spawned }
+		any_country = {
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_empire
+				oc_is_habitat_country = yes
+			}
+		}
 		host_has_dlc = "Utopia"
 	}
 	
 	immediate = {
-		get_galaxy_setup_value = { 
-			setting = num_habitable_worlds
-			which = local_habitats_num
-			scale_by = 3
-		}
-		while = {
-			count = local_habitats_num
+		#get_galaxy_setup_value = { 
+		#	setting = colonizable_planet_odds 
+		#	which = local_habitats_num
+		#	scale_by = 2
+		#}
+		while = { # guarentee at least 2 habitats spawn
+			count = 2
 			random_system = {
 				limit = {
 					NOR = {
 						has_star_flag = oc_has_abandoned_habitat
+						has_star_flag = hostile_system
+						has_star_flag = guardian 
+						has_star_flag = enclave
+						has_star_flag = pirate_system
+						has_star_flag = tiyanki_home_system
 						starting_system = yes
 						has_star_flag = empire_cluster
+						has_owner = yes
 					}
 				}
 				random_system_planet = { # scope to random planet not homeworld
-					limit = { is_a_planet = yes has_owner = no }
+					limit = { is_a_planet = yes has_owner = no is_moon = no }
 					this = { save_event_target_as = megastructure_planet }
 				}
-				spawn_megastructure_habitat = yes
+				spawn_planet_habitat = yes
+				set_star_flag = oc_has_abandoned_habitat
+			}
+		}
+		while = {
+			#count = local_habitats_num
+			count = 8
+			random_list = {
+				50 = {
+					random_system = {
+						limit = {
+							NOR = {
+								has_star_flag = oc_has_abandoned_habitat
+								has_star_flag = hostile_system
+								has_star_flag = guardian 
+								has_star_flag = enclave
+								has_star_flag = pirate_system
+								has_star_flag = tiyanki_home_system
+								starting_system = yes
+								has_star_flag = empire_cluster
+								has_owner = yes
+							}
+						}
+						random_system_planet = { # scope to random planet not homeworld
+							limit = { is_a_planet = yes has_owner = no is_moon = no }
+							this = { save_event_target_as = megastructure_planet }
+						}
+						spawn_planet_habitat = yes
+						set_star_flag = oc_has_abandoned_habitat
+					}
+				}
+				50 = { }
 			}
 		}
 		set_global_flag = oc_random_habitats_spawned
@@ -115,10 +159,10 @@ event = {
 	
 }
 
-# Add Fallen Empire Abandoned Colonies Modifier up to 3 planets away
+# Add Fallen Empire Abandoned Colonies Modifier up to 5 stars away
 # Run before game start
 event = {
-	id = origins_civics_galaxy_setup.10
+	id = origins_civics_galaxy_setup.3
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -140,16 +184,40 @@ event = {
 					ignore_hyperlanes = no 
 					limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 					random_system_planet = {
-						limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
+						limit = { 
+							is_a_planet = yes
+							is_colonizable = yes
+							is_homeworld = no
+							num_modifiers = 0
+							NOR = {
+								is_planet_class = pc_nuked 
+								is_planet_class = pc_gaia 
+								has_modifier = pm_oc_abandoned_colony 
+							} 
+						}
 						random_list = {
-							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+							50 = { 
+								add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+							}
 							50 = { }
 						}
 					}
 					random_system_planet = {
-						limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
+						limit = { 
+							is_a_planet = yes
+							is_colonizable = yes
+							is_homeworld = no
+							num_modifiers = 0
+							NOR = {
+								is_planet_class = pc_nuked 
+								is_planet_class = pc_gaia 
+								has_modifier = pm_oc_abandoned_colony 
+							} 
+						}
 						random_list = {
-							50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
+							50 = { 
+								add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+							}
 							50 = { }
 						}
 					}
@@ -157,25 +225,94 @@ event = {
 						ignore_hyperlanes = no 
 						limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 						random_system_planet = {
-							limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
+							limit = { 
+								is_a_planet = yes
+								is_colonizable = yes
+								is_homeworld = no
+								num_modifiers = 0
+								NOR = {
+									is_planet_class = pc_nuked 
+									is_planet_class = pc_gaia 
+									has_modifier = pm_oc_abandoned_colony 
+								} 
+							}
 							random_list = {
-								50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
-								50 = { }
+								40 = { 
+									add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+								}
+								60 = { }
 							}
 						}
 						every_neighbor_system = { 
 							ignore_hyperlanes = no 
 							limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
 							random_system_planet = {
-								limit = { is_a_planet = yes is_colonizable = yes is_homeworld = no }
+								limit = { 
+									is_a_planet = yes
+									is_colonizable = yes
+									is_homeworld = no
+									num_modifiers = 0
+									NOR = {
+										is_planet_class = pc_nuked 
+										is_planet_class = pc_gaia 
+										has_modifier = pm_oc_abandoned_colony 
+									} 
+								}
 								random_list = {
-									50 = { add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } }
-									50 = { }
+									30 = { 
+										add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+									}
+									70 = { }
+								}
+							}
+							every_neighbor_system = { 
+								ignore_hyperlanes = no 
+								limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
+								random_system_planet = {
+									limit = { 
+										is_a_planet = yes
+										is_colonizable = yes
+										is_homeworld = no
+										num_modifiers = 0
+										NOR = {
+											is_planet_class = pc_nuked 
+											is_planet_class = pc_gaia 
+											has_modifier = pm_oc_abandoned_colony 
+										} 
+									}
+									random_list = {
+										20 = { 
+											add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+										}
+										80 = { }
+									}
+								}
+								every_neighbor_system = { 
+									ignore_hyperlanes = no 
+									limit = { has_owner = no NOT = { has_star_flag = empire_cluster } }
+									random_system_planet = {
+										limit = { 
+											is_a_planet = yes
+											is_colonizable = yes
+											is_homeworld = no
+											num_modifiers = 0
+											NOR = {
+												is_planet_class = pc_nuked 
+												is_planet_class = pc_gaia 
+												has_modifier = pm_oc_abandoned_colony 
+											} 
+										}
+										random_list = {
+											10 = { 
+												add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+											}
+											90 = { }
+										}
+									}
 								}
 							}
 						}
 					}
-					
 				}
 			}
 		}

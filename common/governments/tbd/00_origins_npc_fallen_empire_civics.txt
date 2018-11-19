@@ -17,49 +17,72 @@
 #	}
 #}
 
-# Advance "Primitive" Colonies
+# Fallen Empires
 
-civic_oc_primitive_colonial_administration = {
+civic_oc_fallen_imperium_successor = { # e.g. emperor
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_colonial_administration.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
-		country_type = { 
-			OR = {
-				value = primitive_lost_colony 
-				value = primitive_fallen_colony 
-			}
-		}
+		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	random_weight = { base = 5 }
-	modifier = { 
+	modifier = {
 	}
 }
 
-civic_oc_primitive_lost_colony = {
+civic_oc_fallen_imperium_exarch = { # e.g. exarch
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_lost_colony.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
 	potential = {
-		country_type = { value = primitive_lost_colony }
+		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	random_weight = { base = 5 }
-	modifier = { 
-		planet_clear_blocker_cost_mult = -0.10 
-		planet_colony_development_speed_mult = 0.10
+	modifier = {
 	}
 }
 
-civic_oc_primitive_fallen_colony = {
+civic_oc_fallen_imperium_papacy = { # e.g. pope
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_colony.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
 	potential = {
-		country_type = { value = primitive_fallen_colony }
+		country_type = { value = fallen_empire }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = { value = ethic_fanatic_spiritualist }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	}
+}
+
+# Awakened Empires
+
+civic_oc_awakened_imperium = { # e.g. emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_fallen_empire.dds"
+	potential = {
+		country_type = { value = awakened_fallen_empire  }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	random_weight = { base = 5 }
-	modifier = { 
-		all_technology_research_speed = 0.05
-		pop_consumer_goods_add = 0.15
+	modifier = {
+	}
+}
+
+civic_oc_awakened_imperium_papacy = { # e.g. holy emperor
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_exalted_priesthood.dds"
+	potential = {
+		country_type = { value = awakened_fallen_empire  }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = { value = ethic_fanatic_spiritualist }
+	}
+	random_weight = { base = 5 }
+	modifier = {
 	}
 }
