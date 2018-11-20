@@ -225,103 +225,103 @@ oc_set_colony_homeworld_flag = {
 # For every possible colony, find a unique homeworld
 # Scope: Country
 oc_set_colony_flag = {
-	if = { limit = { from = { has_country_flag = oc_colony_empire_earth } }
+	if = { limit = { prev = { has_country_flag = oc_colony_empire_earth } }
 		set_country_flag = oc_colony_empire_earth
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_01 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_01 } }
 		set_country_flag = oc_colony_empire_01
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_02 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_02 } }
 		set_country_flag = oc_colony_empire_02
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_03 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_03 } }
 		set_country_flag = oc_colony_empire_03
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_04 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_04 } }
 		set_country_flag = oc_colony_empire_04
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_05 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_05 } }
 		set_country_flag = oc_colony_empire_05
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_06 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_06 } }
 		set_country_flag = oc_colony_empire_06
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_07 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_07 } }
 		set_country_flag = oc_colony_empire_07
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_08 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_08 } }
 		set_country_flag = oc_colony_empire_08
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_09 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_09 } }
 		set_country_flag = oc_colony_empire_09
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_10 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_10 } }
 		set_country_flag = oc_colony_empire_10
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_11 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_11 } }
 		set_country_flag = oc_colony_empire_11
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_12 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_12 } }
 		set_country_flag = oc_colony_empire_12
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_13 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_13 } }
 		set_country_flag = oc_colony_empire_13
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_14 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_14 } }
 		set_country_flag = oc_colony_empire_14
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_15 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_15 } }
 		set_country_flag = oc_colony_empire_15
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_16 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_16 } }
 		set_country_flag = oc_colony_empire_16
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_17 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_17 } }
 		set_country_flag = oc_colony_empire_17
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_18 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_18 } }
 		set_country_flag = oc_colony_empire_18
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_19 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_19 } }
 		set_country_flag = oc_colony_empire_19
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_20 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_20 } }
 		set_country_flag = oc_colony_empire_20
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_21 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_21 } }
 		set_country_flag = oc_colony_empire_21
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_22 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_22 } }
 		set_country_flag = oc_colony_empire_22
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_23 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_23 } }
 		set_country_flag = oc_colony_empire_23
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_24 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_24 } }
 		set_country_flag = oc_colony_empire_24
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_25 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_25 } }
 		set_country_flag = oc_colony_empire_25
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_26 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_26 } }
 		set_country_flag = oc_colony_empire_26
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_27 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_27 } }
 		set_country_flag = oc_colony_empire_27
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_28 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_28 } }
 		set_country_flag = oc_colony_empire_28
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_29 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_29 } }
 		set_country_flag = oc_colony_empire_29
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_30 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_30 } }
 		set_country_flag = oc_colony_empire_30
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_31 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_31 } }
 		set_country_flag = oc_colony_empire_31
 	}
-	else_if = { limit = { from = { has_country_flag = oc_colony_empire_32 } }
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_32 } }
 		set_country_flag = oc_colony_empire_32
 	}
 }
