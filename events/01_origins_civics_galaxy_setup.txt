@@ -4,14 +4,17 @@ namespace = origins_civics_galaxy_setup
 ### Hidden Game Start Event
 # Generates or setups galactic features including:
 #  - Sol System
-#  - Add Abandoned Colony Modifiers
-#  - Ring of Gaia system
+#  - Abandoned Habitats
+#  - Abandoned Colony Modifiers
 #  - Fallen Graveyard
 #  - Fallen Patrol
+#  - NPC Lost Colony
 #  - NPC Fallen Colony
 #  - NPC Primitive Lost Colony
 #  - NPC Primitive Fallen Colony
 
+
+#  - Ring of Gaia system
 # Create Sol System if missing
 # Runs prior to event game_start.1 to force Origins Civics' custom "sol_system"s to replace "com_sol_system" spawning
 event = {
@@ -39,11 +42,16 @@ event = {
 						}
 					}
 				}
-				default_empire_setup = yes
+				random_system = { limit = { has_star_flag = sol }
+					default_empire_setup = yes
+				}
 			}
 			else_if = {
 				limit = { oc_requires_primitive_early_space_age_sol = yes }
 				random_system = { spawn_system = { initializer = "origins_npc_sol_system" } }
+				random_planet = { limit = { has_planet_flag = planet_earth }
+					create_early_space_age_sol_humans = yes
+				}
 			}
 			else_if = {
 				limit = { oc_requires_nuked_sol = yes }

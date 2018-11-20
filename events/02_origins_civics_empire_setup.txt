@@ -244,6 +244,90 @@ country_event = {
 	}
 }
 
+# Handles setup of civics that require making the empire a colony of another empire
+# -Find an empire with the same species and pair that empire up
+# ->Lost Colony
+# -Change the homeworld of the species to match that of a paired species
+country_event = {
+	id = origins_civics_empire_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_colony_setup = yes
+		NOR = { 
+			has_country_flag = oc_colony_home_set 
+			has_country_flag = oc_colony_home_empire 
+		}
+	}
+	
+	immediate = {		
+		#flag owner species to compare
+		owner_species = { save_event_target_as = oc_colony_species }
+		if = { limit = { oc_requires_secondary_species_colony_setup = yes }
+			random_owned_pop = { limit = { NOT = { is_same_species = owner } }
+				save_event_target_as = oc_colony_species 
+			}
+		}
+		# make fallen colony
+		if = { limit = { oc_is_fallen_colonies_country = yes }
+			# make fallen empires setup
+			
+		}
+		#make lost colony
+		if = {
+			limit = { # any home country
+				any_country = { 
+					oc_requires_colony_setup = no
+					any_owned_pop = { is_same_species = event_target:oc_colony_species }
+				}
+			}
+			# home country
+			every_country = {
+				limit = { 
+					oc_requires_colony_setup = no
+					any_owned_pop = { is_same_species = event_target:oc_colony_species }
+				}
+				set_country_flag = oc_colony_home_empire
+				oc_set_colony_homeworld_flag = yes
+				oc_create_colony_species = yes
+				oc_change_pops_and_leaders_to_last_created_species = yes
+				random_owned_planet = { limit = { is_capital = yes } 
+					set_planet_flag = colony_homeworld
+				}
+				if = {
+					limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
+					change_dominant_species = { species = last_created }
+				}
+				# every colony country
+				every_country = {
+					limit = { 
+						oc_requires_colony_setup = yes
+						OR = {
+							is_same_species = event_target:oc_colony_species
+							AND = {
+								oc_requires_secondary_species_colony_setup = yes
+								any_owned_pop = { is_same_species = event_target:oc_colony_species }
+							}
+						}
+						NOT = { has_country_flag = oc_colony_home_set }
+					}
+					set_country_flag = oc_colony_home_set
+					oc_set_colony_flag = yes
+					oc_change_pops_and_leaders_to_last_created_species = yes
+					if = {
+						limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
+						change_dominant_species = { species = last_created }
+					}
+				}
+			}
+		}
+		else_if = {
+			
+		}
+	}
+}
+
 # Handles setup of civics that require modifications of the species
 # -Requires species have a new homeworld type
 # ->Voidborne
@@ -423,92 +507,6 @@ country_event = {
 	}
 }
 
-# Handles setup of civics that require making the empire a colony of another empire
-# -Find an empire with the same species and pair that empire up
-# ->Lost Colony
-# -Change the homeworld of the species to match that of a paired species
-country_event = {
-	id = origins_civics_empire_setup.4
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		oc_requires_colony_setup = yes
-		NOR = { 
-			has_country_flag = oc_homeworld_set 
-			has_country_flag = oc_home_empire 
-		}
-	}
-	
-	immediate = {		
-		#flag owner species to compare
-		owner_species = { save_event_target_as = oc_colony_species }
-		if = { limit = { oc_requires_secondary_species_colony_setup = yes }
-			random_owned_pop = { limit = { NOT = { is_same_species = owner } }
-				save_event_target_as = oc_colony_species 
-			}
-		}
-		if = { limit = { oc_is_fallen_colonies_country = yes }
-			# make fallen empires setup
-			
-		}
-		#make lost colony
-		if = {
-			limit = {
-				any_country = { 
-					oc_requires_colony_setup = no
-					any_owned_pop = { is_same_species = event_target:oc_colony_species }
-				}
-			}
-			# home country
-			every_country = {
-				limit = { 
-					oc_requires_colony_setup = no
-					any_owned_pop = { is_same_species = event_target:oc_colony_species }
-				}
-				set_country_flag = oc_home_empire
-				oc_set_colony_homeworld_flag = yes
-				oc_create_colony_species = yes
-				oc_change_pops_and_leaders_to_new_species = yes
-				if = {
-					limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
-					change_dominant_species = { species = last_created }
-				}
-				# every colony country
-				every_country = {
-					limit = { 
-						oc_requires_colony_setup = yes
-						OR = {
-							is_same_species = event_target:oc_colony_species
-							AND = {
-								oc_requires_secondary_species_colony_setup = yes
-								any_owned_pop = { is_same_species = event_target:oc_colony_species }
-							}
-						}
-						NOT = { has_country_flag = oc_homeworld_set }
-					}
-					set_country_flag = oc_homeworld_set
-					oc_set_colony_flag = yes
-					oc_change_pops_and_leaders_to_new_species = yes
-					if = {
-						limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
-						change_dominant_species = { species = last_created }
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				oc_is_fallen_colonies_country = yes
-				any_country = { # only for fallen colonies setup
-					is_country_type = fallen_empire
-				}
-			}
-			set_country_flag = oc_found_viable_homeworld
-		}
-	}
-}
-
 # Planet
 # -Requires Homeworld Class Modification
 # ->Nuclear Vault
@@ -574,12 +572,14 @@ country_event = {
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_nuked = yes
+					reset_start_buildings_and_blockers_post_apoc = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_gaia = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_gaia = yes
+					reset_start_buildings_and_blockers_life_seeded = yes
 				}
 			}
 			if = { limit = { oc_requires_homeworld_class_to_change_to_machine = yes }
@@ -606,15 +606,23 @@ country_event = {
 					}
 				}
 			}
-		}		
-		if = { limit = { oc_requires_reset_capital_setup = yes } 
+		}	
+		if = { limit = { oc_requires_habitat_setup = yes } 
 			random_owned_planet = {
 				limit = { is_capital = yes }
-				reset_start_buildings = yes
-				reset_start_blockers = yes
+				reset_start_buildings_and_blockers_habitat = yes
 				add_pops_on_planet = yes
 			}
 		}
+		
+		#if = { limit = { oc_requires_reset_capital_setup = yes } 
+		#	random_owned_planet = {
+		#		limit = { is_capital = yes }
+		#		reset_start_buildings = yes
+		#		reset_start_blockers = yes
+		#		add_pops_on_planet = yes
+		#	}
+		#}
 		if = { limit = { oc_requires_additional_blockers_setup = yes } 
 			random_owned_planet = {
 				limit = { is_capital = yes }
@@ -661,7 +669,6 @@ country_event = {
 					set_age = 403
 					set_skill = 10
 				}
-				create_fallen_colony_start_navy = yes
 			}
 			if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
 				random_owned_leader = {

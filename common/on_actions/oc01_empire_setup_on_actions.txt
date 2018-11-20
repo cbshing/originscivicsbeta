@@ -4,7 +4,7 @@ on_game_start_country = {
 		origins_civics_empire_setup.1 # civic galaxy setup
 		origins_civics_empire_setup.2 # civic cluster setup
 		origins_civics_empire_setup.3 # civic solar system setup
-		#origins_civics_empire_setup.4 # civic colony setup
+		origins_civics_empire_setup.4 # civic colony setup
 		origins_civics_empire_setup.5 # civic species setup
 		origins_civics_empire_setup.6 # civic homeworld setup
 		origins_civics_empire_setup.8 # civic leader setup

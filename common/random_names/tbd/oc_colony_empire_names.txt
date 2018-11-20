@@ -1,0 +1,165 @@
+##############
+# NAME PARTS #
+##############
+
+# Fallen Colonial Government
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen"
+	parts = {
+		"Government" = 4
+		"Administration" = 4
+		"Territories" = 2
+		"Charter" = 3
+		"Holdings" = 2
+	}
+}
+
+### Descriptives
+
+# Fallen Colonial Government Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen_desc"
+	parts = {
+		"Colonial" = 4
+		"Sector" = 2
+	}
+}
+
+# Fallen Colonial Government Middle Descriptive
+empire_name_parts_list = {
+	key = "oc_fallen_colonial_gen_mid_desc"
+	parts = {
+		"Colonial" = 4
+		"Sector" = 2
+	}
+}
+
+################
+# NAME FORMATS #
+################
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Sol Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.2"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Government of Sol
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.3"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <oc_fallen_colonial_gen>"
+	# Sol Colonial Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 4
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.4"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	# Earth Government
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.5"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	noun = "[This.Capital.GetName]"
+	# Government of Earth
+}
+
+# Fallen Colonial Government
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 8
+			OR = { 
+				has_government = "gov_fallen_colonial_government"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.oc_fallen_colonial.6"
+	prefix_format = "[This.Capital.GetName] <oc_fallen_colonial_gen>"
+	noun = "[This.Capital.GetName]"
+	# Earth Colonial Government
+}

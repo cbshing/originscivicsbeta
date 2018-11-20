@@ -1,0 +1,314 @@
+# Origins Civics Planet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ###########################
+# #    Primitive Effects    #
+# ###########################
+
+### Humans ###
+# Early Space Age Humans
+# Scope: Country
+create_early_space_age_sol_humans = {
+	if = { limit = { any_planet = { has_planet_flag = planet_earth } }
+		random_planet = {
+			limit = { has_planet_flag = planet_earth } 
+			this = { save_event_target_as = earth_home }
+		}
+	}
+	create_species = {
+		is_mod = no
+		name = "PRESCRIPTED_species_name_humans1"
+		namelist = "HUMAN1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		class = "HUM"
+		portrait = "human"
+		traits = {
+			trait = "trait_adaptive"
+			trait = "trait_nomadic"
+			trait = "trait_wasteful"
+		}
+		homeworld = event_target:earth_home
+	}
+	create_country = {
+		name = random
+		authority = random
+		day_zero_contact = no
+		civics = {
+			civic = civic_increasing_urbanization
+			civic = civic_atmospheric_pollution
+		}
+		species = last_created
+		ethos = {
+			ethic = "ethic_xenophile"
+			ethic = "ethic_fanatic_egalitarian"			
+		}
+		flag = {
+			icon = {
+				category = "human"
+				file = "flag_human_9.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors={
+				"dark_blue"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = industrial_01
+		set_country_flag = early_space_age
+		set_country_flag = humans_early_space_age
+		set_primitive_age = early_space_age
+	}
+	create_colony = {
+		owner = last_created_country
+		species = last_created
+		ethos = {
+			ethic = "ethic_xenophile"
+			ethic = "ethic_fanatic_egalitarian"			
+		}
+	}
+	every_tile = {
+		limit = {
+			has_blocker = yes
+		}
+		remove_blocker = yes
+	}
+	random_tile = {
+		limit = { has_building = "building_colony_shelter" }
+		remove_building = yes
+	}
+	while = {
+		count = 3			
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_blocker = tb_decrepit_dwellings
+		}
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_blocker = tb_failing_infrastructure		
+		}				
+	}					
+	create_army = {
+		name = "US Armed Forces West"
+		owner = last_created
+		species = last_created
+		type = "postatomic_army"
+	}
+	create_army = {
+		name = "US Armed Forces East"
+		owner = last_created
+		species = last_created
+		type = "postatomic_army"
+	}
+	create_army = {
+		name = "Chinese PLA"
+		owner = last_created
+		species = last_created
+		type = "postatomic_army"
+	}
+	create_army = {
+		name = "Russian Armed Forces"
+		owner = last_created
+		species = last_created
+		type = "postatomic_army"
+	}
+	create_army = {
+		name = "EU Combined Forces"
+		owner = last_created
+		species = last_created
+		type = "postatomic_army"
+	}
+	create_fleet = {
+		name = "NAME_ISS_II" 
+		effect = {
+			set_owner = last_created_country
+			create_ship = {
+				name = "NAME_ISS_II"
+				design = "NAME_Space_Station"
+			}
+			set_location = PREV
+		}
+	}
+	while = {
+		count = 7
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_grown_pop = no
+				has_growing_pop = no
+			}
+			create_pop = {
+				species = last_created
+			}
+		}
+	}
+	while = {
+		count = 4
+		random_tile = {
+			limit = { 
+				has_blocker = no 
+				has_building = no 
+				has_grown_pop = yes
+			}
+			set_building = "building_primitive_factory"
+			set_deposit = d_mineral_deposit
+		}
+	}
+	while = {
+		count = 4
+		random_tile = {
+			limit = { 
+				has_blocker = no 
+				has_building = no 
+				has_grown_pop = yes
+			}
+			set_building = "building_primitive_farm"
+			set_deposit = d_farmland_deposit
+		}
+	}
+}
+
+# Create Primitive Lost Colony
+# Input event_target:colony_species
+# Scope: Country
+create_primitive_lost_colony = {
+	create_country = {
+		name = random
+		authority = random
+		day_zero_contact = no
+		civics = {
+			civic = civic_oc_primitive_colonial_administration
+			civic = civic_oc_primitive_lost_colony
+		}
+		species = last_created
+		ethos = random
+		flag = {
+			icon = {
+				category = "blocky"
+				file = "flag_blocky_24.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "stripes.dds"
+			}
+			colors={
+				"light_green"
+				"dark_grey"
+				"null"
+				"null"
+			}
+		}
+		type = primitive_lost_colony
+	}
+	last_created_country = {
+		set_graphical_culture = industrial_01
+		set_country_flag = primitive_lost_colony
+	}
+	create_colony = {
+		owner = last_created_country
+		species = last_created
+		ethos = owner
+	}
+	random_tile = {
+		limit = { has_building = "building_colony_shelter" }
+		remove_building = yes
+	}
+	every_tile = {
+		limit = {
+			has_blocker = yes
+		}
+		remove_blocker = yes
+	}
+	while = {
+		count = 3			
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_blocker = tb_decrepit_dwellings
+		}
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_building = no
+				has_grown_pop = no
+			}
+			set_blocker = tb_failing_infrastructure		
+		}				
+	}					
+	while = {
+		count = 5
+		create_army = {
+			name = "NAME_Post-Atomic_Army"
+			owner = last_created
+			species = last_created
+			type = "postatomic_army"
+		}
+	}
+	while = {
+		count = 7
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_grown_pop = no
+				has_growing_pop = no
+			}
+			create_pop = {
+				species = last_created
+			}
+		}
+	}
+	while = {
+		count = 4
+		random_tile = {
+			limit = { 
+				has_blocker = no 
+				has_building = no 
+				has_grown_pop = yes
+			}
+			set_building = "building_primitive_factory"
+			set_deposit = d_mineral_deposit
+		}
+	}
+	while = {
+		count = 4
+		random_tile = {
+			limit = { 
+				has_blocker = no 
+				has_building = no 
+				has_grown_pop = yes
+			}
+			set_building = "building_primitive_farm"
+			set_deposit = d_farmland_deposit
+		}
+	}
+}
