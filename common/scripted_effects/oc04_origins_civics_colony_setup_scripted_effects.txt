@@ -19,7 +19,7 @@
 # For every possible homeworld, create a unique homeworld flag and add planet homeworld flag
 # Scope: Country
 oc_set_colony_homeworld_flag = {
-	if = { limit = { any_owned_planet = planet_earth NOT = { any_country = { has_country_flag =  oc_colony_empire_earth } } }
+	if = { limit = { any_owned_planet = { has_planet_flag = planet_earth } NOT = { any_country = { has_country_flag =  oc_colony_empire_earth } } }
 		set_country_flag = oc_colony_empire_earth
 		random_owned_planet = { limit = { is_capital = yes } 
 			set_planet_flag = colony_homeworld_earth
@@ -339,14 +339,14 @@ oc_create_colony_species = {
 			class = this
 			portrait = this
 			traits = this
-			homeworld = from.capital_scope
+			homeworld = owner.capital_scope
 		}
 	}
 }
 
 # For every possible colony, find a unique homeworld
 # Scope: Country
-oc_change_pops_and_leaders_to_new_species = {
+oc_change_pops_and_leaders_to_last_created_species = {
 	every_owned_pop = {
 		limit = { is_same_species = event_target:oc_colony_species }
 		change_species = last_created
