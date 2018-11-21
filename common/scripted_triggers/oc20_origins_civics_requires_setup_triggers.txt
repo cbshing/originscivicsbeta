@@ -79,6 +79,15 @@ oc_requires_leader_setup = {
 	}
 }
 
+# scope: country 
+oc_requires_npc_sol = {
+	OR = {
+		oc_requires_default_npc_sol = yes
+		oc_requires_primitive_early_space_age_sol = yes
+		oc_requires_nuked_sol = yes
+	}
+}
+
 ### setup archetypes triggers
 
 # scope: country 
@@ -256,8 +265,6 @@ oc_has_nearby_systems_surveyed_country = {
 		has_country_flag = invalid_oc_country
 	}
 }
-
-
 
 ### individual civics triggers
 
@@ -595,7 +602,7 @@ oc_requires_eternal_leader_ruler_trait = {
 oc_requires_digitally_eternal_ruler_trait = {
 	OR = {
 		has_oc_digitally_eternal_civic = yes
-		has_country_flag = digitally_eternal_leader_country
+		has_country_flag = starts_with_digitally_eternal_leader
 	}
 }
 
@@ -603,23 +610,11 @@ oc_requires_digitally_eternal_ruler_trait = {
 oc_requires_clinically_eternal_leader_trait = {
 	OR = {
 		has_oc_clinically_eternal_civic = yes
-		has_country_flag = clinically_eternal_leader_country
+		has_country_flag = stars_with_clinically_eternal_leaders
 	}
 }
 
 
-
-
-
-# scope: country 
-oc_requires_npc_sol = {
-	OR = {
-		oc_requires_default_npc_sol = yes
-		oc_requires_primitive_early_space_age_sol = yes
-		oc_requires_nuked_sol = yes
-		has_country_flag = invalid_oc_country
-	}
-}
 
 # scope: country 
 oc_requires_default_npc_sol = {
@@ -630,7 +625,7 @@ oc_requires_default_npc_sol = {
 		has_country_flag = human_5
 		has_country_flag = human_6
 		has_country_flag = human_7
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_npc_sol
 	}
 }
 
@@ -641,13 +636,13 @@ oc_requires_primitive_early_space_age_sol = {
 			has_oc_alien_message_civic = yes
 			species_portrait = fun12
 		}
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_space_age_sol
 	}
 }
 
 # scope: country 
 oc_requires_nuked_sol = {
 	OR = {
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_nuked_sol
 	}
 }
