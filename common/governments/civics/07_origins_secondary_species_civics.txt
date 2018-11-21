@@ -32,7 +32,7 @@ civic_oc_codominant_evolution = {
 				
 				value = civic_oc_alien_invaded # base OC
 				#value = civic_oc_ecological_disaster # base OC
-				value = civic_oc_codominant_evolution # base OC
+				value = civic_oc_voidborne # base OC
 				
 				# value = civic_oc_syncretic_mechanists # OC Untested Addon
 				# value = civic_oc_codominant_mechanists # OC Untested Addon
