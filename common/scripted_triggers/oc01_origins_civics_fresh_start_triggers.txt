@@ -27,7 +27,7 @@
 has_oc_syncretic_mechanists_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_syncretic_mechanists
-		has_country_flag = invalid_oc_country
+		has_country_flag = syncretic_mechanists_country
 	}
 }
 
@@ -35,7 +35,7 @@ has_oc_syncretic_mechanists_civic = {
 has_oc_codominant_mechanists_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_codominant_mechanists
-		has_country_flag = invalid_oc_country
+		has_country_flag = codominant_mechanists_country
 	}
 }
 
@@ -43,7 +43,7 @@ has_oc_codominant_mechanists_civic = {
 has_oc_habitat_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_habitat_life
-		has_country_flag = invalid_oc_country
+		has_country_flag = habitat_life_country
 	}
 }
 
@@ -51,7 +51,7 @@ has_oc_habitat_life_civic = {
 has_oc_paradise_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_paradise_life
-		has_country_flag = invalid_oc_country
+		has_country_flag = gaia_life_country
 	}
 }
 
@@ -59,7 +59,7 @@ has_oc_paradise_life_civic = {
 has_oc_ringborne_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_ringborne
-		has_country_flag = invalid_oc_country
+		has_country_flag = ringborne_country
 	}
 }
 
@@ -67,7 +67,7 @@ has_oc_ringborne_civic = {
 has_oc_dyson_engineers_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_dyson_engineers
-		has_country_flag = invalid_oc_country
+		has_country_flag = dyson_engineers_country
 	}
 }
 
@@ -75,7 +75,7 @@ has_oc_dyson_engineers_civic = {
 has_oc_wormhole_travelers_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_wormhole_travelers
-		has_country_flag = invalid_oc_country
+		has_country_flag = wormhole_travelers_country
 	}
 }
 
@@ -83,7 +83,7 @@ has_oc_wormhole_travelers_civic = {
 has_oc_cybernetic_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_cybernetic
-		has_country_flag = invalid_oc_country
+		has_country_flag = cybernetic_country
 	}
 }
 
@@ -91,7 +91,7 @@ has_oc_cybernetic_civic = {
 has_oc_latent_psionic_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_latent_psionic
-		has_country_flag = invalid_oc_country
+		has_country_flag = latent_psionic_country
 	}
 }
 
@@ -100,7 +100,7 @@ has_oc_symbiotic_evolution_civic = {
 	OR = {
 
 		#has_valid_civic = civic_oc_symbiotic_evolution
-		has_country_flag = invalid_oc_country
+		has_country_flag = brain_slug_country
 	}
 }
 
@@ -110,7 +110,7 @@ has_oc_symbiotic_evolution_civic = {
 has_oc_hive_habitat_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_hive_habitat_life
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_habitat_life_country
 	}
 }
 
@@ -118,7 +118,7 @@ has_oc_hive_habitat_life_civic = {
 has_oc_hive_paradise_life_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_hive_paradise_life
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_gaia_life_country
 	}
 }
 
@@ -127,7 +127,7 @@ has_oc_hive_dyson_builders_civic = {
 	OR = {
 
 		#has_valid_civic = civic_oc_hive_dyson_builders
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_dyson_builders_country
 	}
 }
 
@@ -138,7 +138,7 @@ has_oc_hive_dyson_builders_civic = {
 has_oc_robo_voidborne_mechanisms_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_robo_voidborne_mechanisms
-		has_country_flag = invalid_oc_country
+		has_country_flag = robo_voidborne_country
 	}
 }
 # scope: country 
@@ -146,7 +146,7 @@ has_oc_robo_dyson_builders_civic = {
 	OR = {
 
 		#has_valid_civic = civic_oc_robo_dyson_builders
-		has_country_flag = invalid_oc_country
+		has_country_flag = robo_dyson_builders_country
 	}
 }
 
