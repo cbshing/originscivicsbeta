@@ -27,7 +27,7 @@
 has_oc_worm_loved_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_worm_loved
-		has_country_flag = invalid_oc_country
+		has_country_flag = worm_loved_country
 	}
 }
 
@@ -35,7 +35,7 @@ has_oc_worm_loved_civic = {
 has_oc_fallen_colony_civic = {
 	OR = {
 		has_valid_civic = civic_oc_fallen_colony
-		has_country_flag = invalid_oc_country
+		has_country_flag = fallen_colony_country
 	}
 }
 
@@ -43,7 +43,7 @@ has_oc_fallen_colony_civic = {
 has_oc_fallen_tributary_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_fallen_tributary
-		has_country_flag = invalid_oc_country
+		has_country_flag = fallen_tributary_country
 	}
 }
 
@@ -51,7 +51,7 @@ has_oc_fallen_tributary_civic = {
 has_oc_fallen_enclave_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_fallen_enclave
-		has_country_flag = invalid_oc_country
+		has_country_flag = fallen_enclave_country
 	}
 }
 
@@ -60,7 +60,7 @@ has_oc_fallen_enclave_civic = {
 has_oc_n_cluster_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_n_cluster
-		has_country_flag = invalid_oc_country
+		has_country_flag = n_cluster_country
 	}
 }
 
@@ -69,7 +69,7 @@ has_oc_synthetics_civic = {
 	OR = {
 
 		#has_valid_civic = civic_oc_synthetics
-		has_country_flag = invalid_oc_country
+		has_country_flag = synthetics_country
 	}
 }
 
@@ -78,6 +78,6 @@ has_oc_psionics_civic = {
 	OR = {
 
 		#has_valid_civic = civic_oc_psionics
-		has_country_flag = invalid_oc_country
+		has_country_flag = psionics_country
 	}
 }
