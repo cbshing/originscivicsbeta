@@ -27,7 +27,7 @@
 has_oc_sublight_empire_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_sublight_empire
-		has_country_flag = invalid_oc_country
+		has_country_flag = sublight_empire_country
 	}
 }
 
@@ -35,7 +35,7 @@ has_oc_sublight_empire_civic = {
 has_oc_sublight_conquerer_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_sublight_conquerer
-		has_country_flag = invalid_oc_country
+		has_country_flag = sublight_conquerer_country
 	}
 }
 
@@ -43,6 +43,6 @@ has_oc_sublight_conquerer_civic = {
 has_oc_refugee_saviour_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_refugee_saviour
-		has_country_flag = invalid_oc_country
+		has_country_flag = refugee_saviour_country
 	}
 }
