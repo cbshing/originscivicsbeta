@@ -27,7 +27,7 @@
 has_oc_codominant_evolution_civic = {
 	OR = {
 		has_valid_civic = civic_oc_codominant_evolution
-		has_country_flag = invalid_oc_country
+		has_country_flag = codominant_country
 	}
 }
 
@@ -35,7 +35,7 @@ has_oc_codominant_evolution_civic = {
 has_oc_alien_message_civic = {
 	OR = {
 		has_valid_civic = civic_oc_alien_message
-		has_country_flag = invalid_oc_country
+		has_country_flag = alien_message_country
 	}
 }
 
@@ -43,7 +43,7 @@ has_oc_alien_message_civic = {
 has_oc_alien_invaded_civic = {
 	OR = {
 		has_valid_civic = civic_oc_alien_invaded
-		has_country_flag = invalid_oc_country
+		has_country_flag = alien_invaded_country
 	}
 }
 
@@ -55,7 +55,7 @@ has_oc_lost_colony_civic = {
 		has_country_flag = human_3
 		has_country_flag = human_4
 		has_country_flag = human_5
-		has_country_flag = invalid_oc_country
+		has_country_flag = lost_colony_country
 	}
 }
 
@@ -65,7 +65,7 @@ has_oc_exiled_colony_civic = {
 		has_valid_civic = civic_oc_exiled_colony
 		has_country_flag = human_6
 		has_country_flag = human_7
-		has_country_flag = invalid_oc_country
+		has_country_flag = exiled_colony_country
 	}
 }
 
@@ -73,7 +73,7 @@ has_oc_exiled_colony_civic = {
 has_oc_post_war_of_worlds_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_post_war_of_worlds
-		has_country_flag = invalid_oc_country
+		has_country_flag = post_wow_country
 	}
 }
 
@@ -81,7 +81,7 @@ has_oc_post_war_of_worlds_civic = {
 has_oc_eternal_leader_civic = {
 	OR = {
 		has_valid_civic = civic_oc_eternal_leader
-		has_country_flag = invalid_oc_country
+		has_country_flag = eternal_leader_country
 	}
 }
 
@@ -89,7 +89,7 @@ has_oc_eternal_leader_civic = {
 has_oc_clinically_eternal_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_clinically_eternal
-		has_country_flag = invalid_oc_country
+		has_country_flag = clinically_eternal_country
 	}
 }
 
@@ -97,7 +97,7 @@ has_oc_clinically_eternal_civic = {
 has_oc_digitally_eternal_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_digitally_eternal
-		has_country_flag = invalid_oc_country
+		has_country_flag = digitally_eternal_country
 	}
 }
 
@@ -105,7 +105,7 @@ has_oc_digitally_eternal_civic = {
 has_oc_ecological_disaster_civic = {
 	OR = {
 		has_valid_civic = civic_oc_ecological_disaster
-		has_country_flag = invalid_oc_country
+		has_country_flag = ecological_disaster_country
 	}
 }
 
@@ -113,7 +113,7 @@ has_oc_ecological_disaster_civic = {
 has_oc_climate_shift_civic = {
 	OR = {
 		has_valid_civic = civic_oc_climate_shift
-		has_country_flag = invalid_oc_country
+		has_country_flag = climate_shift_country
 	}
 }
 
@@ -121,7 +121,7 @@ has_oc_climate_shift_civic = {
 has_oc_living_with_titans_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_living_with_titans
-		has_country_flag = invalid_oc_country
+		has_country_flag = titanic_life_country
 	}
 }
 
@@ -129,7 +129,7 @@ has_oc_living_with_titans_civic = {
 has_oc_nuclear_vault_civic = {
 	OR = {
 		has_valid_civic = civic_oc_nuclear_vault
-		has_country_flag = invalid_oc_country
+		has_country_flag = nuked_vault_country
 	}
 }
 
@@ -137,7 +137,7 @@ has_oc_nuclear_vault_civic = {
 has_oc_nuclear_mutation_civic = {
 	OR = {
 		has_valid_civic = civic_oc_nuclear_mutation
-		has_country_flag = invalid_oc_country
+		has_country_flag = nuked_mutation_country
 	}
 }
 
@@ -145,7 +145,7 @@ has_oc_nuclear_mutation_civic = {
 has_oc_voidborne_civic = {
 	OR = {
 		has_valid_civic = civic_oc_voidborne
-		has_country_flag = invalid_oc_country
+		has_country_flag = voidborne_country
 	}
 }
 
@@ -155,7 +155,7 @@ has_oc_voidborne_civic = {
 has_oc_hive_nuclear_vault_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_nuclear_vault
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_nuked_vault_country
 	}
 }
 
@@ -163,7 +163,7 @@ has_oc_hive_nuclear_vault_civic = {
 has_oc_hive_nuclear_mutation_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_nuclear_mutation
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_nuked_mutation_country
 	}
 }
 
@@ -171,7 +171,7 @@ has_oc_hive_nuclear_mutation_civic = {
 has_oc_hive_voidborne_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_voidborne
-		has_country_flag = invalid_oc_country
+		has_country_flag = hive_voidborne_country
 	}
 }
 
@@ -179,7 +179,7 @@ has_oc_hive_voidborne_civic = {
 has_oc_hive_life_seeded_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_life_seeded
-		has_country_flag = invalid_oc_country
+		has_country_flag = life_seeded_country
 	}
 }
 
@@ -189,7 +189,7 @@ has_oc_hive_life_seeded_civic = {
 has_oc_robo_nuked_start_civic = {
 	OR = {
 		has_valid_civic = civic_oc_robo_nuked_start
-		has_country_flag = invalid_oc_country
+		has_country_flag = robo_nuked_country
 	}
 }
 
@@ -197,7 +197,7 @@ has_oc_robo_nuked_start_civic = {
 has_oc_robo_machine_world_civic = {
 	OR = {
 		has_valid_civic = civic_oc_robo_machine_world
-		has_country_flag = invalid_oc_country
+		has_country_flag = robo_machine_world_country
 	}
 }
 
@@ -205,7 +205,7 @@ has_oc_robo_machine_world_civic = {
 has_oc_robo_abandoned_terraformers_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_robo_abandoned_terraformers
-		has_country_flag = invalid_oc_country
+		has_country_flag = robo_terraformers_country
 	}
 }
 
@@ -215,7 +215,7 @@ has_oc_robo_abandoned_terraformers_civic = {
 has_oc_colony_of_earth_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_colony_of_earth
-		has_country_flag = invalid_oc_country
+		has_country_flag = earth_colony_country
 	}
 }
 
@@ -223,7 +223,7 @@ has_oc_colony_of_earth_civic = {
 has_oc_colony_of_man_civic = {
 	OR = {
 		#has_valid_civic = civic_oc_colony_of_man
-		has_country_flag = invalid_oc_country
+		has_country_flag = man_colony_country
 	}
 }
 
