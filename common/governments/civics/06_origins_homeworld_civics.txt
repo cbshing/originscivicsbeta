@@ -152,6 +152,7 @@ civic_oc_voidborne = {
 				value = civic_oc_climate_shift # base OC
 				value = civic_oc_nuclear_vault # base OC
 				value = civic_oc_nuclear_mutation # base OC
+				value = civic_oc_codominant_evolution # base OC
 				
 				# value = civic_oc_worm_loved # OC Ancients Addon
 				# value = civic_oc_habitat_life # OC Ancients Addon
