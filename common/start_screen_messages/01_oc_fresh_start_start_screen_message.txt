@@ -1,0 +1,83 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+
+### FIRST PARTS
+
+# Habitat
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_VOIDBORNE"
+	
+	trigger = {
+		oc_is_habitat_preference_country = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Gaia
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_VOIDBORNE"
+	
+	trigger = {
+		oc_is_habitat_preference_country = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+### SECOND PARTS
+
+# Dyson Engineers
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_DYSON_ENGINEERS"
+	
+	trigger = {
+		has_oc_dyson_engineers_civic = yes
+		NOT = { has_country_flag = custom_start_screen }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+}
+
+# Dyson Engineers
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_HIVE_DYSON_ENGINEERS"
+	
+	trigger = {
+		has_oc_hive_dyson_builders_civic = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Dyson Engineers
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ROBO_DYSON_ENGINEERS"
+	
+	trigger = {
+		has_oc_robo_dyson_builders_civic = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+### THIRD PARTS
+
+# Dyson Sphere
+part = {
+	location = 2
+	localization = "START_SCREEN_PART_THREE_DYSON_ENGINEERS"
+	
+	trigger = {
+		OR = {
+			has_oc_dyson_engineers_civic =  yes
+			has_oc_hive_dyson_builders_civic = yes
+			has_oc_robo_dyson_builders_civic = yes
+		}
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}

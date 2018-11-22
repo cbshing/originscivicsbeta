@@ -76,6 +76,7 @@ oc_is_habitat_country = {
 # scope: country 
 oc_is_gaia_country = {
 	OR = {
+		has_valid_civic = civic_life_seeded
 		has_oc_paradise_life_civic = yes
 		has_oc_hive_life_seeded_civic = yes
 		has_oc_hive_paradise_life_civic = yes
@@ -86,6 +87,7 @@ oc_is_gaia_country = {
 # scope: country 
 oc_is_nuked_country = {
 	OR = {
+		has_valid_civic = civic_post_apocalyptic
 		has_oc_nuclear_vault_civic = yes
 		has_oc_nuclear_mutation_civic = yes
 		has_oc_worm_loved_civic = yes
@@ -133,7 +135,6 @@ oc_is_gaia_preference_country = {
 # scope: country 
 oc_is_nuked_preference_country = {
 	OR = {
-		has_valid_civic = civic_post_apocalyptic
 		has_oc_nuclear_mutation_civic  = yes
 		has_oc_worm_loved_civic = yes
 		has_oc_hive_nuclear_mutation_civic = yes

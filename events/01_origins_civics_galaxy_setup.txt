@@ -108,35 +108,11 @@ event = {
 		#	which = local_habitats_num
 		#	scale_by = 2
 		#}
-		while = { # guarentee at least 2 habitats spawn
-			count = 2
-			random_system = {
-				limit = {
-					NOR = {
-						has_star_flag = oc_has_abandoned_habitat
-						has_star_flag = hostile_system
-						has_star_flag = guardian 
-						has_star_flag = enclave
-						has_star_flag = pirate_system
-						has_star_flag = tiyanki_home_system
-						starting_system = yes
-						has_star_flag = empire_cluster
-						has_owner = yes
-					}
-				}
-				random_system_planet = { # scope to random planet not homeworld
-					limit = { is_a_planet = yes has_owner = no is_moon = no }
-					this = { save_event_target_as = megastructure_planet }
-				}
-				spawn_planet_habitat = yes
-				set_star_flag = oc_has_abandoned_habitat
-			}
-		}
-		while = {
-			#count = local_habitats_num
-			count = 8
-			random_list = {
-				50 = {
+		# guarentee at least 2 habitats spawn if any country is habitat start
+		random_list = {
+			100 = {
+				while = { 
+					count = 2
 					random_system = {
 						limit = {
 							NOR = {
@@ -159,7 +135,50 @@ event = {
 						set_star_flag = oc_has_abandoned_habitat
 					}
 				}
-				50 = { }
+				modifier = {
+					factor = 0
+					any_country = { NOT = { oc_is_habitat_country = yes } }
+				}
+			}
+			0 = { }
+		}
+		# randomize at least 8 habitats spawn if any country is habitat start
+		while = {
+			#count = local_habitats_num
+			count = 8
+			random_list = {
+				30 = {
+					random_system = {
+						limit = {
+							NOR = {
+								has_star_flag = oc_has_abandoned_habitat
+								has_star_flag = hostile_system
+								has_star_flag = guardian 
+								has_star_flag = enclave
+								has_star_flag = pirate_system
+								has_star_flag = tiyanki_home_system
+								starting_system = yes
+								has_star_flag = empire_cluster
+								has_owner = yes
+							}
+						}
+						random_system_planet = { # scope to random planet not homeworld
+							limit = { is_a_planet = yes has_owner = no is_moon = no }
+							this = { save_event_target_as = megastructure_planet }
+						}
+						spawn_planet_habitat = yes
+						set_star_flag = oc_has_abandoned_habitat
+					}
+					modifier = {
+						factor = 2
+						any_country = { oc_is_habitat_country = yes } 
+					}
+					modifier = {
+						factor = 0.5
+						num_fallen_empires = 1
+					}
+				}
+				70 = { }
 			}
 		}
 		set_global_flag = oc_random_habitats_spawned

@@ -1,0 +1,228 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+
+### FIRST PARTS
+# Nuclear Mutation
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_NUCLEAR_MUTATION"
+	
+	trigger = {
+		has_oc_nuclear_mutation_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Voidborne
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_VOIDBORNE"
+	
+	trigger = {
+		oc_is_habitat_preference_country = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+### SECOND PARTS
+
+# Alien Message
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ALIEN_MESSAGE"
+	
+	trigger = {
+		has_oc_alien_message_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Alien Invaded
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ALIEN_INVADED"
+	
+	trigger = {
+		has_oc_alien_invaded_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Ecological Disaster
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ECOLOGICAL_DISASTER"
+	
+	trigger = {
+		has_oc_ecological_disaster_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Climate Shift
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_CLIMATE_SHIFT"
+	
+	trigger = {
+		has_oc_climate_shift_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+
+# Nuclear Vault
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_NUCLEAR_VAULT"
+	
+	trigger = {
+		has_oc_nuclear_vault_civic = yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Eternal Leader
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ETERNAL_LEADER"
+	
+	trigger = {
+		has_oc_eternal_leader_civic =  yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+# Digitally Eternal Leader
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_DIGITALLY_ETERNAL"
+	
+	trigger = {
+		has_oc_digitally_eternal_civic =  yes
+		NOR = { 
+			has_country_flag = custom_start_screen 
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+		NOR = {
+			has_oc_lost_colony_civic = yes
+			has_oc_colony_of_earth_civic = yes
+			has_oc_colony_of_man_civic = yes
+			has_oc_exiled_colony_civic = yes
+		}
+	}
+}
+
+
+### THIRD PARTS
+
+### PRE-SCRIPTED
+
+### Hive Mind
+
+# Nuclear Mutation Hive
+part = {
+	location = 2
+	localization = "START_SCREEN_PART_ONE_HIVE_NUCLEAR_MUTATION"
+	
+	trigger = {
+		has_oc_hive_nuclear_mutation_civic = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Nuclear Vault Hive
+part = {
+	location = 2
+	localization = "START_SCREEN_PART_TWO_NUCLEAR_VAULT_HIVE"
+	
+	trigger = {
+		has_oc_hive_nuclear_vault_civic = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}

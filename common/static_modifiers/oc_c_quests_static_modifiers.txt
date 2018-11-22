@@ -1,0 +1,39 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+##########################################################################
+# Pop Modifiers
+##########################################################################
+
+### Alien Source Search Quests
+# Search Quest Ends Good
+oc_quests_alien_source_found_good = {
+	pop_happiness = 0.1
+}
+
+# Search Quest Ends Source Dead
+oc_quests_alien_source_found_dead = {
+	pop_happiness = -0.05
+}
+
+# Search Quest Ends Bads
+oc_quests_alien_source_found_bad = {
+	pop_happiness = -0.1
+}
+
+### Homeworld Quests
+# Homeworld Climate is Restored
+oc_restored_homeworld = {
+	pop_happiness = 0.1
+}
+# Homeworld Climate is Ruined
+oc_destroyed_homeworld = {
+	pop_happiness = -0.2
+}
+# Homeworld Climate is Stabilized
+oc_restored_homeworld = {
+	pop_happiness = 0.05
+}
