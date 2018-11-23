@@ -41,39 +41,6 @@
 
 # Nuclear Vault Start Building
 building_oc_vault_start = {
-	is_listed = no
-	icon = "building_primitive_farm"
-	
-	cost = {
-	}
-
-	required_resources = {
-	}
-	
-	produced_resources = {
-		physics_research = 3
-		society_research = 3
-		engineering_research = 3
-	}
-	
-	country_modifier = {
-		all_technology_research_speed = 0.03
-	}
-
-	upgrades = {
-	}
-	
-	ai_replace = no
-	event_building = yes
-
-	ai_allow = {
-		# If planet only has slaves/robots, keep it to mining and farming...
-		is_slave_tile_or_planet = no
-	}
-}
-
-# Nuclear Vault Start Building
-building_oc_vault_start = {
 	icon = "building_primitive_farm"
 	can_build = no
 	event_building = yes
@@ -165,6 +132,41 @@ building_oc_vault_start = {
     }
 	
 	ai_replace = no
+}
+
+
+
+# Nuclear Vault Start Building
+building_oc_vault_start = {
+	is_listed = no
+	icon = "building_primitive_farm"
+	
+	cost = {
+	}
+
+	required_resources = {
+	}
+	
+	produced_resources = {
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	
+	country_modifier = {
+		all_technology_research_speed = 0.03
+	}
+
+	upgrades = {
+	}
+	
+	ai_replace = no
+	event_building = yes
+
+	ai_allow = {
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no
+	}
 }
 
 ### Event Generated
