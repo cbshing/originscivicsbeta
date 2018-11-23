@@ -16,7 +16,7 @@
 # #    Planet Effects    #
 # ########################
 
-### Planets ###
+### Special Planets ###
 # change to planet type nuked
 # Scope: Planet
 change_to_pc_nuked = {
@@ -35,15 +35,72 @@ change_to_pc_machine = {
 	change_pc = pc_machine
 }
 
+# change to planet type hive
+# Scope: Planet
+change_to_pc_hive = {
+	#change_pc = pc_hive
+}
+
 # change to planet type city
 # Scope: Planet
 change_to_pc_city = {
 	#change_pc = pc_city
 }
 
+### Normal Planets ###
+
+# change to planet type arid
+# Scope: Planet
+change_to_pc_arid = {
+	change_pc = pc_arid
+	set_entity_arid = yes
+}
+
+# change to planet type desert
+# Scope: Planet
+change_to_pc_desert = {
+	change_pc = pc_desert
+	set_entity_desert = yes
+}
+
+# change to planet type savannah
+# Scope: Planet
+change_to_pc_savannah = {
+	change_pc = pc_savannah
+	set_entity_savannah = yes
+}
+
+# change to planet type sandsea (PD)
+# Scope: Planet
+change_to_pc_sandsea = {
+#	change_pc = pc_sandsea
+#	set_entity_sandsea = yes
+}
+
+# change to planet type mesa (PD)
+# Scope: Planet
+change_to_pc_mesa = {
+#	change_pc = pc_mesa
+#	set_entity_mesa = yes
+}
+
+# change to planet type oasis (PD)
+# Scope: Planet
+change_to_pc_oasis = {
+#	change_pc = pc_oasis
+#	set_entity_oasis = yes
+}
+
+# change to planet type geocrystalline (PD)
+# Scope: Planet
+change_to_pc_sandsea = {
+#	change_pc = pc_geocrystalline
+#	set_entity_geocrystalline = yes
+}
+
+
 ### Planetary Diversity Related Below ###
 # Code will need to be modified to be compatible with PD
-
 
 # change to planet type random habitable
 # Scope: Planet
