@@ -445,6 +445,13 @@ oc_requires_homeworld_class_to_change_to_machine = {
 }
 
 # scope: country 
+oc_requires_homeworld_class_to_change_to_hive= {
+	OR = {
+		has_country_flag = starts_on_hive_world
+	}
+}
+
+# scope: country 
 oc_requires_homeworld_class_to_change_to_city = {
 	OR = {
 		#oc_is_city_world_country = yes
@@ -456,6 +463,20 @@ oc_requires_homeworld_class_to_change_to_city = {
 oc_requires_homeworld_class_to_change_to_arid = {
 	OR = {
 		has_country_flag = starts_on_arid_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_desert = {
+	OR = {
+		has_country_flag = starts_on_desert_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_savannah = {
+	OR = {
+		has_country_flag = starts_on_savannah_world
 	}
 }
 

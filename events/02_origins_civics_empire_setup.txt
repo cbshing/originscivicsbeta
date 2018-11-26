@@ -611,12 +611,38 @@ country_event = {
 					change_to_pc_machine = yes
 				}
 			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_hive = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_hive = yes
+				}
+			}			
 			if = { limit = { oc_requires_homeworld_class_to_change_to_city = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_city = yes
 				}
 			}
+			
+			if = { limit = { oc_requires_homeworld_class_to_change_to_arid = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_arid = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_desert = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_desert = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_savannah = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_savannah = yes
+				}
+			}
+			
 			if = { limit = { oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes }
 				random_owned_planet = {
 					limit = { has_planet_flag = oc_old_homeworld }
@@ -665,6 +691,7 @@ country_event = {
 }
 
 # Pop
+# -Requires Creation of Secondary Pops
 country_event = {
 	id = origins_civics_empire_setup.7
 	hide_window = yes
@@ -747,6 +774,18 @@ country_event = {
 }
 
 # Technologies
+# -Requires Country to have more technologies
+# -Requires Country to have Robot Tech
+# ->Syncretic Mechanists
+# ->Codominant Mechanists
+# -Requires Country to have Gateway Tech
+# ->Dyson Engineers
+# -Requires Country to have Wormhole Tech
+# ->Wormhole Travelers
+# -Requires Country to have Megastructure Tech
+# ->TBD
+# -Requires Country to have Random Military Tech
+# ->Alien Invaded
 country_event = {
 	id = origins_civics_empire_setup.10
 	hide_window = yes

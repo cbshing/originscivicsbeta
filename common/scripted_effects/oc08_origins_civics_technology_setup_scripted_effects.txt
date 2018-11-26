@@ -17,19 +17,6 @@
 # ########################
 
 ### Technology ###
-# Give Random Military Ship Tech
-# Scope: Country
-give_random_tier2_military_ship_tech = {
-	random_list = {
-		16 = { give_technology = { message = no tech = tech_lasers_2 } }
-		16 = { give_technology = { message = no tech = tech_mass_drivers_2 } }
-		16 = { give_technology = { message = no tech = tech_ship_armor_2  } }
-		16 = { give_technology = { message = no tech = tech_thrusters_2 } }
-		16 = { give_technology = { message = no tech = tech_fusion_power } }
-		16 = { give_technology = { message = no tech = tech_shields_2 } }
-	}
-}
-
 # give megaengineering technology
 # Scope: Country
 give_megaengineering_technology = {
@@ -71,5 +58,18 @@ give_ascension_theory_technology = {
 	}
 	else = {
 		give_technology = { tech = "tech_ascension_theory_apoc" message = no }
+	}
+}
+
+# give random tier2 military ship tech
+# Scope: Country
+give_random_tier2_military_ship_tech = {
+	random_list = {
+		16 = { give_technology = { message = no tech = tech_lasers_2 } }
+		16 = { give_technology = { message = no tech = tech_mass_drivers_2 } }
+		16 = { give_technology = { message = no tech = tech_ship_armor_2  } }
+		16 = { give_technology = { message = no tech = tech_thrusters_2 } }
+		16 = { give_technology = { message = no tech = tech_fusion_power } }
+		16 = { give_technology = { message = no tech = tech_shields_2 } }
 	}
 }
