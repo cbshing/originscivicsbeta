@@ -87,11 +87,24 @@ oc_requires_planet_setup = {
 }
 
 # scope: country 
+oc_requires_pops_setup = {
+	OR = {
+		oc_has_secondary_species_civics = yes
+	}
+}
+
+# scope: country 
 oc_requires_leader_setup = {
 	OR = {
 		oc_requires_leader_ruler_traits = yes
 		oc_requires_all_leader_traits = yes
 	}
+}
+
+# scope: country 
+oc_requires_technologies_setup = {
+	oc_has_robot_pops_on_start_civics = yes
+	oc_requires_random_tier2_ship_tech = yes
 }
 
 # scope: country 
@@ -126,7 +139,6 @@ oc_requires_megastruture_dyson_sphere = {
 	OR = {
 		oc_requires_megastruture_dyson_sphere_tier2 = yes
 		oc_requires_megastruture_dyson_sphere_tier5 = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -136,7 +148,6 @@ oc_requires_megastruture_gateway = {
 		oc_requires_megastruture_gateway_ruined = yes
 		oc_requires_megastruture_gateway_construction = yes
 		oc_requires_megastruture_gateway_complete = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -144,7 +155,6 @@ oc_requires_megastruture_gateway = {
 oc_requires_megastruture_sentry_array = {
 	OR = {
 		oc_requires_megastruture_sentry_array_tier2 = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -152,7 +162,6 @@ oc_requires_megastruture_sentry_array = {
 oc_requires_megastruture_science_nexus = {
 	OR = {
 		oc_requires_megastruture_science_nexus_tier2 = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -160,7 +169,7 @@ oc_requires_megastruture_science_nexus = {
 oc_requires_star_class_to_change = {
 	OR = {
 		oc_requires_star_class_change_to_blackhole = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_blackhole_star
 	}
 }
 
@@ -168,7 +177,6 @@ oc_requires_star_class_to_change = {
 oc_requires_all_planets_habitable = {
 	OR = {
 		oc_requires_all_planets_class_to_change_to_nuked = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -179,7 +187,6 @@ oc_requires_homeworld_preference_to_change = {
 		oc_requires_gaia_preference = yes
 		oc_requires_nuked_preference = yes
 		oc_requires_continental_preference = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -191,7 +198,6 @@ oc_requires_species_have_new_trait = {
 		oc_has_synthetic_species_trait = yes
 		oc_has_psionic_species_trait = yes
 		oc_has_brain_slug_species_trait = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -208,7 +214,6 @@ oc_requires_new_homeworld = {
 oc_requires_homeworld_size_change = {
 	OR = {
 		oc_is_machine_world_country = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -221,7 +226,6 @@ oc_requires_homeworld_class_to_change = {
 		oc_requires_homeworld_class_to_change_to_gaia = yes
 		oc_requires_homeworld_class_to_change_to_machine = yes 
 		oc_requires_homeworld_class_to_change_to_city = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -236,7 +240,6 @@ oc_requires_reset_capital_setup = {
 		oc_requires_homeworld_class_to_change_to_city = yes
 		oc_requires_habitat_setup = yes
 		oc_requires_ringworld_setup = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -244,7 +247,6 @@ oc_requires_reset_capital_setup = {
 oc_requires_special_building_setup = {
 	OR = {
 		oc_requires_vault_building_setup = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -253,7 +255,6 @@ oc_requires_leader_ruler_traits = {
 	OR = {
 		oc_requires_eternal_leader_ruler_trait = yes
 		oc_requires_digitally_eternal_ruler_trait = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -261,7 +262,6 @@ oc_requires_leader_ruler_traits = {
 oc_requires_all_leader_traits = {
 	OR = {
 		oc_requires_clinically_eternal_leader_trait = yes
-		has_country_flag = invalid_oc_country
 	}
 }
 
@@ -273,7 +273,7 @@ oc_requires_advanced_start = {
 	OR = {
 		has_oc_sublight_empire_civic = yes
 		has_oc_sublight_conquerer_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_colonies
 	}
 }
 
@@ -290,7 +290,7 @@ oc_has_nearby_systems_surveyed_country = {
 oc_requires_isolate_cluster = {
 	OR = {
 		has_oc_n_cluster_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_in_isolated_cluster
 	}
 }
 
@@ -386,8 +386,23 @@ oc_requires_star_class_change_to_blackhole = {
 # scope: country 
 oc_requires_homeworld_class_to_change_to_random_habitable = {
 	OR = {
-		has_oc_climate_shift_civic = yes
 		has_country_flag = starts_with_random_habitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = {
+	OR = {
+		has_country_flag = human_3
+		has_country_flag = starts_with_random_tier1_habitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = {
+	OR = {
+		has_oc_climate_shift_civic = yes
+		has_country_flag = starts_with_random_tier2_habitable_homeworld
 	}
 }
 
@@ -434,6 +449,13 @@ oc_requires_homeworld_class_to_change_to_city = {
 	OR = {
 		#oc_is_city_world_country = yes
 		has_country_flag = starts_on_city_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_arid = {
+	OR = {
+		has_country_flag = starts_on_arid_world
 	}
 }
 
@@ -625,7 +647,32 @@ oc_requires_clinically_eternal_leader_trait = {
 	}
 }
 
+# scope: country 
+oc_requires_ascension_theory_tech = {
+	OR = {
+		has_country_flag = starts_with_ascension_theory_tech
+	}
+}
 
+# scope: country 
+oc_requires_megastructure_tech = {
+	OR = {
+		oc_requires_megastruture_dyson_sphere = yes
+		oc_requires_megastruture_sentry_array = yes
+		oc_requires_megastruture_science_nexus = yes
+		oc_requires_megastruture_gateway_construction = yes
+		oc_requires_megastruture_gateway_complete = yes
+		has_country_flag = starts_with_megastructure_tech
+	}
+}
+
+# scope: country 
+oc_requires_random_tier2_ship_tech = {
+	OR = {
+		has_oc_alien_invaded_civic = yes
+		has_country_flag = starts_with_extra_military_tech
+	}
+}
 
 # scope: country 
 oc_requires_default_npc_sol = {

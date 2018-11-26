@@ -114,7 +114,6 @@ civic_oc_alien_invaded = {
 		}
 	}
 	modifier = { 
-		ship_sensor_range_add = 1
 		country_unrest_unhappy_pop_effect_mult = -0.10 
 		army_morale = 0.20
 	}

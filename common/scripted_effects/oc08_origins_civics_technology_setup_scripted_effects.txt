@@ -1,0 +1,75 @@
+# Origins Civics Planet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ########################
+# #    Empire Effects    #
+# ########################
+
+### Technology ###
+# Give Random Military Ship Tech
+# Scope: Country
+give_random_tier2_military_ship_tech = {
+	random_list = {
+		16 = { give_technology = { message = no tech = tech_lasers_2 } }
+		16 = { give_technology = { message = no tech = tech_mass_drivers_2 } }
+		16 = { give_technology = { message = no tech = tech_ship_armor_2  } }
+		16 = { give_technology = { message = no tech = tech_thrusters_2 } }
+		16 = { give_technology = { message = no tech = tech_fusion_power } }
+		16 = { give_technology = { message = no tech = tech_shields_2 } }
+	}
+}
+
+# give megaengineering technology
+# Scope: Country
+give_megaengineering_technology = {
+	give_technology = { tech = "tech_mega_engineering" message = no }
+}
+
+# gives technology and ability to travel wormholes
+# Scope: Country
+allow_country_to_travel_wormhole = {
+	add_seen_bypass_type = wormhole
+	set_country_flag = encountered_first_wormhole
+	give_technology = { tech = "tech_wormhole_stabilization" message = no }
+}
+
+# give technology and ability to activate gateways
+# Scope: Country
+allow_country_to_activate_gateway = {
+	add_seen_bypass_type = gateway
+	set_country_flag = encountered_first_gateway
+	give_technology = { tech = "tech_gateway_activation" message = no }
+}
+
+# give technology to construct gateways
+# note this does not let you travel gateways, you need to use the other effect
+# Scope: Country
+allow_country_to_build_gateways = {
+	give_megaengineering_technology = yes
+	give_technology = { tech = "tech_gateway_construction" message = no }
+}
+
+# give ascension theory technology
+# Scope: Country
+give_ascension_theory_technology = {
+	if = {
+		limit = {
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		give_technology = { tech = "tech_ascension_theory" message = no }
+	}
+	else = {
+		give_technology = { tech = "tech_ascension_theory_apoc" message = no }
+	}
+}

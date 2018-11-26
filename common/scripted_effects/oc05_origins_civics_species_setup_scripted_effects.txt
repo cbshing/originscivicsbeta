@@ -284,6 +284,35 @@ set_new_planet_as_homeworld = {
 }
 
 # change species homeworld to specific planet
+# input is event_target:species_to_modify
+# Scope: Country
+set_random_uninhabitable_planet_as_homeworld = {
+	random_planet = {
+		limit = { 
+			is_uninhabitable_planet = yes
+			NOT = { has_planet_flag = colony_homeworld }
+		}
+		set_planet_flag = colony_homeworld
+		set_planet_flag = colony_homeworld_unihabitable
+		save_event_target_as = new_homeworld
+	}
+	random_owned_pop = {
+		limit = { 
+			is_exact_same_species = event_target:species_to_modify
+			NOR = { 
+				has_trait = trait_robotic_1 
+				has_trait = trait_robotic_2 
+				has_trait = trait_robotic_3
+				has_trait = trait_machine_unit 
+			}			
+		}
+		species = { 
+			set_species_homeworld = event_target:new_homeworld
+		}
+	}
+}
+
+# change species homeworld to specific planet
 # input is event_target:new_homeworld
 # input is event_target:species_to_modify
 # Scope: Country

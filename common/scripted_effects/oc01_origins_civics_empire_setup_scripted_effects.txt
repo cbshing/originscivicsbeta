@@ -88,22 +88,58 @@ create_start_navy = {
 # Create Fallen Colony Start Navy
 # Scope: Country
 create_fallen_colony_start_navy = {
-	delete_all_corvettes = yes
 	#military
-	create_fleet = {
-		set_take_point = yes
-		effect = {
-			set_owner = prev
-			
-			while = {
-				count = 1
-				create_ship = {
-					name = random
-					random_existing_design = small_ship_fallen_empire 
-				}
+	hidden_effect = {
+		create_fleet = {
+			settings = {
+				spawn_debris = no
 			}
-			
-			set_location = prev.capital_star
+			name = "NAME_Colonial_Patrol_403"
+			effect = {
+				set_owner = prev
+				if = {
+					limit = {
+						prev = { has_authority = auth_machine_intelligence }
+					}
+					create_ship = {
+						name = "NAME_Patrol_403-1"
+						design = "NAME_Surplus_Gamma"
+						graphical_culture = fallen_machine_empire_01
+						upgradable = no
+					}
+				}
+				if = {
+					limit = {
+						prev = { is_materialist = yes }
+					}
+					create_ship = {
+						name = "NAME_Patrol_403-1"
+						design = "NAME_Surplus_Sage"
+						graphical_culture = fallen_empire_02
+						upgradable = no
+					}
+				}
+				if = {
+					limit = {
+						prev = { is_xenophile = yes }
+					}
+					create_ship = {
+						name = "NAME_Patrol_403-1"
+						design = "NAME_Surplus_Warden"
+						graphical_culture = fallen_empire_03
+						upgradable = no
+					}
+				}
+				else = {
+					create_ship = {
+						name = "NAME_Patrol_403-1"
+						design = "NAME_Surplus_Zealot"
+						graphical_culture = fallen_empire_04
+						upgradable = no
+					}
+				}
+				set_location = prev.capital_star
+			}
 		}
 	}
 }

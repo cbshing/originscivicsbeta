@@ -73,7 +73,7 @@ oc_has_secondary_species_civics = {
 		has_oc_sublight_conquerer_civic = yes
 		has_oc_refugee_saviour_civic = yes
 		has_oc_post_war_of_worlds_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = has_two_species_country
 	}
 }
 

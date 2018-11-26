@@ -45,9 +45,10 @@ country_event = {
 			
 		}
 		if = {
-			limit = { oc_requires_advanced_start = yes }
 			# tags neighboring planets for future setup in planet setup
 			# sets country as owner of planets
+			limit = { oc_requires_advanced_start = yes }
+			
 		}
 		if = {
 			limit = { oc_requires_hostile_neighbors = yes }
@@ -246,8 +247,10 @@ country_event = {
 
 # Handles setup of civics that require making the empire a colony of another empire
 # -Find an empire with the same species and pair that empire up
+# -If no empire exists, create a new homeworld and change the homeworld of the species to match that of a paired species
+# -Special handling required for civics whose planet classes change, to ensure that only species with the same planet preference match. If not, one species will be overwritten (hence no benefits of species)
 # ->Lost Colony
-# -Change the homeworld of the species to match that of a paired species
+# ->Exiled Colony
 country_event = {
 	id = origins_civics_empire_setup.4
 	hide_window = yes
@@ -276,7 +279,7 @@ country_event = {
 		}
 		#make lost colony
 		if = {
-			limit = { # any home country
+			limit = { # any home country is available to be paired with
 				any_country = { 
 					oc_requires_colony_setup = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
@@ -323,7 +326,10 @@ country_event = {
 			}
 		}
 		else_if = {
-			
+			limit = { oc_is_habitat_preference_country = yes}
+		}
+		else = {
+		
 		}
 	}
 }
@@ -562,12 +568,29 @@ country_event = {
 		}		
 		
 		if = { limit = { oc_requires_homeworld_class_to_change = yes }
-			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }
+			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }			
 				random_owned_planet = {
 					limit = { is_capital = yes }
 					change_to_pc_random_habitable = yes
+					reroll_planet = yes
 				}
 			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_random_habitable_tier1 = yes
+					reroll_planet = yes
+				}
+			}
+			
+			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_random_habitable_tier2 = yes
+					reroll_planet = yes
+				}
+			}
+			
 			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
@@ -635,13 +658,26 @@ country_event = {
 		if = { limit = { oc_requires_lonely_capital = yes } 
 			every_owned_planet = {
 				limit = { is_capital = no }
-				kill_pops_and_buildings = yes
+				cleanse_planet = yes
 			}
 		}
 	}
 }
 
 # Pop
+country_event = {
+	id = origins_civics_empire_setup.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_pops_setup = yes
+	}
+	
+	immediate = {
+		#
+	}
+}
 
 # Leaders
 # -Requires Starting Leader Modification
@@ -703,14 +739,80 @@ country_event = {
 	}
 	
 	immediate = {
-		if = { limit = { oc_requires_leader_ruler_traits = yes }
+		if = { 
+			limit = { has_oc_fallen_colony_civic = yes }
+			create_fallen_colony_start_navy = yes
 		}
 	}
 }
 
 # Technologies
+country_event = {
+	id = origins_civics_empire_setup.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_technologies_setup = yes
+	}
+	
+	immediate = {
+		if = { 
+			limit = { 
+				oc_has_robot_pops_on_start_civics = yes
+			} 
+			give_technology = { message = no tech = tech_powered_exoskeletons }
+			give_technology = { message = no tech = tech_robotic_workers }
+		}
+		if = { 
+			limit = { 
+				oc_requires_megastruture_gateway_construction = yes
+				oc_requires_megastruture_gateway_complete = yes
+			} 
+			allow_country_to_build_gateways = yes
+			allow_country_to_activate_gateway = yes
+		}
+		if = { 
+			limit = { 
+				oc_requires_natural_wormhole = yes
+			} 
+			allow_country_to_travel_wormhole = yes
+		}
+		if = { 
+			limit = { 
+				oc_requires_ascension_theory_tech = yes
+			} 
+			give_ascension_theory_technology = yes
+		}
+		if = { 
+			limit = { 
+				oc_requires_megastructure_tech = yes
+			} 
+			give_megaengineering_technology = yes
+		}
+		if = { 
+			limit = { 
+				oc_requires_random_tier2_ship_tech = yes
+			} 
+			give_random_tier2_military_ship_tech = yes
+		}
+	}
+}
 
 # Flags
+country_event = {
+	id = origins_civics_empire_setup.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_country_flags_setup = yes
+	}
+	
+	immediate = {
+		#
+	}
+}
 
 # Advanced Colonies
 
