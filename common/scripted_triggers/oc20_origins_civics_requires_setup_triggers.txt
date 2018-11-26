@@ -384,6 +384,14 @@ oc_requires_star_class_change_to_blackhole = {
 }
 
 # scope: country 
+oc_requires_secondary_species_colony_setup = {
+	OR = {
+		has_oc_refugee_saviour_civic = yes
+		has_country_flag = starts_with_secondary_species_are_aliens
+	}
+}
+
+# scope: country 
 oc_requires_homeworld_class_to_change_to_random_habitable = {
 	OR = {
 		has_country_flag = starts_with_random_habitable_homeworld
