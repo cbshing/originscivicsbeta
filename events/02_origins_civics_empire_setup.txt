@@ -273,8 +273,23 @@ country_event = {
 			}
 		}
 		# make fallen colony
-		if = { limit = { oc_is_fallen_colonies_country = yes }
+		if = { 
+			limit = { 
+				prev = { oc_is_fallen_colonies_country = yes }
+				any_country = {
+					is_country_type = fallen_empire 
+				}
+			}
 			# make fallen empires setup
+			every_country = {
+				limit = { 
+					is_country_type = fallen_empire 
+					NOT = { has_country_flag = oc_colony_home_empire }
+				}
+				#change fallen empire pops to colony type, but setup new homeworld
+				
+				#change colony pops to new fallen empire pops
+			}
 			
 		}
 		#make lost colony
@@ -283,13 +298,74 @@ country_event = {
 				any_country = { 
 					oc_requires_colony_setup = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
+					OR = {
+						AND = {
+							oc_is_habitat_preference_country = yes
+							prev = { oc_is_habitat_preference_country = yes }
+						}
+						AND = {
+							oc_is_gaia_preference_country = yes
+							prev = { oc_is_gaia_preference_country = yes }
+						}
+						AND = {
+							oc_is_nuked_preference_country = yes
+							prev = { oc_is_nuked_preference_country = yes }
+						}
+						AND = {
+							oc_is_ringworld_preference_country = yes
+							prev = { oc_is_ringworld_preference_country = yes }
+						}
+						AND = {
+							oc_is_habitat_preference_country = no
+							oc_is_gaia_preference_country = no
+							oc_is_nuked_preference_country = no
+							oc_is_ringworld_preference_country = no
+							prev = {
+								oc_is_habitat_preference_country = no
+								oc_is_gaia_preference_country = no
+								oc_is_nuked_preference_country = no
+								oc_is_ringworld_preference_country = no
+							}
+						}
+					}
 				}
 			}
-			# home country
+			# every home country that is same species
 			every_country = {
 				limit = { 
 					oc_requires_colony_setup = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
+					OR = {
+						AND = { # both home & colony are voidborne
+							oc_is_habitat_preference_country = yes
+							prev = { oc_is_habitat_preference_country = yes }
+						}
+						AND = { # both home & colony are gaia
+							oc_is_gaia_preference_country = yes
+							prev = { oc_is_gaia_preference_country = yes }
+						}
+						AND = { # both home & colony are nuked
+							oc_is_nuked_preference_country = yes
+							prev = { oc_is_nuked_preference_country = yes }
+						}
+						AND = { # both home & colony are ringborne
+							oc_is_ringworld_preference_country = yes
+							prev = { oc_is_ringworld_preference_country = yes }
+						}
+						AND = { #neither of the above are true
+							oc_is_habitat_preference_country = no
+							oc_is_gaia_preference_country = no
+							oc_is_nuked_preference_country = no
+							oc_is_ringworld_preference_country = no
+							prev = {
+								oc_is_habitat_preference_country = no
+								oc_is_gaia_preference_country = no
+								oc_is_nuked_preference_country = no
+								oc_is_ringworld_preference_country = no
+							}
+						}
+					}
+					NOT = { has_country_flag = oc_colony_home_empire }
 				}
 				set_country_flag = oc_colony_home_empire
 				oc_set_colony_homeworld_flag = yes
@@ -313,6 +389,36 @@ country_event = {
 								any_owned_pop = { is_same_species = event_target:oc_colony_species }
 							}
 						}
+						OR = {
+							AND = { # both home & colony are voidborne
+								oc_is_habitat_preference_country = yes
+								prev = { oc_is_habitat_preference_country = yes }
+							}
+							AND = { # both home & colony are gaia
+								oc_is_gaia_preference_country = yes
+								prev = { oc_is_gaia_preference_country = yes }
+							}
+							AND = { # both home & colony are nuked
+								oc_is_nuked_preference_country = yes
+								prev = { oc_is_nuked_preference_country = yes }
+							}
+							AND = { # both home & colony are ringborne
+								oc_is_ringworld_preference_country = yes
+								prev = { oc_is_ringworld_preference_country = yes }
+							}
+							AND = { #neither of the above are true
+								oc_is_habitat_preference_country = no
+								oc_is_gaia_preference_country = no
+								oc_is_nuked_preference_country = no
+								oc_is_ringworld_preference_country = no
+								prev = {
+									oc_is_habitat_preference_country = no
+									oc_is_gaia_preference_country = no
+									oc_is_nuked_preference_country = no
+									oc_is_ringworld_preference_country = no
+								}
+							}
+						}
 						NOT = { has_country_flag = oc_colony_home_set }
 					}
 					set_country_flag = oc_colony_home_set
@@ -324,9 +430,6 @@ country_event = {
 					}
 				}
 			}
-		}
-		else_if = {
-			limit = { oc_is_habitat_preference_country = yes}
 		}
 		else = {
 		
@@ -534,6 +637,7 @@ country_event = {
 	}
 	
 	immediate = {
+		# Change homeworld to new planet size. Can add other sizes
 		if = { limit = { oc_requires_homeworld_size_change = yes }
 			if = { limit = { oc_requires_homeworld_size_change_to_25 = yes }
 				random_owned_planet = {
@@ -567,7 +671,9 @@ country_event = {
 			}
 		}		
 		
+		# Change homeworld to new planet class
 		if = { limit = { oc_requires_homeworld_class_to_change = yes }
+			# Change homeworld to a random planet class
 			if = { limit = { oc_requires_homeworld_class_to_change_to_random_habitable = yes }			
 				random_owned_planet = {
 					limit = { is_capital = yes }
@@ -590,7 +696,7 @@ country_event = {
 					reroll_planet = yes
 				}
 			}
-			
+			# Change to a special planet type
 			if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
@@ -623,7 +729,7 @@ country_event = {
 					change_to_pc_city = yes
 				}
 			}
-			
+			# Change for normal planet types. Probably unused, but give as scripting choices anyway
 			if = { limit = { oc_requires_homeworld_class_to_change_to_arid = yes }
 				random_owned_planet = {
 					limit = { is_capital = yes }
@@ -642,13 +748,33 @@ country_event = {
 					change_to_pc_savannah = yes
 				}
 			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_sandsea = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_sandsea = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_mesa = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_mesa = yes
+				}
+			}
+			if = { limit = { oc_requires_homeworld_class_to_change_to_oasis = yes }
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					change_to_pc_oasis = yes
+				}
+			}
 			
+			#Change to a random uninhabitable type
 			if = { limit = { oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes }
 				random_owned_planet = {
 					limit = { has_planet_flag = oc_old_homeworld }
 					remove_planet_flag = oc_old_homeworld
-					if = { limit = { from { has_country_flag = aavardwerk_empire } }
-						change_pc = pc_shattered
+					if = { limit = { from { has_country_flag = aavardwerk_empire } } # special setting for aavardwerk empire
+						#change_pc = pc_shattered
+						change_pc = pc_barren # add junk world image to it
 					}
 					else = {
 						change_to_pc_random_uninhabitable = yes
@@ -656,6 +782,8 @@ country_event = {
 				}
 			}
 		}	
+		
+		#Special handling for habitats. Habitats are on a different planet, so will need to do a different setup
 		if = { limit = { oc_requires_habitat_setup = yes } 
 			random_owned_planet = {
 				limit = { is_capital = yes }
