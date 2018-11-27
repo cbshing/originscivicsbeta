@@ -219,41 +219,45 @@ oc_dyson_sphere_5 = {
 	}
 
 	on_build_complete = {
-		every_system_planet = {
-			limit = {
-				OR = {
-					is_planet_class = pc_molten
-					is_planet_class = pc_toxic
+		if = {
+			limit = { }
+			every_system_planet = {
+				limit = {
+					OR = {
+						is_planet_class = pc_molten
+						is_planet_class = pc_toxic
+					}
 				}
+				change_pc = pc_frozen
 			}
-			change_pc = pc_frozen
-		}
-		every_system_planet = {
-			limit = {
-				is_planet_class = pc_barren
-			}
-			change_pc = pc_barren_cold
-		}
-		
-		#kill system planets
-		every_system_planet = {
-			limit = {
-				OR = {
-					is_colonizable = yes
-					is_colony = yes
-					is_homeworld = yes
+			every_system_planet = {
+				limit = {
+					is_planet_class = pc_barren
 				}
-				NOT = { is_planet_class = pc_habitat }
+				change_pc = pc_barren_cold
 			}
-			owner = { set_country_flag = oc_dyson_sphere_froze_home }
-			every_owned_pop = {
-				kill_pop = yes
+			
+			#kill system planets
+			every_system_planet = {
+				limit = {
+					OR = {
+						is_colonizable = yes
+						is_colony = yes
+						is_homeworld = yes
+					}
+					NOT = { is_planet_class = pc_habitat }
+				}
+				owner = { set_country_flag = oc_dyson_sphere_froze_home }
+				every_owned_pop = {
+					kill_pop = yes
+				}
+				every_tile = {
+					limit = { has_building = yes }
+					remove_building = yes
+				}
+				change_pc = pc_frozen
 			}
-			every_tile = {
-				limit = { has_building = yes }
-				remove_building = yes
-			}
-			change_pc = pc_frozen
 		}
+		else = { }
 	}
 }

@@ -20,7 +20,7 @@ origins_npc_sol_system = {
 		type = rocky_asteroid_belt
 		radius = 145
 	}
-	flags = { empire_home_system sol_system sol colony_home_system npc_sol_system }
+	flags = { empire_home_system sol_system sol npc_sol_system }
 
 	init_effect = {
 		every_neighbor_system = {

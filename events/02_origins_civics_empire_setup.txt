@@ -807,6 +807,13 @@ country_event = {
 			}
 		}
 		
+		# Create orbital debris
+		if = { limit = { oc_requires_capital_orbital_debris_setup = yes } 
+			random_owned_planet = {
+				limit = { is_capital = yes }
+				spawn_orbital_debris = yes
+			}
+		}
 		
 		# Destroy every colony except capital
 		if = { limit = { oc_requires_lonely_capital = yes } 
@@ -851,6 +858,7 @@ country_event = {
 	}
 	
 	immediate = {
+		# Modify Ruler
 		if = { limit = { oc_requires_leader_ruler_traits = yes }
 			if = { limit = { oc_requires_eternal_leader_ruler_trait = yes }
 				random_owned_leader = {
@@ -872,6 +880,7 @@ country_event = {
 			}
 		
 		}
+		# Modify All Leaders
 		if = { limit = { oc_requires_all_leader_traits = yes }
 			if = { limit = { oc_requires_clinically_eternal_leader_trait = yes }
 				#tbd
