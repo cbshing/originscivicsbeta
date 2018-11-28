@@ -1,0 +1,561 @@
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingaaverdwerkcommunity.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingcinematic.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingmodempires.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingorigincivics.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginscivicprescriptedoverwrite.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginscivics1p9p1.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginscivicsadditionalcivicspoints.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginscivicscoloniesofearthaddon.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginscivicsunbalanced.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginsplanetdiversitypatch.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginsplanetdiversitypatch1p9p1.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingoriginsreworkedplanetdiversitypatch.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cbshingprescriptedempires.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cockroachfromsol.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/codominantevolution.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/compatchcivicsr_redux&codominantevolution.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/cormathanidirectorate.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/dragonshoardstart.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/fa_preservestart.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/gaiaring.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/go_dev_cbshing_alpha.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/gwenstestmod.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/horizonsignalmodplanetfix.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/lg_cladisticspecies.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/machineworldstartcivic.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/machineworldstartsystem.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/mechaniststartsystem.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/megaringblack_x.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/modstellaris_customempire.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/newtombingplanet.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/originscivicsbeta.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/originstraits.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/pdxnamelist.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/presapienttraitunlock.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/redditxenaerocustomempires.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ringworldrivals.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/sameclasssamespecies.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/syncreticmechanistplus.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/tombingworld.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/tombstarthabitability.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/tombstartmod.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/tombstarttestenvironment.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/tombterraform.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1074841707.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1112740619.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1121692237.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1140543652.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1141809919.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1154513894.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1160405318.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1161857882.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1173995428.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1177012004.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:15][lexer.cpp:277]: File 'mod/ugc_1220861227.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1227620643.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1236404720.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1249001485.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1249088531.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1293820407.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1306112132.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1308654926.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1310451318.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1311099708.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1314075887.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1324666565.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1327672711.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1335743415.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1337624464.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1351653132.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1359975475.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1365485813.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1366344432.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1371940855.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1378139547.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1384895515.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1416168067.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:16][lexer.cpp:277]: File 'mod/ugc_1439487193.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_1444258673.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_1477839752.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_1534545104.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_681787759.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_682165224.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_684475224.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_684509615.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_687037851.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_687358103.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_687822601.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_692028161.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_696905076.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_698028895.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_703156866.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_711413459.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_715772239.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_717706829.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_727000451.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_741194923.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_798679745.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_804293993.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_811274428.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_817648237.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_819148835.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_856046406.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:17][lexer.cpp:277]: File 'mod/ugc_865040033.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_899313553.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_902526212.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_915432220.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_915966120.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_926426938.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_931501533.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_933075365.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_937289339.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/ugc_952438221.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/unlifeseededmod.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:43:18][lexer.cpp:277]: File 'mod/unroblorgcompanions.mod' should be in utf8-bom encoding (will try to use it anyways)
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: can_build, near line: 45
+" in file: "common/buildings/oc_event_buildings.txt" near line: 45
+[22:47:57][persistent.cpp:34]: Error: "Unknown modifier: job_alloy_drone_add, near line: 60
+" in file: "common/buildings/oc_event_buildings.txt" near line: 60
+[22:47:57][persistent.cpp:34]: Error: "Unknown modifier: job_fabricator_add, near line: 70
+" in file: "common/buildings/oc_event_buildings.txt" near line: 70
+[22:47:57][persistent.cpp:34]: Error: "Unknown modifier: job_foundry_add, near line: 80
+" in file: "common/buildings/oc_event_buildings.txt" near line: 80
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: resources, near line: 89
+" in file: "common/buildings/oc_event_buildings.txt" near line: 94
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: triggered_desc, near line: 102
+" in file: "common/buildings/oc_event_buildings.txt" near line: 108
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: triggered_desc, near line: 110
+" in file: "common/buildings/oc_event_buildings.txt" near line: 116
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: triggered_desc, near line: 118
+" in file: "common/buildings/oc_event_buildings.txt" near line: 124
+[22:47:57][persistent.cpp:34]: Error: "Unexpected token: ai_resource_production, near line: 130
+" in file: "common/buildings/oc_event_buildings.txt" near line: 132
+[22:47:57][game_singleobjectdatabase.h:147]: Object with key: building_oc_vault_start already exists
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_ONE_LOST_COLONY
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_ONE_EXILED_COLONY
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_COLONY
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_LOST_COLONY
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_FALLEN_COLONY
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_LOST_COLONY_CM
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_LOST_COLONY_HED
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_LOST_COLONY_CNE
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_ONE_NUCLEAR_MUTATION
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_ONE_VOIDBORNE
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_ALIEN_MESSAGE
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_ALIEN_INVADED
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_ECOLOGICAL_DISASTER
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_CLIMATE_SHIFT
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_NUCLEAR_VAULT
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_ETERNAL_LEADER
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_DIGITALLY_ETERNAL
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_ONE_HIVE_NUCLEAR_MUTATION
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_NUCLEAR_VAULT_HIVE
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_DYSON_ENGINEERS
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_HIVE_DYSON_ENGINEERS
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_TWO_ROBO_DYSON_ENGINEERS
+[22:48:06][start_screen_messages.cpp:55]: Couldn't find localization for start screen message: START_SCREEN_PART_THREE_DYSON_ENGINEERS
+[22:48:08][game_singleobjectdatabase.h:147]: Object with key: has_encountered_other_species already exists
+[22:48:10][secondary_species_data.cpp:30]: Missing localization or secondary species title for secondary species defined at common/governments/civics/07_origins_secondary_species_civics.txt:65
+[22:48:11][building_type.cpp:533]: Missing building Localization Key: building_oc_vault_start
+[22:48:11][building_type.cpp:533]: Missing building Localization Key: building_oc_vault_start_desc
+[22:48:11][building_type.cpp:533]: Missing building Localization Key: building_oc_eternal_leader_tomb
+[22:48:11][building_type.cpp:533]: Missing building Localization Key: building_oc_eternal_leader_tomb_desc
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_0] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_0_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_0_MEGASTRUCTURE_DETAILS] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_1] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_1_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_2] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_2_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_3] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_3_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_4] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_4_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_5] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_dyson_sphere_5_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_void_habitat] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_void_habitat_DESC] for mega structure
+[22:48:11][megastructure_type.cpp:28]: Missing localization key [oc_void_habitat_MEGASTRUCTURE_DETAILS] for mega structure
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_colonial_administration for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_colonial_administration_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_lost_colony for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_lost_colony_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_fallen_colony for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_primitive_fallen_colony_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_lost_colony for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_lost_colony_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_exiled_colony for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_exiled_colony_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_fallen_colony for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_fallen_colony_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_climate_shift for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_climate_shift_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_nuclear_vault for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_nuclear_vault_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_nuclear_mutation for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_nuclear_mutation_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_voidborne for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_voidborne_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_codominant_evolution for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_codominant_evolution_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_eternal_leader for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_eternal_leader_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_digitally_eternal for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_digitally_eternal_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_alien_message for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_alien_message_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_alien_invaded for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_alien_invaded_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_ecological_disaster for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_ecological_disaster_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_nuclear_vault for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_nuclear_vault_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_nuclear_mutation for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_nuclear_mutation_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_life_seeded for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_life_seeded_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_voidborne for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_hive_voidborne_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_robo_nuked_start for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_robo_nuked_start_desc for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_robo_machine_world for government civic type
+[22:48:11][government_civic_type.cpp:29]: Missing localization key civic_oc_robo_machine_world_desc for government civic type
+[22:48:11][government_type.cpp:15]: Missing localization key gov_fallen_colonial_government for government type
+[22:48:11][government_type.cpp:15]: Missing localization key gov_fallen_colonial_government_desc for government type
+[22:48:11][government_type.cpp:15]: Missing localization key RT_GOVERNOR_GENERAL for government type
+[22:48:11][government_type.cpp:15]: Missing localization key RT_GOVERNOR_GENERAL_FEMALE for government type
+[22:48:11][government_type.cpp:15]: Missing localization key gov_primitive_colonial_government for government type
+[22:48:11][government_type.cpp:15]: Missing localization key gov_primitive_colonial_government_desc for government type
+[22:48:11][government_type.cpp:15]: Missing localization key RT_GOVERNOR for government type
+[22:48:11][government_type.cpp:15]: Missing localization key RT_GOVERNOR_FEMALE for government type
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 751]: Error in scripted trigger, cannot find: oc_requires_homeworld_class_to_change_to_sandsea
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 757]: Error in scripted trigger, cannot find: oc_requires_homeworld_class_to_change_to_mesa
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 763]: Error in scripted trigger, cannot find: oc_requires_homeworld_class_to_change_to_oasis
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 811]: Error in scripted trigger, cannot find: oc_requires_capital_orbital_debris_setup
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 902]: Error in scripted trigger, cannot find: oc_requires_ship_setup
+[22:48:13][trigger_impl.cpp:1083]: [ file: events/02_origins_civics_empire_setup.txt line: 985]: Error in scripted trigger, cannot find: oc_requires_country_flags_setup
+[22:48:13][trigger_impl.cpp:1083]: [ file: common/scripted_triggers/oc20_origins_civics_requires_setup_triggers.txt line: 85]: Error in scripted trigger, cannot find: oc_requires_original_homeworld_destroy
+[22:48:13][trigger_impl.cpp:18001]: host_has_dlc trigger at  file: common/governments/civics/04_origins_colonies_civics.txt line: 98 is referencing an inexisting DLC!
+[22:48:13][effect_impl.cpp:584]: [ file: events/01_origins_civics_galaxy_setup.txt line: 46]: Error in scripted effect, cannot find: default_empire_setup
+[22:48:13][effect_impl.cpp:584]: [ file: events/01_origins_civics_galaxy_setup.txt line: 71]: Error in scripted effect, cannot find: default_empire_setup
+[22:48:13][effect_impl.cpp:584]: [ file: events/02_origins_civics_empire_setup.txt line: 790]: Error in scripted effect, cannot find: reset_start_buildings_and_blockers_habitat
+[22:48:13][effect_impl.cpp:584]: [ file: events/02_origins_civics_empire_setup.txt line: 791]: Error in scripted effect, cannot find: add_pops_on_planet
+[22:48:13][effect_impl.cpp:584]: [ file: events/02_origins_civics_empire_setup.txt line: 806]: Error in scripted effect, cannot find: add_additional_blockers
+[22:48:13][effect_impl.cpp:584]: [ file: events/02_origins_civics_empire_setup.txt line: 814]: Error in scripted effect, cannot find: spawn_orbital_debris
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 0 147570290 }
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 2 147570290 }
+saved_event_target={
+	type=planet
+	id=3872
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 4 147570290 }
+saved_event_target={
+	type=planet
+	id=7559
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 6 147570290 }
+saved_event_target={
+	type=planet
+	id=4746
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 7 147570290 }
+saved_event_target={
+	type=planet
+	id=4746
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 9 147570290 }
+saved_event_target={
+	type=planet
+	id=7880
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 11 147570290 }
+saved_event_target={
+	type=planet
+	id=5075
+	name="megastructure_planet"
+}
+[22:49:07][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 13 147570290 }
+saved_event_target={
+	type=planet
+	id=2551
+	name="megastructure_planet"
+}
+[22:49:18][trigger_impl.cpp:792]: Script Error: Invalid context switch[prev], file: events/02_origins_civics_empire_setup.txt line: 278, Scope: 
+
+[22:49:18][trigger_impl.cpp:793]: type=country
+id=0
+random={ 0 608807639 }
+saved_event_target={
+	type=planet
+	id=7
+	name="megastructure_planet"
+}
+saved_event_target={
+	type=species
+	id=0
+	name="oc_colony_species"
+}
+
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 0 3727015602 }
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 2 3727015602 }
+saved_event_target={
+	type=planet
+	id=9764
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 3 3727015602 }
+saved_event_target={
+	type=planet
+	id=9764
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 5 3727015602 }
+saved_event_target={
+	type=planet
+	id=4175
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 7 3727015602 }
+saved_event_target={
+	type=planet
+	id=3130
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 8 3727015602 }
+saved_event_target={
+	type=planet
+	id=3130
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 9 3727015602 }
+saved_event_target={
+	type=planet
+	id=3130
+	name="megastructure_planet"
+}
+[22:50:28][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 11 3727015602 }
+saved_event_target={
+	type=planet
+	id=1243
+	name="megastructure_planet"
+}
+[22:50:34][trigger_impl.cpp:793]: type=country
+id=0
+random={ 1 3771472097 }
+saved_event_target={
+	type=tile
+	id=281492156579843
+	name="needs_worker"
+}
+saved_event_target={
+	type=species
+	id=73
+	name="oc_colony_species"
+}
+
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 0 3663380986 }
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 2 3663380986 }
+saved_event_target={
+	type=planet
+	id=5826
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 4 3663380986 }
+saved_event_target={
+	type=planet
+	id=9998
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 5 3663380986 }
+saved_event_target={
+	type=planet
+	id=9998
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 7 3663380986 }
+saved_event_target={
+	type=planet
+	id=1631
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 8 3663380986 }
+saved_event_target={
+	type=planet
+	id=1631
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 9 3663380986 }
+saved_event_target={
+	type=planet
+	id=1631
+	name="megastructure_planet"
+}
+[22:51:55][trigger.cpp:354]: Script Error, Checking trigger against an unsupported scope!
+Event: origins_civics_galaxy_setup.2
+Location:  file: events/01_origins_civics_galaxy_setup.txt line: 178
+Trigger Type: num_fallen_empires
+Scope:type=none
+id=0
+random={ 10 3663380986 }
+saved_event_target={
+	type=planet
+	id=1631
+	name="megastructure_planet"
+}
+[22:52:03][trigger_impl.cpp:793]: type=country
+id=0
+random={ 1 3094547077 }
+saved_event_target={
+	type=tile
+	id=562954248388616
+	name="needs_worker"
+}
+saved_event_target={
+	type=species
+	id=59
+	name="oc_colony_species"
+}
+
