@@ -251,6 +251,13 @@ oc_requires_special_building_setup = {
 }
 
 # scope: country
+oc_requires_capital_modifiers = {
+	OR = {
+		oc_requires_capital_orbital_debris_setup = yes
+	}
+}
+
+# scope: country
 oc_requires_leader_ruler_traits = {
 	OR = {
 		oc_requires_eternal_leader_ruler_trait = yes
@@ -489,6 +496,27 @@ oc_requires_homeworld_class_to_change_to_savannah = {
 }
 
 # scope: country 
+oc_requires_homeworld_class_to_change_to_sandsea = {
+	OR = {
+		has_country_flag = starts_on_sandsea_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_mesa = {
+	OR = {
+		has_country_flag = starts_on_mesa_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_oasis = {
+	OR = {
+		has_country_flag = starts_on_oasis_world
+	}
+}
+
+# scope: country 
 oc_requires_habitat_setup = {
 	OR = {
 		oc_is_habitat_country = yes
@@ -634,6 +662,41 @@ oc_requires_additional_blockers_setup = {
 	}
 }
 
+
+# scope: country 
+oc_requires_vault_building_setup = {
+	OR = {
+		has_oc_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_country_flag = starts_with_vault_building
+	}
+}
+
+# scope: country
+oc_requires_capital_orbital_debris_setup = {
+	OR = {
+		has_oc_alien_invaded_civic = yes
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = starts_with_orbital_debris
+	}
+}
+
+# scope: country
+oc_requires_capital_titanic_life_modifier_setup = {
+	OR = {
+		
+		has_country_flag = starts_with_titanic_life_modifier
+	}
+}
+
+# scope: country
+oc_requires_capital_ecological_disaster_modifier_setup = {
+	OR = {
+		
+		has_country_flag = starts_with_ecological_disaster_modifier
+	}
+}
+
 # scope: country 
 oc_requires_lonely_capital = {
 	OR = {
@@ -641,14 +704,6 @@ oc_requires_lonely_capital = {
 		has_oc_hive_voidborne_civic = yes
 		has_oc_hive_life_seeded_civic = yes
 		has_country_flag = starts_with_no_colonies
-	}
-}
-# scope: country 
-oc_requires_vault_building_setup = {
-	OR = {
-		has_oc_nuclear_vault_civic = yes
-		has_oc_hive_nuclear_vault_civic = yes
-		has_country_flag = starts_with_vault_building
 	}
 }
 

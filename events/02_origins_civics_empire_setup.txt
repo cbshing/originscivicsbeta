@@ -275,7 +275,7 @@ country_event = {
 		# make fallen colony
 		if = { 
 			limit = { 
-				prev = { oc_is_fallen_colonies_country = yes }
+				root = { oc_is_fallen_colonies_country = yes }
 				any_country = {
 					is_country_type = fallen_empire 
 				}
@@ -301,26 +301,26 @@ country_event = {
 					OR = {
 						AND = {
 							oc_is_habitat_preference_country = yes
-							prev = { oc_is_habitat_preference_country = yes }
+							root = { oc_is_habitat_preference_country = yes }
 						}
 						AND = {
 							oc_is_gaia_preference_country = yes
-							prev = { oc_is_gaia_preference_country = yes }
+							root = { oc_is_gaia_preference_country = yes }
 						}
 						AND = {
 							oc_is_nuked_preference_country = yes
-							prev = { oc_is_nuked_preference_country = yes }
+							root = { oc_is_nuked_preference_country = yes }
 						}
 						AND = {
 							oc_is_ringworld_preference_country = yes
-							prev = { oc_is_ringworld_preference_country = yes }
+							root = { oc_is_ringworld_preference_country = yes }
 						}
 						AND = {
 							oc_is_habitat_preference_country = no
 							oc_is_gaia_preference_country = no
 							oc_is_nuked_preference_country = no
 							oc_is_ringworld_preference_country = no
-							prev = {
+							root = {
 								oc_is_habitat_preference_country = no
 								oc_is_gaia_preference_country = no
 								oc_is_nuked_preference_country = no
@@ -336,28 +336,28 @@ country_event = {
 					oc_requires_colony_setup = no
 					any_owned_pop = { is_same_species = event_target:oc_colony_species }
 					OR = {
-						AND = { # both home & colony are voidborne
+						AND = {
 							oc_is_habitat_preference_country = yes
-							prev = { oc_is_habitat_preference_country = yes }
+							root = { oc_is_habitat_preference_country = yes }
 						}
-						AND = { # both home & colony are gaia
+						AND = {
 							oc_is_gaia_preference_country = yes
-							prev = { oc_is_gaia_preference_country = yes }
+							root = { oc_is_gaia_preference_country = yes }
 						}
-						AND = { # both home & colony are nuked
+						AND = {
 							oc_is_nuked_preference_country = yes
-							prev = { oc_is_nuked_preference_country = yes }
+							root = { oc_is_nuked_preference_country = yes }
 						}
-						AND = { # both home & colony are ringborne
+						AND = {
 							oc_is_ringworld_preference_country = yes
-							prev = { oc_is_ringworld_preference_country = yes }
+							root = { oc_is_ringworld_preference_country = yes }
 						}
-						AND = { #neither of the above are true
+						AND = {
 							oc_is_habitat_preference_country = no
 							oc_is_gaia_preference_country = no
 							oc_is_nuked_preference_country = no
 							oc_is_ringworld_preference_country = no
-							prev = {
+							root = {
 								oc_is_habitat_preference_country = no
 								oc_is_gaia_preference_country = no
 								oc_is_nuked_preference_country = no
@@ -390,28 +390,28 @@ country_event = {
 							}
 						}
 						OR = {
-							AND = { # both home & colony are voidborne
+							AND = {
 								oc_is_habitat_preference_country = yes
-								prev = { oc_is_habitat_preference_country = yes }
+								root = { oc_is_habitat_preference_country = yes }
 							}
-							AND = { # both home & colony are gaia
+							AND = {
 								oc_is_gaia_preference_country = yes
-								prev = { oc_is_gaia_preference_country = yes }
+								root = { oc_is_gaia_preference_country = yes }
 							}
-							AND = { # both home & colony are nuked
+							AND = {
 								oc_is_nuked_preference_country = yes
-								prev = { oc_is_nuked_preference_country = yes }
+								root = { oc_is_nuked_preference_country = yes }
 							}
-							AND = { # both home & colony are ringborne
+							AND = {
 								oc_is_ringworld_preference_country = yes
-								prev = { oc_is_ringworld_preference_country = yes }
+								root = { oc_is_ringworld_preference_country = yes }
 							}
-							AND = { #neither of the above are true
+							AND = {
 								oc_is_habitat_preference_country = no
 								oc_is_gaia_preference_country = no
 								oc_is_nuked_preference_country = no
 								oc_is_ringworld_preference_country = no
-								prev = {
+								root = {
 									oc_is_habitat_preference_country = no
 									oc_is_gaia_preference_country = no
 									oc_is_nuked_preference_country = no
@@ -800,6 +800,18 @@ country_event = {
 		#		add_pops_on_planet = yes
 		#	}
 		#}
+		
+		#Add special/unique buildings
+		if = { limit = { oc_requires_special_building_setup = yes } 
+			# Add special Vault Complex Building
+			if = { limit = { oc_requires_vault_building_setup = yes } 
+			random_owned_planet = {
+				limit = { is_capital = yes }
+				#add_vault_complex_building
+			}
+		}
+		
+		
 		if = { limit = { oc_requires_additional_blockers_setup = yes } 
 			random_owned_planet = {
 				limit = { is_capital = yes }
@@ -808,10 +820,28 @@ country_event = {
 		}
 		
 		# Create orbital debris
-		if = { limit = { oc_requires_capital_orbital_debris_setup = yes } 
-			random_owned_planet = {
-				limit = { is_capital = yes }
-				spawn_orbital_debris = yes
+		if = { limit = { oc_requires_capital_modifiers = yes } 
+			# Create orbital debris & modifier
+			if = { limit = { oc_requires_capital_orbital_debris_setup = yes } 
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					#add_capital_debris_modifier = yes
+					spawn_orbital_debris = yes
+				}
+			}
+			# Add Titan modifier
+			if = { limit = { oc_requires_capital_titanic_life_modifier_setup = yes } 
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					#add_titan_modifier = yes
+				}
+			}
+			# Add Ecological Disaster modifier
+			if = { limit = { oc_requires_capital_ecological_disaster_modifier_setup = yes } 
+				random_owned_planet = {
+					limit = { is_capital = yes }
+					#add_ecological_disaster_modifier = yes
+				}
 			}
 		}
 		
@@ -975,7 +1005,7 @@ country_event = {
 	}
 }
 
-# Flags
+# Flags & Modifiers
 country_event = {
 	id = origins_civics_empire_setup.11
 	hide_window = yes

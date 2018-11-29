@@ -91,7 +91,6 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = oc_random_habitats_spawned }
 		any_country = {
 			OR = {
 				is_country_type = fallen_empire
@@ -142,7 +141,7 @@ event = {
 			}
 			0 = { }
 		}
-		# randomize at least 8 habitats spawn if any country is habitat start
+		# randomize at most 8 habitats spawn
 		while = {
 			#count = local_habitats_num
 			count = 8
@@ -170,18 +169,17 @@ event = {
 						set_star_flag = oc_has_abandoned_habitat
 					}
 					modifier = {
-						factor = 2
+						factor = 5
 						any_country = { oc_is_habitat_country = yes } 
 					}
 					modifier = {
 						factor = 0.5
-						num_fallen_empires = 1
+						NOT = { any_country = { is_country_type = fallen_empire } }
 					}
 				}
 				70 = { }
 			}
 		}
-		set_global_flag = oc_random_habitats_spawned
 	}
 	
 }

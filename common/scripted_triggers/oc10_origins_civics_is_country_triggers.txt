@@ -64,9 +64,8 @@ oc_is_fallen_colonies_country = {
 # scope: country 
 oc_is_habitat_country = {
 	OR = {
-		has_oc_voidborne_civic = yes
+		oc_is_habitat_preference_country = yes
 		has_oc_habitat_life_civic = yes
-		has_oc_hive_voidborne_civic = yes
 		has_oc_hive_habitat_life_civic = yes
 		has_oc_robo_voidborne_mechanisms_civic = yes
 		has_country_flag = invalid_oc_country
@@ -76,9 +75,8 @@ oc_is_habitat_country = {
 # scope: country 
 oc_is_gaia_country = {
 	OR = {
-		has_valid_civic = civic_life_seeded
+		oc_is_gaia_preference_country = yes
 		has_oc_paradise_life_civic = yes
-		has_oc_hive_life_seeded_civic = yes
 		has_oc_hive_paradise_life_civic = yes
 		has_country_flag = invalid_oc_country
 	}
@@ -109,7 +107,7 @@ oc_is_machine_world_country = {
 # scope: country 
 oc_is_ringworld_country = {
 	OR = {
-		has_oc_ringborne_civic = yes
+		oc_is_ringworld_preference_country = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -119,7 +117,7 @@ oc_is_habitat_preference_country = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_hive_voidborne_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_habitat_preference
 	}
 }
 
@@ -128,7 +126,7 @@ oc_is_gaia_preference_country = {
 	OR = {
 		has_valid_civic = civic_life_seeded
 		has_oc_hive_life_seeded_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_gaia_preference
 	}
 }
 
@@ -138,7 +136,7 @@ oc_is_nuked_preference_country = {
 		has_oc_nuclear_mutation_civic  = yes
 		has_oc_worm_loved_civic = yes
 		has_oc_hive_nuclear_mutation_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_nuked_preference
 	}
 }
 
@@ -146,7 +144,7 @@ oc_is_nuked_preference_country = {
 oc_is_ringworld_preference_country = {
 	OR = {
 		has_oc_ringborne_civic = yes
-		has_country_flag = invalid_oc_country
+		has_country_flag = starts_with_ringworld_preference
 	}
 }
 
