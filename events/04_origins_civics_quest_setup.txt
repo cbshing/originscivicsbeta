@@ -1,0 +1,20 @@
+namespace = origins_civics_quest_setup
+# by cbshing
+
+### Quest Setup
+# Determines which quests are available to a given empire
+
+# First Contact
+event = {
+	id = origins_civics_communication_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+}

@@ -23,6 +23,31 @@ give_megaengineering_technology = {
 	give_technology = { tech = "tech_mega_engineering" message = no }
 }
 
+# give psionic technology
+# Scope: Country
+give_psionic_technology = {
+	give_technology = { tech = "tech_mega_engineering" message = no }
+}
+
+# give technology & ability to make robot
+# Scope: Country
+allow_country_to_make_robots= {
+	give_technology = { tech = "tech_mega_engineering" message = no }
+}
+
+# give technology & ability to make droids
+# Scope: Country
+allow_country_to_make_droids = {
+	give_technology = { tech = "tech_mega_engineering" message = no }
+}
+
+# give technology & ability to make synths
+# Scope: Country
+allow_country_to_make sythns = {
+	give_technology = { tech = "tech_mega_engineering" message = no }
+}
+
+
 # gives technology and ability to travel wormholes
 # Scope: Country
 allow_country_to_travel_wormhole = {

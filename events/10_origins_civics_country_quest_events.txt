@@ -1,0 +1,23 @@
+namespace = origins_civics_country_quest_events
+# by cbshing
+
+### Country Quests
+# Search Quests
+# -Alien Message Search for Friend
+# -Alien Invaded Search for Enemy
+# -Life-Seeded Search for Creator
+# -Lost Colony Search for Lost Ships
+
+event = {
+	id = origins_civics_country_quest_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+}

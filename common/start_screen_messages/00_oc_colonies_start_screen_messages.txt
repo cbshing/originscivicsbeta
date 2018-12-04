@@ -82,7 +82,7 @@ part = {
 # Lost Colony
 part = {
 	location = 2
-	localization = "START_SCREEN_LOST_COLONY"
+	localization = "START_SCREEN_PART_THREE_COLONY"
 	
 	trigger = {
 		OR = {

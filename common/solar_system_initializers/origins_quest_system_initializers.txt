@@ -1,0 +1,107 @@
+
+@distance = 50
+@base_moon_distance = 10
+
+
+### Ring of Gaia Life Seeded Quest Result
+seeded_gaia_ring = {
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 130
+	}
+	
+	flags = { seeded_gaia_ring }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 75
+	
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	planet = {
+		count = 1
+		orbit_angle = 60
+		orbit_distance = 0
+		class = pc_gaia
+		size = 25
+		has_ring = no
+		flags = { seeded_gaia_ring_planet }
+	}
+	
+	change_orbit = 100
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 1 max = 4 }
+			size = { min = 8 max = 20 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+}
+
