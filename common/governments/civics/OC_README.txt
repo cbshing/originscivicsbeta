@@ -40,7 +40,6 @@
 # value = civic_oc_fallen_colony  # OC Fallen Dreams Addon
 # value = civic_oc_fallen_enclave # OC Fallen Dreams Addon
 
-
 #############################################
 # Traits Civics (05_origins_traits_civics.txt)
 #############################################
@@ -51,23 +50,8 @@
 
 # value = civic_oc_symbiotic_evolution # OC Fresh Start Addon
 
-##################################################################
-# Secondary Species Civics (06_origins_secondary_species_civics.txt)
-##################################################################
-# value = civic_mechanists # base game civic
-# value = civic_syncretic_evolution # base game civic
-
-# value = civic_oc_codominant_evolution # base OC
-
-# value = civic_oc_syncretic_mechanists # OC Fresh Start Addon
-# value = civic_oc_codominant_mechanists # OC Fresh Start Addon
-
-# value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
-# value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
-# value = civic_oc_refugee_saviour # OC Unification War Addon, also incompatible with Colonies civics
-
 ##################################################
-# Homeworld Civics (07_origins_homeworld_civics.txt)
+# Homeworld Civics (06_origins_homeworld_civics.txt)
 ##################################################
 # value = civic_post_apocalyptic # base game civic
 # value = civic_life_seeded # base game civic
@@ -81,6 +65,21 @@
 # value = civic_oc_habitat_life # OC Fresh Start Addon
 # value = civic_oc_paradise_life  # OC Fresh Start Addon
 # value = civic_oc_ringborne # OC Fresh Start Addon, does not actually change start planet
+
+##################################################################
+# Secondary Species Civics (07_origins_secondary_species_civics.txt)
+##################################################################
+# value = civic_mechanists # base game civic
+# value = civic_syncretic_evolution # base game civic
+
+# value = civic_oc_codominant_evolution # base OC
+
+# value = civic_oc_syncretic_mechanists # OC Fresh Start Addon
+# value = civic_oc_codominant_mechanists # OC Fresh Start Addon
+
+# value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
+# value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
+# value = civic_oc_refugee_saviour # OC Unification War Addon, also incompatible with Colonies civics
 
 #############################################
 # Leaders Civics (08_origins_leaders_civics.txt)
@@ -101,12 +100,13 @@
 # value = civic_oc_fallen_tributary # OC Fallen Dreams Addon
 
 #########################################
-# Hive Civics (98_origins_hive_civics.txt)
+# Hive Civics (26_origins_hive_civics.txt)
 #########################################
 # value = civic_oc_hive_nuclear_vault # base OC
 # value = civic_oc_hive_nuclear_mutation # base OC
 # value = civic_oc_hive_voidborne # base OC
 # value = civic_oc_hive_life_seeded # base OC
+# value = civic_oc_hive_hive_world # base OC
 
 # value = civic_oc_hive_habitat_life # OC Fresh Start Addon
 # value = civic_oc_hive_paradise_life # OC Fresh Start Addon
