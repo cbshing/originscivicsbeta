@@ -1,4 +1,5 @@
 # 00_origins_npc_civics.txt
+# Civics are only available to NPC empires
 
 #civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
