@@ -1,4 +1,6 @@
-# 05_origins_colonies_civics.txt
+# 36_origins_syn_dawn_planet_civics.txt
+# File contains machine empire civics that modify planet type
+# Separated to make compatches with other "planet" civic mods.
 
 #civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
