@@ -1016,7 +1016,8 @@ country_event = {
 	}
 	
 	immediate = {
-		#
+		#Override Life Discovery Story Flags
+		#Override Worm in Waiting Flags
 	}
 }
 
