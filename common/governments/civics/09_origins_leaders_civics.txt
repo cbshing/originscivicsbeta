@@ -1,4 +1,5 @@
-# 05_origins_colonies_civics.txt
+# 09_origins_leaders_civics.txt
+# Civics that modify the starting leaders or leaders of an empire
 
 #civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
