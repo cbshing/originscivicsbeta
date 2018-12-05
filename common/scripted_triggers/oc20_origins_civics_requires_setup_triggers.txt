@@ -226,6 +226,13 @@ oc_requires_homeworld_class_to_change = {
 		oc_requires_homeworld_class_to_change_to_gaia = yes
 		oc_requires_homeworld_class_to_change_to_machine = yes 
 		oc_requires_homeworld_class_to_change_to_city = yes
+		oc_requires_homeworld_class_to_change_to_hive = yes
+		oc_requires_homeworld_class_to_change_to_arid = yes
+		oc_requires_homeworld_class_to_change_to_desert = yes
+		oc_requires_homeworld_class_to_change_to_savannah = yes
+		oc_requires_homeworld_class_to_change_to_sandsea = yes
+		oc_requires_homeworld_class_to_change_to_mesa = yes
+		oc_requires_homeworld_class_to_change_to_oasis = yes
 	}
 }
 
@@ -462,6 +469,7 @@ oc_requires_homeworld_class_to_change_to_machine = {
 # scope: country 
 oc_requires_homeworld_class_to_change_to_hive= {
 	OR = {
+		oc_is_hive_world_country = yes
 		has_country_flag = starts_on_hive_world
 	}
 }
@@ -630,6 +638,7 @@ oc_requires_homeworld_size_change_to_25 = {
 oc_requires_homeworld_size_change_to_12 = {
 	OR = {
 		has_oc_robo_machine_world_civic = yes
+		has_oc_hive_hive_world_civic = yes
 		has_country_flag = starts_with_size12_planet
 	}
 }
