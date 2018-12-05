@@ -1,4 +1,4 @@
-# 05_origins_colonies_civics.txt
+# 80_origins_hive_planet_civics.txt
 
 #civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
@@ -28,6 +28,7 @@ civic_oc_hive_nuclear_vault = {
 				value = civic_oc_hive_nuclear_mutation # base OC
 				value = civic_oc_hive_voidborne # base OC
 				value = civic_oc_hive_life_seeded # base OC
+				value = civic_oc_hive_hive_world # base OC
 			}
 		}
 	}
@@ -60,6 +61,7 @@ civic_oc_hive_nuclear_mutation = {
 				value = civic_oc_hive_nuclear_vault # base OC
 				value = civic_oc_hive_voidborne # base OC
 				value = civic_oc_hive_life_seeded # base OC
+				value = civic_oc_hive_hive_world # base OC
 			}
 		}
 	}
@@ -76,8 +78,9 @@ civic_oc_hive_nuclear_mutation = {
 		}
 	}
 	description = "civic_tooltip_oc_hive_nuclear_mutation_effects"
+	#used when starting a new game to modify species
+	#see 01_origins_civics_empire_setup.5
 	#used when starting a new game to initialize home planet
-	#see 01_origins_civics_empire_setup.4
 	#see 01_origins_civics_empire_setup.7
 }
 
@@ -91,6 +94,41 @@ civic_oc_hive_life_seeded= {
 			NOR = {
 				value = civic_oc_hive_nuclear_vault # base OC
 				value = civic_oc_hive_nuclear_mutation # base OC
+				value = civic_oc_hive_voidborne # base OC
+				value = civic_oc_hive_hive_world # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_life_seeded_effects"
+	#used when starting a new game to modify species
+	#see 01_origins_civics_empire_setup.5
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_hive_hive_world = {
+	playable = { host_has_dlc = "MegaCorp" }
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_nuclear_mutation # base OC
+				value = civic_oc_hive_life_seeded # base OC
 				value = civic_oc_hive_voidborne # base OC
 			}
 		}
@@ -109,7 +147,6 @@ civic_oc_hive_life_seeded= {
 	}
 	description = "civic_tooltip_life_seeded_effects"
 	#used when starting a new game to initialize home planet
-	#see 01_origins_civics_empire_setup.4
 	#see 01_origins_civics_empire_setup.7
 }
 
