@@ -32,21 +32,31 @@ give_psionic_technology = {
 # give technology & ability to make robot
 # Scope: Country
 allow_country_to_make_robots= {
-	give_technology = { tech = "tech_mega_engineering" message = no }
+	give_technology = { message = no tech = tech_powered_exoskeletons }
+	give_technology = { message = no tech = tech_robotic_workers }
 }
 
 # give technology & ability to make droids
 # Scope: Country
 allow_country_to_make_droids = {
-	give_technology = { tech = "tech_mega_engineering" message = no }
+	give_technology = { message = no tech = tech_powered_exoskeletons }
+	give_technology = { message = no tech = tech_robotic_workers }
 }
 
 # give technology & ability to make synths
 # Scope: Country
 allow_country_to_make sythns = {
-	give_technology = { tech = "tech_mega_engineering" message = no }
+	give_technology = { message = no tech = tech_powered_exoskeletons }
+	give_technology = { message = no tech = tech_robotic_workers }
 }
 
+# give worm-in-waiting technology 
+give_worm_technologies = {
+	set_country_flag = worm_awaited
+	give_technology = { tech = "tech_akx_worm_1" message = no }
+	give_technology = { tech = "tech_akx_worm_2" message = no }
+	give_technology = { tech = "tech_akx_worm_3" message = no }
+}
 
 # gives technology and ability to travel wormholes
 # Scope: Country

@@ -23,16 +23,6 @@ spawn_fallen_empire_debris = {
 
 }
 
-### Solar System ###
-# spawns orbital debris around planet
-# Scope: Solar System
-spawn_random_orbital_debris = {
-	random_list = {
-		50 = { }
-		50 = { }
-	}
-}
-
 ### Stars & Planets ###
 # remove deposits and stations on planet (stars)
 # Scope: Planet
@@ -42,6 +32,27 @@ clear_deposits_and_stations = {
 		mining_station = { dismantle = yes }
 	}
 }
+
+# spawns orbital debris around planet
+# Scope: Solar System
+# Scope: Planet
+spawn_medium_orbital_debris = {
+	random_list = {
+		50 = { 
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = this
+			}
+		}
+		50 = { 
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = solar_system
+			}
+		}
+	}
+}
+
 # spawns habitat
 # input event_target:megastructure_planet
 # Scope: Planet

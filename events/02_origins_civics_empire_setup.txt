@@ -272,123 +272,13 @@ country_event = {
 				save_event_target_as = oc_colony_species 
 			}
 		}
-		# make fallen colony
-		if = { 
-			limit = { 
-				root = { oc_is_fallen_colonies_country = yes }
-				any_country = {
-					is_country_type = fallen_empire 
-				}
-			}
-			# make fallen empires setup
-			every_country = {
-				limit = { 
-					is_country_type = fallen_empire 
-					NOT = { has_country_flag = oc_colony_home_empire }
-				}
-				#change fallen empire pops to colony type, but setup new homeworld
-				
-				#change colony pops to new fallen empire pops
-			}
-			
-		}
 		#make lost colony
 		if = {
 			limit = { # any home country is available to be paired with
-				any_country = { 
-					oc_requires_colony_setup = no
-					any_owned_pop = { is_same_species = event_target:oc_colony_species }
-					OR = {
-						AND = {
-							oc_is_habitat_preference_country = yes
-							root = { oc_is_habitat_preference_country = yes }
-						}
-						AND = {
-							oc_is_gaia_preference_country = yes
-							root = { oc_is_gaia_preference_country = yes }
-						}
-						AND = {
-							oc_is_nuked_preference_country = yes
-							root = { oc_is_nuked_preference_country = yes }
-						}
-						AND = {
-							oc_is_ringworld_preference_country = yes
-							root = { oc_is_ringworld_preference_country = yes }
-						}
-						AND = {
-							oc_is_habitat_preference_country = no
-							oc_is_gaia_preference_country = no
-							oc_is_nuked_preference_country = no
-							oc_is_ringworld_preference_country = no
-							root = {
-								oc_is_habitat_preference_country = no
-								oc_is_gaia_preference_country = no
-								oc_is_nuked_preference_country = no
-								oc_is_ringworld_preference_country = no
-							}
-						}
-					}
-				}
-			}
-			# every home country that is same species
-			every_country = {
-				limit = { 
-					oc_requires_colony_setup = no
-					any_owned_pop = { is_same_species = event_target:oc_colony_species }
-					OR = {
-						AND = {
-							oc_is_habitat_preference_country = yes
-							root = { oc_is_habitat_preference_country = yes }
-						}
-						AND = {
-							oc_is_gaia_preference_country = yes
-							root = { oc_is_gaia_preference_country = yes }
-						}
-						AND = {
-							oc_is_nuked_preference_country = yes
-							root = { oc_is_nuked_preference_country = yes }
-						}
-						AND = {
-							oc_is_ringworld_preference_country = yes
-							root = { oc_is_ringworld_preference_country = yes }
-						}
-						AND = {
-							oc_is_habitat_preference_country = no
-							oc_is_gaia_preference_country = no
-							oc_is_nuked_preference_country = no
-							oc_is_ringworld_preference_country = no
-							root = {
-								oc_is_habitat_preference_country = no
-								oc_is_gaia_preference_country = no
-								oc_is_nuked_preference_country = no
-								oc_is_ringworld_preference_country = no
-							}
-						}
-					}
-					NOT = { has_country_flag = oc_colony_home_empire }
-				}
-				set_country_flag = oc_colony_home_empire
-				oc_set_colony_homeworld_flag = yes
-				oc_create_colony_species = yes
-				oc_change_pops_and_leaders_to_last_created_species = yes
-				random_owned_planet = { limit = { is_capital = yes } 
-					set_planet_flag = colony_homeworld
-				}
-				if = {
-					limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
-					change_dominant_species = { species = last_created }
-				}
-				# every colony country
-				every_country = {
-					limit = { 
-						oc_requires_colony_setup = yes
-						OR = {
-							is_same_species = event_target:oc_colony_species
-							AND = {
-								oc_requires_secondary_species_colony_setup = yes
-								any_owned_pop = { is_same_species = event_target:oc_colony_species }
-							}
-						}
+				NOT = {
+					any_country = { 
+						oc_requires_colony_setup = no
+						any_owned_pop = { is_same_species = event_target:oc_colony_species }
 						OR = {
 							AND = {
 								oc_is_habitat_preference_country = yes
@@ -419,20 +309,135 @@ country_event = {
 								}
 							}
 						}
-						NOT = { has_country_flag = oc_colony_home_set }
-					}
-					set_country_flag = oc_colony_home_set
-					oc_set_colony_flag = yes
-					oc_change_pops_and_leaders_to_last_created_species = yes
-					if = {
-						limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
-						change_dominant_species = { species = last_created }
 					}
 				}
 			}
+			#create a new home country
+			
+			
+			
 		}
-		else = {
 		
+		# make fallen colony
+		if = { 
+			limit = { 
+				root = { oc_is_fallen_colonies_country = yes }
+				any_country = {
+					is_country_type = fallen_empire 
+				}
+			}
+			# make fallen empires setup
+			every_country = {
+				limit = { 
+					is_country_type = fallen_empire 
+					NOT = { has_country_flag = oc_colony_home_empire }
+				}
+				#change fallen empire pops to colony type, but setup new homeworld
+				
+				#change colony pops to new fallen empire pops
+			}
+			
+		}
+		
+		# pair country with every home country that is same species
+		every_country = {
+			limit = { 
+				oc_requires_colony_setup = no
+				any_owned_pop = { is_same_species = event_target:oc_colony_species }
+				OR = {
+					AND = {
+						oc_is_habitat_preference_country = yes
+						root = { oc_is_habitat_preference_country = yes }
+					}
+					AND = {
+						oc_is_gaia_preference_country = yes
+						root = { oc_is_gaia_preference_country = yes }
+					}
+					AND = {
+						oc_is_nuked_preference_country = yes
+						root = { oc_is_nuked_preference_country = yes }
+					}
+					AND = {
+						oc_is_ringworld_preference_country = yes
+						root = { oc_is_ringworld_preference_country = yes }
+					}
+					AND = {
+						oc_is_habitat_preference_country = no
+						oc_is_gaia_preference_country = no
+						oc_is_nuked_preference_country = no
+						oc_is_ringworld_preference_country = no
+						root = {
+							oc_is_habitat_preference_country = no
+							oc_is_gaia_preference_country = no
+							oc_is_nuked_preference_country = no
+							oc_is_ringworld_preference_country = no
+						}
+					}
+				}
+				NOT = { has_country_flag = oc_colony_home_empire }
+			}
+			set_country_flag = oc_colony_home_empire
+			oc_set_colony_homeworld_flag = yes
+			oc_create_colony_species = yes
+			oc_change_pops_and_leaders_to_last_created_species = yes
+			random_owned_planet = { limit = { is_capital = yes } 
+				set_planet_flag = colony_homeworld
+			}
+			if = {
+				limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
+				change_dominant_species = { species = last_created }
+			}
+			# every colony country
+			every_country = {
+				limit = { 
+					oc_requires_colony_setup = yes
+					OR = {
+						is_same_species = event_target:oc_colony_species
+						AND = {
+							oc_requires_secondary_species_colony_setup = yes
+							any_owned_pop = { is_same_species = event_target:oc_colony_species }
+						}
+					}
+					OR = {
+						AND = {
+							oc_is_habitat_preference_country = yes
+							root = { oc_is_habitat_preference_country = yes }
+						}
+						AND = {
+							oc_is_gaia_preference_country = yes
+							root = { oc_is_gaia_preference_country = yes }
+						}
+						AND = {
+							oc_is_nuked_preference_country = yes
+							root = { oc_is_nuked_preference_country = yes }
+						}
+						AND = {
+							oc_is_ringworld_preference_country = yes
+							root = { oc_is_ringworld_preference_country = yes }
+						}
+						AND = {
+							oc_is_habitat_preference_country = no
+							oc_is_gaia_preference_country = no
+							oc_is_nuked_preference_country = no
+							oc_is_ringworld_preference_country = no
+							root = {
+								oc_is_habitat_preference_country = no
+								oc_is_gaia_preference_country = no
+								oc_is_nuked_preference_country = no
+								oc_is_ringworld_preference_country = no
+							}
+						}
+					}
+					NOT = { has_country_flag = oc_colony_home_set }
+				}
+				set_country_flag = oc_colony_home_set
+				oc_set_colony_flag = yes
+				oc_change_pops_and_leaders_to_last_created_species = yes
+				if = {
+					limit = { owner_species = { is_same_species = event_target:oc_colony_species } }
+					change_dominant_species = { species = last_created }
+				}
+			}
 		}
 	}
 }
@@ -819,14 +824,21 @@ country_event = {
 			}
 		}
 		
-		# Create orbital debris
+		# Create modifiers
 		if = { limit = { oc_requires_capital_modifiers = yes } 
 			# Create orbital debris & modifier
 			if = { limit = { oc_requires_capital_orbital_debris_setup = yes } 
 				random_owned_planet = {
 					limit = { is_capital = yes }
-					#add_capital_debris_modifier = yes
-					spawn_orbital_debris = yes
+					#add_orbital_debris_modifier = yes
+					spawn_medium_orbital_debris = yes
+				}
+			}
+			if = { limit = { oc_requires_secondary_planet_orbital_debris_setup = yes } 
+				random_owned_planet = {
+					limit = { has_planet_flag = oc_second_homeworld_planet }
+					#add_orbital_debris_modifier = yes
+					spawn_medium_orbital_debris = yes
 				}
 			}
 			# Add Titan modifier
@@ -963,13 +975,15 @@ country_event = {
 	}
 	
 	immediate = {
+		# starts with robot pops
 		if = { 
 			limit = { 
 				oc_has_robot_pops_on_start_civics = yes
 			} 
-			give_technology = { message = no tech = tech_powered_exoskeletons }
-			give_technology = { message = no tech = tech_robotic_workers }
+			allow_country_to_make_robots = yes
 		}
+		
+		# can build gateways
 		if = { 
 			limit = { 
 				oc_requires_megastruture_gateway_construction = yes
@@ -978,24 +992,41 @@ country_event = {
 			allow_country_to_build_gateways = yes
 			allow_country_to_activate_gateway = yes
 		}
+		
+		# can travel wormholes
 		if = { 
 			limit = { 
 				oc_requires_natural_wormhole = yes
 			} 
 			allow_country_to_travel_wormhole = yes
 		}
+		
+		# is a worm-in-waiting country
+		if = { 
+			limit = { 
+				oc_requires_worm_in_waiting_tech = yes
+			} 
+			give_worm_technologies = yes
+		}
+		
+		
+		# has ascension theory
 		if = { 
 			limit = { 
 				oc_requires_ascension_theory_tech = yes
 			} 
 			give_ascension_theory_technology = yes
 		}
+		
+		# has megaengineering
 		if = { 
 			limit = { 
 				oc_requires_megastructure_tech = yes
 			} 
 			give_megaengineering_technology = yes
 		}
+		
+		# has random tier2 tech
 		if = { 
 			limit = { 
 				oc_requires_random_tier2_ship_tech = yes
@@ -1019,6 +1050,7 @@ country_event = {
 		#Override Life Discovery Story Flags
 		#Override Worm in Waiting Flags
 		
+		#Sets has constructed habitat flag
 		if = { limit = { oc_requires_megastruture_habitat = yes }
 			set_country_flag = already_built_habitat
 		}
