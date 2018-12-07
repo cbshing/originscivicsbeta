@@ -26,7 +26,7 @@
 # scope: country 
 has_oc_syncretic_mechanists_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_syncretic_mechanists
+		#has_valid_civic = civic_cbshing_syncretic_mechanists
 		has_country_flag = syncretic_mechanists_country
 	}
 }
@@ -34,7 +34,7 @@ has_oc_syncretic_mechanists_civic = {
 # scope: country 
 has_oc_codominant_mechanists_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_codominant_mechanists
+		#has_valid_civic = civic_cbshing_codominant_mechanists
 		has_country_flag = codominant_mechanists_country
 	}
 }
@@ -42,7 +42,7 @@ has_oc_codominant_mechanists_civic = {
 # scope: country 
 has_oc_habitat_life_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_habitat_life
+		#has_valid_civic = civic_cbshing_habitat_life
 		has_country_flag = habitat_life_country
 	}
 }
@@ -50,7 +50,7 @@ has_oc_habitat_life_civic = {
 # scope: country 
 has_oc_paradise_life_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_paradise_life
+		#has_valid_civic = civic_cbshing_gaia_world
 		has_country_flag = gaia_life_country
 	}
 }
@@ -66,7 +66,7 @@ has_oc_ringborne_civic = {
 # scope: country 
 has_oc_dyson_engineers_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_dyson_engineers
+		#has_valid_civic = civic_cbshing_dyson_sphere
 		has_country_flag = dyson_engineers_country
 	}
 }
@@ -74,7 +74,7 @@ has_oc_dyson_engineers_civic = {
 # scope: country 
 has_oc_wormhole_travelers_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_wormhole_travelers
+		#has_valid_civic = civic_cbshing_wormhole
 		has_country_flag = wormhole_travelers_country
 	}
 }
@@ -82,7 +82,7 @@ has_oc_wormhole_travelers_civic = {
 # scope: country 
 has_oc_cybernetic_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_cybernetic
+		#has_valid_civic = civic_cbshing_cybernetic
 		has_country_flag = cybernetic_country
 	}
 }
@@ -90,7 +90,7 @@ has_oc_cybernetic_civic = {
 # scope: country 
 has_oc_latent_psionic_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_latent_psionic
+		#has_valid_civic = civic_cbshing_latent_psionic
 		has_country_flag = latent_psionic_country
 	}
 }

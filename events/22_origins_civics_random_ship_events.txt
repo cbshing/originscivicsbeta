@@ -1,0 +1,392 @@
+namespace = origins_civics_random_ship_events
+# by cbshing
+
+### Random Country Events
+# Abandoned Planets
+
+
+### Abandoned Planets
+# -Abandoned Habitat Discovery
+ship_event = {
+	id = origins_civics_random_ship_events.1
+	title = "origins_civics_random_ship_events.1.name"
+	desc = { # fallen colony finding habitat
+		text = origins_civics_random_ship_events.1.desc.a
+		trigger = {
+			owner = {
+				OR = { 
+					oc_is_fallen_colonies_country = yes
+				}
+			}
+		}
+	}
+	desc = { # new empire finding abandoned habitat
+		text = origins_civics_random_ship_events.1.desc.b
+		trigger = {
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = no
+			}
+		}
+	}
+	desc = { # new empire finding abandoned habitat xenophobe
+		text = origins_civics_random_ship_events.1.desc.c
+		trigger = {
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = yes
+			}
+		}
+	}
+	desc = { # new empire finding abandoned habitat machine
+		text = origins_civics_random_ship_events.1.desc.d
+		trigger = {
+			owner = {
+				has_authority = auth_machine_intelligence
+				NOR = {
+					has_civic = civic_machine_terminator
+				}
+			}
+		}
+	}
+	desc = { # new empire finding abandoned habitat machine terminator
+		text = origins_civics_random_ship_events.1.desc.e
+		trigger = {
+			owner = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_terminator
+			}
+		}
+	}
+	picture = GFX_evt_space_station
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { has_planet_flag = oc_abandoned_habitat }
+		owner = { 
+			is_ai = no 
+			NOT = { has_country_flag = oc_found_abandoned_habitat }
+		}
+	}
+	
+	immediate = {
+		owner = { 
+			set_country_flag = oc_found_abandoned_habitat
+		}
+	}
+	
+	option = {
+		trigger = { owner = { OR = { oc_is_fallen_colonies_country = yes } } }
+		name = "origins_civics_random_ship_events.1.a"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = { 
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = no 
+			} 
+		}
+		name = "origins_civics_random_ship_events.1.b"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = yes
+			}
+		}
+		name = "origins_civics_random_ship_events.1.c"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				has_authority = auth_machine_intelligence
+				NOR = {
+					has_civic = civic_machine_terminator
+				}
+			} 
+		}
+		name = "origins_civics_random_ship_events.1.d"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_terminator
+			} 
+		}
+		name = "origins_civics_random_ship_events.1.e"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+}
+
+
+# -Abandoned Colony Discovery
+ship_event = {
+	id = origins_civics_random_ship_events.2
+	title = "origins_civics_random_ship_events.2.name"
+	desc = { # fallen colony finding fellow world
+		text = origins_civics_random_ship_events.2.desc.a
+		trigger = {
+			owner = {
+				OR = { 
+					oc_is_fallen_colonies_country = yes
+				}
+			}
+		}
+	}
+	desc = { # new empire finding abandoned world
+		text = origins_civics_random_ship_events.2.desc.b
+		trigger = {
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = no
+			}
+		}
+	}
+	desc = { # new empire finding abandoned world xenophobe
+		text = origins_civics_random_ship_events.2.desc.c
+		trigger = {
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = yes
+			}
+		}
+	}
+	desc = { # new empire finding abandoned world machine
+		text = origins_civics_random_ship_events.2.desc.d
+		trigger = {
+			owner = {
+				has_authority = auth_machine_intelligence
+				NOR = {
+					has_civic = civic_machine_terminator
+				}
+			}
+		}
+	}
+	desc = { # new empire finding abandoned world machine terminator
+		text = origins_civics_random_ship_events.2.desc.e
+		trigger = {
+			owner = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_terminator
+			}
+		}
+	}
+	picture = GFX_evt_dead_city
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { has_planet_flag = oc_abandoned_colony }
+		owner = { 
+			is_ai = no 
+			NOT = { has_country_flag = oc_found_abandoned_colony }
+		}
+	}
+	
+	immediate = {
+		owner = { 
+			set_country_flag = oc_found_abandoned_colony
+		}
+	}
+	
+	option = {
+		trigger = { owner = { OR = { oc_is_fallen_colonies_country = yes } } }
+		name = "origins_civics_random_ship_events.2.a"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = { 
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = no 
+			} 
+		}
+		name = "origins_civics_random_ship_events.2.b"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				NOR = {
+					oc_is_fallen_colonies_country = yes
+					has_authority = auth_machine_intelligence
+				}
+				is_xenophobe = yes
+			}
+		}
+		name = "origins_civics_random_ship_events.2.c"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				has_authority = auth_machine_intelligence
+				NOR = {
+					has_civic = civic_machine_terminator
+				}
+			} 
+		}
+		name = "origins_civics_random_ship_events.2.d"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+	option = {
+		trigger = { 
+			owner = {
+				has_authority = auth_machine_intelligence
+				has_civic = civic_machine_terminator
+			} 
+		}
+		name = "origins_civics_random_ship_events.2.e"
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = { id = story.5 days = 30 }
+			}
+		}
+	}
+}

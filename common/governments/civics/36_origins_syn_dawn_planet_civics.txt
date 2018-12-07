@@ -19,7 +19,7 @@
 #	}
 #}
 
-civic_oc_robo_nuked_start = {
+civic_cbshing_robo_nuked_start = {
 	icon = "gfx/interface/icons/governments/civics/civic_post_apocalyptic.dds"
 	playable = { 
 		host_has_dlc = "Apocalypse" 
@@ -30,16 +30,14 @@ civic_oc_robo_nuked_start = {
 	possible = {
 		civics = {
 			NOR = {
-				value = civic_machine_servitor
-				value = civic_machine_assimilator
 				value = civic_machine_terminator
 				
-				value = civic_oc_robo_machine_world
+				value = civic_cbshing_machine_world
 			}
 		}
 	}
 	random_weight = {
-		base = 0.1
+		base = 0.3
 		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Apocalypse" }
@@ -61,8 +59,9 @@ civic_oc_robo_nuked_start = {
 	#see 01_origins_civics_empire_setup.7
 }
 
-civic_oc_robo_machine_world = {
+civic_cbshing_machine_world = {
 	playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+	icon = "gfx/interface/icons/governments/civics/civic_oc_robo_machine_world.dds"
 	potential = { authority = { value = auth_machine_intelligence } }
 	possible = {
 		civics = {
@@ -70,7 +69,7 @@ civic_oc_robo_machine_world = {
 				value = civic_machine_servitor
 				value = civic_machine_assimilator
 				
-				value = civic_oc_robo_nuked_start
+				value = civic_cbshing_robo_nuked_start
 			}
 		}
 	}
@@ -88,7 +87,7 @@ civic_oc_robo_machine_world = {
 		}
 	}
 	
-	#description = "civic_tooltip_oc_robo_machine_world_effects"
+	description = "civic_tooltip_oc_robo_machine_world_effects"
 	#used when starting a new game to initialize home planet
 	#see 01_origins_civics_empire_setup.7
 }

@@ -19,7 +19,8 @@
 #	}
 #}
 
-civic_oc_alien_message = {
+civic_cbshing_alien_message = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_alien_message.dds"
 	modification = no
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
@@ -35,8 +36,8 @@ civic_oc_alien_message = {
 			NOR = {
 				value = civic_syncretic_evolution
 				value = civic_oc_alien_invaded # base OC
-				value = civic_oc_ecological_disaster # base OC
-				value = civic_oc_codominant_evolution # base OC
+				value = civic_cbshing_eco_disaster # base OC
+				value = civic_cbshing_codominant_evolution # base OC
 				
 				# value = civic_oc_living_with_titans # OC Disasters Addon
 
@@ -44,8 +45,8 @@ civic_oc_alien_message = {
 				# value = civic_oc_fallen_colony  # OC Fallen Dreams Addon
 				# value = civic_oc_fallen_enclave # OC Fallen Dreams Addon
 				
-				# value = civic_oc_syncretic_mechanists # OC Untested Addon
-				# value = civic_oc_codominant_mechanists # OC Untested Addon
+				# value = civic_cbshing_syncretic_mechanists # OC Untested Addon
+				# value = civic_cbshing_codominant_mechanists # OC Untested Addon
 	
 				# value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
 				# value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
@@ -87,9 +88,9 @@ civic_oc_alien_invaded = {
 		civics = {
 			NOR = {
 				value = civic_syncretic_evolution
-				value = civic_oc_alien_message # base OC
-				value = civic_oc_ecological_disaster # base OC
-				value = civic_oc_codominant_evolution # base OC
+				value = civic_cbshing_alien_message # base OC
+				value = civic_cbshing_eco_disaster # base OC
+				value = civic_cbshing_codominant_evolution # base OC
 				
 				# value = civic_oc_living_with_titans # OC Disasters Addon
 
@@ -97,8 +98,8 @@ civic_oc_alien_invaded = {
 				# value = civic_oc_fallen_colony  # OC Fallen Dreams Addon
 				# value = civic_oc_fallen_enclave # OC Fallen Dreams Addon
 				
-				# value = civic_oc_syncretic_mechanists # OC Untested Addon
-				# value = civic_oc_codominant_mechanists # OC Untested Addon
+				# value = civic_cbshing_syncretic_mechanists # OC Untested Addon
+				# value = civic_cbshing_codominant_mechanists # OC Untested Addon
 	
 				# value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
 				# value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
@@ -125,17 +126,19 @@ civic_oc_alien_invaded = {
 	#see 01_origins_civics_empire_setup.12
 }
 
-civic_oc_ecological_disaster = {
+civic_cbshing_eco_disaster = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_ecological_disaster.dds"
 	modification = no
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
 		civics = {
 			NOR = {
 				value = civic_agrarian_idyll
-				value = civic_oc_alien_message # base OC
+				value = civic_cbshing_alien_message # base OC
 				value = civic_oc_alien_invaded # base OC
 				
 				# value = civic_oc_living_with_titans # OC Disasters Addon
+				# value = civic_oc_worm_loved # OC Fallen Dreams Addon
 
 				# value = civic_oc_fallen_tributary # OC Fallen Dreams Addon
 			}
@@ -155,7 +158,7 @@ civic_oc_ecological_disaster = {
 		edict_length_mult = 0.10
 	}
 
-	#description = "civic_tooltip_oc_ecological_disaster"
+	#description = "civic_tooltip_oc_ecological_disaster_effects"
 	#used when starting a new game to initialize home planet
 	#see 01_origins_civics_empire_setup.12
 }

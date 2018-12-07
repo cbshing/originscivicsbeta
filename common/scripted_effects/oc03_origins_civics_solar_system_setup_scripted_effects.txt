@@ -17,10 +17,20 @@
 # ########################
 
 ### Solar System ###
-# remove deposits and stations on planet (stars)
+# spawns fallen empire orbital debris 
 # Scope: Solar System
 spawn_fallen_empire_debris = {
 
+}
+
+### Solar System ###
+# spawns orbital debris around planet
+# Scope: Solar System
+spawn_random_orbital_debris = {
+	random_list = {
+		50 = { }
+		50 = { }
+	}
 }
 
 ### Stars & Planets ###

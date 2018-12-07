@@ -166,6 +166,11 @@ event = {
 							this = { save_event_target_as = megastructure_planet }
 						}
 						spawn_planet_habitat = yes
+						every_system_planet = { # scope to random planet not homeworld
+							limit = { is_planet_class = pc_habitat }
+							set_planet_flag = oc_abandoned_habitat
+							#add_habitat_blocker = yes
+						}		
 						set_star_flag = oc_has_abandoned_habitat
 					}
 					modifier = {
@@ -223,6 +228,7 @@ event = {
 						random_list = {
 							50 = { 
 								add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+								set_planet_flag = oc_abandoned_colony
 							}
 							50 = { }
 						}
@@ -242,6 +248,7 @@ event = {
 						random_list = {
 							50 = { 
 								add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+								set_planet_flag = oc_abandoned_colony
 							}
 							50 = { }
 						}
@@ -264,6 +271,7 @@ event = {
 							random_list = {
 								40 = { 
 									add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+									set_planet_flag = oc_abandoned_colony
 								}
 								60 = { }
 							}
@@ -285,7 +293,8 @@ event = {
 								}
 								random_list = {
 									30 = { 
-										add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+										add_modifier = { modifier = pm_oc_abandoned_colony days = -1 }
+										set_planet_flag = oc_abandoned_colony										
 									}
 									70 = { }
 								}
@@ -308,6 +317,7 @@ event = {
 									random_list = {
 										20 = { 
 											add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+											set_planet_flag = oc_abandoned_colony
 										}
 										80 = { }
 									}
@@ -330,6 +340,7 @@ event = {
 										random_list = {
 											10 = { 
 												add_modifier = { modifier = pm_oc_abandoned_colony days = -1 } 
+												set_planet_flag = oc_abandoned_colony
 											}
 											90 = { }
 										}

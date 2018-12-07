@@ -121,7 +121,6 @@ civic_oc_hive_life_seeded= {
 civic_oc_hive_hive_world = {
 	playable = { host_has_dlc = "MegaCorp" }
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
@@ -134,10 +133,10 @@ civic_oc_hive_hive_world = {
 		}
 	}
 	random_weight = {
-		base = 0.8
+		base = 0.4
 		modifier = {
 			factor = 0
-			NOT = { host_has_dlc = "Apocalypse" }
+			NOT = { host_has_dlc = "MegaCorp" }
 		}
 		modifier = {
 			# civic has no effect after galaxy generation, disable for random generation
@@ -165,7 +164,7 @@ civic_oc_hive_voidborne = {
 		}
 	}
 	random_weight = {
-		base = 0.2
+		base = 0.1
 		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Utopia" }
@@ -177,30 +176,6 @@ civic_oc_hive_voidborne = {
 		}
 	}
 	modifier = { 
-		#megastructure_build_speed_mult = 0.3
-		#country_starbase_capacity_add = 2
-		#country_starbase_influence_cost_mult = -0.10
-		#mod_megastructure_build_cost_mult = -0.3 
-		#starbase_upgrade_cost_mult = -0.05
-		#country_ship_upgrade_cost_mult = -0.1
-		#shipsize_corvette_build_cost_mult = -0.1
-		#shipsize_destroyer_build_cost_mult = -0.1
-		#shipsize_cruiser_build_cost_mult = -0.1
-		#shipsize_battleship_build_cost_mult = -0.1
-		#Built for Space
-		#starbase_module_build_cost_mult = -0.25
-		#shipsize_research_station_build_cost_mult = -0.25
-		#shipsize_mining_station_build_cost_mult = -0.25
-		#shipsize_starbase_outpost_build_cost_mult = -0.25
-		#shipsize_military_station_small_build_cost_mult = -0.25
-		#starbase_shipyard_build_cost_mult = -0.25
-		#shipsize_colonizer_build_cost_mult = -0.25
-		#shipsize_constructor_build_cost_mult = -0.25
-		#shipsize_science_build_cost_mult = -0.25
-		#ship_upkeep_mult = -0.25
-		#country_starbase_upkeep_mult = -0.25
-		#Space Travelers
-		#ship_speed_mult = 0.1
 		country_resource_minerals_mult = 0.05
 		
 		# change to reduce consumer goods, increase energy & trade output, decrease ability to conquer, allow to build tall

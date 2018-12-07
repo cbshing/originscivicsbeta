@@ -143,10 +143,3 @@ create_fallen_colony_start_navy = {
 		}
 	}
 }
-# delete every corvette
-# Scope: Country
-delete_all_corvettes = {
-	every_ship = { limit = { is_ship_size = corvette } 
-		delete_ship = this
-	}	
-}

@@ -18,8 +18,9 @@
 #	}
 #}
 
-civic_oc_climate_shift = {
+civic_cbshing_eco_shift = {
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_climate_shift.dds"
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
 		civics = {
@@ -28,13 +29,13 @@ civic_oc_climate_shift = {
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
 				
-				value = civic_oc_nuclear_vault # base OC
-				value = civic_oc_nuclear_mutation # base OC
-				value = civic_oc_voidborne # base OC
+				value = civic_cbshing_nuclear_vault # base OC
+				value = civic_cbshing_nuclear_mutation # base OC
+				value = civic_cbshing_voidborne # base OC
 				
 				# value = civic_oc_worm_loved # OC Ancients Addon
-				# value = civic_oc_habitat_life # OC Ancients Addon
-				# value = civic_oc_paradise_life  # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
 				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
 			}
 		}
@@ -52,14 +53,15 @@ civic_oc_climate_shift = {
 		edict_length_mult = 0.10
 	}
 
-	#description = "civic_tooltip_cbshing_eco_shift_effects"
+	#description = "civic_tooltip_oc_climate_shift_effects"
 	#used when starting a new game to initialize home planet
 	#see 01_origins_civics_empire_setup.7
 }
 
-civic_oc_nuclear_vault = {
+civic_cbshing_nuclear_vault = {
 	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
 		civics = {
@@ -68,13 +70,13 @@ civic_oc_nuclear_vault = {
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
 				
-				value = civic_oc_climate_shift # base OC
-				value = civic_oc_nuclear_mutation # base OC
-				value = civic_oc_voidborne # base OC
+				value = civic_cbshing_eco_shift # base OC
+				value = civic_cbshing_nuclear_mutation # base OC
+				value = civic_cbshing_voidborne # base OC
 				
 				# value = civic_oc_worm_loved # OC Ancients Addon
-				# value = civic_oc_habitat_life # OC Ancients Addon
-				# value = civic_oc_paradise_life  # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
 				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
 			}
 		}
@@ -97,9 +99,10 @@ civic_oc_nuclear_vault = {
 	#see 01_origins_civics_empire_setup.7
 }
 
-civic_oc_nuclear_mutation = {
+civic_cbshing_nuclear_mutation = {
 	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
 		civics = {
@@ -108,13 +111,13 @@ civic_oc_nuclear_mutation = {
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
 				
-				value = civic_oc_climate_shift # base OC
-				value = civic_oc_nuclear_vault # base OC
-				value = civic_oc_voidborne # base OC
+				value = civic_cbshing_eco_shift # base OC
+				value = civic_cbshing_nuclear_vault # base OC
+				value = civic_cbshing_voidborne # base OC
 				
 				# value = civic_oc_worm_loved # OC Ancients Addon
-				# value = civic_oc_habitat_life # OC Ancients Addon
-				# value = civic_oc_paradise_life  # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
 				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
 			}
 		}
@@ -137,11 +140,12 @@ civic_oc_nuclear_mutation = {
 	#see 01_origins_civics_empire_setup.7
 }
 
-civic_oc_voidborne = {
+civic_cbshing_voidborne = {
 	playable = { 
 		host_has_dlc = "Utopia" 
 	}
 	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_voidborne.dds"
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
 		civics = {
@@ -150,14 +154,14 @@ civic_oc_voidborne = {
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
 				
-				value = civic_oc_climate_shift # base OC
-				value = civic_oc_nuclear_vault # base OC
-				value = civic_oc_nuclear_mutation # base OC
-				value = civic_oc_codominant_evolution # base OC
+				value = civic_cbshing_eco_shift # base OC
+				value = civic_cbshing_nuclear_vault # base OC
+				value = civic_cbshing_nuclear_mutation # base OC
+				value = civic_cbshing_codominant_evolution # base OC
 				
 				# value = civic_oc_worm_loved # OC Ancients Addon
-				# value = civic_oc_habitat_life # OC Ancients Addon
-				# value = civic_oc_paradise_life  # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
 				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
 			}
 		}
@@ -207,7 +211,7 @@ civic_oc_voidborne = {
 		army_damage_mult = -0.2
 	}
 	
-	description = "civic_tooltip_civic_oc_voidborne_effects"
+	description = "civic_tooltip_oc_voidborne_effects"
 	#used when starting a new game to initialize home planet
 	#see 01_origins_civics_empire_setup.4
 	#see 01_origins_civics_empire_setup.7

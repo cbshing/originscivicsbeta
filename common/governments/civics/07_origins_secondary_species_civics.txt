@@ -18,7 +18,8 @@
 #	}
 #}
 
-civic_oc_codominant_evolution = {
+civic_cbshing_codominant_evolution = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_codominant_evolution.dds"
 	modification = no
 	playable = { host_has_dlc = "Utopia" }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
@@ -31,12 +32,13 @@ civic_oc_codominant_evolution = {
 				value = civic_agrarian_idyll # base game civic
 				value = civic_inwards_perfection # base game civic
 				
+				value = civic_cbshing_alien_message # base OC
 				value = civic_oc_alien_invaded # base OC
-				#value = civic_oc_ecological_disaster # base OC
-				value = civic_oc_voidborne # base OC
+				#value = civic_cbshing_eco_disaster # base OC
+				value = civic_cbshing_voidborne # base OC
 				
-				# value = civic_oc_syncretic_mechanists # OC Untested Addon
-				# value = civic_oc_codominant_mechanists # OC Untested Addon
+				# value = civic_cbshing_syncretic_mechanists # OC Untested Addon
+				# value = civic_cbshing_codominant_mechanists # OC Untested Addon
 	
 				# value = civic_oc_post_war_of_worlds # OC Unification War Addon, also incompatible with Colonies civics
 				# value = civic_oc_sublight_conquerer # OC Unification War Addon, also incompatible with Colonies civics
@@ -64,6 +66,6 @@ civic_oc_codominant_evolution = {
 
 	description = civic_tooltip_oc_codominant_evolution_effects
 	has_secondary_species = {	# see 01_origins_civics_empire_setup.6
-		title = civic_oc_codominant_evolution_secondary_species
+		title = civic_cbshing_codominant_evolution_secondary_species
 	}
 }

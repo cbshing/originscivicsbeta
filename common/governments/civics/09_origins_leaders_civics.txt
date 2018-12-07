@@ -18,7 +18,8 @@
 #	}
 #}
 
-civic_oc_eternal_leader = {
+civic_cbshing_eternal_leader = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_eternal_leader.dds"
 	modification = no
 	playable = { host_has_dlc = "Utopia" }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
@@ -84,7 +85,7 @@ civic_oc_digitally_eternal = {
 		}
 		civics = {
 			NOR = {
-				value = civic_oc_eternal_leader
+				value = civic_cbshing_eternal_leader
 				# value = civic_oc_clinically_eternal # base OC tbd - Eternals Update
 			}
 		}

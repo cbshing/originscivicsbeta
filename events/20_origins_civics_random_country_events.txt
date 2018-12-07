@@ -1,15 +1,10 @@
-namespace = origins_civics_country_quest_events
+namespace = origins_civics_random_country_events
 # by cbshing
 
-### Country Quests
-# Search Quests
-# -Alien Message Search for Friend
-# -Alien Invaded Search for Enemy
-# -Life-Seeded Search for Creator
-# -Lost Colony Search for Lost Ships
+### Random Country Events
 
-event = {
-	id = origins_civics_country_quest_events.1
+country_event = {
+	id = origins_civics_random_country_events.1
 	hide_window = yes
 	is_triggered_only = yes
 	

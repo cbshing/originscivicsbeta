@@ -1018,6 +1018,10 @@ country_event = {
 	immediate = {
 		#Override Life Discovery Story Flags
 		#Override Worm in Waiting Flags
+		
+		if = { limit = { oc_requires_megastruture_habitat = yes }
+			set_country_flag = already_built_habitat
+		}
 	}
 }
 

@@ -18,7 +18,7 @@
 #	}
 #}
 
-civic_oc_lost_colony = {
+civic_cbshing_lost_colony = {
 	modification = no
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
@@ -61,7 +61,7 @@ civic_oc_exiled_colony = {
 	possible = {
 		civics = {
 			NOR = {
-				value = civic_oc_lost_colony # base OC
+				value = civic_cbshing_lost_colony # base OC
 				
 				# value = civic_oc_sublight_empire # OC Unification War Addon
 
@@ -101,7 +101,7 @@ civic_oc_fallen_colony = {
 	possible = {
 		civics = {
 			NOR = {
-				value = civic_oc_lost_colony # base OC
+				value = civic_cbshing_lost_colony # base OC
 				value = civic_oc_exiled_colony # base OC
 				
 				# value = civic_oc_sublight_empire # OC Unification War Addon
