@@ -1,0 +1,31 @@
+﻿l_english:
+ ####################################
+ # Planet Civics
+ ####################################
+ 
+ #Regular Empire
+ civic_cbshing_eco_shift:0 "Climate Shift"
+ civic_cbshing_eco_shift_desc:0 "This society developed during an favorable climate period on their planet. As the climate shifted they had to learn to adapt to their harsh new world."
+ civic_tooltip_cbshing_eco_shift_effects:1 "Start the game after the climate of your planet shifted to a type that is not preferential for your species."
+ 
+ civic_cbshing_nuclear_vault:0 "Nuclear Vault"
+ civic_cbshing_nuclear_vault_desc:0 "Protected by a large underground vault, this society was spared the horrors of nuclear war. They succeed to preserve their culture and science, but they were unprepared for the harsh reality of surface life."
+ civic_tooltip_cbshing_nuclear_vault_effects:1 "Start the game on a §Y$pc_nuked$§! with an underground vault complex deposit, which gives §Y+3% research§! bonus for all sciences."
+ 
+ civic_cbshing_nuclear_mutation:0 "Nuclear Mutation"
+ civic_cbshing_nuclear_mutation_desc:0 "This species was the product of a radiation induced mutation. Having evolved on the desolated surface they are more hardy to alien environments."
+ civic_tooltip_cbshing_nuclear_mutation_effects:1 "Start the game on a §Y$pc_nuked$§! with §Y$trait_pc_nuked_preference$§!."
+ 
+ #civic_cbshing_voidborne:0 "Voidborne"
+ #civic_cbshing_voidborne_desc:0 "This society has long lived in the void of space. Prolonged low gravity living has made it impossible for them to live on any planet."
+ #civic_tooltip_cbshing_voidborne_effects:1 "Homeworld is a §Y$pc_habitat$§! (Size: £planetsize  §Y12§!). Habitability preference is set to §Y$trait_pc_habitat_preference$§!, making other types of planets undesirable.\nBeing Voidborne also grants:\n  §YVoid Habitat§! (Size: £planetsize  §Y6§!) constructible  §Y$pc_habitat$§! unlocked from the start.\n  §YHabitat Upgrade§! unique planetary edict to increase the size of habitats after unlocking the Voidborne perk\n  §Y$MOD_STARBASE_SHIP_BUILD_COST_MULT$§! reduced by §G-25%§!.\n  §YStation Cost§! reduced by §G-25%§!.\n  §Y$MOD_SPACEPORT_MODULE_COST_MULT$§! reduced by §G-25%§!.\n  §Y$MOD_SHIP_UPKEEP_MULT$§! reduced by §G-25%§!.\n  §Y$MOD_SHIP_SPEED_MULT$§! increased by §G+10%§!.\n  §Y$MOD_ARMY_DAMAGE_MULT$§! reduced by §R-20%§!."
+ 
+ #Machine Empire
+ civic_cbshing_robo_nuked_start:0 "Nuclear Start"
+ civic_cbshing_robo_nuked_start_desc:0 "Once its primary processor rebooted, this Machine Intelligence awoke to discover the world was destroyed."
+ civic_tooltip_cbshing_robo_nuked_start_effects:1 "Start the game on a §Y$pc_nuked$§!."
+ 
+ civic_cbshing_machine_world:0 "Machine World"
+ civic_cbshing_machine_world_desc:0 "To maximize their efficiency, the Machine Intelligence transformed their small size 12 planet into a §YMachine World§!. The thin atmosphere consists mostly of industrial pollutants and is not capable of supporting biological life."
+ civic_tooltip_cbshing_machine_world_effects:1 "Start the game on a size 12 §Y$pc_machine$§!."
+ 
