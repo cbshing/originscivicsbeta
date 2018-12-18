@@ -25,9 +25,7 @@ make_species_habitat_preference = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify 
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}
 		}
@@ -47,9 +45,7 @@ make_species_gaia_preference = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify 
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}
 		}
@@ -69,9 +65,7 @@ make_species_nuked_preference = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -91,9 +85,7 @@ make_species_continental_preference = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -113,9 +105,7 @@ make_species_ringworld_preference = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -127,6 +117,28 @@ make_species_ringworld_preference = {
 	}
 }
 
+# input is event_target:species_to_modify
+# input is event_target:new_planet_preference
+# Scope: Country
+change_owner_species_to_specific_planet_preference = {
+    every_owned_pop = {
+        limit = { 
+			is_exact_same_species = event_target:species_to_modify
+			NOR = { 
+				has_trait = trait_mechanical 
+				has_trait = trait_machine_unit 
+			}			
+		}
+        modify_species = {
+            species = this
+            ideal_planet_class = event_target:new_planet_preference                            
+            base = none # makes this replace parent species
+        }
+    }
+    owner = { change_dominant_species = { species = last_created change_all = yes } }
+}
+
+
 ### New Traits ###
 # add cybernetic trait to species
 # input is event_target:species_to_modify
@@ -136,9 +148,7 @@ mod_species_cybernetic = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -162,24 +172,8 @@ mod_species_synthetic = {
 		portrait = "default_robot"
 		traits = {
 			trait = "trait_mechanical"
-			trait = "trait_robotic_3"
+			#trait = "trait_robotic_3"
 		}
-		
-		new_pop_resource_requirement = {
-			type = robot_food
-			value = 30
-		}
-		pops_auto_growth = 1.0
-		
-		pops_can_be_colonizers = yes
-		pops_can_migrate = yes
-		pops_can_reproduce = no
-		pops_can_join_factions = yes
-		pop_maintenance = 1
-		can_generate_leaders = yes
-		pops_can_be_slaves = yes
-		pops_have_happiness = yes
-		pop_ethics = random	#can also be pop_ethics = { some_ethic some_other_ethic etc }
 		
 		effect = {
 			if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
@@ -217,9 +211,7 @@ mod_species_psionic = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -250,11 +242,9 @@ set_capital_as_homeworld = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
-			}			
+			}		
 		}
 		species = { 
 			set_species_homeworld = event_target:new_capital_homeworld
@@ -271,11 +261,9 @@ set_new_planet_as_homeworld = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
-			}			
+			}		
 		}
 		species = { 
 			set_species_homeworld = event_target:new_homeworld
@@ -300,9 +288,7 @@ set_random_uninhabitable_planet_as_homeworld = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}
@@ -316,10 +302,13 @@ set_random_uninhabitable_planet_as_homeworld = {
 # input is event_target:new_homeworld
 # input is event_target:species_to_modify
 # Scope: Country
+# change species homeworld to Earth
+# input is event_target:species_to_modify
+# Scope: Country
 make_same_species_as_earth = {
 	#find Earth
 	random_system = {
-		limit = { has_star_flag = sol }
+		limit = { has_star_flag = sol_system }
 		#check for planet_earth flag
 		if = { 
 			limit = { any_planet = { has_planet_flag = planet_earth } } 
@@ -328,12 +317,15 @@ make_same_species_as_earth = {
 					has_planet_flag = planet_earth
 				}
 				save_event_target_as = earth_home
+				prevprev = { set_country_flag = earth_is_found }
 				if = { limit = { has_owner = yes } 
 					prevprev = { set_country_flag = earth_is_owned }
-					owner = { 
-						set_country_flag = earth_owner
-						set_country_flag = oc_home_empire
-						owner_species = { save_event_target_as = earth_owner }
+					if = { limit = { owner = { is_machine_empire = no } }
+						owner = { 
+							set_country_flag = earth_owner
+							set_country_flag = oc_home_empire
+							owner_species = { save_event_target_as = earth_owner }
+						}
 					}
 				}
 			}
@@ -343,19 +335,24 @@ make_same_species_as_earth = {
 			random_system_planet = {
 				limit = {
 					OR = {
-						is_colonizable = yes
-						is_homeworld = yes
+						is_planet_class = pc_continental
+						is_planet_class = pc_nuked
 					}
-					is_asteroid = no
-					is_star = no
 				}
 				save_event_target_as = earth_home
+				set_planet_flag = planet_earth
+				prevprev = { set_country_flag = earth_is_found }
 				if = { limit = { has_owner = yes } 
 					prevprev = { set_country_flag = earth_is_owned }
-					owner = { 
-						set_country_flag = earth_owner
-						set_country_flag = oc_home_empire
-						owner_species = { save_event_target_as = earth_owner }
+					if = { limit = { owner = { is_machine_empire = no } }
+						owner = { 
+							set_country_flag = earth_owner
+							set_country_flag = oc_home_empire
+							owner_species = {
+								set_species_homeworld = event_target:earth_home		
+							}
+							owner_species = { save_event_target_as = earth_owner }
+						}
 					}
 				}
 			}
@@ -365,9 +362,7 @@ make_same_species_as_earth = {
 		limit = { 
 			is_exact_same_species = event_target:species_to_modify
 			NOR = { 
-				has_trait = trait_robotic_1 
-				has_trait = trait_robotic_2 
-				has_trait = trait_robotic_3
+				has_trait = trait_mechanical 
 				has_trait = trait_machine_unit 
 			}			
 		}

@@ -34,7 +34,7 @@ has_oc_codominant_evolution_civic = {
 # scope: country 
 has_oc_alien_message_civic = {
 	OR = {
-		has_valid_civic = civic_cbshing_alien_message
+		#has_valid_civic = civic_cbshing_alien_message
 		has_country_flag = alien_message_country
 	}
 }
@@ -42,7 +42,7 @@ has_oc_alien_message_civic = {
 # scope: country 
 has_oc_alien_invaded_civic = {
 	OR = {
-		has_valid_civic = civic_oc_alien_invaded
+		#has_valid_civic = civic_oc_alien_invaded
 		has_country_flag = alien_invaded_country
 	}
 }
@@ -50,7 +50,7 @@ has_oc_alien_invaded_civic = {
 # scope: country 
 has_oc_lost_colony_civic = {
 	OR = {
-		has_valid_civic = civic_cbshing_lost_colony
+		#has_valid_civic = civic_cbshing_lost_colony
 		has_country_flag = lost_colony_country
 	}
 }
@@ -58,7 +58,7 @@ has_oc_lost_colony_civic = {
 # scope: country 
 has_oc_exiled_colony_civic = {
 	OR = {
-		has_valid_civic = civic_oc_exiled_colony
+		#has_valid_civic = civic_oc_exiled_colony
 		has_country_flag = exiled_colony_country
 	}
 }
@@ -74,7 +74,7 @@ has_oc_post_war_of_worlds_civic = {
 # scope: country 
 has_oc_eternal_leader_civic = {
 	OR = {
-		has_valid_civic = civic_cbshing_eternal_leader
+		#has_valid_civic = civic_cbshing_eternal_leader
 		has_country_flag = eternal_leader_country
 	}
 }
@@ -98,7 +98,7 @@ has_oc_digitally_eternal_civic = {
 # scope: country 
 has_oc_ecological_disaster_civic = {
 	OR = {
-		has_valid_civic = civic_cbshing_eco_disaster
+		#has_valid_civic = civic_cbshing_eco_disaster
 		has_country_flag = ecological_disaster_country
 	}
 }
@@ -138,7 +138,7 @@ has_oc_nuclear_mutation_civic = {
 # scope: country 
 has_oc_voidborne_civic = {
 	OR = {
-		has_valid_civic = civic_cbshing_voidborne
+		#has_valid_civic = civic_cbshing_voidborne
 		has_country_flag = voidborne_country
 	}
 }
@@ -149,7 +149,7 @@ has_oc_voidborne_civic = {
 has_oc_hive_nuclear_vault_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_nuclear_vault
-		has_country_flag = hive_nuked_vault_country
+		has_country_flag = nuked_vault_country
 	}
 }
 
@@ -157,15 +157,15 @@ has_oc_hive_nuclear_vault_civic = {
 has_oc_hive_nuclear_mutation_civic = {
 	OR = {
 		has_valid_civic = civic_oc_hive_nuclear_mutation
-		has_country_flag = hive_nuked_mutation_country
+		has_country_flag = nuked_mutation_country
 	}
 }
 
 # scope: country 
 has_oc_hive_voidborne_civic = {
 	OR = {
-		has_valid_civic = civic_oc_hive_voidborne
-		has_country_flag = hive_voidborne_country
+		#has_valid_civic = civic_oc_hive_voidborne
+		has_country_flag = voidborne_country
 	}
 }
 
@@ -177,6 +177,12 @@ has_oc_hive_life_seeded_civic = {
 	}
 }
 
+has_oc_hive_post_apocalyptic_civic = {
+	OR = {
+		has_valid_civic = civic_oc_hive_post_apocalyptic
+		has_country_flag = post_apocalyptic_country
+	}
+}
 
 # scope: country 
 has_oc_hive_hive_world_civic = {
@@ -212,6 +218,162 @@ has_oc_robo_abandoned_terraformers_civic = {
 	}
 }
 
+
+### corporate empires
+
+# scope: country 
+has_oc_corp_syncretic_evolution_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_syncretic_evolution
+		has_country_flag = syncretic_evolution_country
+	}
+}
+
+# scope: country 
+has_oc_corp_mechanists_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_mechanists
+		has_country_flag = mechanist_country
+	}
+}
+
+# scope: country 
+has_oc_corp_life_seeded_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_life_seeded
+		has_country_flag = life_seeded_country
+	}
+}
+ 
+# scope: country 
+has_oc_corp_post_apocalyptic_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_post_apocalyptic
+		has_country_flag = post_apocalyptic_country
+	}
+}
+
+# scope: country 
+has_oc_corp_codominant_evolution_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_codominant_evolution
+		has_country_flag = codominant_country
+	}
+}
+
+# scope: country 
+has_oc_corp_alien_message_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_alien_message
+		has_country_flag = alien_message_country
+	}
+}
+
+# scope: country 
+has_oc_corp_alien_invaded_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_alien_invaded
+		has_country_flag = alien_invaded_country
+	}
+}
+
+# scope: country 
+has_oc_corp_lost_colony_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_lost_colony
+		has_country_flag = lost_colony_country
+	}
+}
+
+# scope: country 
+has_oc_corp_exiled_colony_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_exiled_colony
+		has_country_flag = exiled_colony_country
+	}
+}
+
+# scope: country 
+has_oc_corp_post_war_of_worlds_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_post_war_of_worlds
+		has_country_flag = post_wow_country
+	}
+}
+
+# scope: country 
+has_oc_corp_eternal_leader_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_eternal_leader
+		has_country_flag = eternal_leader_country
+	}
+}
+
+# scope: country 
+has_oc_corp_clinically_eternal_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_clinically_eternal
+		has_country_flag = clinically_eternal_country
+	}
+}
+
+# scope: country 
+has_oc_corp_digitally_eternal_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_digitally_eternal
+		has_country_flag = digitally_eternal_country
+	}
+}
+
+# scope: country 
+has_oc_corp_ecological_disaster_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_ecological_disaster
+		has_country_flag = ecological_disaster_country
+	}
+}
+
+# scope: country 
+has_oc_corp_climate_shift_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_climate_shift
+		has_country_flag = climate_shift_country
+	}
+}
+
+# scope: country 
+has_oc_corp_titanic_disaster_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_titanic_disaster
+		has_country_flag = titanic_life_country
+	}
+}
+
+# scope: country 
+has_oc_corp_nuclear_vault_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_nuclear_vault
+		has_country_flag = nuked_vault_country
+	}
+}
+
+# scope: country 
+has_oc_corp_nuclear_mutation_civic = {
+	OR = {
+		has_valid_civic = civic_oc_corp_nuclear_mutation
+		has_country_flag = nuked_mutation_country
+	}
+}
+
+# scope: country 
+has_oc_corp_voidborne_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_corp_voidborne
+		has_country_flag = voidborne_country
+	}
+}
+
+
 ### Colonies of Earth
 
 # scope: country 
@@ -238,7 +400,7 @@ has_oc_colony_of_man_civic = {
 # scope: country 
 has_oc_primitive_colonial_administration_civic = {
 	OR = {
-		has_valid_civic = civic_oc_primitive_colonial_administration
+		#has_valid_civic = civic_oc_primitive_colonial_administration
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -246,7 +408,7 @@ has_oc_primitive_colonial_administration_civic = {
 # scope: country 
 has_oc_primitive_lost_colony_civic = {
 	OR = {
-		has_valid_civic = civic_oc_primitive_lost_colony
+		#has_valid_civic = civic_oc_primitive_lost_colony
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -254,7 +416,7 @@ has_oc_primitive_lost_colony_civic = {
 # scope: country 
 has_oc_primitive_fallen_colony_civic = {
 	OR = {
-		has_valid_civic = civic_oc_primitive_fallen_colony
+		#has_valid_civic = civic_oc_primitive_fallen_colony
 		has_country_flag = invalid_oc_country
 	}
 }

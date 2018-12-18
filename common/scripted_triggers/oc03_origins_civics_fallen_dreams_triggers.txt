@@ -34,7 +34,7 @@ has_oc_worm_loved_civic = {
 # scope: country 
 has_oc_fallen_colony_civic = {
 	OR = {
-		has_valid_civic = civic_oc_fallen_colony
+		#has_valid_civic = civic_oc_fallen_colony
 		has_country_flag = fallen_colony_country
 	}
 }

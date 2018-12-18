@@ -17,16 +17,90 @@
 #	}
 #}
 
+civic_oc_hive_post_apocalyptic = {
+	icon = "gfx/interface/icons/governments/civics/civic_post_apocalyptic.dds"
+	playable = { host_has_dlc = "Apocalypse" }
+	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_nuclear_mutation # base OC
+				#value = civic_oc_hive_voidborne # base OC
+				value = civic_oc_hive_life_seeded # base OC
+				value = civic_oc_hive_hive_world # base OC
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 1 # Should be fairly rare
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_post_apocalyptic_effects"
+
+	traits = {
+		trait = trait_survivor
+	}
+}
+
+civic_oc_hive_life_seeded = {
+	playable = { host_has_dlc = "Apocalypse" }
+	modification = no
+	homeworld = pc_gaia # Changes homeworld class regardless of what is picked for empire
+	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_hive_post_apocalyptic # base OC
+				value = civic_oc_hive_nuclear_vault # base OC
+				value = civic_oc_hive_nuclear_mutation # base OC
+				#value = civic_oc_hive_voidborne # base OC
+				value = civic_oc_hive_hive_world # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_life_seeded_effects"
+	#used when starting a new game to modify species
+	#see 01_origins_civics_empire_setup.5
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
 civic_oc_hive_nuclear_vault = {
 	playable = { host_has_dlc = "Apocalypse" }
+	#homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
+				value = civic_oc_hive_post_apocalyptic # base OC
 				value = civic_oc_hive_nuclear_mutation # base OC
-				value = civic_oc_hive_voidborne # base OC
+				#value = civic_oc_hive_voidborne # base OC
 				value = civic_oc_hive_life_seeded # base OC
 				value = civic_oc_hive_hive_world # base OC
 			}
@@ -44,22 +118,28 @@ civic_oc_hive_nuclear_vault = {
 			has_global_flag = game_started
 		}
 	}
+	
+	modifier = { 
+		pop_housing_usage_mult = -0.10
+	}
 
-	description = "civic_tooltip_oc_hive_nuclear_vault_effects"
+	description = "civic_tooltip_oc_nuclear_vault_effects"
 	#used when starting a new game to initialize home planet
 	#see 01_origins_civics_empire_setup.7
 }
 
 civic_oc_hive_nuclear_mutation = {
 	playable = { host_has_dlc = "Apocalypse" }
+	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
+				value = civic_oc_hive_post_apocalyptic # base OC
 				value = civic_oc_hive_nuclear_vault # base OC
-				value = civic_oc_hive_voidborne # base OC
+				#value = civic_oc_hive_voidborne # base OC
 				value = civic_oc_hive_life_seeded # base OC
 				value = civic_oc_hive_hive_world # base OC
 			}
@@ -77,41 +157,7 @@ civic_oc_hive_nuclear_mutation = {
 			has_global_flag = game_started
 		}
 	}
-	description = "civic_tooltip_oc_hive_nuclear_mutation_effects"
-	#used when starting a new game to modify species
-	#see 01_origins_civics_empire_setup.5
-	#used when starting a new game to initialize home planet
-	#see 01_origins_civics_empire_setup.7
-}
-
-civic_oc_hive_life_seeded= {
-	playable = { host_has_dlc = "Apocalypse" }
-	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
-	potential = { authority = { value = auth_hive_mind } }
-	possible = {
-		civics = {
-			NOR = {
-				value = civic_oc_hive_nuclear_vault # base OC
-				value = civic_oc_hive_nuclear_mutation # base OC
-				value = civic_oc_hive_voidborne # base OC
-				value = civic_oc_hive_hive_world # base OC
-			}
-		}
-	}
-	random_weight = {
-		base = 0.8
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Apocalypse" }
-		}
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-	description = "civic_tooltip_life_seeded_effects"
+	description = "civic_tooltip_oc_nuclear_mutation_effects"
 	#used when starting a new game to modify species
 	#see 01_origins_civics_empire_setup.5
 	#used when starting a new game to initialize home planet
@@ -119,16 +165,18 @@ civic_oc_hive_life_seeded= {
 }
 
 civic_oc_hive_hive_world = {
-	playable = { host_has_dlc = "MegaCorp" }
+	playable = { host_has_dlc = "Megacorp" }
+	homeworld = pc_hive # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
 			NOR = {
+				value = civic_oc_hive_post_apocalyptic # base OC
 				value = civic_oc_hive_nuclear_vault # base OC
 				value = civic_oc_hive_nuclear_mutation # base OC
 				value = civic_oc_hive_life_seeded # base OC
-				value = civic_oc_hive_voidborne # base OC
+				#value = civic_oc_hive_voidborne # base OC
 			}
 		}
 	}
@@ -136,7 +184,7 @@ civic_oc_hive_hive_world = {
 		base = 0.4
 		modifier = {
 			factor = 0
-			NOT = { host_has_dlc = "MegaCorp" }
+			NOT = { host_has_dlc = "Megacorp" }
 		}
 		modifier = {
 			# civic has no effect after galaxy generation, disable for random generation
@@ -144,48 +192,7 @@ civic_oc_hive_hive_world = {
 			has_global_flag = game_started
 		}
 	}
-	description = "civic_tooltip_life_seeded_effects"
+	description = "civic_tooltip_oc_hive_world_effects"
 	#used when starting a new game to initialize home planet
-	#see 01_origins_civics_empire_setup.7
-}
-
-civic_oc_hive_voidborne = {
-	playable = { host_has_dlc = "Utopia" }
-	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_oc_voidborne.dds"
-	potential = { authority = { value = auth_hive_mind } }
-	possible = {
-		civics = {
-			NOR = {
-				value = civic_oc_hive_nuclear_vault # base OC
-				value = civic_oc_hive_nuclear_mutation # base OC
-				value = civic_oc_hive_life_seeded # base OC
-			}
-		}
-	}
-	random_weight = {
-		base = 0.1
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Utopia" }
-		}
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-	modifier = { 
-		country_resource_minerals_mult = 0.05
-		
-		# change to reduce consumer goods, increase energy & trade output, decrease ability to conquer, allow to build tall
-		
-		pop_consumer_goods_mult = -0.10
-		army_damage_mult = -0.2
-	}
-	
-	description = "civic_tooltip_civic_oc_hive_voidborne_effects"
-	#used when starting a new game to initialize home planet
-	#see 01_origins_civics_empire_setup.4
 	#see 01_origins_civics_empire_setup.7
 }

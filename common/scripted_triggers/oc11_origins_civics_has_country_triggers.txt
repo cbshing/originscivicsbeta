@@ -73,6 +73,10 @@ oc_has_secondary_species_civics = {
 		has_oc_sublight_conquerer_civic = yes
 		has_oc_refugee_saviour_civic = yes
 		has_oc_post_war_of_worlds_civic = yes
+		
+		has_oc_corp_syncretic_evolution_civic = yes
+		has_oc_corp_post_war_of_worlds_civic = yes
+		has_oc_corp_codominant_evolution_civic = yes
 		has_country_flag = has_two_species_country
 	}
 }
@@ -82,6 +86,7 @@ oc_has_robot_pops_on_start_civics = {
 	OR = {
 		has_oc_syncretic_mechanists_civic = yes
 		has_oc_codominant_mechanists_civic = yes
+		has_oc_corp_mechanists_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -112,6 +117,7 @@ oc_has_search_quest_hidden_civics = {
 	OR = {
 		has_oc_paradise_life_civic = yes
 		has_oc_hive_paradise_life_civic = yes
+		has_oc_corp_life_seeded_civic = yes
 		has_country_flag = invalid_oc_country
 	}
 }
@@ -119,9 +125,30 @@ oc_has_search_quest_hidden_civics = {
 # scope: country 
 oc_has_restore_homeworld_quest_hidden_civics = {
 	OR = {
-		has_oc_climate_shift_civic = yes
+		oc_has_restore_homeworld_nuked_quest_hidden_civics = yes
+		oc_has_restore_homeworld_climate_shift_quest_hidden_civics = yes
+		has_country_flag = homeworld_restoration_quest_needed
+	}
+}
+
+# scope: country 
+oc_has_restore_homeworld_nuked_quest_hidden_civics = {
+	OR = {
+		has_post_apocalyptic_civic = yes
 		has_oc_nuclear_vault_civic = yes
 		has_oc_hive_nuclear_vault_civic = yes
-		has_country_flag = invalid_oc_country
+		has_oc_hive_post_apocalyptic_civic = yes
+		has_oc_corp_post_apocalyptic_civic = yes
+		has_oc_corp_nuclear_vault_civic = yes
+		has_country_flag = nuked_homeworld_restoration_quest_needed
+	}
+}
+
+# scope: country 
+oc_has_restore_homeworld_climate_shift_quest_hidden_civics = {
+	OR = {
+		has_oc_climate_shift_civic = yes
+		has_oc_corp_climate_shift_civic = yes
+		has_country_flag = tier2_homeworld_restoration_quest_needed
 	}
 }

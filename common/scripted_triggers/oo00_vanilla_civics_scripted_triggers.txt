@@ -31,6 +31,14 @@ has_syncretic_evolution_civic = {
 }
 
 # scope: country 
+has_post_apocalyptic_civic = {
+	OR = {
+		has_valid_civic = civic_post_apocalyptic
+		has_country_flag = invalid_country
+	}
+}
+
+# scope: country 
 has_machine_assimilator_civic = {
 	OR = {
 		has_valid_civic = civic_machine_assimilator

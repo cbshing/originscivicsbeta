@@ -1,8 +1,0 @@
-# Triggers when the game starts
-on_game_start = {
-	events = {
-		origins_civics_galaxy_setup.1 # OC Sol Setup
-		origins_civics_galaxy_setup.2 # OC Abandoned Habitats
-		origins_civics_galaxy_setup.3 # OC Abandoned Colonies
-	}
-}

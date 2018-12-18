@@ -22,7 +22,10 @@ civic_cbshing_codominant_evolution = {
 	icon = "gfx/interface/icons/governments/civics/civic_oc_codominant_evolution.dds"
 	modification = no
 	playable = { host_has_dlc = "Utopia" }
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
 	possible = {	
 		civics = {
 			NOR = {
@@ -31,6 +34,7 @@ civic_cbshing_codominant_evolution = {
 				value = civic_fanatic_purifiers  # base game civic
 				value = civic_agrarian_idyll # base game civic
 				value = civic_inwards_perfection # base game civic
+				value = civic_life_seeded # base game civic
 				
 				value = civic_cbshing_alien_message # base OC
 				value = civic_oc_alien_invaded # base OC
@@ -60,12 +64,11 @@ civic_cbshing_codominant_evolution = {
 		}
 	}
 	modifier = { 
-		ship_sensor_range_add = 1
-		pop_other_species_owner_happiness = 0.05
+
 	}
 
 	description = civic_tooltip_oc_codominant_evolution_effects
-	has_secondary_species = {	# see 01_origins_civics_empire_setup.6
-		title = civic_cbshing_codominant_evolution_secondary_species
+	has_secondary_species = {	# see 02_origins_civics_empire_setup.0
+		title = civic_oc_codominant_evolution_secondary_species
 	}
 }

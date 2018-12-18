@@ -26,7 +26,31 @@ give_megaengineering_technology = {
 # give psionic technology
 # Scope: Country
 give_psionic_technology = {
-	give_technology = { tech = "tech_mega_engineering" message = no }
+	give_technology = { tech = "tech_psionic_theory" message = no }
+}
+
+# give telepathy technology
+# Scope: Country
+give_telepathy_technology = {
+	give_technology = { tech = "tech_psionic_theory" message = no }
+	give_technology = { tech = "tech_telepathy" message = no }
+}
+
+# give precog technology
+# Scope: Country
+give_precognition_interface_technology = {
+	give_technology = { tech = "tech_psionic_theory" message = no }
+	give_technology = { tech = "tech_telepathy" message = no }
+	give_technology = { tech = "tech_precognition_interface" message = no }
+}
+
+# give psi drive technology
+# Scope: Country
+give_psi_drive_technology = {
+	give_technology = { tech = "tech_psionic_theory" message = no }
+	give_technology = { tech = "tech_telepathy" message = no }
+	give_technology = { tech = "tech_precognition_interface" message = no }
+	give_technology = { tech = "tech_psi_jump_drive_1" message = no }
 }
 
 # give technology & ability to make robot
@@ -41,13 +65,26 @@ allow_country_to_make_robots= {
 allow_country_to_make_droids = {
 	give_technology = { message = no tech = tech_powered_exoskeletons }
 	give_technology = { message = no tech = tech_robotic_workers }
+	give_technology = { message = no tech = tech_colonial_centralization }
+	give_technology = { message = no tech = tech_droid_workers }
 }
 
 # give technology & ability to make synths
 # Scope: Country
-allow_country_to_make sythns = {
+allow_country_to_make_synths = {
 	give_technology = { message = no tech = tech_powered_exoskeletons }
 	give_technology = { message = no tech = tech_robotic_workers }
+	give_technology = { message = no tech = tech_colonial_centralization }
+	give_technology = { message = no tech = tech_droid_workers }
+	give_technology = { message = no tech = tech_galactic_administration }
+	give_technology = { message = no tech = tech_sapient_ai }
+	give_technology = { message = no tech = tech_synthetic_workers }
+}
+
+# give hydroponics technology
+# Scope: Country
+give_hydroponics_technology= {
+	give_technology = { message = no tech = "tech_hydroponics" }
 }
 
 # give worm-in-waiting technology 
@@ -85,15 +122,7 @@ allow_country_to_build_gateways = {
 # give ascension theory technology
 # Scope: Country
 give_ascension_theory_technology = {
-	if = {
-		limit = {
-			NOT = { host_has_dlc = "Apocalypse" }
-		}
-		give_technology = { tech = "tech_ascension_theory" message = no }
-	}
-	else = {
-		give_technology = { tech = "tech_ascension_theory_apoc" message = no }
-	}
+	give_technology = { tech = "tech_ascension_theory" message = no }
 }
 
 # give random tier2 military ship tech

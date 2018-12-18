@@ -100,7 +100,12 @@
 # value = civic_oc_fallen_tributary # OC Fallen Dreams Addon
 
 #########################################
-# Hive Civics (26_origins_hive_civics.txt)
+# Hive Civics (23_origins_hive_system_civics.txt)
+#########################################
+# value = civic_oc_hive_dyson_builders # OC Fresh Start Addon
+
+#########################################
+# Hive Civics (26_origins_hive_planet_civics.txt)
 #########################################
 # value = civic_oc_hive_nuclear_vault # base OC
 # value = civic_oc_hive_nuclear_mutation # base OC
@@ -111,17 +116,26 @@
 # value = civic_oc_hive_habitat_life # OC Fresh Start Addon
 # value = civic_oc_hive_paradise_life # OC Fresh Start Addon
 
-# value = civic_oc_hive_dyson_builders # OC Fresh Start Addon
+#####################################################
+# Synthetic Dawn Civics (37_origins_syn_dawn_system_civics.txt)
+#####################################################
+# value = civic_oc_robo_dyson_builders # OC Fresh Start Addon
 
 #####################################################
-# Synthetic Dawn Civics (99_origins_syn_dawn_civics.txt)
+# Synthetic Dawn Civics (36_origins_syn_dawn_planet_civics.txt)
+#####################################################
+# value = civic_cbshing_robo_nuked_start # base OC
+# value = civic_cbshing_machine_world # base OC
+
+# value = civic_oc_robo_voidborne_mechanisms # OC Fresh Start Addon
+
+#####################################################
+# Synthetic Dawn Civics (37_origins_syn_dawn_secondary_species_civics.txt)
 #####################################################
 # value = civic_machine_servitor # base game civic
 # value = civic_machine_assimilator # base game civic
 
-# value = civic_cbshing_robo_nuked_start # base OC
-# value = civic_cbshing_machine_world # base OC
+#####################################################
+# Synthetic Dawn Civics (39_origins_syn_dawn_quest_civics.txt)
+#####################################################
 # value = civic_oc_robo_abandoned_terraformers # OC Unknown Update
-
-# value = civic_oc_robo_voidborne_mechanisms # OC Fresh Start Addon
-# value = civic_oc_robo_dyson_builders # OC Fresh Start Addon
