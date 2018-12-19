@@ -11,7 +11,7 @@
  
  civic_cbshing_nuclear_vault:0 "Nuclear Vault"
  civic_cbshing_nuclear_vault_desc:0 "Protected by a large underground vault, this society was spared the horrors of nuclear war. Cramped together they succeed to preserve their society, but they were unprepared for the harsh reality of surface life."
- civic_tooltip_oc_nuclear_vault_effects:1 "$MOD_POP_HOUSING_USAGE_MULT$: §G-10%§!\nCapital starts as a §Y$pc_nuked$§! with a unique §Y$d_oc_vault_complex$§! deposit, which gives several §Yresearch§! and §amenities§! bonuses to the capital planet."
+ civic_tooltip_oc_nuclear_vault_effects:1 "$MOD_POP_HOUSING_USAGE_MULT$: §G-10%§!\nCapital starts as a §Y$pc_nuked$§! with a unique §Y$d_oc_vault_complex$§! deposit, which gives several §Yresearch§! and §Yamenities§! bonuses to the capital planet."
  
  civic_cbshing_nuclear_mutation:0 "Nuclear Mutation"
  civic_cbshing_nuclear_mutation_desc:0 "This species was the product of a radiation induced mutation. Having evolved on the desolated surface of their homeworld, they are more hardy to alien environments."
@@ -36,16 +36,16 @@
 
  civic_oc_hive_hive_world:0 "Hive World"
  civic_oc_hive_hive_world_desc:0 "Having reached a certain mass on its small world, this Hive integrated itself with the terrain. Now any beings not part of the Hive that set foot here will be attacked by the very terrain itself."
- civic_tooltip_oc_hive_hive_world_effects:1 "Homeworld is a §Y$pc_hive$§! (Size: £planetsize£ §Y12§!)."
+ civic_tooltip_oc_hive_world_effects:1 "Homeworld is a §Y$pc_hive$§! (Size: £planetsize£ §Y12§!)."
 
  #Machine Empire
  civic_cbshing_robo_nuked_start:0 "Nuclear Start"
  civic_cbshing_robo_nuked_start_desc:0 "Upon rebooting its primary processor, this Machine Intelligence awoke to discover the world was destroyed."
- civic_tooltip_cbshing_robo_nuked_start_effects:1 "Capital starts as a §Y$pc_nuked$§!. Any §Y$SECONDARY_SPECIES$§! begins with §Y$trait_pc_nuked_preference$§! habitability preference."
+ civic_tooltip_oc_robo_nuked_start_effects:1 "Capital starts as a §Y$pc_nuked$§!. Any §Y$SECONDARY_SPECIES$§! begins with §Y$trait_pc_nuked_preference$§! habitability preference."
  
  civic_cbshing_machine_world:0 "Machine World"
  civic_cbshing_machine_world_desc:0 "To maximize their efficiency, the Machine Intelligence transformed their small planet into a §YMachine World§!. The thin atmosphere consists mostly of industrial pollutants and is not capable of supporting biological life."
- civic_tooltip_cbshing_machine_world_effects:1 "Homeworld is a §Y$pc_machine$§! (Size: £planetsize£ §Y12§!)."
+ civic_tooltip_oc_machine_world_effects:1 "Homeworld is a §Y$pc_machine$§! (Size: £planetsize£ §Y12§!)."
  
  #Corporate Empire
  civic_oc_corp_post_apocalyptic:0 "$civic_post_apocalyptic$"
