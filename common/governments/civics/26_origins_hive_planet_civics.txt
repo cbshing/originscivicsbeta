@@ -165,8 +165,8 @@ civic_oc_hive_nuclear_mutation = {
 }
 
 civic_oc_hive_hive_world = {
-	playable = { host_has_dlc = "Megacorp" }
-	homeworld = pc_hive # Changes homeworld class regardless of what is picked for empire
+	playable = { host_has_dlc = "Utopia" }
+	#homeworld = pc_hive # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
@@ -184,7 +184,7 @@ civic_oc_hive_hive_world = {
 		base = 0.4
 		modifier = {
 			factor = 0
-			NOT = { host_has_dlc = "Megacorp" }
+			NOT = { host_has_dlc = "Utopia" }
 		}
 		modifier = {
 			# civic has no effect after galaxy generation, disable for random generation
