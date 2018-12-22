@@ -140,6 +140,25 @@ change_owner_species_to_specific_planet_preference = {
 
 
 ### New Traits ###
+# add survivor trait to species
+# input is event_target:species_to_modify
+# Scope: Country
+mod_species_survivor = {
+	every_owned_pop = {
+		limit = { 
+			is_exact_same_species = event_target:species_to_modify
+			NOR = { 
+				has_trait = trait_mechanical 
+				has_trait = trait_machine_unit 
+			}			
+		}
+		modify_species = {
+			species = this
+			add_trait = trait_survivor
+		}
+	}
+}
+
 # add cybernetic trait to species
 # input is event_target:species_to_modify
 # Scope: Country

@@ -5,7 +5,7 @@
 # The names can NOT be removed or changed since the code references them
 
 ##########################################################################
-# Pop Modifiers
+# Homeworld Restoration Modifiers
 ##########################################################################
 
 oc_restored_homeworld = {
@@ -15,4 +15,28 @@ oc_restored_homeworld = {
 
 oc_restored_homeworld_hive = {
 	planet_stability_add = 5
+}
+
+##########################################################################
+# Eternal Leader Modifiers
+##########################################################################
+
+# Eternal Leader
+
+oc_eternal_leader_default_boon = {
+	country_base_influence_produces_add = 1
+}
+
+oc_eternal_leader_default_neg_boon = {
+	#
+}
+
+# Digitally Eternal Leader
+
+oc_digitally_eternal_default_boon = {
+	all_technology_research_speed = 0.05
+}
+
+oc_digitally_eternal_default_neg_boon = {
+	all_technology_research_speed = -0.05
 }

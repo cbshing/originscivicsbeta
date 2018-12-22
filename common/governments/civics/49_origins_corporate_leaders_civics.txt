@@ -1,0 +1,103 @@
+# 49_origins_corporate_leaders_civics.txt
+# Civics that modify the starting leaders or leaders of an empire
+
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_oc_corp_eternal_leader = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_eternal_leader.dds"
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { authority = { value = auth_corporate } }
+	possible = {	
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				#value = civic_cbshing_eternal_leader
+				#value = civic_oc_digitally_eternal
+				# value = civic_oc_clinically_eternal # base OC tbd - Eternals Update
+				
+				value = civic_oc_corp_digitally_eternal
+			}
+		}
+	}
+	random_weight = {
+		base = 0.1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		country_election_influence_cost_mult = -0.99
+	}
+
+	description = "civic_tooltip_oc_eternal_leader_effects"
+	#see 01_origins_civics_empire_setup.8
+}
+
+civic_oc_corp_digitally_eternal = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_digitally_eternal.dds"
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { authority = { value = auth_corporate } }
+	possible = {	
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				# value = civic_oc_clinically_eternal # base OC tbd - Eternals Update
+				
+				value = civic_oc_corp_eternal_leader
+			}
+		}
+	}
+	random_weight = {
+		base = 0.1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		country_election_influence_cost_mult = -0.99
+	}
+
+	description = "civic_tooltip_oc_digitally_eternal_effects"
+	#see 01_origins_civics_empire_setup.8
+}

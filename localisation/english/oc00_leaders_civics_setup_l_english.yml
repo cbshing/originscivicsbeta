@@ -1,0 +1,47 @@
+﻿l_english:
+
+ ####################################
+ # Origins Civics - Leaders
+ ####################################
+ 
+ #Regular Empire
+ civic_cbshing_eternal_leader:0 "Eternal Leader"
+ civic_cbshing_eternal_leader_desc:0 "This society has been long guided by a ruler who is Eternal."
+ civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic boons."
+ 
+ civic_oc_digitally_eternal:0 "Digitally Eternal"
+ civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruler who uploaded their consciousness to a computer long ago."
+ civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being Immortal, and the ability to access his/her unique optimization boons."
+
+ #Corporate Empire
+ civic_oc_corp_eternal_leader:0 "Eternal CEO"
+ civic_oc_corp_eternal_leader_desc:0 "This society has been long guided by a CEO who is Eternal."
+ 
+ civic_oc_corp_digitally_eternal:0 "Digital CEO"
+ civic_oc_corp_digitally_eternal_desc:0 "This society has been long guided by a CEO who uploaded their consciousness to a computer long ago." 
+ 
+ ####################################
+ # Origins Traits
+ ####################################
+ leader_trait_oc_eternal_leader:0 "Eternal"
+ leader_trait_oc_eternal_leader_desc:0 "This leader is an Eternal, an immortal being that wields incredible psionic power."
+ leader_trait_oc_eternal_leader_weakened:0 "Young Eternal"
+ leader_trait_oc_eternal_leader_weakened_desc:0 "This leader is an Eternal, but immature with their psionic powers. After training for several decades she/he will reach her/his true potential"
+ leader_trait_oc_digitally_eternal:0 "Uploaded"
+ leader_trait_oc_digitally_eternal_desc:0 "This leader Uploaded their consciousness to the empire's computer networks long ago."
+ 
+ ####################################
+ # Origins Modifiers
+ ####################################
+ oc_eternal_leader_default_boon:0 "Eternal Boon : Resting"
+ oc_eternal_leader_default_boon_desc:0 "Without exercising their great psionic power, the Eternal is able to focus on influencing the many branches of government."
+ oc_digitally_eternal_default_boon:0 "Eternal Boon : Standby"
+ oc_digitally_eternal_default_boon_desc:0 "Without exercising its great calculating powers, the Uploaded is able to focus on optimizing national research."
+ 
+ ####################################
+ # Origins Start Messages
+ ####################################
+ START_SCREEN_PART_TWO_ETERNAL_LEADER:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of stability and scientific progress followed."
+ START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of stability and scientific progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."

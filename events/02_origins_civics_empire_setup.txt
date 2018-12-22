@@ -112,6 +112,13 @@ country_event = {
 		
 		# add new trait to species
 		if = { limit = { oc_requires_species_have_new_trait = yes } 
+			if = { limit = { oc_has_survivor_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_survivor = yes
+			}
 			if = { limit = { oc_has_cybernetic_species_trait = yes } 
 				random_owned_pop = { 
 					limit = { NOT = { is_same_species = owner_species } }
@@ -465,6 +472,54 @@ country_event = {
 	}
 }
 
+# Leaders
+# -Requires Starting Leader Modification
+# ->Eternal Leader
+# ->Digitally Eternal
+# ->Clinically Eternal
+# ->Patriarchal
+# ->Matriarchal
+country_event = {
+	id = origins_civics_empire_setup.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_leader_setup = yes
+	}
+	
+	immediate = {
+		# Modify Ruler
+		if = { limit = { oc_requires_leader_ruler_traits = yes }
+			if = { limit = { oc_requires_eternal_leader_ruler_trait = yes }
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_oc_eternal_leader
+					add_ruler_trait = leader_trait_oc_eternal_leader
+					set_age = 403
+					set_skill = 5
+				}
+			}
+			if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_oc_digitally_eternal
+					add_ruler_trait = leader_trait_oc_digitally_eternal
+					set_age = 256
+					set_skill = 4
+				}
+			}
+		
+		}
+		# Modify All Leaders
+		if = { limit = { oc_requires_all_leader_traits = yes }
+			if = { limit = { oc_requires_clinically_eternal_leader_trait = yes }
+				#tbd
+			}
+		}
+	}
+}
+
 # Technologies
 # -Requires Country to have more technologies
 # -Requires Country to have Robot Tech
@@ -576,6 +631,8 @@ country_event = {
 	}
 	
 	immediate = {
+		## Country Flags
+	
 		#Override Life Discovery Story Flags
 		#Override Worm in Waiting Flags
 		#Enables Homeworld Restoration Quest
@@ -587,6 +644,23 @@ country_event = {
 		if = { limit = { oc_requires_megastruture_habitat = yes }
 			set_country_flag = already_built_habitat
 		}
+		
+		## Country Modifiers
+		
+		#Sets Eternal Leader start modifier
+		if = { limit = { oc_requires_eternal_leader_ruler_trait = yes }
+			add_modifier = {
+				modifier = "oc_eternal_leader_default_boon"
+			}
+		}
+		
+		#Sets Digitally Eternal start modifier
+		if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
+			add_modifier = {
+				modifier = "oc_digitally_eternal_default_boon"
+			}
+		}
+		
 	}
 }
 

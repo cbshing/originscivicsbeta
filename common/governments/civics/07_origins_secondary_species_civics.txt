@@ -36,10 +36,10 @@ civic_cbshing_codominant_evolution = {
 				value = civic_inwards_perfection # base game civic
 				value = civic_life_seeded # base game civic
 				
-				value = civic_cbshing_alien_message # base OC
-				value = civic_oc_alien_invaded # base OC
+				#value = civic_cbshing_alien_message # base OC
+				#value = civic_oc_alien_invaded # base OC
 				#value = civic_cbshing_eco_disaster # base OC
-				value = civic_cbshing_voidborne # base OC
+				#value = civic_cbshing_voidborne # base OC
 				
 				# value = civic_cbshing_syncretic_mechanists # OC Untested Addon
 				# value = civic_cbshing_codominant_mechanists # OC Untested Addon

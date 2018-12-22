@@ -1,0 +1,55 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+### SECOND PARTS
+
+# Eternal Leader
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ETERNAL_LEADER"
+	
+	trigger = {
+		oc_requires_eternal_leader_ruler_trait = yes
+		NOT = { has_authority = auth_corporate }
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Eternal CEO
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP"
+	
+	trigger = {
+		oc_requires_eternal_leader_ruler_trait = yes
+		has_authority = auth_corporate
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Eternal Leader
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_DIGITALLY_ETERNAL"
+	
+	trigger = {
+		oc_requires_digitally_eternal_ruler_trait = yes
+		NOT = { has_authority = auth_corporate }
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Eternal CEO
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP"
+	
+	trigger = {
+		oc_requires_digitally_eternal_ruler_trait = yes
+		has_authority = auth_corporate
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}

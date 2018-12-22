@@ -82,7 +82,7 @@
 # value = civic_oc_refugee_saviour # OC Unification War Addon, also incompatible with Colonies civics
 
 #############################################
-# Leaders Civics (08_origins_leaders_civics.txt)
+# Leaders Civics (09_origins_leaders_civics.txt)
 #############################################
 # value = civic_cbshing_eternal_leader # base OC
 # value = civic_oc_clinically_eternal # base OC tbd - Eternals Update
@@ -139,3 +139,35 @@
 # Synthetic Dawn Civics (39_origins_syn_dawn_quest_civics.txt)
 #####################################################
 # value = civic_oc_robo_abandoned_terraformers # OC Unknown Update
+
+##################################################
+# Homeworld Civics (46_origins_homeworld_civics.txt)
+##################################################
+# value = civic_oc_corp_post_apocalyptic # base game civic
+# value = civic_oc_corp_life_seeded # base game civic
+
+# value = civic_oc_corp_climate_shift # base OC
+# value = civic_oc_corp__nuclear_vault # base OC
+# value = civic_oc_corp__nuclear_mutation # base OC
+# value = civic_oc_corp__voidborne # base OC
+
+# value = civic_oc_corp_habitat_life # OC Fresh Start Addon
+# value = civic_oc_corp_gaia_world  # OC Fresh Start Addon
+# value = civic_oc_corp_ringborne # OC Fresh Start Addon, does not actually change start planet
+
+##################################################################
+# Secondary Species Civics (47_origins_secondary_species_civics.txt)
+##################################################################
+# value = civic_oc_corp_mechanists # base game civic
+# value = civic_oc_corp_syncretic_evolution # base game civic
+
+# value = civic_oc_corp_codominant_evolution # base OC
+
+# value = civic_oc_corp_syncretic_mechanists # OC Fresh Start Addon
+# value = civic_oc_corp_codominant_mechanists # OC Fresh Start Addon
+#############################################
+# Leaders Civics (49_origins_leaders_civics.txt)
+#############################################
+# value = civic_oc_corp_eternal_leader # base OC
+# value = civic_oc_corp_clinically_eternal # base OC tbd - Eternals Update
+# value = civic_oc_corp_digitally_eternal # base OC tbd - Eternals Update

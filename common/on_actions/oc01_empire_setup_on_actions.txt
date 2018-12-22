@@ -7,7 +7,7 @@ on_game_start_country = {
 		#origins_civics_empire_setup.4 # civic colony setup
 		origins_civics_empire_setup.5 # civic species setup
 		#origins_civics_empire_setup.7 # civic secondary planets pop setup 
-		#origins_civics_empire_setup.8 # civic leader setup
+		origins_civics_empire_setup.8 # civic leader setup
 		#origins_civics_empire_setup.9 # civic ships setup
 		origins_civics_empire_setup.11 #civic flags and country modifiers setup
 	}

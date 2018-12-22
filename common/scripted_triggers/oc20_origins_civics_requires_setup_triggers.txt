@@ -125,6 +125,9 @@ oc_requires_country_flags_setup = {
 	OR = {
 		oc_has_restore_homeworld_quest_hidden_civics = yes
 		oc_requires_megastruture_habitat = yes
+		
+		oc_requires_eternal_leader_ruler_trait = yes
+		oc_requires_digitally_eternal_ruler_trait = yes
 	}
 }
 
@@ -214,6 +217,7 @@ oc_requires_homeworld_preference_to_change = {
 # scope: country 
 oc_requires_species_have_new_trait = {
 	OR = {
+		oc_has_survivor_species_trait = yes
 		oc_has_cybernetic_species_trait = yes
 		oc_has_latent_psionic_species_trait = yes
 		oc_has_synthetic_species_trait = yes
@@ -948,6 +952,7 @@ oc_requires_lonely_capital = {
 oc_requires_eternal_leader_ruler_trait = {
 	OR = {
 		has_oc_eternal_leader_civic = yes
+		has_oc_corp_eternal_leader_civic = yes
 		has_country_flag = starts_with_eternal_leader
 	}
 }
@@ -956,6 +961,7 @@ oc_requires_eternal_leader_ruler_trait = {
 oc_requires_digitally_eternal_ruler_trait = {
 	OR = {
 		has_oc_digitally_eternal_civic = yes
+		has_oc_corp_digitally_eternal_civic = yes
 		has_country_flag = starts_with_digitally_eternal_leader
 	}
 }
