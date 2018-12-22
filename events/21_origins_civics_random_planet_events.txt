@@ -3,16 +3,31 @@ namespace = origins_civics_random_planet_events
 
 ### Random Planet Events 
 
-event = {
+planet_event = {
 	id = origins_civics_random_planet_events.1
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		
+		has_owner = yes
+		original_owner = yes #may need to rethink if player loses homeworld, its terraformed, and regains it will a bug occur
+		is_homeworld = yes
+		owner = { is_ai = no }
+		has_ground_combat = no #don't know if its needed
+		is_occupied_flag = no #don't know if its needed
+		num_pops > 0 #must have pops living on their home, may change
+		NOT = { has_planet_flag = homeworld_underground_vault_found }
+		years > 10
 	}
 	
+	is_triggered_only = yes
+	
 	immediate = {
-		
+		set_planet_flag = homeworld_underground_vault_found 
+	}
+	
+	option = {
+	
 	}
 }
+
