@@ -248,7 +248,7 @@ district_hab_energy = {
 #foundry
 #now available to all empires, but must be built on industrial habitat
 #grants 4 housing
-#8 foundry jobs for hive, 8 foundry jobs for machine, 8 foundryjobs for regular
+#8 foundry jobs for hive, 8 foundry jobs for machine, 8 foundry jobs for regular
 district_hab_alloy = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -387,17 +387,17 @@ district_hab_alloy = {
 	}
 
 	ai_resource_production = {
-		energy = 1
+		alloy = 1
 		trigger = {
 			always = yes
 		}
 	}
 }
 
-#civilian industrry
+#civilian industry
 #now available to all empires, but must be built on commercial or research habitat
 #grants 4 housing
-#8 technician jobs for hive, 8 technician jobs for machine, 8 technician jobs for regular
+#8 artisan jobs for regular
 district_hab_consumer_goods = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -457,6 +457,10 @@ district_hab_consumer_goods = {
 					resource = consumer_goods
 					value < 8
 				}
+				has_monthly_income = {
+					resource = minerals
+					value > 6
+				}
 			}
 		}
 
@@ -491,7 +495,7 @@ district_hab_consumer_goods = {
 	}
 
 	ai_resource_production = {
-		energy = 1
+		consumer_goods = 1
 		trigger = {
 			always = yes
 		}
@@ -547,10 +551,13 @@ district_hab_cultural = {
 	ai_weight = {
 		weight = 1
 
-		modifier = 
-		{
+		modifier = {
 			factor = 3
 			free_amenities < 2
+		}
+		modifier = {
+			factor = 2
+			free_housing < 0
 		}
 	}
 
@@ -562,16 +569,34 @@ district_hab_cultural = {
 	}
 }
 
+#research
+#now available to all empires, but must be built on research habitat
+#grants 4 housing
+#8 research jobs for hive, 8 research jobs for machine, 8 research jobs for regular
 district_hab_science = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
 	
 	show_on_uncolonized = {
 		is_planet_class = pc_habitat
+		OR = {
+			from = { is_gestalt = yes }
+			AND = {
+				from = { is_gestalt = no }
+				has_planet_flag = research_habitat
+			}
+		}
 	}
 	
 	potential = {
 		is_planet_class = pc_habitat
+		OR = {
+			owner = { is_gestalt = yes }
+			AND = {
+				owner = { is_gestalt = no }
+				has_planet_flag = research_habitat
+			}
+		}
 	}
 	
 	resources = {
@@ -582,6 +607,10 @@ district_hab_science = {
 		upkeep = {
 			energy = @hab_maintenance
 		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 4
 	}
 	
 	triggered_planet_modifier = {
@@ -650,6 +679,10 @@ district_hab_science = {
 	#}
 }
 
+#commercial
+#available to regular empires, but must be built on commercial habitat
+#grants 4 housing
+#8 clerk jobs
 district_hab_commercial = {
 	base_buildtime = 240
 	is_capped_by_modifier = no
@@ -657,11 +690,13 @@ district_hab_commercial = {
 	show_on_uncolonized = {
 		is_planet_class = pc_habitat
 		from = { is_gestalt = no }
+		has_planet_flag = commercial_habitat
 	}
 	
 	potential = {
 		is_planet_class = pc_habitat
 		owner = { is_gestalt = no }
+		has_planet_flag = commercial_habitat
 	}
 	
 	resources = {
@@ -675,7 +710,8 @@ district_hab_commercial = {
 	}
 		
 	planet_modifier = {
-		job_clerk_add = 5
+		planet_housing_add = 4
+		job_clerk_add = 8
 	}
 	
 	triggered_desc = {
@@ -685,10 +721,13 @@ district_hab_commercial = {
 	ai_weight = {
 		weight = 1
 
-		modifier = 
-		{
+		modifier = {
 			factor = 5
 			free_amenities < 2
+		}
+		modifier = {
+			factor = 2
+			free_housing < 0
 		}
 	}
 
