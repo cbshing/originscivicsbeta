@@ -97,6 +97,11 @@ habitat_industrial = {
 			factor = 0
 			starbase = { NOT = { has_starbase_size >= starbase_starport } }
 		}
+		
+		modifier = {
+			factor = 2
+			owner = { has_monthly_income = { resource = alloys } < 50 }
+		}
 
 		modifier = {
 			factor = 0.1
@@ -251,6 +256,11 @@ habitat_commericial = {
 		modifier = {
 			factor = 0
 			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+		
+		modifier = {
+			factor = 2
+			owner = { has_monthly_income = { resource = consumer_goods } < 50 }
 		}
 
 		modifier = {
