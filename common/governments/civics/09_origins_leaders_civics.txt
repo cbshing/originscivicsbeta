@@ -24,7 +24,7 @@ civic_cbshing_eternal_leader = {
 	playable = { host_has_dlc = "Utopia" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
+		#authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {	
 		authority = {
@@ -73,7 +73,7 @@ civic_oc_digitally_eternal = {
 	playable = { host_has_dlc = "Utopia" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
+		#authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {	
 		authority = {

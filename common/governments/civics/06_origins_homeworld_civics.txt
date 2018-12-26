@@ -23,7 +23,7 @@ civic_cbshing_eco_shift = {
 	icon = "gfx/interface/icons/governments/civics/civic_oc_climate_shift.dds"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
+		#authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -68,7 +68,7 @@ civic_cbshing_nuclear_vault = {
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
+		#authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -117,7 +117,7 @@ civic_cbshing_nuclear_mutation = {
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOT = { value = auth_corporate } }
+		#authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
 		civics = {

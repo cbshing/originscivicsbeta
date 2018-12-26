@@ -256,7 +256,7 @@ has_oc_corp_post_apocalyptic_civic = {
 # scope: country 
 has_oc_corp_codominant_evolution_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_codominant_evolution
+		#has_valid_civic = civic_oc_corp_codominant_evolution
 		has_country_flag = codominant_country
 	}
 }
@@ -304,7 +304,7 @@ has_oc_corp_post_war_of_worlds_civic = {
 # scope: country 
 has_oc_corp_eternal_leader_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_eternal_leader
+		#has_valid_civic = civic_oc_corp_eternal_leader
 		has_country_flag = eternal_leader_country
 	}
 }
@@ -320,7 +320,7 @@ has_oc_corp_clinically_eternal_civic = {
 # scope: country 
 has_oc_corp_digitally_eternal_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_digitally_eternal
+		#has_valid_civic = civic_oc_corp_digitally_eternal
 		has_country_flag = digitally_eternal_country
 	}
 }
@@ -336,7 +336,7 @@ has_oc_corp_ecological_disaster_civic = {
 # scope: country 
 has_oc_corp_climate_shift_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_climate_shift
+		#has_valid_civic = civic_oc_corp_climate_shift
 		has_country_flag = climate_shift_country
 	}
 }
@@ -352,7 +352,7 @@ has_oc_corp_titanic_disaster_civic = {
 # scope: country 
 has_oc_corp_nuclear_vault_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_nuclear_vault
+		#has_valid_civic = civic_oc_corp_nuclear_vault
 		has_country_flag = nuked_vault_country
 	}
 }
@@ -360,7 +360,7 @@ has_oc_corp_nuclear_vault_civic = {
 # scope: country 
 has_oc_corp_nuclear_mutation_civic = {
 	OR = {
-		has_valid_civic = civic_oc_corp_nuclear_mutation
+		#has_valid_civic = civic_oc_corp_nuclear_mutation
 		has_country_flag = nuked_mutation_country
 	}
 }
