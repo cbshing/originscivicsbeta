@@ -4,20 +4,41 @@ namespace = origins_civics_random_planet_events
 ### Random Planet Events 
 
 planet_event = {
-	id = origins_civics_random_planet_events.1
-	hide_window = yes
+	id = origins_civics_random_planet_events.100
+	title = origins_civics_random_planet_events.100.name
+	desc = {
+		text = origins_civics_random_planet_events.100.desc_vaultdweller
+		trigger = {
+			owner = { has_oc_nuclear_vault_civic = yes }
+		}
+	}
+	desc = {
+		text = origins_civics_random_planet_events.100.desc_other
+		trigger = {
+			owner = { has_oc_nuclear_vault_civic = no }
+		}
+	}
+	
 	is_triggered_only = yes
 	
 	trigger = {
 		has_owner = yes
-		original_owner = yes #may need to rethink if player loses homeworld, its terraformed, and regains it will a bug occur
+		original_owner = yes 
 		is_homeworld = yes
-		owner = { is_ai = no }
-		has_ground_combat = no #don't know if its needed
-		is_occupied_flag = no #don't know if its needed
-		num_pops > 0 #must have pops living on their home, may change
+		owner = { 
+			is_ai = no 
+			OR = {
+				oc_has_restore_homeworld_nuked_quest_hidden_civics = yes
+				oc_has_restore_homeworld_climate_shift_quest_hidden_civics = yes
+			}
+			NOT = { has_country_flag = restore_homeworld_country_true }
+			NOT = { has_country_flag = found_homeworld_vault }
+		}
+		has_ground_combat = no 
+		is_occupied_flag = no 
+		num_pops > 0 
 		NOT = { has_planet_flag = homeworld_underground_vault_found }
-		years > 10
+		years > 20
 	}
 	
 	is_triggered_only = yes
@@ -27,7 +48,38 @@ planet_event = {
 	}
 	
 	option = {
-	
+		name = origins_civics_random_planet_events.100.openit
+		begin_event_chain = {
+			event_chain = "homeworld_underground_vault_chain"
+			target = root
+		}
+		enable_special_project = {
+			name = "HOMEWORLD_VAULT_1_PROJECT" # Decrypt Vault Key
+			location = this
+			owner = root
+		}
+		enable_special_project = {
+			name = "HOMEWORLD_VAULT_2_PROJECT" # Blow up Vault Door
+			location = this
+			owner = root
+		}
+	}
+	option = {
+		name = origins_civics_random_planet_events.100.havekey
+		random_list = {
+			50 = { } # our pops are in it
+			40 = { } # its empty
+			10 = { } # something bad
+		}
+	}
+	option = {
+		name = origins_civics_random_planet_events.100.ignore
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier1influencereward
+			min = @tier1influencemin
+			max = @tier1influencemax
+		}
 	}
 }
 
