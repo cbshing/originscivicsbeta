@@ -20,47 +20,52 @@
 add_eternal_boon_cooldown_modifier = {
     set_variable = { which = eternal_boon_cooldown_time value = 10800 } # 30 yrs
     if = {
-        limit = {}
+        limit = { galaxy_percentage < 0.01 } #1%
+        set_variable = { which = eternal_boon_cooldown_time value = 30 } # 30d
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.02 } #2%
+        set_variable = { which = eternal_boon_cooldown_time value = 60 } # 60d
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.05 } #5%
+        set_variable = { which = eternal_boon_cooldown_time value = 360 } # 1yr
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.10 } #10%
+        set_variable = { which = eternal_boon_cooldown_time value = 1080 } # 3yr
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.20 } #20%
+        set_variable = { which = eternal_boon_cooldown_time value = 1800 } # 5yr
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.30 } #30%
+        set_variable = { which = eternal_boon_cooldown_time value = 3600 } # 10yr
+    }
+    else_if = {
+        limit = { galaxy_percentage < 0.40 } #40%
+        set_variable = { which = eternal_boon_cooldown_time value = 7200 } # 20yr
+    }
+    else = { #>40%
+        set_variable = { which = eternal_boon_cooldown_time value = 10800 } # 30yr
+    }
+    if = {
+        limit = { owner_species = { has_trait = trait_psionic } }
         divide_variable = { which = eternal_boon_cooldown_time value = 3 } # 10 yrs
     }
     else_if = {
-        limit = {}
+        limit = { owner_species = { has_trait = trait_latent_psionic } }
         divide_variable = { which = eternal_boon_cooldown_time value = 2 } # 15 yrs
     }
-    if = {
-        limit = {} #1%
-        divide_variable = { which = eternal_boon_cooldown_time value = 360 } # 30d (min 10d)
-    }
-    else_if = {
-        limit = {} #2%
-        divide_variable = { which = eternal_boon_cooldown_time value = 180 } # 60d (min 20d)
-    }
-    else_if = {
-        limit = {} #5%
-        divide_variable = { which = eternal_boon_cooldown_time value = 30 } # 1yr (min 120d)
-    }
-    else_if = {
-        limit = {} #10%
-        divide_variable = { which = eternal_boon_cooldown_time value = 10 } # 3yr (min 20d)
-    }
-    else_if = {
-        limit = {} #20%
-        divide_variable = { which = eternal_boon_cooldown_time value = 5 } # 6yr (min 20d)
-    }
-    else_if = {
-        limit = {} #30
-        divide_variable = { which = eternal_boon_cooldown_time value = 3 } # 10yr (min 20d)
-    }
-    else_if = {
-        limit = {} #40
-        divide_variable = { which = eternal_boon_cooldown_time value = 2 } # 15yr (min 20d)
-    }
-    else = { #>40%
-
-    }
+    
+    add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = @eternal_boon_cooldown_time }
 }
 
 # Digitally Eternal Optimization Error Effect
 calculate_digitally_eternal_optimization_error = {
-
+    random_list = {
+    
+    
+    }
 }
