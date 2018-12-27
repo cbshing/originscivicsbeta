@@ -16,7 +16,51 @@
 # # Eternal Boon Effects #
 # ########################
 
-# Eternal Boon
+# Eternal Boon Cooldown Effect
+add_eternal_boon_cooldown_modifier = {
+    set_variable = { which = eternal_boon_cooldown_time value = 10800 } # 30 yrs
+    if = {
+        limit = {}
+        divide_variable = { which = eternal_boon_cooldown_time value = 3 } # 10 yrs
+    }
+    else_if = {
+        limit = {}
+        divide_variable = { which = eternal_boon_cooldown_time value = 2 } # 15 yrs
+    }
+    if = {
+        limit = {} #1%
+        divide_variable = { which = eternal_boon_cooldown_time value = 360 } # 30d (min 10d)
+    }
+    else_if = {
+        limit = {} #2%
+        divide_variable = { which = eternal_boon_cooldown_time value = 180 } # 60d (min 20d)
+    }
+    else_if = {
+        limit = {} #5%
+        divide_variable = { which = eternal_boon_cooldown_time value = 30 } # 1yr (min 120d)
+    }
+    else_if = {
+        limit = {} #10%
+        divide_variable = { which = eternal_boon_cooldown_time value = 10 } # 3yr (min 20d)
+    }
+    else_if = {
+        limit = {} #20%
+        divide_variable = { which = eternal_boon_cooldown_time value = 5 } # 6yr (min 20d)
+    }
+    else_if = {
+        limit = {} #30
+        divide_variable = { which = eternal_boon_cooldown_time value = 3 } # 10yr (min 20d)
+    }
+    else_if = {
+        limit = {} #40
+        divide_variable = { which = eternal_boon_cooldown_time value = 2 } # 15yr (min 20d)
+    }
+    else = { #>40%
 
+    }
+}
 
-# Digitally Eternal Optimizations
+# Digitally Eternal Optimization Error Effect
+calculate_digitally_eternal_optimization_error = {
+
+}
