@@ -65,7 +65,48 @@ add_eternal_boon_cooldown_modifier = {
 # Digitally Eternal Optimization Error Effect
 calculate_digitally_eternal_optimization_error = {
     random_list = {
-    
-    
+        10 = {
+            modifier = {
+                factor = 2
+                #admin cap?
+            }
+            modifier = {
+                factor = 0.8
+                owner_species = { has_trait = trait_cybernetic }
+            }
+            modifier = {
+                factor = 0.5
+                owner_species = { has_trait = trait_mechanical }
+            }
+            modifier = { # 50% chance error with >= 40% of galaxy
+                factor = 5
+                galaxy_percentage >= 0.40
+            }
+            modifier = { # 40% chance error with < 40% of galaxy
+                factor = 4
+                galaxy_percentage < 0.40
+            }
+            modifier = { # 30% error with < 30% of galaxy
+                factor = 3
+                galaxy_percentage < 0.30
+            }
+            modifier = { # 20% error with < 20% of galaxy
+                factor = 2
+                galaxy_percentage < 0.20
+            }
+            modifier = { # 10% error with < 10% of galaxy
+                factor = 1
+                galaxy_percentage < 0.10
+            }
+            modifier = { # 5% error with < 5% of galaxy
+                factor = 0.5
+                galaxy_percentage < 0.05
+            }
+            modifier = { # No error if own <2% of galaxy
+                factor = 0
+                galaxy_percentage < 0.02
+            }
+            set_country_flag = oc_digitally_eternal_optimization_has_error
+        }
     }
 }
