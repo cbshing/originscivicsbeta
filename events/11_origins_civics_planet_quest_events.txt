@@ -152,6 +152,7 @@ planet_event = {
 		NOR = {
 			is_planet_class = pc_gaia # this is added if someone has terraformed their homeworld to gaia instead.
 			is_planet_class = pc_hive # this is added if someone has terraformed their homeworld to hive instead.
+			is_planet_class = pc_city # this is added if someone has terraformed their homeworld to city instead.
 			is_ideal_planet_class = { who = owner status = yes }
 		}
 	}
