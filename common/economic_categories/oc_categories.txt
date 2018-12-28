@@ -1,0 +1,3 @@
+boons = {
+	parent = edicts
+}

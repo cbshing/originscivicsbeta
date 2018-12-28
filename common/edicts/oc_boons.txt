@@ -1,0 +1,98 @@
+##########################################################################
+# Eternal Boons
+##########################################################################
+
+@BoonCost = 1
+
+@BoonDuration = 3600
+
+#################
+#Eternal Boons
+#################
+oc_boon_eternal_influence = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = oc_eternal_boon_influence days = @BoonDuration }
+		add_eternal_boon_cooldown_modifier = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_boon_eternal_research = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = oc_eternal_boon_research days = @BoonDuration }
+		add_eternal_boon_cooldown_modifier = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_boon_eternal_unity = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = oc_eternal_boon_unity days = @BoonDuration }
+		add_eternal_boon_cooldown_modifier = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

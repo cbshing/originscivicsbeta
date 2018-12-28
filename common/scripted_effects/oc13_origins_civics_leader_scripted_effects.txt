@@ -108,5 +108,6 @@ calculate_digitally_eternal_optimization_error = {
             }
             set_country_flag = oc_digitally_eternal_optimization_has_error
         }
+		10 = { }
     }
 }

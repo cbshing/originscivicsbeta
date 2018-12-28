@@ -1,0 +1,20 @@
+namespace = origins_civics_leader_quest_events
+# by cbshing
+
+### Leader Events
+# Eternal Death
+# Digital Death
+
+event = {
+	id = origins_civics_leader_quest_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+}

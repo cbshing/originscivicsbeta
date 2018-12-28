@@ -21,22 +21,151 @@ oc_restored_homeworld_hive = {
 # Eternal Leader Modifiers
 ##########################################################################
 
-# Eternal Leader
-
+# Old
 oc_eternal_leader_default_boon = {
 	country_base_influence_produces_add = 1
 }
 
-oc_eternal_leader_default_neg_boon = {
-	#
+oc_digitally_eternal_default_neg_boon = {
+	all_technology_research_speed = -0.05
+}
+
+# Eternal Leader
+
+oc_eternal_boon_cooldown_effect = {
+}
+
+oc_eternal_boon_influence = {
+	country_base_influence_produces_add = 1
+	country_influence_produces_mult = 0.3
+}
+
+oc_eternal_boon_research = {
+	all_technology_research_speed = 0.10
+	num_tech_alternatives_add = 1
+}
+
+oc_eternal_boon_unity = {
+	country_unity_produces_mult = 0.25
+	pop_ethic_spiritualist_attraction_mult = 0.5
+}
+
+oc_eternal_boon_defense = {
+	ship_shield_mult = 0.3
+	ship_evasion_mult = 0.1
+	starbase_defensive_war_ship_build_speed_mult = 0.50
+	ship_home_territory_fire_rate_mult = 0.20
+}
+
+oc_eternal_boon_offense = {
+	ship_weapon_damage = 0.1
+	ship_fire_rate_mult = 0.1
+	army_morale = 0.4
+}
+
+oc_eternal_boon_production = {
+	stations_produces_mult = 0.2
+	planet_jobs_produces_mult = 0.2
+	species_leader_exp_gain = 0.25
+}
+
+oc_eternal_boon_survey = {
+	science_ship_survey_speed = 0.25
+	ship_anomaly_generation_chance_mult = 0.10
+	ship_sensor_range_add = 1
+	ship_hyperlane_range_add = 1
+}
+
+oc_eternal_boon_construction = {
+	megastructure_build_speed_mult = 0.25
+	planet_building_build_speed_mult = 0.5
 }
 
 # Digitally Eternal Leader
 
-oc_digitally_eternal_default_boon = {
-	all_technology_research_speed = 0.05
+oc_eternal_optimization_bureaucracy = {
+	pop_amenities_usage_mult = -0.15
+	pop_housing_usage_mult = -0.15
 }
 
-oc_digitally_eternal_default_neg_boon = {
-	all_technology_research_speed = -0.05
+oc_eternal_optimization_bureaucracy_neg = {
+	pop_amenities_usage_mult = 0.15
+	pop_housing_usage_mult = 0.15
+}
+
+oc_eternal_optimization_research = {
+	all_technology_research_speed = 0.2
+	num_tech_alternatives_add = 1
+}
+
+oc_eternal_optimization_research_neg = {
+	all_technology_research_speed = -0.2
+}
+
+oc_eternal_optimization_defense = {
+	ship_shield_mult = 0.5
+	ship_evasion_mult = 0.3
+	starbase_defensive_war_ship_build_speed_mult = 0.80
+	ship_home_territory_fire_rate_mult = 0.40
+}
+
+oc_eternal_optimization_defense_neg = {
+	ship_shield_mult = -0.5
+	ship_evasion_mult = -0.3
+	starbase_defensive_war_ship_build_speed_mult = -0.80
+	ship_home_territory_fire_rate_mult = -0.40
+}
+
+oc_eternal_optimization_offense = {
+	ship_weapon_damage = 0.3
+	ship_fire_rate_mult = 0.3
+	army_morale = 0.4
+}
+
+oc_eternal_optimization_offense_neg = {
+	ship_weapon_damage = -0.3
+	ship_fire_rate_mult = -0.3
+	army_morale = -0.4
+}
+
+oc_eternal_optimization_production = {
+	stations_produces_mult = 0.5
+	planet_jobs_produces_mult = 0.5
+	species_leader_exp_gain = 0.25
+}
+
+oc_eternal_optimization_production_neg = {
+	stations_produces_mult = -0.5
+	planet_jobs_produces_mult = -0.5
+	species_leader_exp_gain = -0.25
+}
+
+oc_eternal_optimization_construction = {
+	megastructure_build_speed_mult = 0.50
+	planet_building_build_speed_mult = 0.80
+}
+
+oc_eternal_optimization_construction_neg = {
+	megastructure_build_speed_mult = -0.50
+	planet_building_build_speed_mult = -0.80
+}
+
+oc_eternal_optimization_recycling = {
+	planet_pops_consumer_goods_upkeep_mult = -0.20
+}
+
+oc_eternal_optimization_recycling_neg = {
+	planet_pops_consumer_goods_upkeep_mult = 0.20
+}
+
+oc_eternal_boon_survey = {
+	science_ship_survey_speed = 0.5
+	ship_anomaly_generation_chance_mult = 0.2
+	ship_sensor_range_add = 1
+	ship_hyperlane_range_add = 1
+}
+
+oc_eternal_boon_survey_neg = {
+	science_ship_survey_speed = -0.5
+	ship_anomaly_generation_chance_mult = -0.2
 }
