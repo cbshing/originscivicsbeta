@@ -78,16 +78,16 @@ calculate_digitally_eternal_optimization_error = {
                 factor = 0.5
                 owner_species = { has_trait = trait_mechanical }
             }
-            modifier = { # 50% chance error with >= 40% of galaxy
-                factor = 5
+            modifier = { # 80% chance error with >= 40% of galaxy
+                factor = 8
                 galaxy_percentage >= 0.40
             }
-            modifier = { # 40% chance error with < 40% of galaxy
-                factor = 4
+            modifier = { # 60% chance error with < 40% of galaxy
+                factor = 6
                 galaxy_percentage < 0.40
             }
-            modifier = { # 30% error with < 30% of galaxy
-                factor = 3
+            modifier = { # 40% error with < 30% of galaxy
+                factor = 4
                 galaxy_percentage < 0.30
             }
             modifier = { # 20% error with < 20% of galaxy
@@ -108,6 +108,6 @@ calculate_digitally_eternal_optimization_error = {
             }
             set_country_flag = oc_digitally_eternal_optimization_has_error
         }
-		10 = { }
+	10 = { }
     }
 }
