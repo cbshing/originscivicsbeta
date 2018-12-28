@@ -114,6 +114,15 @@ oc_has_encountered_other_species = {
 }
 
 # scope: country 
+oc_has_immortal_rulers_civics = {
+	OR = {
+		has_oc_eternal_leader_civic = yes
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
 oc_has_search_quest_on_start_civics = {
 	OR = {
 		has_oc_alien_message_civic = yes
