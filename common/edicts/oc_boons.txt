@@ -9,7 +9,7 @@
 #################
 #Eternal Boons
 #################
-oc_boon_eternal_influence = {
+oc_edict_boon_eternal_stability = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -20,6 +20,7 @@ oc_boon_eternal_influence = {
 	
 	allow = {
 		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_stability }
 	}
 	
 	potential = {
@@ -30,7 +31,7 @@ oc_boon_eternal_influence = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_influence days = @BoonDuration }
+		add_modifier = { modifier = oc_eternal_boon_stability days = @BoonDuration }
 		add_eternal_boon_cooldown_modifier = yes
 	}
 	
@@ -38,7 +39,8 @@ oc_boon_eternal_influence = {
 		weight = 0
 	}
 }
-oc_boon_eternal_research = {
+
+oc_edict_boon_eternal_exploration = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -49,6 +51,7 @@ oc_boon_eternal_research = {
 	
 	allow = {
 		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_exploration }
 	}
 	
 	potential = {
@@ -59,7 +62,7 @@ oc_boon_eternal_research = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_research days = @BoonDuration }
+		add_modifier = { modifier = oc_eternal_boon_exploration days = @BoonDuration }
 		add_eternal_boon_cooldown_modifier = yes
 	}
 	
@@ -67,7 +70,8 @@ oc_boon_eternal_research = {
 		weight = 0
 	}
 }
-oc_boon_eternal_unity = {
+
+oc_edict_boon_eternal_military = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -78,6 +82,7 @@ oc_boon_eternal_unity = {
 	
 	allow = {
 		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_military }
 	}
 	
 	potential = {
@@ -88,7 +93,38 @@ oc_boon_eternal_unity = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_unity days = @BoonDuration }
+		add_modifier = { modifier = oc_eternal_boon_military days = @BoonDuration }
+		add_eternal_boon_cooldown_modifier = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+oc_edict_boon_eternal_development = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_development }
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = oc_eternal_boon_development days = @BoonDuration }
 		add_eternal_boon_cooldown_modifier = yes
 	}
 	
