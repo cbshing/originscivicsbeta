@@ -33,6 +33,50 @@ oc_digitally_eternal_default_neg_boon = {
 # Eternal Leader
 
 oc_eternal_boon_cooldown_effect = {
+	# does nothing
+}
+
+oc_eternal_boon_stability = {
+	pop_ethic_spiritualist_attraction_mult = 0.25
+	pop_government_ethic_attraction = 0.25
+	country_unity_produces_mult = 0.25
+	country_base_influence_produces_add = 1
+	country_influence_produces_mult = 0.25
+	planet_stability_add = 20
+	pop_happiness = 20
+}
+
+oc_eternal_boon_exploration = {
+	all_technology_research_speed = 0.15
+	num_tech_alternatives_add = 1
+	species_leader_exp_gain = 0.15
+	
+	science_ship_survey_speed = 0.15
+	ship_anomaly_generation_chance_mult = 0.15
+}
+
+oc_eternal_boon_military = {
+	ship_shield_mult = 0.5
+	ship_evasion_mult = 0.15
+	ship_tracking_add = 10
+	ship_hull_regen_add_per = 0.25
+	ship_armor_regen_add_per = 0.25
+	ship_sensor_range_add = 2
+	ship_hyperlane_range_add = 1
+	army_morale = 1
+}	
+
+oc_eternal_boon_development = {
+	starbase_defensive_war_ship_build_speed_mult = 0.50
+	ship_home_territory_fire_rate_mult = 0.05
+	megastructure_build_speed_mult = 0.25
+	planet_building_build_speed_mult = 0.25
+	planet_jobs_produces_mult = 0.25
+	stations_jobs_produces_mult = 0.25
+}
+
+oc_eternal_boon_growth = {
+	pop_growth_speed = -0.2
 }
 
 oc_eternal_boon_influence = {
