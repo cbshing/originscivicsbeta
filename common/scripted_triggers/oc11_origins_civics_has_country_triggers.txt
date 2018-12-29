@@ -32,6 +32,7 @@ oc_has_survivor_species_trait = {
 		has_oc_corp_post_apocalyptic_civic = yes
 		has_country_flag = survivor_trait_country
 	}
+	
 }
 
 # scope: country 
@@ -40,6 +41,7 @@ oc_has_cybernetic_species_trait = {
 		has_oc_cybernetic_civic = yes
 		has_country_flag = cybernetic_trait_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -48,6 +50,7 @@ oc_has_latent_psionic_species_trait = {
 		has_oc_latent_psionic_civic = yes
 		has_country_flag = latent_psionic_trait_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -56,6 +59,7 @@ oc_has_synthetic_species_trait = {
 		has_oc_synthetics_civic = yes
 		has_country_flag = oc_synthetic_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -64,6 +68,7 @@ oc_has_psionic_species_trait = {
 		has_oc_psionics_civic = yes
 		has_country_flag = psionic_trait_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -72,6 +77,7 @@ oc_has_brain_slug_species_trait = {
 		has_oc_symbiotic_evolution_civic = yes
 		has_country_flag = invalid_oc_country
 	}
+	
 }
 
 # scope: country 
@@ -89,6 +95,7 @@ oc_has_secondary_species_civics = {
 		has_oc_corp_codominant_evolution_civic = yes
 		has_country_flag = has_two_species_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -99,6 +106,7 @@ oc_has_robot_pops_on_start_civics = {
 		has_oc_corp_mechanists_civic = yes
 		has_country_flag = has_robots_on_start_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -120,6 +128,7 @@ oc_has_immortal_rulers_civics = {
 		has_oc_digitally_eternal_civic = yes
 		has_country_flag = invalid_oc_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 

@@ -556,6 +556,7 @@ oc_requires_homeworld_class_to_change_to_nuked = {
 		oc_is_nuked_country = yes
 		has_country_flag = starts_on_nuked_world
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -565,6 +566,7 @@ oc_requires_homeworld_class_to_change_to_gaia = {
 		oc_is_gaia_country = yes
 		has_country_flag = starts_on_gaia_world
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -573,6 +575,7 @@ oc_requires_homeworld_class_to_change_to_machine = {
 		oc_is_machine_world_country = yes
 		has_country_flag = starts_on_machine_world
 	}
+	host_has_dlc = "Synthetic Dawn Story Pack"
 }
 
 # scope: country 
@@ -581,6 +584,7 @@ oc_requires_homeworld_class_to_change_to_hive = {
 		oc_is_hive_world_country = yes
 		has_country_flag = starts_on_hive_world
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -589,6 +593,7 @@ oc_requires_homeworld_class_to_change_to_city = {
 		#oc_is_city_world_country = yes
 		has_country_flag = starts_on_city_world
 	}
+	host_has_dlc = "Megacorp"
 }
 
 # scope: country 
@@ -751,6 +756,7 @@ oc_requires_habitat_setup = {
 		oc_is_habitat_country = yes
 		has_country_flag = starts_on_habitat
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -775,6 +781,7 @@ oc_requires_all_planets_class_to_change_to_nuked = {
 		has_oc_worm_loved_civic = yes
 		has_country_flag = invalid_oc_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -784,6 +791,7 @@ oc_requires_habitat_preference = {
 		has_oc_hive_voidborne_civic = yes
 		has_country_flag = starts_with_habitat_preference
 	}
+	host_has_dlc = "Utopia" 
 }
 
 # scope: country 
@@ -792,6 +800,7 @@ oc_requires_gaia_preference = {
 		has_oc_hive_life_seeded_civic = yes
 		has_country_flag = starts_with_gaia_preference
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -802,6 +811,7 @@ oc_requires_nuked_preference = {
 		has_oc_hive_nuclear_mutation_civic = yes
 		has_country_flag = starts_with_nuked_preference
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -828,6 +838,7 @@ oc_requires_secondary_species_preference_change = {
 		has_machine_servitor_civic = yes
 		has_country_flag = starts_with_two_species
 	}
+	host_has_dlc = "Utopia" 
 }
 
 # scope: country 
@@ -955,6 +966,7 @@ oc_requires_eternal_leader_ruler_trait = {
 		has_oc_corp_eternal_leader_civic = yes
 		has_country_flag = starts_with_eternal_leader
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -964,6 +976,7 @@ oc_requires_digitally_eternal_ruler_trait = {
 		has_oc_corp_digitally_eternal_civic = yes
 		has_country_flag = starts_with_digitally_eternal_leader
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -972,6 +985,7 @@ oc_requires_clinically_eternal_leader_trait = {
 		has_oc_clinically_eternal_civic = yes
 		has_country_flag = starts_with_clinically_eternal_leaders
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -979,6 +993,7 @@ oc_requires_ascension_theory_tech = {
 	OR = {
 		has_country_flag = starts_with_ascension_theory_tech
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 

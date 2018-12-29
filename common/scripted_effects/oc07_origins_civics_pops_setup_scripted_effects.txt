@@ -3,6 +3,7 @@ oc_generate_start_pops = {
 		limit = { 
 			owner = {
 				oc_has_secondary_species_civics = yes
+				host_has_dlc = "Utopia" 
 			}
 		}
 
@@ -53,7 +54,12 @@ oc_generate_start_pops = {
 	}
 	
 	if = { 
-		limit = { owner = { oc_has_robot_pops_on_start_civics = yes } }
+		limit = { 
+			owner = { 
+				oc_has_robot_pops_on_start_civics = yes 
+				host_has_dlc = "Utopia" 
+			} 
+		}
 		owner = { create_built_robot_species = yes }
 		while = {
 			count = 8
