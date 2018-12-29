@@ -356,6 +356,7 @@ oc_requires_special_building_setup = {
 	OR = {
 		oc_requires_robot_factory_building_setup = yes
 		oc_requires_vault_building_setup = yes
+		
 	}
 }
 
@@ -912,6 +913,7 @@ oc_requires_robot_factory_building_setup = {
 	OR = {
 		oc_has_robot_pops_on_start_civics = yes
 		oc_has_synthetic_species_trait = yes
+		has_mechanists_civic = yes
 		has_country_flag = starts_with_robot_factory
 	}
 }

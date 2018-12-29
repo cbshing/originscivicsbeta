@@ -28,6 +28,7 @@ has_syncretic_evolution_civic = {
 		has_valid_civic = civic_syncretic_evolution
 		has_country_flag = syncretic_evolution_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -36,6 +37,7 @@ has_mechanists_civic = {
 		has_valid_civic = civic_mechanists
 		has_country_flag = mechanist_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -44,6 +46,7 @@ has_post_apocalyptic_civic = {
 		has_valid_civic = civic_post_apocalyptic
 		has_country_flag = post_apocalyptic_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -52,6 +55,7 @@ has_life_seeded_civic = {
 		has_valid_civic = civic_life_seeded
 		has_country_flag = life_seeded_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -60,6 +64,7 @@ has_machine_assimilator_civic = {
 		has_valid_civic = civic_machine_assimilator
 		has_country_flag = invalid_country
 	}
+	host_has_dlc = "Synthetic Dawn Story Pack"
 }
 
 # scope: country 
@@ -68,4 +73,5 @@ has_machine_servitor_civic = {
 		has_valid_civic = civic_machine_servitor
 		has_country_flag = invalid_country
 	}
+	host_has_dlc = "Synthetic Dawn Story Pack"
 }

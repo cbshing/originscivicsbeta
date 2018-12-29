@@ -32,7 +32,7 @@ oc_has_survivor_species_trait = {
 		has_oc_corp_post_apocalyptic_civic = yes
 		has_country_flag = survivor_trait_country
 	}
-	
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
