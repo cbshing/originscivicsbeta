@@ -68,7 +68,7 @@ civic_life_seeded = {
 		civics = {
 			NOR = {
 				value = civic_post_apocalyptic # base OC
-        value = civic_mechanists # base OC
+				value = civic_mechanists # base OC
 				value = civic_syncretic_evolution # base OC
         
 				value = civic_oc_climate_shift # base OC
@@ -157,7 +157,7 @@ civic_mechanists = {
 				value = civic_syncretic_evolution
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
-				value = civic_oc_corp_codominant_evolution
+				value = civic_oc_codominant_evolution
 			}
 		}
 	}

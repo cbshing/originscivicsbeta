@@ -7,11 +7,11 @@
  #Regular Empire
  civic_cbshing_eternal_leader:0 "Eternal Leader"
  civic_cbshing_eternal_leader_desc:0 "This society has been long guided by a ruler who is Eternal."
- civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic boons."
+ civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
  
  civic_oc_digitally_eternal:0 "Digitally Eternal"
  civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruler who uploaded their consciousness to a computer long ago."
- civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being Immortal, and the ability to access his/her unique optimization boons."
+ civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
 
  #Corporate Empire
  civic_oc_corp_eternal_leader:0 "Eternal CEO"
@@ -29,6 +29,12 @@
  leader_trait_oc_eternal_leader_weakened_desc:0 "This leader is an Eternal, but immature with their psionic powers. After training for several decades she/he will reach her/his true potential"
  leader_trait_oc_digitally_eternal:0 "Uploaded"
  leader_trait_oc_digitally_eternal_desc:0 "This leader Uploaded their consciousness to the empire's computer networks long ago."
+ 
+ 
+ ####################################
+ # Origins Resource Category
+ ####################################
+ boons:0 "Boons"
  
  ####################################
  # Origins Modifiers
@@ -69,14 +75,14 @@
  ####################################
  # Origins Edicts
  ####################################
- oc_edict_boon_eternal_stability:0 "$oc_eternal_boon_stability$"
- oc_edict_boon_eternal_stability_desc:0 "Our Eternal Leader will focus their psionic energy on the stability and unity of our empire."
- oc_edict_boon_eternal_exploration:0 "$oc_eternal_boon_exploration$"
- oc_edict_boon_eternal_exploration_desc:0 "Our Eternal Leader will focus their psionic energy on furthering our understanding of science and the galaxy."
- oc_edict_boon_eternal_military:0 "$oc_eternal_boon_military$"
- oc_edict_boon_eternal_military_desc:0 "Our Eternal Leader will focus their psionic energy on our aiding our military command."
- oc_edict_boon_eternal_development:0 "$oc_eternal_boon_development$"
- oc_edict_boon_eternal_development_desc:0 "Our Eternal Leader will focus their psionic energy on our encouraging planetary development and production."
+ edict_oc_edict_boon_eternal_stability:0 "$oc_eternal_boon_stability$"
+ edict_oc_edict_boon_eternal_stability_desc:0 "Our Eternal Leader will focus their psionic energy on the stability and unity of our empire.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_exploration:0 "$oc_eternal_boon_exploration$"
+ edict_oc_edict_boon_eternal_exploration_desc:0 "Our Eternal Leader will focus their psionic energy on furthering our understanding of science and the galaxy.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_military:0 "$oc_eternal_boon_military$"
+ edict_oc_edict_boon_eternal_military_desc:0 "Our Eternal Leader will focus their psionic energy on our aiding our military command.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_development:0 "$oc_eternal_boon_development$"
+ edict_oc_edict_boon_eternal_development_desc:0 "Our Eternal Leader will focus their psionic energy on our encouraging planetary development and production.\n§YBoon length is not determined by edict length§!"
 
  ####################################
  # Origins Start Messages
@@ -85,3 +91,10 @@
  START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of stability and scientific progress followed."
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
+
+ ####################################
+ # Origins Events
+ ####################################
+ origins_civics_random_leader_events.100.name:0 "Eternal is Exhausted"
+ origins_civics_random_leader_events.100.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has currently used [ruler.GetHerHis] psionic powers to benefit our empire and has now returned to [ruler.GetHerHis] bedchamber to rest. We will be unable to access [ruler.GetHerHis] psionic boons for some time."
+ 

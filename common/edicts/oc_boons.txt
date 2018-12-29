@@ -3,14 +3,14 @@
 ##########################################################################
 
 @BoonCost = 1
-
+@BoonEdictDuration = 1
 @BoonDuration = 3600
 
 #################
 #Eternal Boons
 #################
 oc_edict_boon_eternal_stability = {
-	length = @BoonDuration
+	length = @BoonEdictDuration
 	resources = {
 		category = boons
 		cost = {
@@ -19,7 +19,7 @@ oc_edict_boon_eternal_stability = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_stability }
 	}
 	
@@ -31,8 +31,16 @@ oc_edict_boon_eternal_stability = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_stability days = @BoonDuration }
-		add_eternal_boon_cooldown_modifier = yes
+		if = { 
+			limit = { NOT = { has_modifier = oc_eternal_boon_cooldown_effect } }
+			add_modifier = { modifier = oc_eternal_boon_stability days = @BoonDuration }
+			add_eternal_boon_cooldown_modifier = yes
+		}
+		else = {
+			hidden_effect = {
+				country_event = { id = origins_civics_random_leader_events.100 days = -1 }
+			}
+		}
 	}
 	
 	ai_weight = {
@@ -41,7 +49,7 @@ oc_edict_boon_eternal_stability = {
 }
 
 oc_edict_boon_eternal_exploration = {
-	length = @BoonDuration
+	length = @BoonEdictDuration
 	resources = {
 		category = boons
 		cost = {
@@ -50,7 +58,7 @@ oc_edict_boon_eternal_exploration = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_exploration }
 	}
 	
@@ -62,8 +70,16 @@ oc_edict_boon_eternal_exploration = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_exploration days = @BoonDuration }
-		add_eternal_boon_cooldown_modifier = yes
+		if = { 
+			limit = { NOT = { has_modifier = oc_eternal_boon_cooldown_effect } }
+			add_modifier = { modifier = oc_eternal_boon_exploration days = @BoonDuration }
+			add_eternal_boon_cooldown_modifier = yes
+		}
+		else = {
+			hidden_effect = {
+				country_event = { id = origins_civics_random_leader_events.100 days = -1 }
+			}
+		}
 	}
 	
 	ai_weight = {
@@ -72,7 +88,7 @@ oc_edict_boon_eternal_exploration = {
 }
 
 oc_edict_boon_eternal_military = {
-	length = @BoonDuration
+	length = @BoonEdictDuration
 	resources = {
 		category = boons
 		cost = {
@@ -81,7 +97,7 @@ oc_edict_boon_eternal_military = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_military }
 	}
 	
@@ -93,8 +109,16 @@ oc_edict_boon_eternal_military = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_military days = @BoonDuration }
-		add_eternal_boon_cooldown_modifier = yes
+		if = { 
+			limit = { NOT = { has_modifier = oc_eternal_boon_cooldown_effect } }
+			add_modifier = { modifier = oc_eternal_boon_military days = @BoonDuration }
+			add_eternal_boon_cooldown_modifier = yes
+		}
+		else = {
+			hidden_effect = {
+				country_event = { id = origins_civics_random_leader_events.100 days = -1 }
+			}
+		}
 	}
 	
 	ai_weight = {
@@ -103,7 +127,7 @@ oc_edict_boon_eternal_military = {
 }
 
 oc_edict_boon_eternal_development = {
-	length = @BoonDuration
+	length = @BoonEdictDuration
 	resources = {
 		category = boons
 		cost = {
@@ -112,7 +136,7 @@ oc_edict_boon_eternal_development = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_development }
 	}
 	
@@ -124,8 +148,16 @@ oc_edict_boon_eternal_development = {
 	}
 
 	effect = {
-		add_modifier = { modifier = oc_eternal_boon_development days = @BoonDuration }
-		add_eternal_boon_cooldown_modifier = yes
+		if = { 
+			limit = { NOT = { has_modifier = oc_eternal_boon_cooldown_effect } }
+			add_modifier = { modifier = oc_eternal_boon_development days = @BoonDuration }
+			add_eternal_boon_cooldown_modifier = yes
+		}
+		else = {
+			hidden_effect = {
+				country_event = { id = origins_civics_random_leader_events.100 days = -1 }
+			}
+		}
 	}
 	
 	ai_weight = {

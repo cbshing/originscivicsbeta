@@ -3,16 +3,21 @@ namespace = origins_civics_random_leader_events
 
 ### Leader Events
 
-event = {
-	id = origins_civics_random_leader_events.1
-	hide_window = yes
+# Eternal Boon Unavailable Notification Event
+country_event = {
+	id = origins_civics_random_leader_events.100
+	title = "origins_civics_random_leader_events.100.name"
+	picture = GFX_evt_psionics
+	show_sound = event_psionic
+	desc = origins_civics_random_leader_events.100.a
+	
 	is_triggered_only = yes
 	
 	trigger = {
-		
+		has_modifier = oc_eternal_boon_stability
 	}
 	
-	immediate = {
-		
+	option = {
+		name = UNFORTUNATE
 	}
 }
