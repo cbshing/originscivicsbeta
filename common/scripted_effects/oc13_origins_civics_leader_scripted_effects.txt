@@ -67,10 +67,6 @@ calculate_digitally_eternal_optimization_error = {
     random_list = {
         10 = {
             modifier = {
-                factor = 2
-                #admin cap?
-            }
-            modifier = {
                 factor = 0.8
                 owner_species = { has_trait = trait_cybernetic }
             }
@@ -78,16 +74,16 @@ calculate_digitally_eternal_optimization_error = {
                 factor = 0.5
                 owner_species = { has_trait = trait_mechanical }
             }
-            modifier = { # 80% chance error with >= 40% of galaxy
-                factor = 8
+            modifier = { # 50% chance error with >= 40% of galaxy
+                factor = 4
                 galaxy_percentage >= 0.40
             }
-            modifier = { # 60% chance error with < 40% of galaxy
-                factor = 6
+            modifier = { # 40% chance error with < 40% of galaxy
+                factor = 3
                 galaxy_percentage < 0.40
             }
-            modifier = { # 40% error with < 30% of galaxy
-                factor = 4
+            modifier = { # 30% error with < 30% of galaxy
+                factor = 2
                 galaxy_percentage < 0.30
             }
             modifier = { # 20% error with < 20% of galaxy
@@ -105,6 +101,34 @@ calculate_digitally_eternal_optimization_error = {
             modifier = { # No error if own <2% of galaxy
                 factor = 0
                 galaxy_percentage < 0.02
+            }
+			modifier = { # 7% chance error if empire_size < 130
+                factor = 0.7
+                empire_size >= 130
+            }
+            modifier = { # 5% chance error if empire_size < 110
+                factor = 0.5
+                empire_size < 130
+            }
+            modifier = { # 4% chance error if empire_size < 90
+                factor = 0.4
+                empire_size < 110
+            }
+            modifier = { # 3% chance error if empire_size < 80
+                factor = 0.3
+                empire_size < 90
+            }
+            modifier = { # 2% chance error if empire_size < 70
+                factor = 0.2
+                empire_size < 70
+            }
+            modifier = { # 1% chance error if empire_size < 50
+                factor = 0.1
+                empire_size < 50
+            }
+            modifier = { # No error if empire_size < 30
+                factor = 0
+                empire_size < 30
             }
             set_country_flag = oc_digitally_eternal_optimization_has_error
         }
