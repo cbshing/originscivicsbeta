@@ -26,7 +26,15 @@
 has_syncretic_evolution_civic = {
 	OR = {
 		has_valid_civic = civic_syncretic_evolution
-		has_country_flag = invalid_country
+		has_country_flag = syncretic_evolution_country
+	}
+}
+
+# scope: country 
+has_mechanists_civic = {
+	OR = {
+		has_valid_civic = civic_mechanists
+		has_country_flag = mechanist_country
 	}
 }
 
@@ -34,7 +42,15 @@ has_syncretic_evolution_civic = {
 has_post_apocalyptic_civic = {
 	OR = {
 		has_valid_civic = civic_post_apocalyptic
-		has_country_flag = invalid_country
+		has_country_flag = post_apocalyptic_country
+	}
+}
+
+# scope: country 
+has_life_seeded_civic = {
+	OR = {
+		has_valid_civic = civic_life_seeded
+		has_country_flag = life_seeded_country
 	}
 }
 

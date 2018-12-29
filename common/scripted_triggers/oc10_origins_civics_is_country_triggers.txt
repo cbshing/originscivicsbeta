@@ -25,6 +25,48 @@
 # is type of country
 
 # scope: country 
+oc_is_origins_civics = {
+	OR = {
+		has_syncretic_evolution_civic = yes
+		has_mechanists_civic = yes
+		has_post_apocalyptic_civic = yes
+		has_life_seeded_civic = yes
+		has_machine_assimilator_civic = yes
+		has_machine_servitor_civic = yes
+	
+		has_oc_codominant_evolution_civic = yes
+		has_oc_alien_message_civic  = yes
+		has_oc_alien_invaded_civic = yes
+		has_oc_lost_colony_civic = yes
+		has_oc_exiled_colony_civic = yes
+		has_oc_post_war_of_worlds_civic = yes
+		has_oc_eternal_leader_civic = yes
+		has_oc_clinically_eternal_civic = yes
+		has_oc_digitally_eternal_civic = yes
+		has_oc_ecological_disaster_civic = yes
+		has_oc_climate_shift_civic = yes
+		has_oc_living_with_titans_civic = yes
+		has_oc_nuclear_vault_civic = yes
+		has_oc_nuclear_mutation_civic = yes
+		has_oc_voidborne_civic = yes
+		
+		has_oc_colony_of_earth_civic = yes
+		has_oc_colony_of_man_civic = yes
+		
+		has_oc_hive_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_oc_hive_life_seeded_civic = yes
+		has_oc_hive_post_apocalyptic_civic = yes
+		has_oc_hive_hive_world_civic = yes
+		
+		has_oc_robo_nuked_start_civic = yes
+		has_oc_robo_machine_world_civic = yes
+		has_oc_robo_abandoned_terraformers_civic = yes
+	}
+}
+
+# scope: country 
 oc_is_from_earth = {
 	OR = {
 		oc_is_same_species_as_earth = yes
