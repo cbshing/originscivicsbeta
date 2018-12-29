@@ -74,11 +74,13 @@ planet_event = {
 	}
 	option = {
 		name = origins_civics_random_planet_events.100.ignore
-		add_monthly_resource_mult = {
-			resource = influence
-			value = @tier1influencereward
-			min = @tier1influencemin
-			max = @tier1influencemax
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencereward
+				min = @tier1influencemin
+				max = @tier1influencemax
+			}
 		}
 	}
 }

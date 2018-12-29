@@ -18,48 +18,101 @@
 
 # Eternal Boon Cooldown Effect
 add_eternal_boon_cooldown_modifier = {
-    set_variable = { which = eternal_boon_cooldown_time value = 10800 } # 30 yrs
     if = {
-        limit = { galaxy_percentage < 0.01 } #1%
-        set_variable = { which = eternal_boon_cooldown_time value = 30 } # 30d
+        limit = { galaxy_percentage < 0.01 } #1% 30d
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 30 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 10 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 15 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.02 } #2%
-        set_variable = { which = eternal_boon_cooldown_time value = 60 } # 60d
+        limit = { galaxy_percentage < 0.02 } #2% 60d
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 60 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 20 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 30 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.05 } #5%
-        set_variable = { which = eternal_boon_cooldown_time value = 360 } # 1yr
+        limit = { galaxy_percentage < 0.05 } #5% 1yr
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 360 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 120 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 180 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.10 } #10%
-        set_variable = { which = eternal_boon_cooldown_time value = 1080 } # 3yr
+        limit = { galaxy_percentage < 0.10 } #10% 3yr
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 1080 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 360 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 540 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.20 } #20%
-        set_variable = { which = eternal_boon_cooldown_time value = 1800 } # 5yr
+        limit = { galaxy_percentage < 0.20 } #20% 5yr
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 1800 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 600 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 900 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.30 } #30%
-        set_variable = { which = eternal_boon_cooldown_time value = 3600 } # 10yr
+        limit = { galaxy_percentage < 0.30 } #30% 10 yr
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 3600 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 1200 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 1800 }
+		}
     }
     else_if = {
-        limit = { galaxy_percentage < 0.40 } #40%
-        set_variable = { which = eternal_boon_cooldown_time value = 7200 } # 20yr
+        limit = { galaxy_percentage < 0.40 } #40% 20yrs
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 7200 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 2400 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 3600 }
+		}
     }
-    else = { #>40%
-        set_variable = { which = eternal_boon_cooldown_time value = 10800 } # 30yr
+    else = { #>40% # 30yrs
+		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 10800 }
+		if = {
+			limit = { owner_species = { has_trait = trait_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 3600 }
+		}
+		else_if = {
+			limit = { owner_species = { has_trait = trait_latent_psionic } }
+			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 5400 }
+		}
     }
-    if = {
-        limit = { owner_species = { has_trait = trait_psionic } }
-        divide_variable = { which = eternal_boon_cooldown_time value = 3 } # 10 yrs
-    }
-    else_if = {
-        limit = { owner_species = { has_trait = trait_latent_psionic } }
-        divide_variable = { which = eternal_boon_cooldown_time value = 2 } # 15 yrs
-    }
-    
-    add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = @eternal_boon_cooldown_time }
 }
 
 # Digitally Eternal Optimization Error Effect
@@ -74,20 +127,20 @@ calculate_digitally_eternal_optimization_error = {
                 factor = 0.5
                 owner_species = { has_trait = trait_mechanical }
             }
-            modifier = { # 50% chance error with >= 40% of galaxy
-                factor = 4
+            modifier = { # 90% chance error with >= 40% of galaxy
+                factor = 9
                 galaxy_percentage >= 0.40
             }
-            modifier = { # 40% chance error with < 40% of galaxy
-                factor = 3
+            modifier = { # 70% chance error with < 40% of galaxy
+                factor = 7
                 galaxy_percentage < 0.40
             }
-            modifier = { # 30% error with < 30% of galaxy
-                factor = 2
+            modifier = { # 50% error with < 30% of galaxy
+                factor = 5
                 galaxy_percentage < 0.30
             }
-            modifier = { # 20% error with < 20% of galaxy
-                factor = 2
+            modifier = { # 25% error with < 20% of galaxy
+                factor = 2.5
                 galaxy_percentage < 0.20
             }
             modifier = { # 10% error with < 10% of galaxy
@@ -102,36 +155,8 @@ calculate_digitally_eternal_optimization_error = {
                 factor = 0
                 galaxy_percentage < 0.02
             }
-			modifier = { # 7% chance error if empire_size < 130
-                factor = 0.7
-                empire_size >= 130
-            }
-            modifier = { # 5% chance error if empire_size < 110
-                factor = 0.5
-                empire_size < 130
-            }
-            modifier = { # 4% chance error if empire_size < 90
-                factor = 0.4
-                empire_size < 110
-            }
-            modifier = { # 3% chance error if empire_size < 80
-                factor = 0.3
-                empire_size < 90
-            }
-            modifier = { # 2% chance error if empire_size < 70
-                factor = 0.2
-                empire_size < 70
-            }
-            modifier = { # 1% chance error if empire_size < 50
-                factor = 0.1
-                empire_size < 50
-            }
-            modifier = { # No error if empire_size < 30
-                factor = 0
-                empire_size < 30
-            }
             set_country_flag = oc_digitally_eternal_optimization_has_error
         }
-	10 = { }
+		10 = { }
     }
 }
