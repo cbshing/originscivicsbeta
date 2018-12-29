@@ -103,7 +103,6 @@ oc_eternal_optimization_stability_neg = {
 
 oc_eternal_optimization_exploration = {
 	all_technology_research_speed = 0.2
-	num_tech_alternatives_add = 1
 	species_leader_exp_gain = 0.25
 	planet_researchers_upkeep_mult = -0.15
 	science_ship_survey_speed = 0.3

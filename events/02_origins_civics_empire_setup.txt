@@ -650,14 +650,14 @@ country_event = {
 		#Sets Eternal Leader start modifier
 		if = { limit = { oc_requires_eternal_leader_ruler_trait = yes }
 			add_modifier = {
-				modifier = "oc_eternal_leader_default_boon"
+				modifier = "oc_eternal_boon_stability"
 			}
 		}
 		
 		#Sets Digitally Eternal start modifier
 		if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
 			add_modifier = {
-				modifier = "oc_digitally_eternal_default_boon"
+				modifier = "oc_eternal_optimization_exploration"
 			}
 		}
 		
