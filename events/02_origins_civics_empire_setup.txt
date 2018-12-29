@@ -398,7 +398,14 @@ planet_event = {
 				remove_building = building_research_lab_1 
 				add_building = building_hydroponics_farm 
 			}
-			# Add setup for Mechanist Start
+			
+			# Add setup specifically for vanilla Mechanist Start + Megacorp
+			if = { limit = { owner = {  has_valid_civic = civic_mechanists is_megacorp = yes } }
+				remove_building = building_commercial_zone			
+				add_district = district_generator
+			}
+			
+			# Add setup for OC Mechanist Starts
 			if = { limit = { owner = {  oc_requires_robot_factory_building_setup = yes } }
 				if = {
 					limit = { owner = { is_megacorp = yes } }
