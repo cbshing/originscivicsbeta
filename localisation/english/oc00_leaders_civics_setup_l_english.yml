@@ -39,50 +39,50 @@
  ####################################
  # Origins Modifiers
  ####################################
- oc_eternal_leader_default_boon:0 "Eternal Boon : Resting"
+ oc_eternal_leader_default_boon:0 "Eternal Boon: Resting"
  oc_eternal_leader_default_boon_desc:0 "Without exercising their great psionic power, the Eternal is able to focus on influencing the many branches of government."
  oc_digitally_eternal_default_boon:0 "Eternal Boon : Standby"
  oc_digitally_eternal_default_boon_desc:0 "Without exercising its great calculating powers, the Uploaded is able to focus on optimizing national research."
  # Eternal Leader Boons
- oc_eternal_boon_cooldown_effect:0 "Eternal Boon : Exhausted"
+ oc_eternal_boon_cooldown_effect:0 "Eternal Boon: Exhausted"
  oc_eternal_boon_cooldown_effect_desc:0 "Our Eternal Leader has exhausted all of their psionic power and needs time to recharge and focus."
- oc_eternal_boon_stability:0 "Eternal Boon : Stability"
+ oc_eternal_boon_stability:0 "Eternal Boon: Stability"
  oc_eternal_boon_stability_desc:0 "Our Eternal Leader is focusing on the stability of our empire, herding politicians, and encouraging faith in the Eternal."
- oc_eternal_boon_exploration:0 "Eternal Boon : Exploration"
+ oc_eternal_boon_exploration:0 "Eternal Boon: Exploration"
  oc_eternal_boon_exploration_desc:0 "Our Eternal Leader is focusing on exploring the galaxy, inspiring our scientists to seek new understandings of the natural laws."
- oc_eternal_boon_military:0 "Eternal Boon : Command"
+ oc_eternal_boon_military:0 "Eternal Boon: Command"
  oc_eternal_boon_military_desc:0 "Our Eternal Leader is focusing on our military command, inspiring our troops and guiding us through the darkness."
- oc_eternal_boon_development:0 "Eternal Boon : Development"
+ oc_eternal_boon_development:0 "Eternal Boon: Development"
  oc_eternal_boon_development_desc:0 "Our Eternal Leader is focusing on developing our economy, encouraging planetary growth and new constructions."
  # Digitally Eternal Optimizations
- oc_eternal_optimization_stability:0 "Eternal Optimization : Stability"
+ oc_eternal_optimization_stability:0 "Eternal Optimization: Stability"
  oc_eternal_optimization_stability_desc:0 "The Uploaded is optimizing our bureaucracy, correcting errors to allow for improved policing, government stability, and resource usage."
  oc_eternal_optimization_stability_neg:0 "Optimization Error: Stability"
  oc_eternal_optimization_stability_neg_desc:0 "The Uploaded has faulted, causing errors in our bureaucracy, leaving much confusion amongst our populace."
- oc_eternal_optimization_exploration:0 "Eternal Optimization : Exploration"
+ oc_eternal_optimization_exploration:0 "Eternal Optimization: Exploration"
  oc_eternal_optimization_exploration_desc:0 "The Uploaded is optimizing our science divisions, providing unique insights only capable through its pooled computer services."
- oc_eternal_optimization_exploration_neg:0 "Optimization Error : Exploration"
+ oc_eternal_optimization_exploration_neg:0 "Optimization Error: Exploration"
  oc_eternal_optimization_exploration_neg_desc:0 "The Uploaded has faulted, causing confusion in our scientific community and slowing down progress."
- oc_eternal_optimization_military:0 "Eternal Optimization : Command"
+ oc_eternal_optimization_military:0 "Eternal Optimization: Command"
  oc_eternal_optimization_military_desc:0 "The Uploaded is optimizing our military command, improving our military's overall accuracy and firing rate."
- oc_eternal_optimization_military_neg:0 "Optimization Error : Command"
+ oc_eternal_optimization_military_neg:0 "Optimization Error: Command"
  oc_eternal_optimization_military_neg_desc:0 "The Uploaded has faulted, causing confusion within our military branches, slowing down command efforts."
- oc_eternal_optimization_development:0 "Eternal Optimization : Development"
+ oc_eternal_optimization_development:0 "Eternal Optimization: Development"
  oc_eternal_optimization_development_desc:0 "The Uploaded is optimizing our planetary development committees, reducing costs and increasing our citizens productivity."
- oc_eternal_optimization_production_neg:0 "Optimization Error : Development"
+ oc_eternal_optimization_production_neg:0 "Optimization Error: Development"
  oc_eternal_optimization_production_neg_desc:0 "The Uploaded has faulted, throwing our planetary development committees into chaos."
  
  ####################################
  # Origins Edicts
  ####################################
  edict_oc_edict_boon_eternal_stability:0 "$oc_eternal_boon_stability$"
- edict_oc_edict_boon_eternal_stability_desc:0 "Our Eternal Leader will focus their psionic energy on the stability and unity of our empire.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_stability_desc:0 "Our Eternal Leader will focus their psionic energy on the stability and unity of our empire.\n\n§YBoon length is not determined by edict length§!"
  edict_oc_edict_boon_eternal_exploration:0 "$oc_eternal_boon_exploration$"
- edict_oc_edict_boon_eternal_exploration_desc:0 "Our Eternal Leader will focus their psionic energy on furthering our understanding of science and the galaxy.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_exploration_desc:0 "Our Eternal Leader will focus their psionic energy on furthering our understanding of science and the galaxy.\n\n§YBoon length is not determined by edict length§!"
  edict_oc_edict_boon_eternal_military:0 "$oc_eternal_boon_military$"
- edict_oc_edict_boon_eternal_military_desc:0 "Our Eternal Leader will focus their psionic energy on our aiding our military command.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_military_desc:0 "Our Eternal Leader will focus their psionic energy on our aiding our military command.\n\n§YBoon length is not determined by edict length§!"
  edict_oc_edict_boon_eternal_development:0 "$oc_eternal_boon_development$"
- edict_oc_edict_boon_eternal_development_desc:0 "Our Eternal Leader will focus their psionic energy on our encouraging planetary development and production.\n§YBoon length is not determined by edict length§!"
+ edict_oc_edict_boon_eternal_development_desc:0 "Our Eternal Leader will focus their psionic energy on our encouraging planetary development and production.\n\n§YBoon length is not determined by edict length§!"
 
  ####################################
  # Origins Start Messages

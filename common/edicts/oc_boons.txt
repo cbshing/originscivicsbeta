@@ -19,7 +19,7 @@ oc_edict_boon_eternal_stability = {
 	}
 	
 	allow = {
-		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_stability }
 	}
 	
@@ -58,7 +58,7 @@ oc_edict_boon_eternal_exploration = {
 	}
 	
 	allow = {
-		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_exploration }
 	}
 	
@@ -97,7 +97,7 @@ oc_edict_boon_eternal_military = {
 	}
 	
 	allow = {
-		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_military }
 	}
 	
@@ -136,7 +136,7 @@ oc_edict_boon_eternal_development = {
 	}
 	
 	allow = {
-		#NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
+		NOT = { has_modifier = oc_eternal_boon_cooldown_effect }
 		NOT = { has_modifier = oc_eternal_boon_development }
 	}
 	
