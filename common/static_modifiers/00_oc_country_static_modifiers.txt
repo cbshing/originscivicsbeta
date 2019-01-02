@@ -80,9 +80,22 @@ oc_eternal_boon_development = {
 	country_starbase_influence_cost_mult = -0.1
 	pop_growth_speed = 0.1
 	planet_colony_development_speed_mult = 0.1
+	planet_stability_add = 5
 }
 
 # Digitally Eternal Leader
+
+oc_eternal_optimization_updating_effect = {
+	# does nothing
+}
+
+oc_eternal_optimization_rebooting_effect = {
+	planet_stability_add = -20
+	all_technology_research_speed = -0.2
+	ship_accuracy_add = -10
+	army_damage_mult = -0.20
+	planet_jobs_specialist_produces_mult = -0.15
+}
 
 oc_eternal_optimization_stability = {
 	pop_ethic_materialist_attraction_mult = 0.25
@@ -150,6 +163,7 @@ oc_eternal_optimization_development = {
 	planet_districts_upkeep_mult = -0.20
 	planet_jobs_specialist_produces_mult = 0.15
 	planet_colony_development_speed_mult = 0.2
+	planet_stability_add = 5
 }
 
 oc_eternal_optimization_development_neg = {
@@ -160,4 +174,5 @@ oc_eternal_optimization_development_neg = {
 	planet_districts_upkeep_mult = 0.20
 	planet_jobs_specialist_produces_mult = -0.15
 	planet_colony_development_speed_mult = -0.2
+	planet_stability_add = -5
 }
