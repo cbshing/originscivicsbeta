@@ -20,26 +20,466 @@
 add_eternal_boon_cooldown_modifier = {
     if = {
         limit = { galaxy_percentage < 0.01 } #1% 30d
-		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 30 }
-		if = {
-			limit = { owner_species = { has_trait = trait_psionic } }
-			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 10 }
+		# Cooldown effect timeout
+		if = { 
+			limit = {
+				has_country_flag = oc_eternal_boon_01
+			}
+			remove_country_flag = oc_eternal_boon_01
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 30 }
 		}
 		else_if = {
-			limit = { owner_species = { has_trait = trait_latent_psionic } }
-			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 15 }
+			limit = {
+				has_country_flag = oc_eternal_boon_02
+			}
+			remove_country_flag = oc_eternal_boon_02
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 30 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_03
+			}
+			remove_country_flag = oc_eternal_boon_03
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 30 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_04
+			}
+			remove_country_flag = oc_eternal_boon_04
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 30 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_05
+			}
+			remove_country_flag = oc_eternal_boon_05
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 30 }		
+		}
+		#Cooldown modifier timeout
+		if = {
+			limit = {
+				any_owned_leader = {
+					leader_class = ruler
+					has_ruler_trait = leader_trait_oc_eternal_leader
+				}
+				NOR = { 
+					owner_species = { has_trait = trait_psionic } 
+					owner_species = { has_trait = trait_latent_psionic } 
+					owner_species = { has_trait = trait_mechanical } 
+					owner_species = { has_trait = trait_cybernetic } 
+				}
+			}
+			add_modifier = { modifier = oc_eternal_exhausted days = 30 }
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					leader_class = ruler
+					has_ruler_trait = leader_trait_oc_digitally_eternal
+				}
+				NOR = { 
+					owner_species = { has_trait = trait_psionic } 
+					owner_species = { has_trait = trait_latent_psionic } 
+					owner_species = { has_trait = trait_mechanical } 
+					owner_species = { has_trait = trait_cybernetic } 
+				}
+			}
+			add_modifier = { modifier = oc_eternal_loading days = 30 }
+		}
+		if = { # has psionic or synthetic
+			limit = { 
+				OR = {
+					AND = {
+						owner_species = { has_trait = trait_psionic } 
+						has_ascension_perk = ap_transcendence 
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_eternal_leader
+						}
+					}
+					AND = {
+						owner_species = { has_trait = trait_mechanical } 
+						has_ascension_perk = ap_synthetic_evolution 
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_digitally_eternal
+						}
+					}
+				}
+			}
+			# Cooldown effect timeout
+			if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_01
+				}
+				remove_country_flag = oc_eternal_boon_01
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 10 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_02
+				}
+				remove_country_flag = oc_eternal_boon_02
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 10 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_03
+				}
+				remove_country_flag = oc_eternal_boon_03
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 10 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_04
+				}
+				remove_country_flag = oc_eternal_boon_04
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 10 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_05
+				}
+				remove_country_flag = oc_eternal_boon_05
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 10 }		
+			}
+			#Cooldown modifier timeout
+			if = {
+				limit = {
+					owner_species = { has_trait = trait_psionic } 
+					has_ascension_perk = ap_transcendence 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+				}
+				add_modifier = { modifier = oc_eternal_exhausted days = 10 }
+			}
+			else_if = {
+				limit = {
+					owner_species = { has_trait = trait_mechanical } 
+					has_ascension_perk = ap_synthetic_evolution 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+				}
+				add_modifier = { modifier = oc_eternal_loading days = 10 }
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					AND = {
+						owner_species = { has_trait = trait_latent_psionic } 
+						has_ascension_perk = ap_mind_over_matter  
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_eternal_leader
+						}
+					}
+					AND = {
+						owner_species = { has_trait = trait_cybernetic } 
+						has_ascension_perk = ap_the_flesh_is_weak  
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_digitally_eternal
+						}
+					}
+				}
+			}
+			# Cooldown effect timeout
+			if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_01
+				}
+				remove_country_flag = oc_eternal_boon_01
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 15 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_02
+				}
+				remove_country_flag = oc_eternal_boon_02
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 15 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_03
+				}
+				remove_country_flag = oc_eternal_boon_03
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 15 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_04
+				}
+				remove_country_flag = oc_eternal_boon_04
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 15 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_05
+				}
+				remove_country_flag = oc_eternal_boon_05
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 15 }		
+			}
+			#Cooldown modifier timeout
+			if = {
+				limit = {
+					owner_species = { has_trait = trait_latent_psionic } 
+					has_ascension_perk = ap_mind_over_matter 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+				}
+				add_modifier = { modifier = oc_eternal_exhausted days = 15 }
+			}
+			else_if = {
+				limit = {
+					owner_species = { has_trait = trait_cybernetic } 
+					has_ascension_perk = ap_the_flesh_is_weak 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+				}
+				add_modifier = { modifier = oc_eternal_loading days = 15 }
+			}
 		}
     }
     else_if = {
         limit = { galaxy_percentage < 0.02 } #2% 60d
-		add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 60 }
-		if = {
-			limit = { owner_species = { has_trait = trait_psionic } }
-			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 20 }
+		# Cooldown effect timeout
+		if = { 
+			limit = {
+				has_country_flag = oc_eternal_boon_01
+			}
+			remove_country_flag = oc_eternal_boon_01
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 60 }
 		}
 		else_if = {
-			limit = { owner_species = { has_trait = trait_latent_psionic } }
-			add_modifier = { modifier = oc_eternal_boon_cooldown_effect days = 30 }
+			limit = {
+				has_country_flag = oc_eternal_boon_02
+			}
+			remove_country_flag = oc_eternal_boon_02
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 60 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_03
+			}
+			remove_country_flag = oc_eternal_boon_03
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 60 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_04
+			}
+			remove_country_flag = oc_eternal_boon_04
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 60 }		
+		}
+		else_if = {
+			limit = {
+				has_country_flag = oc_eternal_boon_05
+			}
+			remove_country_flag = oc_eternal_boon_05
+			set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 60 }		
+		}
+		#Cooldown modifier timeout
+		if = {
+			limit = {
+				any_owned_leader = {
+					leader_class = ruler
+					has_ruler_trait = leader_trait_oc_eternal_leader
+				}
+				NOR = { 
+					owner_species = { has_trait = trait_psionic } 
+					owner_species = { has_trait = trait_latent_psionic } 
+					owner_species = { has_trait = trait_mechanical } 
+					owner_species = { has_trait = trait_cybernetic } 
+				}
+			}
+			add_modifier = { modifier = oc_eternal_exhausted days = 60 }
+		}
+		else_if = {
+			limit = {
+				any_owned_leader = {
+					leader_class = ruler
+					has_ruler_trait = leader_trait_oc_digitally_eternal
+				}
+				NOR = { 
+					owner_species = { has_trait = trait_psionic } 
+					owner_species = { has_trait = trait_latent_psionic } 
+					owner_species = { has_trait = trait_mechanical } 
+					owner_species = { has_trait = trait_cybernetic } 
+				}
+			}
+			add_modifier = { modifier = oc_eternal_loading days = 60 }
+		}
+		if = { # has psionic or synthetic
+			limit = { 
+				OR = {
+					AND = {
+						owner_species = { has_trait = trait_psionic } 
+						has_ascension_perk = ap_transcendence 
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_eternal_leader
+						}
+					}
+					AND = {
+						owner_species = { has_trait = trait_mechanical } 
+						has_ascension_perk = ap_synthetic_evolution 
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_digitally_eternal
+						}
+					}
+				}
+			}
+			# Cooldown effect timeout
+			if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_01
+				}
+				remove_country_flag = oc_eternal_boon_01
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 20 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_02
+				}
+				remove_country_flag = oc_eternal_boon_02
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 20 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_03
+				}
+				remove_country_flag = oc_eternal_boon_03
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 20 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_04
+				}
+				remove_country_flag = oc_eternal_boon_04
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 20 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_05
+				}
+				remove_country_flag = oc_eternal_boon_05
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 20 }		
+			}
+			#Cooldown modifier timeout
+			if = {
+				limit = {
+					owner_species = { has_trait = trait_psionic } 
+					has_ascension_perk = ap_transcendence 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+				}
+				add_modifier = { modifier = oc_eternal_exhausted days = 20 }
+			}
+			else_if = {
+				limit = {
+					owner_species = { has_trait = trait_mechanical } 
+					has_ascension_perk = ap_synthetic_evolution 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+				}
+				add_modifier = { modifier = oc_eternal_loading days = 20 }
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					AND = {
+						owner_species = { has_trait = trait_latent_psionic } 
+						has_ascension_perk = ap_mind_over_matter  
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_eternal_leader
+						}
+					}
+					AND = {
+						owner_species = { has_trait = trait_cybernetic } 
+						has_ascension_perk = ap_the_flesh_is_weak  
+						any_owned_leader = {
+							leader_class = ruler
+							has_ruler_trait = leader_trait_oc_digitally_eternal
+						}
+					}
+				}
+			}
+			# Cooldown effect timeout
+			if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_01
+				}
+				remove_country_flag = oc_eternal_boon_01
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_01 days = 30 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_02
+				}
+				remove_country_flag = oc_eternal_boon_02
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_02 days = 30 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_03
+				}
+				remove_country_flag = oc_eternal_boon_03
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_03 days = 30 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_04
+				}
+				remove_country_flag = oc_eternal_boon_04
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_04 days = 30 }		
+			}
+			else_if = {
+				limit = {
+					has_country_flag = oc_eternal_boon_05
+				}
+				remove_country_flag = oc_eternal_boon_05
+				set_timed_country_flag = { flag = oc_eternal_exhausted_flag_05 days = 30 }		
+			}
+			#Cooldown modifier timeout
+			if = {
+				limit = {
+					owner_species = { has_trait = trait_latent_psionic } 
+					has_ascension_perk = ap_mind_over_matter 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+				}
+				add_modifier = { modifier = oc_eternal_exhausted days = 30 }
+			}
+			else_if = {
+				limit = {
+					owner_species = { has_trait = trait_cybernetic } 
+					has_ascension_perk = ap_the_flesh_is_weak 
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+				}
+				add_modifier = { modifier = oc_eternal_loading days = 30 }
+			}
 		}
     }
     else_if = {

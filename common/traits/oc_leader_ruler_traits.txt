@@ -25,9 +25,9 @@ leader_trait_oc_eternal_leader = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		country_unity_produces_mult = 0.10
-		pop_ethic_spiritualist_attraction_mult = 0.33
-		pop_happiness = 0.05
+		#country_unity_produces_mult = 0.05
+		#pop_ethic_spiritualist_attraction_mult = 0.33
+		#pop_happiness = 0.05
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }
@@ -44,7 +44,7 @@ leader_trait_oc_eternal_leader_weakened = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		pop_happiness = 0.05
+		#country_unity_produces_mult = 0.05
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }
@@ -61,8 +61,25 @@ leader_trait_oc_digitally_eternal = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		pop_ethic_materialist_attraction_mult = 0.33
-		num_tech_alternatives_add = 1
+		#pop_ethic_materialist_attraction_mult = 0.33
+		#num_tech_alternatives_add = 1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+leader_trait_oc_clinically_eternal = {
+	cost = 0
+	modification = no
+	#icon = "gfx/interface/icons/traits/leader_traits/leader_trait_oc_digitally_eternal.dds"
+	#immortal_leaders = yes
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	modifier = {
+		leader_age = 500
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }

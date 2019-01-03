@@ -1,0 +1,93 @@
+##########################################################################
+# Eternal Blessings & Optimizations
+##########################################################################
+
+@BoonCost = 1
+@BoonEdictDuration = 3600
+@BoonDuration = 3600
+
+#################
+#Eternal Blessings
+#################
+oc_eternal_blessing_unity = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOR = { 
+			#has_country_flag = oc_eternal_exhausted_flag_01
+			has_country_flag = oc_eternal_exhausted_flag_02 
+			has_country_flag = oc_eternal_exhausted_flag_03 
+			has_country_flag = oc_eternal_exhausted_flag_04 
+			has_country_flag = oc_eternal_exhausted_flag_05 
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		country_unity_produces_mult = 0.15
+		country_base_influence_produces_add = 1
+	}
+
+	effect = {
+		set_country_flag = oc_eternal_boon_01
+		add_eternal_boon_cooldown_modifier = yes
+		add_eternal_boon_cooldown_flag = yes
+		roll_eternal_boon_death_flag = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_blessing_sensor = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOR = { 
+			has_country_flag = oc_eternal_exhausted_flag_01
+			#has_country_flag = oc_eternal_exhausted_flag_02 
+			has_country_flag = oc_eternal_exhausted_flag_03 
+			has_country_flag = oc_eternal_exhausted_flag_04 
+			has_country_flag = oc_eternal_exhausted_flag_05 
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		ship_sensor_range_add = 10
+	}
+
+	effect = {
+		add_eternal_boon_cooldown_modifier = yes
+		add_eternal_boon_cooldown_flag = yes
+		roll_eternal_boon_death_flag = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
