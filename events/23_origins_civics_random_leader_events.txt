@@ -3,7 +3,7 @@ namespace = origins_civics_random_leader_events
 
 ### Leader Events
 
-# Eternal Boon Unavailable Notification Event
+# Eternal Blessing Unavailable Notification Event
 country_event = {
 	id = origins_civics_random_leader_events.100
 	title = "origins_civics_random_leader_events.100.name"
@@ -14,7 +14,32 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_modifier = oc_eternal_boon_stability
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Eternal Optimization Unavailable Notification Event
+country_event = {
+	id = origins_civics_random_leader_events.101
+	title = "origins_civics_random_leader_events.101.name"
+	picture = GFX_evt_psionics
+	show_sound = event_psionic
+	desc = origins_civics_random_leader_events.101.a
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_digitally_eternal
+		}
 	}
 	
 	option = {
