@@ -1,0 +1,54 @@
+#####################
+# Event buildings
+#####################
+
+building_oc_eternal_mausoleum = {
+	base_buildtime = 900
+	base_cap_amount = 1	
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	
+	icon = building_akx_worm_3
+	
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = { has_country_flag = oc_lost_eternal_leader }
+	}	
+	
+	planet_modifier  = {
+		job_high_priest_add = 2
+		job_priest_add = 10
+		pop_ethic_spiritualist_attraction_mult = 0.20
+	}
+	
+	effect = {
+		owner = { remove_modifier = oc_eternal_mourning}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+		produces = {
+			unity = 1
+		}	
+	}
+	
+	triggered_desc = {
+		text = job_priest_effect_desc
+	}
+	
+	triggered_desc = {
+		text = job_high_priest_effect_desc
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}

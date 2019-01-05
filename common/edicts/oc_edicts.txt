@@ -81,3 +81,73 @@ oc_eternal_blessing_sensor = {
 		weight = 0
 	}
 }
+oc_eternal_blessing_production = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_blessing_unity
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		ship_sensor_range_add = 10
+	}
+
+	effect = {
+		roll_eternal_boon_effect = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_blessing_research = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_blessing_unity
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		ship_sensor_range_add = 10
+	}
+
+	effect = {
+		roll_eternal_boon_effect = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

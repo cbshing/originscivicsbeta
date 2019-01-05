@@ -13,7 +13,11 @@
  civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruler who uploaded their consciousness to a computer long ago."
  civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
 
- #Corporate Empire
+ civic_oc_clinically_eternal:0 "Clinically Eternal"
+ civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruling class that prolongs their life through the use of advanced medications."
+ civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your leaders having the §Y$leader_trait_oc_clinically_eternal$§! trait, allowing them to live for 500 more years.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ 
+ #Corporate Empire (Unused)
  civic_oc_corp_eternal_leader:0 "Eternal CEO"
  civic_oc_corp_eternal_leader_desc:0 "This society has been long guided by a CEO who is Eternal."
  
@@ -29,8 +33,9 @@
  leader_trait_oc_eternal_leader_weakened_desc:0 "This leader is an Eternal, but immature with their psionic powers. After training for several decades she/he will reach her/his true potential"
  leader_trait_oc_digitally_eternal:0 "Uploaded"
  leader_trait_oc_digitally_eternal_desc:0 "This leader Uploaded their consciousness to the empire's computer networks long ago."
- 
- 
+ leader_trait_oc_clinically_eternal:0 "Clinically Eternal"
+ leader_trait_oc_clinically_eternal_desc:0 "This leader adheres to a strict medication and exercise regiment which prolongs their life for several hundred years."
+  
  ####################################
  # Origins Resource Category
  ####################################
@@ -38,6 +43,56 @@
  
  ####################################
  # Origins Modifiers
+ ####################################
+ oc_eternal_blessing_passive_small:0 "Small Blessings"
+ oc_eternal_blessing_passive_small_desc:0 "The existence of the Eternal is a small blessing to our empire. Many of our citizens pray to the Eternal for salvation."
+ oc_eternal_blessing_passive_medium:0 "Medium Blessings"
+ oc_eternal_blessing_passive_medium_desc:0 "Having awaken our species' latent psionic abilities, many citizens of the empire feel comforted while sensing the Eternal's aura."
+ oc_eternal_blessing_passive_large:0 "Large Blessings"
+ oc_eternal_blessing_passive_large_desc:0 "Having awaken our species' psionic abilities, our empire benefits from its ability to communicate into the mind of our omniscient Eternal."
+ oc_eternal_exhausted:0 "Eternal Exhaustion"
+ oc_eternal_exhausted_desc:0 "The Eternal has exhausted her/his psionic abilities attempting a blessing ritual and must rest for some time."
+ oc_eternal_mourning:0 "Eternal Mourning"
+ oc_eternal_mourning_desc:0 "The death of our Eternal leader has greatly impacted every citizen throughout the empire. Our nation mourns."
+
+ oc_eternal_boost_passive_small:0 "Small Boost"
+ oc_eternal_boost_passive_small_desc:0 "The existence of the Uploaded grants a small boost to the scientists of our empire. Many of the researchers benefits from the Uploaded's fast and reliable calculations."
+ oc_eternal_boost_passive_medium:0 "Medium Boost"
+ oc_eternal_boost_passive_medium_desc:0 "Having connected the members our species through advanced cybernetics, many of our citizens are able to benefit from the Uploaded's calculations."
+ oc_eternal_boost_passive_large:0 "Large Boost"
+ oc_eternal_boost_passive_large_desc:0 "Having uploaded our species to a mechanical existence, our empire benefits from being able to simultaneously connect to our omniscient leader."
+ oc_eternal_error:0 "Uploaded Erred"
+ oc_eternal_error_desc:0 "The Uploaded has faulted while attempting the latest optimization calculations and will now run diagnostic software for some time." 
+ oc_eternal_crash:0 "Uploaded Crashed"
+ oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation. It will take some time to reboot and recover the Uploaded's mind from the backup server."
+ 
+ ####################################
+ # Origins Start Messages
+ ####################################
+ START_SCREEN_PART_TWO_ETERNAL_LEADER:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of stability and scientific progress followed."
+ START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of stability and scientific progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
+ START_SCREEN_PART_TWO_CLINICALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Longevity formula was discovered. Monopolizing its potentials, the clinically immortal ruling class unified our society, and an era of stability and scientific progress followed."
+
+ ####################################
+ # Origins Buildings
+ ####################################
+ building_oc_eternal_mausoleum:0 "Mausoleum of the Eternal"
+ building_oc_eternal_mausoleum_desc:0 "A massive complex lay in the center of the capital city, enshrining the Eternal and all the principles our fallen leader stood for."
+ 
+ ####################################
+ # Origins Events
+ ####################################
+ origins_civics_random_leader_events.100.name:0 "Eternal Exhausted"
+ origins_civics_random_leader_events.100.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge.\n\nWe will be unable to access our Eternal's psionic blessings for some time."
+ origins_civics_random_leader_events.100.name:0 "Uploaded Error"
+ origins_civics_random_leader_events.100.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause.\n\nWe will be unable to access our Uploaded's optimization programs for some time."
+ 
+
+ 
+ ####################################
+ # Origins Modifiers - Old
  ####################################
  oc_eternal_leader_default_boon:0 "Eternal Boon: Resting"
  oc_eternal_leader_default_boon_desc:0 "Without exercising their great psionic power, the Eternal is able to focus on influencing the many branches of government."
@@ -73,7 +128,7 @@
  oc_eternal_optimization_development_neg_desc:0 "The Uploaded has faulted, throwing our planetary development and citizens into chaos."
  
  ####################################
- # Origins Edicts
+ # Origins Edicts - Old
  ####################################
  edict_oc_edict_boon_eternal_stability:0 "$oc_eternal_boon_stability$"
  edict_oc_edict_boon_eternal_stability_desc:0 "Our Eternal Leader will focus their psionic energy on stabilizing and uniting our empire.\n\n§YBoon length is not determined by edict length§!"
@@ -92,18 +147,3 @@
  edict_oc_edict_optimization_eternal_military_desc:0 "The Uploaded will focus on optimizing our military command, increasing our military's overall accuracy and fire power.\n\n§YBoon length is not determined by edict length§!"
  edict_oc_edict_optimization_eternal_development:0 "$oc_eternal_optimization_development$"
  edict_oc_edict_optimization_eternal_development_desc:0 "The Uploaded will focus on optimizing planetary development, encouraging construction and increasing production.\n\n§YBoon length is not determined by edict length§!"
-
- ####################################
- # Origins Start Messages
- ####################################
- START_SCREEN_PART_TWO_ETERNAL_LEADER:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of stability and scientific progress followed."
- START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
- START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of stability and scientific progress followed."
- START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
-
- ####################################
- # Origins Events
- ####################################
- origins_civics_random_leader_events.100.name:0 "Eternal is Exhausted"
- origins_civics_random_leader_events.100.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has currently used [ruler.GetHerHis] psionic powers to benefit our empire and has now returned to [ruler.GetHerHis] bedchamber to rest. We will be unable to access [ruler.GetHerHis] psionic boons for some time."
- 
