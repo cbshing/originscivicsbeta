@@ -44,15 +44,15 @@
  ####################################
  # Origins Edicts
  ####################################
- edict_oc_eternal_blessing_unity:0 "Empathic Manipulation Blessing"
+ edict_oc_eternal_blessing_unity:0 "Eternal Blessing: Empathic Manipulation"
  edict_oc_eternal_blessing_unity_desc:0 "The Eternal shall use their psionic energy to influence the feelings and emotions of our citizens towards our government."
- edict_oc_eternal_blessing_sensor:0 "Clairvoyance Blessing"
+ edict_oc_eternal_blessing_sensor:0 "Eternal Blessing: Clairvoyance"
  edict_oc_eternal_blessing_sensor_desc:0 "The Eternal shall use their clairvoyance abilities to help us see into the darkness of space."
- edict_oc_eternal_blessing_workers:0 "Matter Manipulation Blessing"
+ edict_oc_eternal_blessing_workers:0 "Eternal Blessing: Matter Manipulation"
  edict_oc_eternal_blessing_workers_desc:0 "The Eternal shall use their psionic energy to manipulate matter, improving production throughout our empire."
- edict_oc_eternal_blessing_research:0 "Technological Manipulation Blessing"
+ edict_oc_eternal_blessing_research:0 "Eternal Blessing: Technological Manipulation"
  edict_oc_eternal_blessing_research_desc:0 "The Eternal shall use their psionic energy to manipulate technology, improving our research and allowing our ships to repair faster."
- edict_oc_eternal_blessing_speed:0 "Void Manipulation Blessing"
+ edict_oc_eternal_blessing_speed:0 "Eternal Blessing: Void Manipulation"
  edict_oc_eternal_blessing_speed_desc:0 "The Eternal shall use their psionic energy to influence the void, allowing our ships to travel faster."
  
  ####################################
