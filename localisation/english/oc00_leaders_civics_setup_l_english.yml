@@ -42,6 +42,10 @@
  boons:0 "Boons"
  
  ####################################
+ # Origins Edicts
+ ####################################
+ 
+ ####################################
  # Origins Modifiers
  ####################################
  oc_eternal_blessing_passive_small:0 "Small Blessings"
