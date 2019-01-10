@@ -24,6 +24,9 @@ oc_eternal_blessing_workers = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_research
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -36,9 +39,9 @@ oc_eternal_blessing_workers = {
 	
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.10
-		planet_jobs_slave_produces_mult = 0.10
-		station_gatherers_produces_mult = 0.10
-		country_unity_produces_mult = 0.15
+		planet_jobs_slave_produces_mult = 0.05
+		station_gatherers_produces_mult = 0.05
+		country_unity_produces_mult = 0.2
 		#planet_metallurgists_produces_mult = 0.05
 		#planet_artisans_produces_mult = 0.05
 		#country_base_minerals_produces_add = 50
@@ -69,6 +72,9 @@ oc_eternal_blessing_sensor = {
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_research
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -82,7 +88,7 @@ oc_eternal_blessing_sensor = {
 	modifier = {
 		ship_sensor_range_add = 10
 		ship_anomaly_generation_chance_mult = 0.10
-		#ship_tracking_add = 5
+		ship_tracking_add = 5
 	}
 
 	effect = {
@@ -109,6 +115,9 @@ oc_eternal_blessing_research = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -120,7 +129,7 @@ oc_eternal_blessing_research = {
 	}
 	
 	modifier = {
-		all_technology_research_speed = 0.15
+		all_technology_research_speed = 0.10
 	}
 
 	effect = {
@@ -147,6 +156,9 @@ oc_eternal_blessing_unity = {
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_research
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -159,8 +171,8 @@ oc_eternal_blessing_unity = {
 	
 	modifier = {
 		#country_unity_produces_mult = 0.15
-		#country_base_influence_produces_add = 1
-		pop_government_ethic_attraction = 1
+		country_base_influence_produces_add = 1
+		pop_government_ethic_attraction = 0.75
 	}
 
 	effect = {
@@ -187,6 +199,9 @@ oc_eternal_blessing_repair = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_workers
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -198,8 +213,8 @@ oc_eternal_blessing_repair = {
 	}
 	
 	modifier = {
-		ship_hull_regen_add_perc = 0.05
-		ship_armor_regen_add_perc = 0.05
+		ship_hull_regen_add_perc = 0.10
+		ship_armor_regen_add_perc = 0.10
 	}
 
 	effect = {
@@ -226,6 +241,9 @@ oc_eternal_blessing_matter = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_research
 			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_workers
 		}
 	}
 	
@@ -237,11 +255,8 @@ oc_eternal_blessing_matter = {
 	}
 	
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = 0.05
-		station_gatherers_produces_mult = 0.05
-		#planet_metallurgists_produces_mult = 0.05
-		#planet_artisans_produces_mult = 0.05
+		country_base_minerals_produces_add = 100
+		country_base_alloys_produces_add = 50
 	}
 
 	effect = {
@@ -268,6 +283,9 @@ oc_eternal_blessing_speed = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_growth
+			has_edict = oc_eternal_blessing_matter
 		}
 	}
 	
@@ -282,6 +300,49 @@ oc_eternal_blessing_speed = {
 		ship_speed_mult = 0.15
 		ship_windup_mult = -0.5
 		ship_ftl_jumpdrive_range_mult = 0.25
+	}
+
+	effect = {
+		roll_eternal_boon_effect = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_blessing_growth = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_blessing_unity
+			has_edict = oc_eternal_blessing_sensor
+			has_edict = oc_eternal_blessing_workers
+			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_matter
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		pop_growth_speed = 0.05
+		planet_jobs_food_produces_mult = 0.10
+		pop_environment_tolerance = 0.1
 	}
 
 	effect = {
