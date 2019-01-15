@@ -45,13 +45,15 @@
  # Origins Edicts
  ####################################
  edict_oc_eternal_blessing_workers:0 "Eternal Blessing: Godly Aura"
- edict_oc_eternal_blessing_workers_desc:0 "The Eternal shall use their psionic energy to enhance their natural godly aura, inspiring our workers and slaves to work harder."
+ edict_oc_eternal_blessing_workers_desc:0 "The Eternal shall use their psionic energy to enhance their natural godly aura, inspiring our workers."
  edict_oc_eternal_blessing_sensor:0 "Eternal Blessing: Clairvoyance"
  edict_oc_eternal_blessing_sensor_desc:0 "The Eternal shall use their clairvoyance abilities to help our ships see through the darkness of space."
  edict_oc_eternal_blessing_research:0 "Eternal Blessing: Genius Guidance"
  edict_oc_eternal_blessing_research_desc:0 "The Eternal shall use their super genius to guide our scientists towards making technological discoveries."
  edict_oc_eternal_blessing_unity:0 "Eternal Blessing: Empathic Manipulation"
  edict_oc_eternal_blessing_unity_desc:0 "The Eternal shall use their psionic energy to influence the feelings and emotions of our citizens towards our government."
+ edict_oc_eternal_blessing_force:0 "Eternal Blessing: Forcefield Manipulation"
+ edict_oc_eternal_blessing_force_desc:0 "The Eternal shall use their psionic energy to manipulate the energy fields protecting our ship and improve our energy production."
  edict_oc_eternal_blessing_repair:0 "Eternal Blessing: Hull Manipulation"
  edict_oc_eternal_blessing_repair_desc:0 "The Eternal shall use their psionic energy to manipulate technology, allowing our ships to repair faster."
  edict_oc_eternal_blessing_matter:0 "Eternal Blessing: Matter Manipulation"
@@ -61,31 +63,47 @@
  edict_oc_eternal_blessing_growth:0 "Eternal Blessing: Weather Manipulation"
  edict_oc_eternal_blessing_growth_desc:0 "The Eternal shall use their psionic energy to manipulate the weather on planets throughout our empire, increasing our habitability and encouraging growth.."
 
- 
+ edict_oc_eternal_optimization_research:0 "Optimization: Research"
+ edict_oc_eternal_optimization_research_desc:0 "The Uploaded shall utilize their vast computing power to improve our research speed."
+ edict_oc_eternal_optimization_workers:0 "Optimization: Consumption"
+ edict_oc_eternal_optimization_workers_desc:0 "The Uploaded shall utilize their vast computing power to reduce overall planetary consumption."
+ edict_oc_eternal_optimization_sensor:0 "Eternal Blessing: Clairvoyance"
+ edict_oc_eternal_optimization_sensor_desc:0 "The Eternal shall use their clairvoyance abilities to help our ships see through the darkness of space."
+ edict_oc_eternal_optimization_unity:0 "Eternal Blessing: Empathic Manipulation"
+ edict_oc_eternal_optimization_unity_desc:0 "The Eternal shall use their psionic energy to influence the feelings and emotions of our citizens towards our government."
+ edict_oc_eternal_optimization_force:0 "Eternal Blessing: Forcefield Manipulation"
+ edict_oc_eternal_optimization_force_desc:0 "The Eternal shall use their psionic energy to manipulate the energy fields protecting our ship and improve our energy production."
+ edict_oc_eternal_optimization_repair:0 "Eternal Blessing: Hull Manipulation"
+ edict_oc_eternal_optimization_repair_desc:0 "The Eternal shall use their psionic energy to manipulate technology, allowing our ships to repair faster."
+ edict_oc_eternal_optimization_matter:0 "Eternal Blessing: Matter Manipulation"
+ edict_oc_eternal_optimization_matter_desc:0 "The Eternal shall use their psionic energy to manipulate matter, creating minerals and alloys out of air."
+ edict_oc_eternal_optimization_speed:0 "Eternal Blessing: Void Manipulation"
+ edict_oc_eternal_optimization_speed_desc:0 "The Eternal shall use their psionic energy to influence the void, allowing our ships to travel faster."
+
  ####################################
  # Origins Modifiers
  ####################################
  oc_eternal_blessing_passive_small:0 "Small Blessings"
  oc_eternal_blessing_passive_small_desc:0 "The existence of the Eternal is a small blessing to our empire. Many of our citizens pray to the Eternal for salvation."
- oc_eternal_blessing_passive_medium:0 "Medium Blessings"
+ oc_eternal_blessing_passive_medium:0 "Psionic Connection"
  oc_eternal_blessing_passive_medium_desc:0 "Having awaken our species' latent psionic abilities, many citizens of the empire feel comforted while sensing the Eternal's aura."
- oc_eternal_blessing_passive_large:0 "Large Blessings"
+ oc_eternal_blessing_passive_large:0 "Psionic Blessing"
  oc_eternal_blessing_passive_large_desc:0 "Having awaken our species' psionic abilities, our empire benefits from its ability to communicate into the mind of our omniscient Eternal."
- oc_eternal_exhausted:0 "Eternal Exhaustion"
- oc_eternal_exhausted_desc:0 "The Eternal has exhausted her/his psionic abilities attempting a blessing ritual and must rest for some time."
- oc_eternal_mourning:0 "Eternal Mourning"
- oc_eternal_mourning_desc:0 "The death of our Eternal leader has greatly impacted every citizen throughout the empire. Our nation mourns."
+ oc_eternal_exhausted:0 "Eternal Exhausted"
+ oc_eternal_exhausted_desc:0 "While attempting to grant a psionic boon to our empire, our Eternal leader exhausted themselves and must now rest."
+ oc_eternal_mourning:0 "Eternal Mourned"
+ oc_eternal_mourning_desc:0 "Our nation mourns the death of our Eternal leader."
 
  oc_eternal_boost_passive_small:0 "Small Boost"
  oc_eternal_boost_passive_small_desc:0 "The existence of the Uploaded grants a small boost to the scientists of our empire. Many of the researchers benefits from the Uploaded's fast and reliable calculations."
- oc_eternal_boost_passive_medium:0 "Medium Boost"
+ oc_eternal_boost_passive_medium:0 "Cybernetic Connection"
  oc_eternal_boost_passive_medium_desc:0 "Having connected the members our species through advanced cybernetics, many of our citizens are able to benefit from the Uploaded's calculations."
- oc_eternal_boost_passive_large:0 "Large Boost"
+ oc_eternal_boost_passive_large:0 "Synthetic Uplink"
  oc_eternal_boost_passive_large_desc:0 "Having uploaded our species to a mechanical existence, our empire benefits from being able to simultaneously connect to our omniscient leader."
- oc_eternal_error:0 "Uploaded Erred"
+ oc_eternal_error:0 "Uploaded Crashed"
  oc_eternal_error_desc:0 "The Uploaded has faulted while attempting the latest optimization calculations and will now run diagnostic software for some time." 
- oc_eternal_crash:0 "Uploaded Crashed"
- oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation. It will take some time to reboot and recover the Uploaded's mind from the backup server."
+ oc_eternal_crash:0 "Uploaded Offline"
+ oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation. It will take some time to upload our new leader to the galactic network."
  
  ####################################
  # Origins Start Messages
@@ -105,10 +123,10 @@
  ####################################
  # Origins Events
  ####################################
- origins_civics_random_leader_events.100.name:0 "Eternal Exhausted"
- origins_civics_random_leader_events.100.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge.\n\nWe will be unable to access our Eternal's psionic blessings for some time."
- origins_civics_random_leader_events.100.name:0 "Uploaded Error"
- origins_civics_random_leader_events.100.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause.\n\nWe will be unable to access our Uploaded's optimization programs for some time."
+ origins_civics_random_leader_events.101.name:0 "Eternal Exhausted"
+ origins_civics_random_leader_events.101.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge.\n\nWe will be unable to access our Eternal's psionic blessings for some time."
+ origins_civics_random_leader_events.111.name:0 "Uploaded Error"
+ origins_civics_random_leader_events.111.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause.\n\nWe will be unable to access our Uploaded's optimization programs for some time."
  
 
  

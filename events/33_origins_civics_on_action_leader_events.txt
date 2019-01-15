@@ -71,6 +71,24 @@ event = {
 	}
 }
 
+# New Leaders Get Clinically Eternal Trait
+country_event = {
+	id = origins_civics_on_action_leader_events.99
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_oc_clinically_eternal_civic = yes
+	}
+
+	immediate = {
+		from = {
+			add_trait = leader_trait_oc_clinically_eternal
+			add_ruler_trait = leader_trait_oc_clinically_eternal
+		}
+	}
+}
+
 # Eternal Blessing Unavailable Notification Event
 country_event = {
 	id = origins_civics_on_action_leader_events.101

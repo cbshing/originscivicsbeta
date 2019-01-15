@@ -247,3 +247,7 @@ roll_eternal_optimization_effect = {
 		}
 	}
 }
+
+change_leader_to_robot = {
+
+}
