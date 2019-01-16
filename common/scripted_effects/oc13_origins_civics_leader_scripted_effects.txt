@@ -282,6 +282,7 @@ create_digitally_eternal_robot_leader = {
 	random_owned_leader = {
 		limit = { leader_class = ruler }
 		change_species = event_target:new_robotic_leader
+		species = { set_species_identity = this }
 		change_leader_portrait = species
 		add_trait = leader_trait_oc_digitally_eternal
 		add_ruler_trait = leader_trait_oc_digitally_eternal
