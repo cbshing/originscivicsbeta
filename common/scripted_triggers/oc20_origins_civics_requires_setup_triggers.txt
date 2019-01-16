@@ -837,7 +837,7 @@ oc_requires_secondary_species_preference_change = {
 		has_oc_corp_syncretic_evolution_civic = yes
 		has_machine_assimilator_civic = yes
 		has_machine_servitor_civic = yes
-		has_country_flag = starts_with_two_species
+		#has_country_flag = starts_with_two_species
 	}
 	host_has_dlc = "Utopia" 
 }
@@ -966,7 +966,7 @@ oc_requires_eternal_leader_ruler_trait = {
 	OR = {
 		has_oc_eternal_leader_civic = yes
 		has_oc_corp_eternal_leader_civic = yes
-		has_country_flag = starts_with_eternal_leader
+		#has_country_flag = starts_with_eternal_leader
 	}
 	host_has_dlc = "Utopia"
 }
@@ -976,7 +976,7 @@ oc_requires_digitally_eternal_ruler_trait = {
 	OR = {
 		has_oc_digitally_eternal_civic = yes
 		has_oc_corp_digitally_eternal_civic = yes
-		has_country_flag = starts_with_digitally_eternal_leader
+		#has_country_flag = starts_with_digitally_eternal_leader
 	}
 	host_has_dlc = "Utopia"
 }
@@ -985,7 +985,7 @@ oc_requires_digitally_eternal_ruler_trait = {
 oc_requires_clinically_eternal_leader_trait = {
 	OR = {
 		has_oc_clinically_eternal_civic = yes
-		has_country_flag = starts_with_clinically_eternal_leaders
+		#has_country_flag = starts_with_clinically_eternal_leaders
 	}
 	host_has_dlc = "Utopia"
 }
