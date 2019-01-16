@@ -29,6 +29,7 @@ has_oc_codominant_evolution_civic = {
 		has_valid_civic = civic_cbshing_codominant_evolution
 		has_country_flag = codominant_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -69,6 +70,7 @@ has_oc_post_war_of_worlds_civic = {
 		#has_valid_civic = civic_oc_post_war_of_worlds
 		has_country_flag = post_wow_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -77,6 +79,7 @@ has_oc_eternal_leader_civic = {
 		has_valid_civic = civic_cbshing_eternal_leader
 		has_country_flag = eternal_leader_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -85,6 +88,7 @@ has_oc_clinically_eternal_civic = {
 		#has_valid_civic = civic_oc_clinically_eternal
 		has_country_flag = clinically_eternal_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -93,6 +97,7 @@ has_oc_digitally_eternal_civic = {
 		has_valid_civic = civic_oc_digitally_eternal
 		has_country_flag = digitally_eternal_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -125,6 +130,7 @@ has_oc_nuclear_vault_civic = {
 		has_valid_civic = civic_cbshing_nuclear_vault
 		has_country_flag = nuked_vault_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -133,6 +139,7 @@ has_oc_nuclear_mutation_civic = {
 		has_valid_civic = civic_cbshing_nuclear_mutation
 		has_country_flag = nuked_mutation_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -141,6 +148,7 @@ has_oc_voidborne_civic = {
 		#has_valid_civic = civic_cbshing_voidborne
 		has_country_flag = voidborne_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 ### hive empires
@@ -151,6 +159,7 @@ has_oc_hive_nuclear_vault_civic = {
 		has_valid_civic = civic_oc_hive_nuclear_vault
 		has_country_flag = nuked_vault_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -159,6 +168,7 @@ has_oc_hive_nuclear_mutation_civic = {
 		has_valid_civic = civic_oc_hive_nuclear_mutation
 		has_country_flag = nuked_mutation_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -167,6 +177,7 @@ has_oc_hive_voidborne_civic = {
 		#has_valid_civic = civic_oc_hive_voidborne
 		has_country_flag = voidborne_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -175,6 +186,7 @@ has_oc_hive_life_seeded_civic = {
 		has_valid_civic = civic_oc_hive_life_seeded
 		has_country_flag = life_seeded_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 has_oc_hive_post_apocalyptic_civic = {
@@ -182,6 +194,7 @@ has_oc_hive_post_apocalyptic_civic = {
 		has_valid_civic = civic_oc_hive_post_apocalyptic
 		has_country_flag = post_apocalyptic_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -200,6 +213,7 @@ has_oc_robo_nuked_start_civic = {
 		has_valid_civic = civic_cbshing_robo_nuked_start
 		has_country_flag = robo_nuked_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -227,6 +241,7 @@ has_oc_corp_syncretic_evolution_civic = {
 		#has_valid_civic = civic_oc_corp_syncretic_evolution
 		has_country_flag = syncretic_evolution_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -235,6 +250,7 @@ has_oc_corp_mechanists_civic = {
 		#has_valid_civic = civic_oc_corp_mechanists
 		has_country_flag = mechanist_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -243,6 +259,7 @@ has_oc_corp_life_seeded_civic = {
 		#has_valid_civic = civic_oc_corp_life_seeded
 		has_country_flag = life_seeded_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
  
 # scope: country 
@@ -251,6 +268,7 @@ has_oc_corp_post_apocalyptic_civic = {
 		#has_valid_civic = civic_oc_corp_post_apocalyptic
 		has_country_flag = post_apocalyptic_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -259,6 +277,7 @@ has_oc_corp_codominant_evolution_civic = {
 		#has_valid_civic = civic_oc_corp_codominant_evolution
 		has_country_flag = codominant_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -299,6 +318,7 @@ has_oc_corp_post_war_of_worlds_civic = {
 		#has_valid_civic = civic_oc_corp_post_war_of_worlds
 		has_country_flag = post_wow_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -307,6 +327,7 @@ has_oc_corp_eternal_leader_civic = {
 		#has_valid_civic = civic_oc_corp_eternal_leader
 		has_country_flag = eternal_leader_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -315,6 +336,7 @@ has_oc_corp_clinically_eternal_civic = {
 		#has_valid_civic = civic_oc_corp_clinically_eternal
 		has_country_flag = clinically_eternal_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -323,6 +345,7 @@ has_oc_corp_digitally_eternal_civic = {
 		#has_valid_civic = civic_oc_corp_digitally_eternal
 		has_country_flag = digitally_eternal_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 # scope: country 
@@ -355,6 +378,7 @@ has_oc_corp_nuclear_vault_civic = {
 		#has_valid_civic = civic_oc_corp_nuclear_vault
 		has_country_flag = nuked_vault_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -363,6 +387,7 @@ has_oc_corp_nuclear_mutation_civic = {
 		#has_valid_civic = civic_oc_corp_nuclear_mutation
 		has_country_flag = nuked_mutation_country
 	}
+	host_has_dlc = "Apocalypse" 
 }
 
 # scope: country 
@@ -371,6 +396,7 @@ has_oc_corp_voidborne_civic = {
 		#has_valid_civic = civic_oc_corp_voidborne
 		has_country_flag = voidborne_country
 	}
+	host_has_dlc = "Utopia"
 }
 
 
