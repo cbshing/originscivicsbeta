@@ -14,17 +14,14 @@ building_oc_eternal_mausoleum = {
 	potential = {
 		exists = planet
 		planet = { is_capital = yes }
-		owner = { has_country_flag = oc_lost_eternal_leader }
+		owner = { has_country_flag = oc_first_eternal_leader_died }
+		owner = { oc_requires_eternal_leader_ruler_trait = yes }
 	}	
 	
 	planet_modifier  = {
 		job_high_priest_add = 2
 		job_priest_add = 10
 		pop_ethic_spiritualist_attraction_mult = 0.20
-	}
-	
-	effect = {
-		owner = { remove_modifier = oc_eternal_mourning}
 	}
 	
 	resources = {
