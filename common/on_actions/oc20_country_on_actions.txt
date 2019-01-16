@@ -1,0 +1,14 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		origins_civics_on_action_leader_events.100 # Passive Boon Check Event
+	}
+}
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		origins_civics_on_action_leader_events.99 # Clinically Eternal gets trait
+	}
+}

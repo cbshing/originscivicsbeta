@@ -80,8 +80,8 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
-			add_modifier = { modifier = oc_eternal_exhausted days = 1800 random = 1200 }
-			country_event = { id = origins_civics_random_leader_events.100 days = 1 }
+			add_modifier = { modifier = oc_eternal_exhausted days = 1800 }
+			country_event = { id = origins_civics_on_action_leader_events.101 days = 1 }
 		}
 		1 = { #kill leader & death modifier
 			modifier = {
@@ -127,7 +127,7 @@ roll_eternal_boon_effect = {
 				owner = { has_ascension_perk = ap_transcendence }
 			}
 			add_modifier = { modifier = oc_eternal_mourning days = 1800 }
-			#country_event kill leader
+			kill_leader = { type = ruler }
 		}
 	}
 }
@@ -196,8 +196,8 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
-			add_modifier = { modifier = oc_eternal_loading days = 1800 random = 1200 }
-			country_event = { id = origins_civics_random_leader_events.101 days = 1 }
+			add_modifier = { modifier = oc_eternal_error days = 1800 }
+			country_event = { id = origins_civics_on_action_leader_events.111 days = 1 }
 		}
 		2 = { #death modifier
 			modifier = {
@@ -242,12 +242,48 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
-			add_modifier = { modifier = oc_eternal_reboot days = 1800 }
-			#country_event kill leader
+			add_modifier = { modifier = oc_eternal_crash days = 3600 }
+			kill_leader = { type = ruler }
 		}
 	}
 }
 
-change_leader_to_robot = {
-
+create_digitally_eternal_robot_leader = {
+	create_species = {
+		name = this
+		namelist = this
+		plural = this
+		class = "ROBOT"
+		portrait = "default_robot"
+		traits = {
+			trait = "trait_mechanical"
+		}
+		
+		effect = {
+			if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
+				prev = {
+					switch = {
+						trigger = is_species_class
+						HUM = { prev = { change_species_characteristics = { portrait = "sd_hum_robot" } } }
+						MAM = { prev = { change_species_characteristics = { portrait = "sd_mam_robot" } } }
+						REP = { prev = { change_species_characteristics = { portrait = "sd_rep_robot" } } }
+						AVI = { prev = { change_species_characteristics = { portrait = "sd_avi_robot" } } }
+						ART = { prev = { change_species_characteristics = { portrait = "sd_art_robot" } } }
+						MOL = { prev = { change_species_characteristics = { portrait = "sd_mol_robot" } } }
+						FUN = { prev = { change_species_characteristics = { portrait = "sd_fun_robot" } } }
+						PLANT = { prev = { change_species_characteristics = { portrait = "sd_pla_robot" } } }
+					}
+				}
+			}
+			
+			save_event_target_as = new_robotic_leader
+		}
+	}
+	random_owned_leader = {
+		limit = { leader_class = ruler }
+		change_species = event_target:new_robotic_leader
+		change_leader_portrait = species
+		add_trait = leader_trait_oc_digitally_eternal
+		add_ruler_trait = leader_trait_oc_digitally_eternal
+	}
 }

@@ -7,15 +7,15 @@
  #Regular Empire
  civic_cbshing_eternal_leader:0 "Eternal Leader"
  civic_cbshing_eternal_leader_desc:0 "This society has been long guided by a ruler who is Eternal."
- civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic blessings.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
  
  civic_oc_digitally_eternal:0 "Digitally Eternal"
  civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruler who uploaded their consciousness to a computer long ago."
- civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being a Machine Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
 
  civic_oc_clinically_eternal:0 "Clinically Eternal"
- civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruling class that prolongs their life through the use of advanced medications."
- civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your leaders having the §Y$leader_trait_oc_clinically_eternal$§! trait, allowing them to live for 500 more years.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ civic_oc_clinically_eternal_desc:0 "This society has been long guided by a ruling class that prolongs their life through the use of advanced medications."
+ civic_tooltip_oc_clinically_eternal_effects:1 "Start the game with your leaders having the §Y$leader_trait_oc_clinically_eternal$§! trait, allowing them to live for 500 more years.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
  
  #Corporate Empire (Unused)
  civic_oc_corp_eternal_leader:0 "Eternal CEO"
@@ -32,7 +32,7 @@
  leader_trait_oc_eternal_leader_weakened:0 "Young Eternal"
  leader_trait_oc_eternal_leader_weakened_desc:0 "This leader is an Eternal, but immature with their psionic powers. After training for several decades she/he will reach her/his true potential"
  leader_trait_oc_digitally_eternal:0 "Uploaded"
- leader_trait_oc_digitally_eternal_desc:0 "This leader Uploaded their consciousness to the empire's computer networks long ago."
+ leader_trait_oc_digitally_eternal_desc:0 "This leader had their consciousness Uploaded to the empire's computer networks long ago."
  leader_trait_oc_clinically_eternal:0 "Clinically Eternal"
  leader_trait_oc_clinically_eternal_desc:0 "This leader adheres to a strict medication and exercise regiment which prolongs their life for several hundred years."
   
@@ -61,25 +61,30 @@
  edict_oc_eternal_blessing_speed:0 "Eternal Blessing: Void Manipulation"
  edict_oc_eternal_blessing_speed_desc:0 "The Eternal shall use their psionic energy to influence the void, allowing our ships to travel faster."
  edict_oc_eternal_blessing_growth:0 "Eternal Blessing: Weather Manipulation"
- edict_oc_eternal_blessing_growth_desc:0 "The Eternal shall use their psionic energy to manipulate the weather on planets throughout our empire, increasing our habitability and encouraging growth.."
+ edict_oc_eternal_blessing_growth_desc:0 "The Eternal shall use their psionic energy to manipulate the weather on planets throughout our empire, improving crop yield and living conditions."
 
- edict_oc_eternal_optimization_research:0 "Optimization: Research"
- edict_oc_eternal_optimization_research_desc:0 "The Uploaded shall utilize their vast computing power to improve our research speed."
- edict_oc_eternal_optimization_workers:0 "Optimization: Consumption"
- edict_oc_eternal_optimization_workers_desc:0 "The Uploaded shall utilize their vast computing power to reduce overall planetary consumption."
- edict_oc_eternal_optimization_sensor:0 "Eternal Blessing: Clairvoyance"
- edict_oc_eternal_optimization_sensor_desc:0 "The Eternal shall use their clairvoyance abilities to help our ships see through the darkness of space."
- edict_oc_eternal_optimization_unity:0 "Eternal Blessing: Empathic Manipulation"
- edict_oc_eternal_optimization_unity_desc:0 "The Eternal shall use their psionic energy to influence the feelings and emotions of our citizens towards our government."
- edict_oc_eternal_optimization_force:0 "Eternal Blessing: Forcefield Manipulation"
- edict_oc_eternal_optimization_force_desc:0 "The Eternal shall use their psionic energy to manipulate the energy fields protecting our ship and improve our energy production."
- edict_oc_eternal_optimization_repair:0 "Eternal Blessing: Hull Manipulation"
- edict_oc_eternal_optimization_repair_desc:0 "The Eternal shall use their psionic energy to manipulate technology, allowing our ships to repair faster."
- edict_oc_eternal_optimization_matter:0 "Eternal Blessing: Matter Manipulation"
- edict_oc_eternal_optimization_matter_desc:0 "The Eternal shall use their psionic energy to manipulate matter, creating minerals and alloys out of air."
- edict_oc_eternal_optimization_speed:0 "Eternal Blessing: Void Manipulation"
- edict_oc_eternal_optimization_speed_desc:0 "The Eternal shall use their psionic energy to influence the void, allowing our ships to travel faster."
+ edict_oc_eternal_optimization_research:0 "Optimization Boon: Research Labs"
+ edict_oc_eternal_optimization_research_desc:0 "The Uploaded shall utilize their computing power to speed up research."
+ edict_oc_eternal_optimization_civindustry:0 "Optimization Boon: Civilian Industry"
+ edict_oc_eternal_optimization_civindustry_desc:0 "The Uploaded shall utilize their computing power to improve the productivity of our civilian industry."
+ edict_oc_eternal_optimization_milindustry:0 "Optimization Boon: Military Industry"
+ edict_oc_eternal_optimization_milindustry_desc:0 "The Uploaded shall utilize their computing power to improve the productivity of our arms industry."
+ edict_oc_eternal_optimization_sensor:0 "Optimization Boon: Predictive Exploration"
+ edict_oc_eternal_optimization_sensor_desc:0 "The Uploaded shall utilize their computing power to interpret extraterrestrial signals, predicting likely locations of alien artifacts."
+ edict_oc_eternal_optimization_unity:0 "Optimization Boon: Information Manipulation"
+ edict_oc_eternal_optimization_unity_desc:0 "The Uploaded shall utilize their computing power to manipulate information in our empire, improving our citizen's views of our government."
+ edict_oc_eternal_optimization_force:0 "Optimization Boon: Market Manipulation"
+ edict_oc_eternal_optimization_force_desc:0 "The Uploaded shall utilize their computing power to manipulate markets, improving our exchange rate and increasing our energy production."
+ edict_oc_eternal_optimization_repair:0 "Optimization Boon: Advanced Ship Modeling"
+ edict_oc_eternal_optimization_repair_desc:0 "The Uploaded shall utilize their computing power to improve ship design and modeling, allowing our ships to be constructed faster."
+ edict_oc_eternal_optimization_matter:0 "Optimization Boon: Advanced Architecture"
+ edict_oc_eternal_optimization_matter_desc:0 "The Uploaded shall utilize their computing power to improve architectural design and modeling, allowing our buildings to be constructed faster."
+ edict_oc_eternal_optimization_speed:0 "Optimization Boon: Advanced FTL"
+ edict_oc_eternal_optimization_speed_desc:0 "The Uploaded shall utilize their computing power to chart faster travel paths through the void."
+ edict_oc_eternal_optimization_growth:0 "Optimization Boon: Advanced Weather Modeling"
+ edict_oc_eternal_optimization_growth_desc:0 "The Uploaded shall utilize their computing power to better model planetary weather patterns, improving crop yield and living conditions."
 
+ 
  ####################################
  # Origins Modifiers
  ####################################

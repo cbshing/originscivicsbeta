@@ -3,74 +3,6 @@ namespace = origins_civics_on_action_leader_events
 
 ### On Action Leader Events
 
-
-# Eternal Passive Upgrade (check every month if ascension perk)
-event = {
-	id = origins_civics_on_action_leader_events.100
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		any_country = { limit = { has_immortal_leaders = yes } }
-	}
-	
-	every_country = {
-		limit = { has_immortal_leaders = yes }
-		if = { 
-			limit = { 
-				has_oc_eternal_leader_civic = yes
-				any_owned_leader = {
-					leader_class = ruler
-					has_ruler_trait = leader_trait_oc_eternal_leader
-				}
-				owner_species = { has_trait = trait_latent_psionic }
-				has_ascension_perk = ap_mind_over_matter
-			}
-			add_modifier = { modifier = oc_eternal_blessing_passive_medium days = -1 }
-		}
-		else_if = { 
-			limit = { 
-				has_oc_digitally_eternal_civic = yes
-				any_owned_leader = {
-					leader_class = ruler
-					has_ruler_trait = leader_trait_oc_digitally_eternal
-				}
-				owner_species = { has_trait = trait_cybernetic }
-				has_ascension_perk = ap_the_flesh_is_weak
-				NOT = { has_modifier = oc_eternal_crash }
-			}
-			add_modifier = { modifier = oc_eternal_boost_passive_medium days = -1 }
-		}
-		else_if = { 
-			limit = { 
-				has_oc_eternal_leader_civic = yes
-				any_owned_leader = {
-					leader_class = ruler
-					has_ruler_trait = leader_trait_oc_eternal_leader
-				}
-				owner_species = { has_trait = trait_psionic }
-				has_ascension_perk = ap_transcendence
-			}
-			remove_modifier = oc_eternal_blessing_passive_medium
-			add_modifier = { modifier = oc_eternal_blessing_passive_large days = -1 }
-		}
-		else_if = { 
-			limit = { 
-				has_oc_digitally_eternal_civic = yes
-				any_owned_leader = {
-					leader_class = ruler
-					has_ruler_trait = leader_trait_oc_digitally_eternal
-				}
-				owner_species = { has_trait = trait_mechanical }
-				has_ascension_perk = ap_synthetic_evolution
-				NOT = { has_modifier = oc_eternal_crash }
-			}
-			remove_modifier = oc_eternal_boost_passive_medium
-			add_modifier = { modifier = oc_eternal_boost_passive_large days = -1 }
-		}
-	}
-}
-
 # New Leaders Get Clinically Eternal Trait
 country_event = {
 	id = origins_civics_on_action_leader_events.99
@@ -88,12 +20,80 @@ country_event = {
 		}
 	}
 }
+# Eternal Passive Upgrade (check every month if ascension perk)
+event = {
+	id = origins_civics_on_action_leader_events.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = { oc_has_immortal_rulers_civics = yes }
+	}
+	
+	immediate = {
+		every_country = {
+			limit = { oc_has_immortal_rulers_civics = yes }
+			if = { 
+				limit = { 
+					has_oc_eternal_leader_civic = yes
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+					owner_species = { has_trait = trait_latent_psionic }
+					has_ascension_perk = ap_mind_over_matter
+				}
+				add_modifier = { modifier = oc_eternal_blessing_passive_medium days = -1 }
+			}
+			else_if = { 
+				limit = { 
+					has_oc_digitally_eternal_civic = yes
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+					owner_species = { has_trait = trait_cybernetic }
+					has_ascension_perk = ap_the_flesh_is_weak
+					NOT = { has_modifier = oc_eternal_crash }
+				}
+				add_modifier = { modifier = oc_eternal_boost_passive_medium days = -1 }
+			}
+			else_if = { 
+				limit = { 
+					has_oc_eternal_leader_civic = yes
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_eternal_leader
+					}
+					owner_species = { has_trait = trait_psionic }
+					has_ascension_perk = ap_transcendence
+				}
+				remove_modifier = oc_eternal_blessing_passive_medium
+				add_modifier = { modifier = oc_eternal_blessing_passive_large days = -1 }
+			}
+			else_if = { 
+				limit = { 
+					has_oc_digitally_eternal_civic = yes
+					any_owned_leader = {
+						leader_class = ruler
+						has_ruler_trait = leader_trait_oc_digitally_eternal
+					}
+					owner_species = { has_trait = trait_mechanical }
+					has_ascension_perk = ap_synthetic_evolution
+					NOT = { has_modifier = oc_eternal_crash }
+				}
+				remove_modifier = oc_eternal_boost_passive_medium
+				add_modifier = { modifier = oc_eternal_boost_passive_large days = -1 }
+			}
+		}
+	}
+}
 
 # Eternal Blessing Unavailable Notification Event
 country_event = {
 	id = origins_civics_on_action_leader_events.101
 	title = "origins_civics_on_action_leader_events.101.name"
-	picture = GFX_evt_psionics
+	picture = GFX_evt_throne_room
 	show_sound = event_psionic
 	desc = origins_civics_on_action_leader_events.101.a
 	
@@ -115,7 +115,7 @@ country_event = {
 country_event = {
 	id = origins_civics_on_action_leader_events.111
 	title = "origins_civics_on_action_leader_events.111.name"
-	picture = GFX_evt_psionics
+	picture = GFX_evt_glitchy_matrix
 	show_sound = event_psionic
 	desc = origins_civics_on_action_leader_events.111.a
 	
@@ -133,23 +133,43 @@ country_event = {
 	}
 }
 
-# Digitally Eternal Death Event (on_leader_death on_action - 1st time)
+# Digitally Eternal Death Event (on_leader_death on_action)
 country_event = {
 	id = origins_civics_on_action_leader_events.112
 	title = "origins_civics_on_action_leader_events.112.name"
-	picture = GFX_evt_psionics
-	show_sound = event_psionic
-	desc = origins_civics_on_action_leader_events.112.a
+	picture = GFX_evt_throne_room
+	show_sound = event_life_support_fail
+	location = FROM
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = oc_first_eternal_leader_died }
+		}
+		text = origins_civics_on_action_leader_events.112.a
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = oc_first_eternal_leader_died
+		}
+		text = origins_civics_on_action_leader_events.112.b
+	}
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		is_ai = no
 		has_oc_digitally_eternal_civic = yes
-		NOT = { has_country_flag = first_eternal_leader_died }
+		NOT = { has_country_flag = oc_eternal_leader_is_died }
+		FROM = { 
+			is_same_value = root.ruler
+			has_trait = leader_trait_oc_digitally_eternal
+		}
 	}
-	
+		
 	option = {
 		name = UNFORTUNATE
+		hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
+		hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
 	}
 }
 
@@ -164,13 +184,26 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		any_owned_leader = {
-			leader_class = ruler
-			has_ruler_trait = leader_trait_oc_digitally_eternal
+		is_ai = no
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = synthetic_empire }}
+			create_digitally_eternal_robot_leader = yes
+		}
+		else = {
+			random_owned_leader = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_oc_digitally_eternal
+				add_ruler_trait = leader_trait_oc_digitally_eternal
+			}
 		}
 	}
 	
 	option = {
-		name = UNFORTUNATE
+		name = EXCELLENT
 	}
 }

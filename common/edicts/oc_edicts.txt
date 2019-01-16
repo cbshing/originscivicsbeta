@@ -3,7 +3,7 @@
 ##########################################################################
 
 @BoonCost = 1
-@BoonDuration = 3600
+@BoonDuration = 2700
 
 #################
 #Eternal Blessings
@@ -22,7 +22,7 @@ oc_eternal_blessing_workers = {
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_blessing_unity
 			has_edict = oc_eternal_blessing_sensor
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_speed
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_force
@@ -48,7 +48,7 @@ oc_eternal_blessing_workers = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -69,7 +69,7 @@ oc_eternal_blessing_sensor = {
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_blessing_unity
 			has_edict = oc_eternal_blessing_workers
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_speed
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_force
@@ -85,60 +85,60 @@ oc_eternal_blessing_sensor = {
 	}
 	
 	modifier = {
-		ship_sensor_range_add = 10
+		ship_sensor_range_add = 4
 		ship_anomaly_generation_chance_mult = 0.10
 		ship_tracking_add = 5
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
 		weight = 0
 	}
 }
-oc_eternal_blessing_research = {
-	length = @BoonDuration
-	resources = {
-		category = boons
-		cost = {
-			influence = @BoonCost
-		}
-	}
-	
-	allow = {
-		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
-		NOR = { # Not has any other blessing activated
-			has_edict = oc_eternal_blessing_unity
-			has_edict = oc_eternal_blessing_sensor
-			has_edict = oc_eternal_blessing_workers
-			has_edict = oc_eternal_blessing_speed
-			has_edict = oc_eternal_blessing_repair
-			has_edict = oc_eternal_blessing_force
-			has_edict = oc_eternal_blessing_matter
-		}
-	}
-	
-	potential = {
-		any_owned_leader = {
-			leader_class = ruler
-			has_ruler_trait = leader_trait_oc_eternal_leader
-		}
-	}
-	
-	modifier = {
-		all_technology_research_speed = 0.10
-	}
-
-	effect = {
-		roll_eternal_boon_effect = yes
-	}
-	
-	ai_weight = {
-		weight = 0
-	}
-}
+#oc_eternal_blessing_research = {
+#	length = @BoonDuration
+#	resources = {
+#		category = boons
+#		cost = {
+#			influence = @BoonCost
+#		}
+#	}
+#	
+#	allow = {
+#		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
+#		NOR = { # Not has any other blessing activated
+#			has_edict = oc_eternal_blessing_unity
+#			has_edict = oc_eternal_blessing_sensor
+#			has_edict = oc_eternal_blessing_workers
+#			has_edict = oc_eternal_blessing_speed
+#			has_edict = oc_eternal_blessing_repair
+#			has_edict = oc_eternal_blessing_force
+#			has_edict = oc_eternal_blessing_matter
+#		}
+#	}
+#	
+#	potential = {
+#		any_owned_leader = {
+#			leader_class = ruler
+#			has_ruler_trait = leader_trait_oc_eternal_leader
+#		}
+#	}
+#	
+#	modifier = {
+#		all_technology_research_speed = 0.10
+#	}
+#
+#	effect = {
+#		roll_eternal_boon_effect = yes
+#	}
+#	
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
 oc_eternal_blessing_unity = {
 	length = @BoonDuration
 	resources = {
@@ -153,7 +153,7 @@ oc_eternal_blessing_unity = {
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_speed
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_force
@@ -176,7 +176,7 @@ oc_eternal_blessing_unity = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -198,7 +198,7 @@ oc_eternal_blessing_force = {
 			has_edict = oc_eternal_blessing_unity
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_speed
 			has_edict = oc_eternal_blessing_matter
@@ -218,7 +218,7 @@ oc_eternal_blessing_force = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -241,7 +241,7 @@ oc_eternal_blessing_repair = {
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
 			has_edict = oc_eternal_blessing_speed
-			has_edict = oc_eternal_blessing_workers
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_force
 			has_edict = oc_eternal_blessing_matter
 		}
@@ -260,7 +260,7 @@ oc_eternal_blessing_repair = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -281,7 +281,7 @@ oc_eternal_blessing_matter = {
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_blessing_unity
 			has_edict = oc_eternal_blessing_sensor
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_speed
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_force
@@ -302,7 +302,7 @@ oc_eternal_blessing_matter = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -324,7 +324,7 @@ oc_eternal_blessing_speed = {
 			has_edict = oc_eternal_blessing_unity
 			has_edict = oc_eternal_blessing_sensor
 			has_edict = oc_eternal_blessing_workers
-			has_edict = oc_eternal_blessing_research
+			has_edict = oc_eternal_blessing_growth
 			has_edict = oc_eternal_blessing_repair
 			has_edict = oc_eternal_blessing_force
 			has_edict = oc_eternal_blessing_matter
@@ -345,7 +345,49 @@ oc_eternal_blessing_speed = {
 	}
 
 	effect = {
-		roll_eternal_boon_effect = yes
+		hidden_effect = { roll_eternal_boon_effect = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_blessing_growth = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_exhausted } # Not exhausted
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_blessing_sensor
+			has_edict = oc_eternal_blessing_workers
+			has_edict = oc_eternal_blessing_unity
+			has_edict = oc_eternal_blessing_speed
+			has_edict = oc_eternal_blessing_repair
+			has_edict = oc_eternal_blessing_force
+			has_edict = oc_eternal_blessing_matter
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_eternal_leader
+		}
+	}
+	
+	modifier = {
+		planet_jobs_food_produces_mult = 0.1
+		pop_environment_tolerance = 0.1
+	}
+
+	effect = {
+		hidden_effect = { roll_eternal_boon_effect = yes }
 	}
 	
 	ai_weight = {
@@ -365,58 +407,16 @@ oc_eternal_optimization_research = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_loading } # Not crashed
-		NOT = { has_modifier = oc_eternal_reboot } # Not crashed
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
 		NOR = { # Not has any other blessing activated
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-		}
-	}
-	
-	potential = {
-		any_owned_leader = {
-			leader_class = ruler
-			has_ruler_trait = leader_trait_oc_eternal_leader
-		}
-	}
-	
-	modifier = {
-		all_technology_research_speed = 0.15
-	}
-
-	effect = {
-		roll_eternal_optimization_effect = yes
-	}
-	
-	ai_weight = {
-		weight = 0
-	}
-}
-oc_eternal_optimization_consumption = {
-	length = @BoonDuration
-	resources = {
-		category = boons
-		cost = {
-			influence = @BoonCost
-		}
-	}
-	
-	allow = {
-		NOT = { has_modifier = oc_eternal_loading } # Not crashed
-		NOT = { has_modifier = oc_eternal_reboot } # Not crashed
-		NOR = { # Not has any other blessing activated
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
 		}
 	}
 	
@@ -428,18 +428,18 @@ oc_eternal_optimization_consumption = {
 	}
 	
 	modifier = {
-		all_technology_research_speed = 0.15
+		all_technology_research_speed = 0.10
 	}
 
 	effect = {
-		roll_eternal_optimization_effect = yes
+		hidden_effect = { roll_eternal_optimization_effect = yes }
 	}
 	
 	ai_weight = {
 		weight = 0
 	}
 }
-oc_eternal_optimization_consumption = {
+oc_eternal_optimization_civindustry = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -449,16 +449,16 @@ oc_eternal_optimization_consumption = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_loading } # Not crashed
-		NOT = { has_modifier = oc_eternal_reboot } # Not crashed
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
 		}
 	}
 	
@@ -470,19 +470,18 @@ oc_eternal_optimization_consumption = {
 	}
 	
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.10
-		planet_pops_organics_food_upkeep_mult = -0.10
+		planet_artisans_produces_mult = 0.10
 	}
 
 	effect = {
-		roll_eternal_optimization_effect = yes
+		hidden_effect = { roll_eternal_optimization_effect = yes }
 	}
 	
 	ai_weight = {
 		weight = 0
 	}
 }
-oc_eternal_optimization_information = {
+oc_eternal_optimization_milindustry = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -492,16 +491,16 @@ oc_eternal_optimization_information = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_loading } # Not crashed
-		NOT = { has_modifier = oc_eternal_reboot } # Not crashed
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
 		}
 	}
 	
@@ -513,19 +512,18 @@ oc_eternal_optimization_information = {
 	}
 	
 	modifier = {
-		pop_government_ethic_attraction = 0.5	
-		pop_ethics_shift_speed_mult = 0.5
+		planet_metallurgists_produces_mult = 0.10
 	}
 
 	effect = {
-		roll_eternal_optimization_effect = yes
+		hidden_effect = { roll_eternal_optimization_effect = yes }
 	}
 	
 	ai_weight = {
 		weight = 0
 	}
 }
-oc_eternal_optimization_information = {
+oc_eternal_optimization_sensor = {
 	length = @BoonDuration
 	resources = {
 		category = boons
@@ -535,16 +533,16 @@ oc_eternal_optimization_information = {
 	}
 	
 	allow = {
-		NOT = { has_modifier = oc_eternal_loading } # Not crashed
-		NOT = { has_modifier = oc_eternal_reboot } # Not crashed
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
 		NOR = { # Not has any other blessing activated
 			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
-			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
 		}
 	}
 	
@@ -556,12 +554,184 @@ oc_eternal_optimization_information = {
 	}
 	
 	modifier = {
-		pop_government_ethic_attraction = 0.5	
-		pop_ethics_shift_speed_mult = 0.5
+		science_ship_survey_speed = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
 	}
 
 	effect = {
-		roll_eternal_optimization_effect = yes
+		hidden_effect = { roll_eternal_optimization_effect = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_optimization_unity = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_digitally_eternal
+		}
+	}
+	
+	modifier = {
+		country_unity_produces_mult = 0.05
+		#country_base_influence_produces_add = 1
+		pop_government_ethic_attraction = 0.75
+		pop_ethics_shift_speed_mult = 0.75
+	}
+
+	effect = {
+		hidden_effect = { roll_eternal_optimization_effect = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_optimization_force = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_repair
+			has_edict = oc_eternal_optimization_matter
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_digitally_eternal
+		}
+	}
+	
+	modifier = {
+		country_trade_fee = -0.05
+		country_energy_produces_mult = 0.10
+	}
+
+	effect = {
+		hidden_effect = { roll_eternal_optimization_effect = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_optimization_repair = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_matter
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_digitally_eternal
+		}
+	}
+	
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.15
+	}
+
+	effect = {
+		hidden_effect = { roll_eternal_optimization_effect = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+oc_eternal_optimization_matter = {
+	length = @BoonDuration
+	resources = {
+		category = boons
+		cost = {
+			influence = @BoonCost
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = oc_eternal_crash } # Not rebooted
+		NOT = { has_modifier = oc_eternal_error } # Not crashed
+		NOR = { # Not has any other blessing activated
+			has_edict = oc_eternal_optimization_research
+			has_edict = oc_eternal_optimization_civindustry
+			has_edict = oc_eternal_optimization_milindustry
+			has_edict = oc_eternal_optimization_sensor
+			has_edict = oc_eternal_optimization_unity
+			has_edict = oc_eternal_optimization_force
+			has_edict = oc_eternal_optimization_repair
+		}
+	}
+	
+	potential = {
+		any_owned_leader = {
+			leader_class = ruler
+			has_ruler_trait = leader_trait_oc_digitally_eternal
+		}
+	}
+	
+	modifier = {
+		planet_building_build_speed_mult = 0.15
+	}
+
+	effect = {
+		hidden_effect = { roll_eternal_optimization_effect = yes }
 	}
 	
 	ai_weight = {

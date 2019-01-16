@@ -508,10 +508,11 @@ country_event = {
 				}
 			}
 			if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
+				create_digitally_eternal_robot_leader = yes
 				random_owned_leader = {
 					limit = { leader_class = ruler }
-					add_trait = leader_trait_oc_digitally_eternal
-					add_ruler_trait = leader_trait_oc_digitally_eternal
+					#add_trait = leader_trait_oc_digitally_eternal
+					#add_ruler_trait = leader_trait_oc_digitally_eternal
 					set_age = 256
 					set_skill = 4
 				}
@@ -663,15 +664,6 @@ country_event = {
 		
 		## Country Modifiers
 		
-		#Sets Eternal Leader start modifier
-		if = { limit = { oc_requires_eternal_leader_ruler_trait = yes }
-			add_modifier = { modifier = "oc_eternal_boon_stability" days = 3600 }
-		}
-		
-		#Sets Digitally Eternal start modifier
-		if = { limit = { oc_requires_digitally_eternal_ruler_trait = yes }
-			add_modifier = { modifier = "oc_eternal_optimization_exploration" days = 3600 }
-		}
 		
 	}
 }
