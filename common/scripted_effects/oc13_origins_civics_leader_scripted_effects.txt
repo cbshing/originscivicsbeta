@@ -80,7 +80,6 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
-			add_modifier = { modifier = oc_eternal_exhausted days = 1800 }
 			country_event = { id = origins_civics_on_action_leader_events.101 days = 1 }
 		}
 		1 = { #kill leader & death modifier
@@ -126,8 +125,8 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
-			add_modifier = { modifier = oc_eternal_mourning days = 1800 }
 			kill_leader = { type = ruler }
+			country_event = { id = origins_civics_on_action_leader_events.102 days = 1 }
 		}
 	}
 }
