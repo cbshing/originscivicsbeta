@@ -9,6 +9,6 @@ on_monthly_pulse = {
 # scope: country, from: leader
 on_leader_spawned = {
 	events = {
-		origins_civics_on_action_leader_events.99 # Clinically Eternal gets trait
+		origins_civics_on_action_leader_events.140 # Clinically Eternal gets trait
 	}
 }
