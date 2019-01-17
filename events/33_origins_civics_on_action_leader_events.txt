@@ -123,6 +123,16 @@ country_event = {
 		}
 	}
 	
+	immediate = {
+		random_list = {
+			20 = { add_modifier = { modifier = oc_eternal_error days = 1440 } }
+			20 = { add_modifier = { modifier = oc_eternal_error days = 1620 } }
+			20 = { add_modifier = { modifier = oc_eternal_error days = 1800 } }
+			20 = { add_modifier = { modifier = oc_eternal_error days = 1980 } }
+			20 = { add_modifier = { modifier = oc_eternal_error days = 2160 } }
+		}
+	}
+	
 	option = {
 		name = UNFORTUNATE
 	}
@@ -159,6 +169,10 @@ country_event = {
 			is_same_value = root.ruler
 			has_trait = leader_trait_oc_digitally_eternal
 		}
+	}
+	
+	immediate = {
+		add_modifier = { modifier = oc_eternal_crash days = 3600 }
 	}
 		
 	option = {
