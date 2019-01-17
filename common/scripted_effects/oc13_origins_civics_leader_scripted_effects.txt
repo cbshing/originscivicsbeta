@@ -195,7 +195,6 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
-			add_modifier = { modifier = oc_eternal_error days = 1800 }
 			country_event = { id = origins_civics_on_action_leader_events.111 days = 1 }
 		}
 		2 = { #death modifier
@@ -241,8 +240,8 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
-			add_modifier = { modifier = oc_eternal_crash days = 3600 }
 			kill_leader = { type = ruler }
+			country_event = { id = origins_civics_on_action_leader_events.112 days = 1 }
 		}
 	}
 }
