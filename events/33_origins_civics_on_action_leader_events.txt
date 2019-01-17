@@ -3,23 +3,6 @@ namespace = origins_civics_on_action_leader_events
 
 ### On Action Leader Events
 
-# New Leaders Get Clinically Eternal Trait
-country_event = {
-	id = origins_civics_on_action_leader_events.99
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_oc_clinically_eternal_civic = yes
-	}
-
-	immediate = {
-		from = {
-			add_trait = leader_trait_oc_clinically_eternal
-			add_ruler_trait = leader_trait_oc_clinically_eternal
-		}
-	}
-}
 # Eternal Passive Upgrade (check every month if ascension perk)
 event = {
 	id = origins_civics_on_action_leader_events.100
@@ -106,10 +89,22 @@ country_event = {
 		}
 	}
 	
+	immediate = {
+		random_list = {
+			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1440 } }
+			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1620 } }
+			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1800 } }
+			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1980 } }
+			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 2160 } }
+		}
+	}
+	
 	option = {
 		name = UNFORTUNATE
 	}
 }
+
+#add_modifier = { modifier = oc_eternal_mourning days = 1800 }
 
 # Eternal Optimization Unavailable Notification Event
 country_event = {
@@ -205,5 +200,23 @@ country_event = {
 	
 	option = {
 		name = EXCELLENT
+	}
+}
+
+# New Leaders Get Clinically Eternal Trait
+country_event = {
+	id = origins_civics_on_action_leader_events.140
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_oc_clinically_eternal_civic = yes
+	}
+
+	immediate = {
+		from = {
+			add_trait = leader_trait_oc_clinically_eternal
+			add_ruler_trait = leader_trait_oc_clinically_eternal
+		}
 	}
 }
