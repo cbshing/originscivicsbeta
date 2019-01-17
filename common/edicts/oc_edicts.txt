@@ -48,7 +48,8 @@ oc_eternal_blessing_workers = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -91,7 +92,8 @@ oc_eternal_blessing_sensor = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -176,7 +178,8 @@ oc_eternal_blessing_unity = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -218,7 +221,8 @@ oc_eternal_blessing_force = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -260,7 +264,8 @@ oc_eternal_blessing_repair = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -298,11 +303,12 @@ oc_eternal_blessing_matter = {
 	
 	modifier = {
 		country_base_minerals_produces_add = 100
-		country_base_alloys_produces_add = 50
+		country_base_alloys_produces_add = 10
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -345,7 +351,8 @@ oc_eternal_blessing_speed = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {
@@ -387,7 +394,8 @@ oc_eternal_blessing_growth = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_boon_effect = yes }
+		#hidden_effect = { roll_eternal_boon_effect = yes }
+		roll_eternal_boon_effect = yes
 	}
 	
 	ai_weight = {

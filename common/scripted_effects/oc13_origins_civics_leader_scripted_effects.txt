@@ -21,7 +21,7 @@ roll_eternal_boon_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				factor = 500
+				factor = 100
 				galaxy_percentage < 0.05
 			}
 		}
@@ -137,7 +137,7 @@ roll_eternal_optimization_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				factor = 500
+				factor = 100
 				galaxy_percentage < 0.05
 			}
 		}
@@ -249,41 +249,28 @@ roll_eternal_optimization_effect = {
 }
 
 create_digitally_eternal_robot_leader = {
-	create_species = {
-		name = this
-		namelist = this
-		plural = this
-		class = "ROBOT"
-		portrait = "default_robot"
-		traits = {
-			trait = "trait_mechanical"
-		}
-		
-		effect = {
-			if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
-				prev = {
-					switch = {
-						trigger = is_species_class
-						HUM = { prev = { change_species_characteristics = { portrait = "sd_hum_robot" } } }
-						MAM = { prev = { change_species_characteristics = { portrait = "sd_mam_robot" } } }
-						REP = { prev = { change_species_characteristics = { portrait = "sd_rep_robot" } } }
-						AVI = { prev = { change_species_characteristics = { portrait = "sd_avi_robot" } } }
-						ART = { prev = { change_species_characteristics = { portrait = "sd_art_robot" } } }
-						MOL = { prev = { change_species_characteristics = { portrait = "sd_mol_robot" } } }
-						FUN = { prev = { change_species_characteristics = { portrait = "sd_fun_robot" } } }
-						PLANT = { prev = { change_species_characteristics = { portrait = "sd_pla_robot" } } }
-					}
-				}
-			}
-			
-			save_event_target_as = new_robotic_leader
-		}
-	}
 	random_owned_leader = {
 		limit = { leader_class = ruler }
-		change_species = event_target:new_robotic_leader
-		species = { set_species_identity = this }
-		change_leader_portrait = species
+		if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
+			prev = {
+				switch = {
+					trigger = is_species_class
+					HUM = { prev = { change_leader_portrait  = "sd_hum_robot" } }
+					MAM = { prev = { change_leader_portrait  = "sd_mam_robot" } }
+					REP = { prev = { change_leader_portrait  = "sd_rep_robot" } }
+					AVI = { prev = { change_leader_portrait  = "sd_avi_robot" } }
+					ART = { prev = { change_leader_portrait  = "sd_art_robot" } }
+					MOL = { prev = { change_leader_portrait  = "sd_mol_robot" } }
+					FUN = { prev = { change_leader_portrait  = "sd_fun_robot" } }
+					PLANT = { prev = { change_leader_portrait  = "sd_pla_robot" } }
+				}
+			}
+		}
+		else = {
+			change_leader_portrait  = "default_robot"
+		}
+		
+		add_trait = trait_mechanical
 		add_trait = leader_trait_oc_digitally_eternal
 		add_ruler_trait = leader_trait_oc_digitally_eternal
 	}

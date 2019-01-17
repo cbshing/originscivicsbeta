@@ -40,7 +40,7 @@ event = {
 						leader_class = ruler
 						has_ruler_trait = leader_trait_oc_eternal_leader
 					}
-					owner_species = { has_trait = trait_latent_psionic }
+					any_owned_pop = { has_trait = trait_latent_psionic }
 					has_ascension_perk = ap_mind_over_matter
 				}
 				add_modifier = { modifier = oc_eternal_blessing_passive_medium days = -1 }
@@ -52,7 +52,7 @@ event = {
 						leader_class = ruler
 						has_ruler_trait = leader_trait_oc_digitally_eternal
 					}
-					owner_species = { has_trait = trait_cybernetic }
+					any_owned_pop = { has_trait = trait_cybernetic }
 					has_ascension_perk = ap_the_flesh_is_weak
 					NOT = { has_modifier = oc_eternal_crash }
 				}
@@ -65,7 +65,7 @@ event = {
 						leader_class = ruler
 						has_ruler_trait = leader_trait_oc_eternal_leader
 					}
-					owner_species = { has_trait = trait_psionic }
+					any_owned_pop = { has_trait = trait_psionic }
 					has_ascension_perk = ap_transcendence
 				}
 				remove_modifier = oc_eternal_blessing_passive_medium
@@ -78,7 +78,7 @@ event = {
 						leader_class = ruler
 						has_ruler_trait = leader_trait_oc_digitally_eternal
 					}
-					owner_species = { has_trait = trait_mechanical }
+					any_owned_pop = { has_trait = trait_mechanical }
 					has_ascension_perk = ap_synthetic_evolution
 					NOT = { has_modifier = oc_eternal_crash }
 				}

@@ -1,0 +1,504 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+# Establish Trade District Habitat
+decision_trade_district_habitat = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_planetary_government"		
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		owner = { 
+			is_regular_empire = yes 
+		}
+		NOT = { 
+			has_planet_flag = trade_habitat
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_district = district_hab_commercial 	
+		hidden_effect = { set_planet_flag = trade_habitat }
+	}
+	
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
+	}
+}
+
+decision_remove_trade_district_habitat = {
+	owned_planets_only = yes
+	icon = decision_trade_district_habitat
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = trade_habitat
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_remove_trade_habitat_requirements
+			num_districts = { type = district_hab_commercial value < 1 }
+		}
+	}
+	
+	effect = {
+		hidden_effect = { remove_planet_flag = trade_habitat remove_district = district_hab_commercial }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Establish Leisure District Habitat
+decision_cultural_district_habitat = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_planetary_government"		
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		owner = { 
+			is_regular_empire = yes 
+		}
+		NOT = { 
+			has_planet_flag = cultural_habitat
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = research_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_district = district_hab_cultural 	
+		hidden_effect = { set_planet_flag = cultural_habitat }
+	}
+	
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
+	}
+}
+
+decision_remove_cultural_district_habitat = {
+	owned_planets_only = yes
+	icon = decision_cultural_district_habitat
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = cultural_habitat
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_remove_leisure_habitat_requirements
+			num_districts = { type = district_hab_cultural value < 1 }
+		}
+	}
+	
+	effect = {
+		hidden_effect = { remove_planet_flag = cultural_habitat remove_district = district_hab_cultural }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Establish Research District Habitat
+decision_research_district_habitat = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_planetary_government"		
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		NOT = { 
+			has_planet_flag = research_habitat
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = generator_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_district = district_hab_science 	
+		hidden_effect = { set_planet_flag = research_habitat }
+	}
+	
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
+	}
+}
+
+decision_remove_research_district_habitat = {
+	owned_planets_only = yes
+	icon = decision_research_district_habitat
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = research_habitat
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_remove_science_habitat_requirements
+			num_districts = { type = district_hab_science value < 1 }
+		}
+	}
+	
+	effect = {
+		hidden_effect = { remove_planet_flag = research_habitat remove_district = district_hab_science }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Establish Generator District Habitat
+decision_energy_district_habitat = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_planetary_government"		
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		NOT = { 
+			has_planet_flag = energy_habitat
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_district = district_hab_energy 	
+		hidden_effect = { set_planet_flag = energy_habitat }
+	}
+	
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
+	}
+}
+
+decision_remove_energy_district_habitat = {
+	owned_planets_only = yes
+	icon = decision_energy_district_habitat
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = energy_habitat
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_remove_energy_habitat_requirements
+			num_districts = { type = district_hab_energy value < 1 }
+		}
+	}
+	
+	effect = {
+		hidden_effect = { remove_planet_flag = energy_habitat remove_district = district_hab_energy }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Establish Foundry District Habitat
+decision_foundry_district_habitat = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_planetary_government"		
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		NOT = { 
+			has_planet_flag = foundry_habitat
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_no_free_districts
+			free_district_slots > 0
+		}
+		custom_tooltip = {
+			fail_text = decision_district_habitat_too_many_districts
+			hidden_trigger = {
+				NOR = {
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = energy_habitat
+					}
+					AND = {
+						has_planet_flag = trade_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+					}
+					AND = {
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_district = district_hab_foundry 	
+		hidden_effect = { set_planet_flag = foundry_habitat }
+	}
+	
+	ai_weight = { # in testing, never saw AI use; just force AI to certain habitat setups
+		weight = 0
+	}
+}
+
+decision_remove_foundry_district_habitat = {
+	owned_planets_only = yes
+	icon = decision_foundry_district_habitat
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = foundry_habitat
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_remove_foundry_habitat_requirements
+			num_districts = { type = district_hab_foundry value < 1 }
+		}
+	}
+	
+	effect = {
+		hidden_effect = { remove_planet_flag = foundry_habitat remove_district = district_hab_foundry }
+		#hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

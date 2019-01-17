@@ -1,0 +1,1040 @@
+@hab_cost = 500
+@hab_maintenance = 2
+
+# housing adds 10 housing + 2 clerk jobs; or 2 maint. drone jobs
+district_hab_housing = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 10
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	
+	#jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes 
+				has_ascension_perk = ap_voidborn
+				has_ascension_perk = ap_master_builders
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_fallen_empire = no
+				is_regular_empire = yes 
+			}
+		}
+		modifier = {
+			job_clerk_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_fallen_empire = no
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborn
+				has_ascension_perk = ap_master_builders
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_fallen_empire = no
+				is_regular_empire = yes 
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 12
+			free_housing < 0
+		}
+	}
+}
+
+# energy adds 2 housing + 3 technician jobs; or 4 hive technician jobs
+district_hab_energy = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		#from = { is_gestalt = yes }
+		has_planet_flag = energy_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		#owner = { is_gestalt = yes }
+		OR = {
+			custom_tooltip = {
+				fail_text = "has_decision_energy_habitat"
+				hidden_trigger = { 
+					has_planet_flag = energy_habitat
+					owner = { is_ai = no }
+				}
+			}
+			AND = { #ai gets it if is energy_habitat flag anyway
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = energy_habitat
+				}
+			}
+			AND = { #ai gets free pass to district, always need energy
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}	
+			hidden_trigger = { num_districts = { type = district_hab_energy value > 0 } }	
+		}
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	# Output modifier
+	triggered_planet_modifier = {
+		potential = {
+			solar_system = {
+				NOR = {
+					is_star_class = sc_black_hole
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5
+				}				
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = 0.5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			custom_tooltip = {
+				text = "black_hole_or_dyson_sphere_reduce_output"
+				solar_system = {
+					OR = {
+						is_star_class = sc_black_hole
+						has_megastructure = dyson_sphere_3
+						has_megastructure = dyson_sphere_4
+						has_megastructure = dyson_sphere_5
+					}				
+				}
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = -0.5
+		}
+	}
+	
+	
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				owner = { is_fallen_empire = yes }
+				owner = { has_ascension_perk = ap_voidborn }
+			}
+		}		
+		
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				owner = { is_fallen_empire = yes }
+				owner = { has_ascension_perk = ap_master_builders }
+			}
+		}		
+		
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	#jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}		
+		
+		modifier = {
+			job_technician_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}	
+		
+		modifier = {
+			job_technician_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = 4
+		}
+	}
+	
+	# voidborne jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+				has_ascension_perk = ap_voidborn 
+			}
+		}		
+		
+		modifier = {
+			job_technician_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_technician_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_technician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_generator_effect_desc
+	}
+	
+	prerequisites = {
+		tech_power_plant_1
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 3
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			free_housing < 0
+		}
+
+		modifier = {
+			factor = 3
+			any_owned_pop = { 
+				OR = { 
+					is_unemployed = yes 
+					has_job = servant 
+				}
+			}
+		}
+
+		# No one to work it anyway
+		modifier = {
+			factor = 0
+			free_housing > 0
+			NOT = {
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# cultural adds 4 housing + 4 entertainer jobs and 2 cultural worker jobs
+district_hab_cultural = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+		has_planet_flag = cultural_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		owner = { is_gestalt = no }
+		OR = {
+			custom_tooltip = {
+				fail_text = "has_decision_cultural_habitat"
+				hidden_trigger = {
+					has_planet_flag = cultural_habitat
+					owner = { is_ai = no }
+				}
+			}
+			AND = { #ai gets it if is cultural_habitat flag anyway
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = cultural_habitat
+				}
+			}
+			AND = { #ai uses if not gestalt, not sure if useful district
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = research_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+			hidden_trigger = { num_districts = { type = district_hab_cultural value > 0 } }			
+		}
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+		
+	planet_modifier = {
+		planet_housing_add = 4
+		job_entertainer_add = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			planet_housing_add = 2
+			job_entertainer_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_spiritualist = no
+				is_megacorp = no 
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_spiritualist = yes	}
+		}
+		modifier = {
+			job_priest_add = 2
+			pop_ethic_spiritualist_attraction_mult = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+	
+	
+	triggered_desc = {
+		text = job_entertainer_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		text = job_priest_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_megacorp = yes }
+		}
+		text = job_manager_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_spiritualist = no
+				is_megacorp = no 
+			}
+		}
+		text = job_culture_worker_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 3
+			free_amenities < 2
+		}
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# research adds 2 housing + 3 researcher jobs
+district_hab_science = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		has_planet_flag = research_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		OR = {
+			custom_tooltip = {
+				fail_text = "has_decision_research_habitat"
+				hidden_trigger = {
+					has_planet_flag = research_habitat
+					owner = { is_ai = no }
+				}
+			}
+			AND = { #ai gets it if is research_habitat flag anyway
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = research_habitat
+				}
+			}
+			AND = { #ai gets free pass to district, research is good
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					NOR = { # if converted from human
+						has_planet_flag = trade_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}		
+			hidden_trigger = { num_districts = { type = district_hab_science value > 0 } }
+		}
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 3
+		}
+	}
+	
+	#jobs voidborne
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_hive_empire = yes 
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {	
+			job_calculator_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_hive_empire = yes } 
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_machine_empire = yes } 
+		}
+		text = job_calculator_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+
+	#ai_resource_production = {
+	#	science? = 1
+	#	trigger = {
+	#		always = yes
+	#	}
+	#}
+}
+
+# commercial adds 2 housing + 4 clerk jobs
+district_hab_commercial = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+		has_planet_flag = trade_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		owner = { is_gestalt = no }
+		OR = {
+			custom_tooltip = {
+				fail_text = "has_decision_trade_habitat"
+				hidden_trigger = {
+					has_planet_flag = trade_habitat
+					owner = { is_ai = no }
+				}
+			}
+			AND = { #ai gets it if is trade_habitat flag anyway
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = trade_habitat
+				}
+			}
+			AND = { #ai corporate gets trade habitats
+				hidden_trigger = {
+					owner = { is_ai = yes has_authority = auth_corporate }
+					NOR = { # if converted from human
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = foundry_habitat
+					}
+				}
+			}
+			hidden_trigger = { num_districts = { type = district_hab_commercial value > 0 } }	
+		}
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+		
+	planet_modifier = {
+		planet_housing_add = 2
+		job_clerk_add = 4
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			planet_housing_add = 2
+			job_clerk_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			free_amenities < 2
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# foundry adds 2 housing + 3 foundry jobs, machine empires + 4 foundry jobs
+district_hab_foundry = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		has_planet_flag = foundry_habitat
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		OR = {
+			custom_tooltip = {
+				fail_text = "has_decision_foundry_habitat"
+				hidden_trigger = {
+					has_planet_flag = foundry_habitat
+					owner = { is_ai = no }
+				}
+			}
+			AND = { #ai gets it if is foundry_habitat flag anyway
+				hidden_trigger = {
+					owner = { is_ai = yes }
+					has_planet_flag = foundry_habitat
+				}
+			}
+			AND = { #ai gestalt empires only get foundry
+				hidden_trigger = {
+					owner = { is_ai = yes is_gestalt = yes }
+					NOR = { # if converted from human
+						has_planet_flag = research_habitat
+						has_planet_flag = energy_habitat
+						has_planet_flag = cultural_habitat
+						has_planet_flag = trade_habitat
+					}
+				}
+			}
+		}
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	#housing
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	#jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_foundry_add = 3
+		}
+	}
+	
+	#jobs voidborne
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_hive_empire = yes
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes 
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				has_ascension_perk = ap_voidborn 
+			}
+		}
+		modifier = {
+			job_foundry_add = 2
+		}
+	}
+	
+	prerequisites = {
+		tech_alloys_1
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_foundry_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_hive_empire = yes } 
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_machine_empire = yes } 
+		}
+		text = job_fabricator_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 1
+		modifier = 
+		{
+			factor = 4
+			owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 15
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		alloys = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
