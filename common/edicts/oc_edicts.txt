@@ -440,7 +440,8 @@ oc_eternal_optimization_research = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -482,7 +483,8 @@ oc_eternal_optimization_civindustry = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -524,7 +526,8 @@ oc_eternal_optimization_milindustry = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -567,7 +570,8 @@ oc_eternal_optimization_sensor = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -612,7 +616,8 @@ oc_eternal_optimization_unity = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -655,7 +660,8 @@ oc_eternal_optimization_force = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -697,7 +703,8 @@ oc_eternal_optimization_repair = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
@@ -739,7 +746,8 @@ oc_eternal_optimization_matter = {
 	}
 
 	effect = {
-		hidden_effect = { roll_eternal_optimization_effect = yes }
+		#hidden_effect = { roll_eternal_optimization_effect = yes }
+		roll_eternal_optimization_effect = yes
 	}
 	
 	ai_weight = {
