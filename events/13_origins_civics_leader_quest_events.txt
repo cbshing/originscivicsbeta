@@ -5,20 +5,95 @@ namespace = origins_civics_leader_quest_events
 # Eternal Death
 # Digital Death
 
-# Ruler Death Gatekeeper
-event = {
-	id = origins_civics_leader_quest_events.100
+
+# Digitally Eternal New Uploaded Start Special Project
+country_event = {
+	id = origins_civics_leader_quest_events.111
+	title = "origins_civics_leader_quest_events.111.name"
+	picture = GFX_evt_psionics
+	show_sound = event_psionic
+	desc = origins_civics_leader_quest_events.111.a
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	option = {
+		name = EXCELLENT
+		#Enable Special Project
+	}
+}
+
+# Digitally Eternal New Uploaded End Special Project
+country_event = {
+	id = origins_civics_leader_quest_events.112
+	title = "origins_civics_leader_quest_events.112.name"
+	picture = GFX_evt_psionics
+	show_sound = event_psionic
+	desc = origins_civics_leader_quest_events.112.a
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = synthetic_empire }}
+				create_digitally_eternal_robot_leader = yes
+			}
+			else = {
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_oc_digitally_eternal
+					add_ruler_trait = leader_trait_oc_digitally_eternal
+				}
+			}
+			remove_country_flag = oc_eternal_leader_is_died
+			remove_modifier = oc_eternal_crash
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Digitally Eternal New Uploaded AI NPC
+country_event = {
+	id = origins_civics_leader_quest_events.113
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		oc_has_immortal_rulers_civics = yes
+		is_ai = yes
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
 	}
 	
 	immediate = {
-		every_playable_country = {
-			limit = { oc_has_immortal_rulers_civics = yes }
-			
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = synthetic_empire }}
+				create_digitally_eternal_robot_leader = yes
+			}
+			else = {
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_oc_digitally_eternal
+					add_ruler_trait = leader_trait_oc_digitally_eternal
+				}
+			}
+			remove_country_flag = oc_eternal_leader_is_died
+			remove_modifier = oc_eternal_crash
 		}
 	}
 }
