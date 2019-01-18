@@ -27,12 +27,12 @@
 # scope: country 
 oc_is_origins_civics = {
 	OR = {
-		has_syncretic_evolution_civic = yes
-		has_mechanists_civic = yes
-		has_post_apocalyptic_civic = yes
-		has_life_seeded_civic = yes
-		has_machine_assimilator_civic = yes
-		has_machine_servitor_civic = yes
+		#has_syncretic_evolution_civic = yes
+		#has_mechanists_civic = yes
+		#has_post_apocalyptic_civic = yes
+		#has_life_seeded_civic = yes
+		#has_machine_assimilator_civic = yes
+		#has_machine_servitor_civic = yes
 	
 		has_oc_codominant_evolution_civic = yes
 		has_oc_alien_message_civic  = yes
