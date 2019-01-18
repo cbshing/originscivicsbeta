@@ -5,7 +5,7 @@ namespace = origins_civics_on_action_leader_events
 
 # Eternal Passive Upgrade (check every month if ascension perk)
 event = {
-	id = origins_civics_on_action_leader_events.100
+	id = origins_civics_on_action_leader_events.99
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -72,6 +72,35 @@ event = {
 	}
 }
 
+# Ruler Death Gatekeeper (on_ruler_set on_action)
+country_event = {
+	id = origins_civics_on_action_leader_events.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_has_immortal_rulers_civics = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+				has_oc_digitally_eternal_civic = yes
+			}
+			country_event = { id = origins_civics_leader_quest_events.111 days = 30 }
+		}
+		else_if = {
+			limit = {
+				is_ai = no
+				has_oc_digitally_eternal_civic = yes
+			}
+			country_event = { id = origins_civics_leader_quest_events.113 days = 2700 random = 900 }
+		}
+	}
+}
+
 # Eternal Blessing Unavailable Notification Event
 country_event = {
 	id = origins_civics_on_action_leader_events.101
@@ -90,13 +119,7 @@ country_event = {
 	}
 	
 	immediate = {
-		random_list = {
-			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1440 } }
-			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1620 } }
-			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1800 } }
-			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 1980 } }
-			20 = { add_modifier = { modifier = oc_eternal_exhausted days = 2160 } }
-		}
+		add_modifier = { modifier = oc_eternal_exhausted days = 1800 }
 	}
 	
 	option = {
@@ -124,13 +147,7 @@ country_event = {
 	}
 	
 	immediate = {
-		random_list = {
-			20 = { add_modifier = { modifier = oc_eternal_error days = 1440 } }
-			20 = { add_modifier = { modifier = oc_eternal_error days = 1620 } }
-			20 = { add_modifier = { modifier = oc_eternal_error days = 1800 } }
-			20 = { add_modifier = { modifier = oc_eternal_error days = 1980 } }
-			20 = { add_modifier = { modifier = oc_eternal_error days = 2160 } }
-		}
+		add_modifier = { modifier = oc_eternal_error days = 1800 }
 	}
 	
 	option = {
@@ -179,41 +196,6 @@ country_event = {
 		name = UNFORTUNATE
 		hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
 		hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
-	}
-}
-
-# Digitally Eternal New Uploaded (on_ruler_set on_action)
-country_event = {
-	id = origins_civics_on_action_leader_events.113
-	title = "origins_civics_on_action_leader_events.113.name"
-	picture = GFX_evt_psionics
-	show_sound = event_psionic
-	desc = origins_civics_on_action_leader_events.113.a
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	immediate = {
-		if = {
-			limit = { NOT = { has_country_flag = synthetic_empire }}
-			create_digitally_eternal_robot_leader = yes
-		}
-		else = {
-			random_owned_leader = {
-				limit = { leader_class = ruler }
-				add_trait = leader_trait_oc_digitally_eternal
-				add_ruler_trait = leader_trait_oc_digitally_eternal
-			}
-		}
-	}
-	
-	option = {
-		name = EXCELLENT
 	}
 }
 
