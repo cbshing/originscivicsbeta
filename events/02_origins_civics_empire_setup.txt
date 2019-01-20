@@ -656,7 +656,10 @@ country_event = {
 		if = { limit = { oc_has_restore_homeworld_quest_hidden_civics = yes }
 			set_country_flag = origins_restore_homeworld_needed
 		}
-		
+		#Adds Tomb Worm Flag to fix Spiritualist Faction Modifier for Tomb World Start
+		if = { limit = { oc_requires_homeworld_class_to_change_to_nuked = yes }
+			set_country_flag = worm_tomb_ending
+		}		
 		#Sets has constructed habitat flag
 		if = { limit = { oc_requires_megastruture_habitat = yes }
 			set_country_flag = already_built_habitat

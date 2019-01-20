@@ -124,10 +124,11 @@ oc_requires_technologies_setup = {
 oc_requires_country_flags_setup = {
 	OR = {
 		oc_has_restore_homeworld_quest_hidden_civics = yes
+		oc_requires_homeworld_class_to_change_to_nuked = yes
 		oc_requires_megastruture_habitat = yes
 		
-		oc_requires_eternal_leader_ruler_trait = yes
-		oc_requires_digitally_eternal_ruler_trait = yes
+		#oc_requires_eternal_leader_ruler_trait = yes
+		#oc_requires_digitally_eternal_ruler_trait = yes
 	}
 }
 
