@@ -84,7 +84,6 @@
  edict_oc_eternal_optimization_growth:0 "Optimization Boon: Advanced Weather Modeling"
  edict_oc_eternal_optimization_growth_desc:0 "The Uploaded shall utilize their computing power to better model planetary weather patterns, improving crop yield and living conditions."
 
- 
  ####################################
  # Origins Modifiers
  ####################################
@@ -111,11 +110,19 @@
  oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation. It will take some time to upload our new leader to the galactic network."
  
  ####################################
+ # Origins Tooltips
+ ####################################
+ eternal_leader_exhausted:0 "Eternal Leader becomes §RExhausted§"
+ eternal_leader_death:0 "Eternal Leader §RDying§"
+ digitally_eternal_error:0 "Uploaded Leader will §RCrash§"
+ digitally_eternal_crash:0 "Uploaded Leader going §ROffline§"
+ 
+ ####################################
  # Origins Start Messages
  ####################################
  START_SCREEN_PART_TWO_ETERNAL_LEADER:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of stability and scientific progress followed."
  START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
- START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of stability and scientific progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network, [ruler.SheHe] optimized our society to reach its full potential, and an era of stability and scientific progress followed."
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
  START_SCREEN_PART_TWO_CLINICALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Longevity formula was discovered. Monopolizing its potentials, the clinically immortal ruling class unified our society, and an era of stability and scientific progress followed."
 
@@ -128,12 +135,15 @@
  ####################################
  # Origins Events
  ####################################
- origins_civics_random_leader_events.101.name:0 "Eternal Exhausted"
- origins_civics_random_leader_events.101.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge.\n\nWe will be unable to access our Eternal's psionic blessings for some time."
- origins_civics_random_leader_events.111.name:0 "Uploaded Error"
- origins_civics_random_leader_events.111.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause.\n\nWe will be unable to access our Uploaded's optimization programs for some time."
+ origins_civics_leader_quest_events.110: "Need for a New Upload"
  
-
+ origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
+ origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge.\n\n§RWe will be unable to access our Eternal's psionic blessings for some time.§"
+ origins_civics_on_action_leader_events.103.name:0 "Uploaded Crash"
+ origins_civics_on_action_leader_events.103.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause.\n\n§RWe will be unable to access our Uploaded's optimization programs for some time.§"
+ origins_civics_on_action_leader_events.104.name:0 "Death of an Eternal"
+ origins_civics_on_action_leader_events.104.a:0 "Seated on the Everlasting Throne in the Hall of Infinity, the Eternal [root.GetRulerTitle] has passed. For countless generations [root.GetRulerTitle] [fromfrom.GetName] ruled over [root.GetHomeWorldName]. [root.GetRulerTitle] [fromfrom.GetName] was the guiding light for our citizens in the dark times, and now...without [fromfrom.GetHerHis] guidance we must forge a future on our own. Many of our citizens whisper in fear of the uncertainty. Many more clamour about the need to enshrine our great leader so that even in death the [root.GetRulerTitle] can continue to reign over [root.GetName]."
+ origins_civics_on_action_leader_events.104.b:0 "Seated on the Everlasting Throne in the Hall of Infinity, the Eternal [root.GetRulerTitle] has passed. Our citizenry once again mourn the loss of our guiding light. We pray that the high priests will divine the reincarnation of our Eternal and return us to our Eternal's guidance soon."
  
  ####################################
  # Origins Modifiers - Old

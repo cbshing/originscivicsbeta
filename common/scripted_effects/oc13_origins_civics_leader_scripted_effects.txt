@@ -21,7 +21,8 @@ roll_eternal_boon_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				factor = 100
+				#factor = 100
+				factor = 1
 				galaxy_percentage < 0.05
 			}
 		}
@@ -80,11 +81,13 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
-			country_event = { id = origins_civics_on_action_leader_events.101 days = 1 }
+			custom_tooltip = eternal_leader_exhausted
+			country_event = { id = origins_civics_on_action_leader_events.102 days = 1 }
 		}
 		1 = { #kill leader & death modifier
 			modifier = {
-				factor = 0
+				#factor = 0
+				factor = 90
 				galaxy_percentage < 0.40
 			}
 			modifier = {
@@ -125,8 +128,9 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
+			#custom_tooltip = eternal_leader_death
 			kill_leader = { type = ruler }
-			country_event = { id = origins_civics_on_action_leader_events.102 days = 1 }
+			#country_event = { id = origins_civics_on_action_leader_events.104 days = 1 }
 		}
 	}
 }
@@ -196,7 +200,7 @@ roll_eternal_optimization_effect = {
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
 			custom_tooltip = digitally_eternal_error
-			hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.111 days = -1 } }
+			hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.103 days = -1 } }
 		}
 		2 = { #death modifier
 			modifier = {
@@ -241,8 +245,9 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
+			#custom_tooltip = digitally_eternal_crash
 			kill_leader = { type = ruler }
-			hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.112 days = 1 }	}
+			#hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.105 days = 1 }	}
 		}
 	}
 }
@@ -269,7 +274,7 @@ create_digitally_eternal_robot_leader = {
 			change_leader_portrait  = "default_robot"
 		}
 		
-		add_trait = trait_mechanical
+		#add_trait = trait_mechanical
 		add_trait = leader_trait_oc_digitally_eternal
 		add_ruler_trait = leader_trait_oc_digitally_eternal
 	}

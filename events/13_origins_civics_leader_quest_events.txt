@@ -8,11 +8,11 @@ namespace = origins_civics_leader_quest_events
 
 # Digitally Eternal New Uploaded Start Special Project
 country_event = {
-	id = origins_civics_leader_quest_events.111
-	title = "origins_civics_leader_quest_events.111.name"
+	id = origins_civics_leader_quest_events.110
+	title = "origins_civics_leader_quest_events.110.name"
 	picture = GFX_evt_psionics
 	show_sound = event_psionic
-	desc = origins_civics_leader_quest_events.111.a
+	desc = origins_civics_leader_quest_events.110.a
 	
 	is_triggered_only = yes
 	
@@ -30,11 +30,11 @@ country_event = {
 
 # Digitally Eternal New Uploaded End Special Project
 country_event = {
-	id = origins_civics_leader_quest_events.112
-	title = "origins_civics_leader_quest_events.112.name"
+	id = origins_civics_leader_quest_events.111
+	title = "origins_civics_leader_quest_events.111.name"
 	picture = GFX_evt_psionics
 	show_sound = event_psionic
-	desc = origins_civics_leader_quest_events.112.a
+	desc = origins_civics_leader_quest_events.111.a
 	
 	is_triggered_only = yes
 	
@@ -69,7 +69,7 @@ country_event = {
 
 # Digitally Eternal New Uploaded AI NPC
 country_event = {
-	id = origins_civics_leader_quest_events.113
+	id = origins_civics_leader_quest_events.1110
 	hide_window = yes
 	is_triggered_only = yes
 	

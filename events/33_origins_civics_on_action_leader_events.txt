@@ -3,9 +3,56 @@ namespace = origins_civics_on_action_leader_events
 
 ### On Action Leader Events
 
+# Ruler Death Gatekeeper (on_leader_death on_action)
+country_event = {
+	id = origins_civics_on_action_leader_events.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_has_immortal_rulers_civics = yes
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_oc_eternal_leader_civic = yes	}
+			add_modifier = { modifier = oc_eternal_mourning days = 3600 }
+			hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
+			if = {
+				limit = { is_ai = yes } 
+				country_event = { id = origins_civics_leader_quest_events.1100 days = 2700 random = 900 } # AI Leader Revival Project
+			}
+			else_if = {
+				limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } is_ai = no}
+				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
+				country_event = { id = origins_civics_leader_quest_events.100 days = 30 } # Eternal Mausoleum Construction
+
+			}
+			else_if = {
+				limit = { is_ai = no }
+				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
+				country_event = { id = origins_civics_leader_quest_events.101 days = 30 } # Leader Death Revival Special Project
+			}
+		}
+		else_if = {
+			limit = { has_oc_digitally_eternal_civic = yes	}
+			add_modifier = { modifier = oc_eternal_crash days = 3600 }
+			hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
+			if = {
+				limit = { is_ai = yes } 
+				country_event = { id = origins_civics_leader_quest_events.1110 days = 30 } # AI Leader Revival Project
+			}
+			else = {
+				#country_event = { id = origins_civics_on_action_leader_events.105 days = -1 } # Leader Death Notification
+				country_event = { id = origins_civics_leader_quest_events.110 days = 30 } # Leader Death Revival Special Project
+			}
+		}
+	}
+}
+
 # Eternal Passive Upgrade (check every month if ascension perk)
 event = {
-	id = origins_civics_on_action_leader_events.99
+	id = origins_civics_on_action_leader_events.101
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -72,42 +119,13 @@ event = {
 	}
 }
 
-# Ruler Death Gatekeeper (on_ruler_set on_action)
-country_event = {
-	id = origins_civics_on_action_leader_events.100
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		oc_has_immortal_rulers_civics = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	immediate = {
-		if = {
-			limit = {
-				is_ai = no
-				has_oc_digitally_eternal_civic = yes
-			}
-			country_event = { id = origins_civics_leader_quest_events.111 days = 30 }
-		}
-		else_if = {
-			limit = {
-				is_ai = no
-				has_oc_digitally_eternal_civic = yes
-			}
-			country_event = { id = origins_civics_leader_quest_events.113 days = 2700 random = 900 }
-		}
-	}
-}
-
 # Eternal Blessing Unavailable Notification Event
 country_event = {
-	id = origins_civics_on_action_leader_events.101
-	title = "origins_civics_on_action_leader_events.101.name"
-	picture = GFX_evt_throne_room
-	show_sound = event_psionic
-	desc = origins_civics_on_action_leader_events.101.a
+	id = origins_civics_on_action_leader_events.102
+	title = "origins_civics_on_action_leader_events.102.name"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	desc = origins_civics_on_action_leader_events.102.a
 	
 	is_triggered_only = yes
 	
@@ -131,11 +149,11 @@ country_event = {
 
 # Eternal Optimization Unavailable Notification Event
 country_event = {
-	id = origins_civics_on_action_leader_events.111
-	title = "origins_civics_on_action_leader_events.111.name"
+	id = origins_civics_on_action_leader_events.103
+	title = "origins_civics_on_action_leader_events.103.name"
 	picture = GFX_evt_glitchy_matrix
-	show_sound = event_psionic
-	desc = origins_civics_on_action_leader_events.111.a
+	show_sound = event_ancient_drone
+	desc = origins_civics_on_action_leader_events.103.a
 	
 	is_triggered_only = yes
 	
@@ -155,10 +173,10 @@ country_event = {
 	}
 }
 
-# Digitally Eternal Death Event (on_leader_death on_action)
+# Eternal Leader Death Event (on_leader_death on_action)
 country_event = {
-	id = origins_civics_on_action_leader_events.112
-	title = "origins_civics_on_action_leader_events.112.name"
+	id = origins_civics_on_action_leader_events.104
+	title = "origins_civics_on_action_leader_events.104.name"
 	picture = GFX_evt_throne_room
 	show_sound = event_life_support_fail
 	location = FROM
@@ -166,36 +184,70 @@ country_event = {
 		trigger = {
 			NOT = { has_country_flag = oc_first_eternal_leader_died }
 		}
-		text = origins_civics_on_action_leader_events.112.a
+		text = origins_civics_on_action_leader_events.104.a
 	}
-
 	desc = {
 		trigger = {
 			has_country_flag = oc_first_eternal_leader_died
 		}
-		text = origins_civics_on_action_leader_events.112.b
+		text = origins_civics_on_action_leader_events.104.b
 	}
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		NOT = { has_country_flag = oc_eternal_leader_is_died }
+		has_oc_eternal_leader_civic = yes
+		FROM = { 
+			is_same_value = root.ruler
+			has_trait = leader_trait_oc_eternal_leader
+		}
+	}
+		
+	option = {
+		name = UNFORTUNATE
+		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
+			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
+		}
+	}
+}
+
+# Digitally Eternal Death Event (on_leader_death on_action)
+country_event = {
+	id = origins_civics_on_action_leader_events.105
+	title = "origins_civics_on_action_leader_events.105.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_life_support_fail
+	location = FROM
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = oc_first_eternal_leader_died }
+		}
+		text = origins_civics_on_action_leader_events.105.a
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = oc_first_eternal_leader_died
+		}
+		text = origins_civics_on_action_leader_events.105.b
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
 		FROM = { 
 			is_same_value = root.ruler
 			has_trait = leader_trait_oc_digitally_eternal
 		}
 	}
-	
-	immediate = {
-		add_modifier = { modifier = oc_eternal_crash days = 3600 }
-	}
 		
 	option = {
 		name = UNFORTUNATE
-		hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
-		hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
+		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
+			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
+		}
 	}
 }
 

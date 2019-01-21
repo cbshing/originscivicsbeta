@@ -1,7 +1,7 @@
 # No scope, like on_game_start
 on_monthly_pulse = {
 	events = {
-		origins_civics_on_action_leader_events.100 # Passive Boon Check Event
+		origins_civics_on_action_leader_events.101 # Passive Boon Check Event
 	}
 }
 
@@ -10,5 +10,16 @@ on_monthly_pulse = {
 on_leader_spawned = {
 	events = {
 		origins_civics_on_action_leader_events.140 # Clinically Eternal gets trait
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		origins_civics_on_action_leader_events.100 # Immortal Leaders Death Check
+		origins_civics_on_action_leader_events.104 # Eternal Leader Death Text
+		origins_civics_on_action_leader_events.105 # Digitally Eternal Leaders Death Text
 	}
 }
