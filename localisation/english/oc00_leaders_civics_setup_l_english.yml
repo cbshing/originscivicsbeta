@@ -134,7 +134,7 @@
  # Origins Special Projects & Event Chains
  ####################################
  OC_DE_UPLOAD_LEADER_PROJECT:0 "Upload Leader"
- OC_DE_UPLOAD_LEADER_PROJECT_desc:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. While the process will destroy any biological functions [ruler.GetName] may have, [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
+ OC_DE_UPLOAD_LEADER_PROJECT_desc:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. While the process will destroy any bodily functions [ruler.GetName] may have, [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
 
  
  ####################################
