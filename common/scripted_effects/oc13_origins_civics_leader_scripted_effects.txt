@@ -130,6 +130,7 @@ roll_eternal_boon_effect = {
 			}
 			#custom_tooltip = eternal_leader_death
 			kill_leader = { type = ruler }
+			hidden_effect = { set_country_flag = eternal_leader_death_by_boon }
 			#country_event = { id = origins_civics_on_action_leader_events.104 days = 1 }
 		}
 	}
@@ -247,6 +248,7 @@ roll_eternal_optimization_effect = {
 			}
 			#custom_tooltip = digitally_eternal_crash
 			kill_leader = { type = ruler }
+			hidden_effect = { set_country_flag = eternal_leader_death_by_boon }
 			#hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.105 days = 1 }	}
 		}
 	}

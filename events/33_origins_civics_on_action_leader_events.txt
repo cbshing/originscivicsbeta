@@ -19,20 +19,31 @@ country_event = {
 			add_modifier = { modifier = oc_eternal_mourning days = 3600 }
 			hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
 			if = {
-				limit = { is_ai = yes } 
+				limit = { 
+					NOT = { has_country_flag = eternal_leader_death_by_chosen_one } 
+					is_ai = yes 
+				} 
 				country_event = { id = origins_civics_leader_quest_events.1100 days = 2700 random = 900 } # AI Leader Revival Project
 			}
 			else_if = {
-				limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } is_ai = no}
+				limit = { 
+					NOT = { has_country_flag = oc_first_eternal_leader_died } 
+					NOT = { has_country_flag = eternal_leader_death_by_chosen_one } 
+					is_ai = no
+				}
 				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.100 days = 30 } # Eternal Mausoleum Construction
 
 			}
 			else_if = {
-				limit = { is_ai = no }
+				limit = { 
+					NOT = { has_country_flag = eternal_leader_death_by_chosen_one } 
+					is_ai = no 
+				}
 				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.101 days = 30 } # Leader Death Revival Special Project
 			}
+			else = { } 
 		}
 		else_if = {
 			limit = { has_oc_digitally_eternal_civic = yes	}
@@ -142,6 +153,7 @@ country_event = {
 	
 	option = {
 		name = UNFORTUNATE
+		custom_tooltip = origins_civics_on_action_leader_events.102.a.tooltip
 	}
 }
 
@@ -170,6 +182,7 @@ country_event = {
 	
 	option = {
 		name = UNFORTUNATE
+		custom_tooltip = origins_civics_on_action_leader_events.103.a.tooltip
 	}
 }
 
@@ -183,14 +196,50 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = { has_country_flag = oc_first_eternal_leader_died }
+			has_country_flag = eternal_leader_death_by_boon
 		}
 		text = origins_civics_on_action_leader_events.104.a
 	}
 	desc = {
 		trigger = {
 			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = eternal_leader_death_by_boon
 		}
 		text = origins_civics_on_action_leader_events.104.b
+	}
+	desc = {
+		trigger = {
+			has_country_flag = eternal_leader_death_by_chosen_one
+		}
+		text = origins_civics_on_action_leader_events.104.c
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = oc_first_eternal_leader_died }
+			has_country_flag = eternal_leader_death_by_assassin
+		}
+		text = origins_civics_on_action_leader_events.104.d
+	}
+	desc = {
+		trigger = {
+			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = eternal_leader_death_by_assassin
+		}
+		text = origins_civics_on_action_leader_events.104.e
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = oc_first_eternal_leader_died }
+			has_country_flag = eternal_leader_death_in_battle
+		}
+		text = origins_civics_on_action_leader_events.104.f
+	}
+	desc = {
+		trigger = {
+			has_country_flag = oc_first_eternal_leader_died 
+			has_country_flag = eternal_leader_death_in_battle
+		}
+		text = origins_civics_on_action_leader_events.104.g
 	}
 	
 	is_triggered_only = yes
@@ -203,11 +252,24 @@ country_event = {
 			has_trait = leader_trait_oc_eternal_leader
 		}
 	}
+	
+	immediate = {
+		remove_country_flag = eternal_leader_death_by_boon
+	}
 		
 	option = {
-		name = UNFORTUNATE
+		name = TERRIBLE
 		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
 			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
+		}
+		if = { limit = { has_country_flag = eternal_leader_death_by_chosen_one }
+			hidden_effect = { remove_modifier = oc_eternal_mourning }
+		}
+		if = { limit = { has_country_flag = eternal_leader_death_by_assassin }
+			hidden_effect = { 
+				remove_modifier = oc_eternal_mourning 
+				#add_modifier = { modifier = oc_eternal_anger days = 1800 }
+			}
 		}
 	}
 }
@@ -222,13 +284,14 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = { has_country_flag = oc_first_eternal_leader_died }
+			has_country_flag = eternal_leader_death_by_boon
 		}
 		text = origins_civics_on_action_leader_events.105.a
 	}
-
 	desc = {
 		trigger = {
 			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = eternal_leader_death_by_boon
 		}
 		text = origins_civics_on_action_leader_events.105.b
 	}

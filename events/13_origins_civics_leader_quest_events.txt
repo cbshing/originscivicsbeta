@@ -12,7 +12,8 @@ country_event = {
 	title = "origins_civics_leader_quest_events.110.name"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.a
+	desc = origins_civics_leader_quest_events.110.desc
+	trackable = yes
 	
 	is_triggered_only = yes
 	
@@ -23,8 +24,14 @@ country_event = {
 	}
 	
 	option = {
-		name = EXCELLENT
-		#Enable Special Project
+		name = SHALL_BE_DONE
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_DE_UPLOAD_LEADER"
+				location = this
+				owner = root
+			}
+		}
 	}
 }
 
