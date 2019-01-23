@@ -216,14 +216,14 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = { has_country_flag = oc_first_eternal_leader_died }
-			has_country_flag = eternal_leader_death_by_assassin
+			has_country_flag = eternal_leader_death_by_concubine
 		}
 		text = origins_civics_on_action_leader_events.104.d
 	}
 	desc = {
 		trigger = {
 			has_country_flag = oc_first_eternal_leader_died
-			has_country_flag = eternal_leader_death_by_assassin
+			has_country_flag = eternal_leader_death_by_concubine
 		}
 		text = origins_civics_on_action_leader_events.104.e
 	}
@@ -265,9 +265,10 @@ country_event = {
 		if = { limit = { has_country_flag = eternal_leader_death_by_chosen_one }
 			hidden_effect = { remove_modifier = oc_eternal_mourning }
 		}
-		if = { limit = { has_country_flag = eternal_leader_death_by_assassin }
+		if = { limit = { has_country_flag = eternal_leader_death_by_concubine }
 			hidden_effect = { 
 				remove_modifier = oc_eternal_mourning 
+				remove_country_flag = eternal_leader_death_by_concubine
 				#add_modifier = { modifier = oc_eternal_anger days = 1800 }
 			}
 		}
@@ -279,7 +280,7 @@ country_event = {
 	id = origins_civics_on_action_leader_events.105
 	title = "origins_civics_on_action_leader_events.105.name"
 	picture = GFX_evt_throne_room
-	show_sound = event_life_support_fail
+	show_sound = event_red_alert
 	location = FROM
 	desc = {
 		trigger = {
@@ -295,6 +296,20 @@ country_event = {
 		}
 		text = origins_civics_on_action_leader_events.105.b
 	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = oc_first_eternal_leader_died }
+			has_country_flag = eternal_leader_death_by_hacking
+		}
+		text = origins_civics_on_action_leader_events.105.c
+	}
+	desc = {
+		trigger = {
+			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = eternal_leader_death_by_hacking
+		}
+		text = origins_civics_on_action_leader_events.105.d
+	}
 	
 	is_triggered_only = yes
 	
@@ -307,9 +322,12 @@ country_event = {
 	}
 		
 	option = {
-		name = UNFORTUNATE
+		name = WORRYING
 		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
 			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
+		}
+		if = { limit = { has_country_flag = eternal_leader_death_by_hacking }
+			hidden_effect = { remove_country_flag = eternal_leader_death_by_hacking }
 		}
 	}
 }

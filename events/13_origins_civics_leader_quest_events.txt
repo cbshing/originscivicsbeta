@@ -65,12 +65,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = oc_eternal_leader_is_died
-			remove_modifier = oc_eternal_crash
 		}
 	}
 	
 	option = {
 		name = EXCELLENT
+		remove_modifier = oc_eternal_crash
 	}
 }
 

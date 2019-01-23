@@ -134,7 +134,7 @@
  # Origins Special Projects & Event Chains
  ####################################
  OC_DE_UPLOAD_LEADER_PROJECT:0 "Upload Leader"
- OC_DE_UPLOAD_LEADER_PROJECT_desc:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. While the process will destroy any bodily functions [ruler.GetName] may have, [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
+ OC_DE_UPLOAD_LEADER_PROJECT_desc:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
 
  
  ####################################
@@ -144,6 +144,9 @@
  
  origins_civics_leader_quest_events.110.name: "Need for a New Upload"
  origins_civics_leader_quest_events.110.desc: "Without the administrative powers of a permanently linked consciousness to our computing networks, the [root.GetName] is in a state of chaos. Now, with the selection of a new leader, we have an opportunity to rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, our scientists believe we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
+ origins_civics_leader_quest_events.111.name: "[ruler.GetName] Uploaded"
+ origins_civics_leader_quest_events.111.desc: "With the final wire disconnected from [ruler.GetHerHis]'s now lifeless body, [root.GetRulerTitle] [ruler.GetName] is now fully integrated into our supercomputing networks. The unique neural patterns of [ruler.GetName] are already making a mark on our empire, with small boosts being reported by our scientists and business leaders. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicate an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
+ 
  
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
  origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge."
@@ -159,6 +162,11 @@
  origins_civics_on_action_leader_events.104.e:0 "Our Eternal [root.GetRulerTitle] [from.GetName] is dead! Killed by alien concubine in [from.GetHerHis] bedchamber. This outrageous act has deeply angered our citizens. Our citizenry once again mourn the loss of our guiding light. We pray that the high priests will divine the reincarnation of our Eternal so that we may receive the Eternal's guidance soon."
  origins_civics_on_action_leader_events.104.f:0 "Collapsed on the Everlasting Throne in the Hall of Infinity lay our bleeding Eternal [root.GetRulerTitle], [from.HerHis] body covered in wounds in [from.HerHis] valiant efforts to defend our empire. For countless generations [root.GetRulerTitle] [from.GetName] ruled over [root.GetHomeWorldName]. [root.GetRulerTitle] [from.GetName] was the guiding light for our citizens in the dark times, and now...without [from.GetHerHis] guidance we must forge a future on our own. Many of our citizens whisper in fear of the uncertainty. Many more clamour about the need to enshrine our great leader so that even in death the [root.GetRulerTitle] can continue to reign over [root.GetName]."
  origins_civics_on_action_leader_events.104.g:0 "Collapsed on the Everlasting Throne in the Hall of Infinity lay our bleeding Eternal [root.GetRulerTitle], [from.HerHis] body covered in wounds in [from.HerHis] valiant efforts to defend our empire. Our citizenry once again mourn the loss of our guiding light. We pray that the high priests will divine the reincarnation of our Eternal so that we may receive the Eternal's guidance soon."
+ origins_civics_on_action_leader_events.105.name:0 "Uploaded Offline"
+ origins_civics_on_action_leader_events.105.a:0 "As the flashing lights stop and blare of the klaxon dissipate, the ever commanding voice of the Uploaded [root.GetRulerTitle] fades. Fragmented and overwhelmed, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever in the intergalactic web. For countless generations [root.GetRulerTitle] [from.GetName] guided our citizens, bringing about order and scientific achievement. And now, without [from.GetName] our citizens see dark times ahead."
+ origins_civics_on_action_leader_events.105.b:0 "As the flashing lights stop and blare of the klaxon dissipate, the commanding voice of the Uploaded [root.GetRulerTitle] fades. Fragmented, and overwhelmed, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever in the intergalactic web. These are unstable times."
+ origins_civics_on_action_leader_events.105.c:0 "As the flashing lights stop and blare of the klaxon dissipate, the ever commanding voice of the Uploaded [root.GetRulerTitle] laughs. Fragmented and overwhelmed by an unknown hacker, the mind of [root.GetRulerTitle] [from.GetName] is now lost forever quarantined to an isolated server to live out [from.HerHis] days. For countless generations [root.GetRulerTitle] [from.GetName] guided our citizens, bringing about order and scientific achievement. And now, without [from.GetName] our citizens see dark times ahead."
+ origins_civics_on_action_leader_events.105.d:0 "As the flashing lights stop and blare of the klaxon dissipate, the commanding voice of the Uploaded [root.GetRulerTitle] laughs. Fragmented and overwhelmed by an unknown hacker, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever quarantined to an isolated server to live out [from.HerHis] days. These are unstable times."
 
   
  ####################################
