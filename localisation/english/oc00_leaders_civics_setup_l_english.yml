@@ -14,7 +14,7 @@
  civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being a Machine Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
 
  civic_oc_clinically_eternal:0 "Clinically Eternal"
- civic_oc_clinically_eternal_desc:0 "This society has been long guided by a ruling class that prolongs their life through the use of advanced medications."
+ civic_oc_clinically_eternal_desc:0 "This society has been long guided by a clinically immortal ruling class, whose life is artificially extended through the continued abuse of expensive medications and medical procedures."
  civic_tooltip_oc_clinically_eternal_effects:1 "Start the game with your leaders having the §Y$leader_trait_oc_clinically_eternal$§! trait, allowing them to live for 500 more years.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
  
  #Corporate Empire (Unused)
@@ -32,9 +32,9 @@
  leader_trait_oc_eternal_leader_weakened:0 "Young Eternal"
  leader_trait_oc_eternal_leader_weakened_desc:0 "This leader is an Eternal, but immature with their psionic powers. After training for several decades she/he will reach her/his true potential"
  leader_trait_oc_digitally_eternal:0 "Uploaded"
- leader_trait_oc_digitally_eternal_desc:0 "This leader had their consciousness Uploaded to the empire's computer networks long ago."
+ leader_trait_oc_digitally_eternal_desc:0 "This leader had their consciousness Uploaded to the empire's central computer long ago."
  leader_trait_oc_clinically_eternal:0 "Clinically Eternal"
- leader_trait_oc_clinically_eternal_desc:0 "This leader adheres to a strict medication and exercise regiment which prolongs their life for several hundred years."
+ leader_trait_oc_clinically_eternal_desc:0 "This leader plans to live forever, of course, but barring that even five hundred would be pretty nice."
   
  ####################################
  # Origins Resource Category
@@ -104,10 +104,17 @@
  oc_eternal_boost_passive_medium_desc:0 "Having connected the members our species through advanced cybernetics, many of our citizens are able to benefit from the Uploaded's calculations."
  oc_eternal_boost_passive_large:0 "Synthetic Uplink"
  oc_eternal_boost_passive_large_desc:0 "Having uploaded our species to a mechanical existence, our empire benefits from being able to simultaneously connect to our omniscient leader."
+ oc_eternal_boost_research:0 "Research Prioritization"
+ oc_eternal_boost_research_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting research throughout our empire."
+ oc_eternal_boost_military:0 "Military Prioritization"
+ oc_eternal_boost_military_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our empire's military capabilities."
+ oc_eternal_boost_specialist:0 "Specialist Prioritization"
+ oc_eternal_boost_specialist_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our specialists output throughout our empire."
+ 
  oc_eternal_error:0 "Uploaded Crashed"
- oc_eternal_error_desc:0 "The Uploaded has faulted while attempting the latest optimization calculations and will now run diagnostic software for some time." 
+ oc_eternal_error_desc:0 "The Uploaded has faulted while attempting the latest optimization calculations and is currently running diagnostic programs on itself to identify the root cause." 
  oc_eternal_crash:0 "Uploaded Offline"
- oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation. It will take some time to upload our new leader to the galactic network."
+ oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation."
  
  ####################################
  # Origins Tooltips
@@ -136,23 +143,30 @@
  OC_DE_UPLOAD_LEADER_PROJECT:0 "Upload Leader"
  OC_DE_UPLOAD_LEADER_PROJECT_desc:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
 
- 
  ####################################
  # Origins Events
  ####################################
  SHALL_BE_DONE:0 "It shall be done"
  
- origins_civics_leader_quest_events.110.name: "Need for a New Upload"
- origins_civics_leader_quest_events.110.desc: "Without the administrative powers of a permanently linked consciousness to our computing networks, the [root.GetName] is in a state of chaos. Now, with the selection of a new leader, we have an opportunity to rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, our scientists believe we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
- origins_civics_leader_quest_events.111.name: "[ruler.GetName] Uploaded"
- origins_civics_leader_quest_events.111.desc: "With the final wire disconnected from [ruler.GetHerHis]'s now lifeless body, [root.GetRulerTitle] [ruler.GetName] is now fully integrated into our supercomputing networks. The unique neural patterns of [ruler.GetName] are already making a mark on our empire, with small boosts being reported by our scientists and business leaders. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicate an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
- 
+ origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
+ origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the central core continously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
+ origins_civics_leader_quest_events.111.name:0 "[ruler.GetName] Uploaded"
+ origins_civics_leader_quest_events.111.desc:0 "As the neural interface device disconnects from [ruler.GetHerHis]'s now lifeless body, the central core is rebooted with [root.GetRulerTitle] [ruler.GetName] fully integrated into our systems. The unique neural patterns of [ruler.GetName] are already making a mark on our empire, with a renewed sense of stability washing over our empire. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicates an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
+ origins_civics_leader_quest_events.112.name:0 "A New Upload?"
+ origins_civics_leader_quest_events.112.desc:0 "While archiving the computer core, one of the apprentice technicians discovered a marked file located in a hidden subdirectory. Upon opening this file what she discovered were the blueprint designs for the original neural interface device created by [firsteternalruler.GetName], that device which allowed [firsteternalruler.GetHerHim] to upload [firsteternalruler.GetHerHis] personality into the central core. With this discovery our engineers feel they could recreate the neural interface, allowing us to upload a new consciousness to lead our people. [root.GetRulerTitle] [root.GetRulerName] volunteers to permanently lead our nation."
+ origins_civics_leader_quest_events.113.name:0 "Uploaded: Progress Report"
+ origins_civics_leader_quest_events.113.desc:0 "As the consciousness of [root.GetRulerName] uploads into the central core, our engineers can tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
+ origins_civics_leader_quest_events.113.desc.first:0 "As the consciousness of [root.GetRulerName] uploads into the central core, a thought passes through the lead engineer's mind. He believes that he may be able to tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?
+ origins_civics_leaders_quest_events.113.a:0 "Emphasis on Research"
+ origins_civics_leaders_quest_events.113.b:0 "Emphasis on Military"
+ origins_civics_leaders_quest_events.113.c:0 "Emphasis on Specialist"
+ origins_civics_leaders_quest_events.113.d:0 "This is immoral."
  
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
  origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge."
  origins_civics_on_action_leader_events.102.a.tooltip:0 "§ROur Eternal Leader will be unable to grant [ruler.GetHerHis] psionic blessings for some time.§"
  origins_civics_on_action_leader_events.103.name:0 "Uploaded Crash"
- origins_civics_on_action_leader_events.103.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic software to identify the root cause."
+ origins_civics_on_action_leader_events.103.a:0 "Our Uploaded [root.GetRulerTitle] [root.GetRulerName] has faulted while attempting the latest optimization calculations to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now clear [ruler.GetHerHis] buffer and run several diagnostic programs to identify the root cause."
  origins_civics_on_action_leader_events.103.a.tooltip:0 "§ROur Uploaded Leader will be unable to run [ruler.GetHerHis] optimization programs for some time.§"
  origins_civics_on_action_leader_events.104.name:0 "Passing of the Eternal"
  origins_civics_on_action_leader_events.104.a:0 "Seated on the Everlasting Throne in the Hall of Infinity, the Eternal [root.GetRulerTitle] has passed. For countless generations [root.GetRulerTitle] [from.GetName] ruled over [root.GetHomeWorldName]. [root.GetRulerTitle] [from.GetName] was the guiding light for our citizens in the dark times, and now...without [from.GetHerHis] guidance we must forge a future on our own. Many of our citizens whisper in fear of the uncertainty. Many more clamour about the need to enshrine our great leader so that even in death the [root.GetRulerTitle] can continue to reign over [root.GetName]."
@@ -163,11 +177,9 @@
  origins_civics_on_action_leader_events.104.f:0 "Collapsed on the Everlasting Throne in the Hall of Infinity lay our bleeding Eternal [root.GetRulerTitle], [from.HerHis] body covered in wounds in [from.HerHis] valiant efforts to defend our empire. For countless generations [root.GetRulerTitle] [from.GetName] ruled over [root.GetHomeWorldName]. [root.GetRulerTitle] [from.GetName] was the guiding light for our citizens in the dark times, and now...without [from.GetHerHis] guidance we must forge a future on our own. Many of our citizens whisper in fear of the uncertainty. Many more clamour about the need to enshrine our great leader so that even in death the [root.GetRulerTitle] can continue to reign over [root.GetName]."
  origins_civics_on_action_leader_events.104.g:0 "Collapsed on the Everlasting Throne in the Hall of Infinity lay our bleeding Eternal [root.GetRulerTitle], [from.HerHis] body covered in wounds in [from.HerHis] valiant efforts to defend our empire. Our citizenry once again mourn the loss of our guiding light. We pray that the high priests will divine the reincarnation of our Eternal so that we may receive the Eternal's guidance soon."
  origins_civics_on_action_leader_events.105.name:0 "Uploaded Offline"
- origins_civics_on_action_leader_events.105.a:0 "As the flashing lights stop and blare of the klaxon dissipate, the ever commanding voice of the Uploaded [root.GetRulerTitle] fades. Fragmented and overwhelmed, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever in the intergalactic web. For countless generations [root.GetRulerTitle] [from.GetName] guided our citizens, bringing about order and scientific achievement. And now, without [from.GetName] our citizens see dark times ahead."
- origins_civics_on_action_leader_events.105.b:0 "As the flashing lights stop and blare of the klaxon dissipate, the commanding voice of the Uploaded [root.GetRulerTitle] fades. Fragmented, and overwhelmed, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever in the intergalactic web. These are unstable times."
- origins_civics_on_action_leader_events.105.c:0 "As the flashing lights stop and blare of the klaxon dissipate, the ever commanding voice of the Uploaded [root.GetRulerTitle] laughs. Fragmented and overwhelmed by an unknown hacker, the mind of [root.GetRulerTitle] [from.GetName] is now lost forever quarantined to an isolated server to live out [from.HerHis] days. For countless generations [root.GetRulerTitle] [from.GetName] guided our citizens, bringing about order and scientific achievement. And now, without [from.GetName] our citizens see dark times ahead."
- origins_civics_on_action_leader_events.105.d:0 "As the flashing lights stop and blare of the klaxon dissipate, the commanding voice of the Uploaded [root.GetRulerTitle] laughs. Fragmented and overwhelmed by an unknown hacker, the personality of [root.GetRulerTitle] [from.GetName] is now lost forever quarantined to an isolated server to live out [from.HerHis] days. These are unstable times."
-
+ origins_civics_on_action_leader_events.105.a:0 "Amongst the flashing lights and blaring klaxon, the technicians watch in horror as the holoavatar of [root.GetRulerTitle] [from.GetName] dims. One by one, the server banks that comprise our Uploaded leader shut down until finally the central core, the original neural interface, winks out./n/nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. Without the original information from [from.GetName] on how [from.GetSheHe] uploaded [from.GetHerHim]self into the central core, our nation may never be as perfect as before."
+ origins_civics_on_action_leader_events.105.b:0 "Amongst the flashing lights and blaring klaxon, the technicians watch the as the holoavatar of [root.GetRulerTitle] [from.GetName] dims. One by one, the server banks that comprise our Uploaded leader shut down until finally the central core, the original neural interface, winks out./n/nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. While our nation may never be as perfect as before, our technology has advanced to the point that [from.GetName] can be replaced."
+ origins_civics_on_action_leader_events.105.c:0 "To the tune of the blaring klaxon and flashing lights, the holoavatar of [root.GetRulerTitle] [from.GetName] fades away. Our technicians hopelessly watch as the server bank that comprises our Uploaded leader shuts down as the central core attempts to protect the neural interface from a crash./n/nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. It will take some time for our scientists to upload and interface a new personality into the central core."
   
  ####################################
  # Origins Modifiers - Old
