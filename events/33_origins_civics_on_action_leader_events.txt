@@ -176,8 +176,6 @@ country_event = {
 	}
 }
 
-#add_modifier = { modifier = oc_eternal_mourning days = 1800 }
-
 # Eternal Optimization Unavailable Notification Event
 country_event = {
 	id = origins_civics_on_action_leader_events.103
@@ -274,6 +272,17 @@ country_event = {
 	
 	immediate = {
 		remove_country_flag = eternal_leader_death_by_boon
+		hidden_effect = {
+			if = { limit = { has_modifier = oc_eternal_blessing_unity }
+				remove_modifier = oc_eternal_blessing_unity 
+			}
+			if = { limit = { has_modifier = oc_eternal_blessing_military }
+				remove_modifier = oc_eternal_blessing_military 
+			}
+			if = { limit = { has_modifier = oc_eternal_blessing_workers }
+				remove_modifier = oc_eternal_blessing_workers 
+			}
+		}
 	}
 		
 	option = {
@@ -328,6 +337,20 @@ country_event = {
 		FROM = { 
 			is_same_value = root.ruler
 			has_trait = leader_trait_oc_digitally_eternal
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = { limit = { has_modifier = oc_eternal_boost_science  }
+				remove_modifier = oc_eternal_boost_science  
+			}
+			if = { limit = { has_modifier = oc_eternal_boost_military  }
+				remove_modifier = oc_eternal_boost_military  
+			}
+			if = { limit = { has_modifier = oc_eternal_boost_specialist  }
+				remove_modifier = oc_eternal_boost_specialist  
+			}
 		}
 	}
 		
