@@ -13,6 +13,7 @@ country_event = {
 	picture = GFX_evt_sapient_AI
 	show_sound = event_conversation
 	desc = origins_civics_leader_quest_events.110.desc
+	location = capital_scope
 	trackable = yes
 	
 	is_triggered_only = yes
@@ -65,6 +66,21 @@ country_event = {
 				}
 			}
 			remove_country_flag = oc_eternal_leader_is_died
+			if = {
+				limit = { has_country_flag = oc_digitally_eternal_modification_research }
+				remove_country_flag = oc_digitally_eternal_modification_research
+				add_modifier = { modifier = oc_eternal_boost_research days = -1 }
+			}
+			else_if = {
+				limit = { has_country_flag = oc_digitally_eternal_modification_military }
+				remove_country_flag = oc_digitally_eternal_modification_military
+				add_modifier = { modifier = oc_eternal_boost_military days = -1 }
+			}
+			else_if = {
+				limit = { has_country_flag = oc_digitally_eternal_modification_specialist }
+				remove_country_flag = oc_digitally_eternal_modification_specialist
+				add_modifier = { modifier = oc_eternal_boost_specialist days = -1 }
+			}
 		}
 	}
 	
@@ -73,6 +89,91 @@ country_event = {
 		remove_modifier = oc_eternal_crash
 	}
 }
+
+# Digitally Eternal First New Uploaded Start Special Project
+country_event = {
+	id = origins_civics_leader_quest_events.112
+	title = "origins_civics_leader_quest_events.112.name"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_conversation
+	desc = origins_civics_leader_quest_events.112.desc
+	location = capital_scope
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	immediate = {
+		set_country_flag = first_digitally_eternal_revival
+	}
+	
+	option = {
+		name = SHALL_BE_DONE
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_DE_UPLOAD_LEADER"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Digitally Eternal Mid Special Project
+country_event = {
+	id = origins_civics_leader_quest_events.113
+	title = "origins_civics_leader_quest_events.113.name"
+	picture = GFX_evt_cybernetic
+	show_sound = event_construction
+	desc = {
+		text = origins_civics_leader_quest_events.113.desc
+		trigger = { NOT = { has_country_flag = first_digitally_eternal_revival } }
+	}
+	desc = {
+		text = origins_civics_leader_quest_events.113.desc.first
+		trigger = { has_country_flag = first_digitally_eternal_revival }
+	}
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+		NOT = { has_country_flag = oc_digitally_eternal_modification_immoral }
+	}
+	
+	immediate = {
+		if = { limit = { has_country_flag = first_digitally_eternal_revival }
+			remove_country_flag = first_digitally_eternal_revival
+		}
+	}
+	
+	option = {
+		name = origins_civics_leaders_quest_events.113.a
+		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_research }
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.113.b
+		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_military }
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.113.c
+		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_specialist }
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.113.d
+		custom_tooltip = origins_civics_leaders_quest_events.113.d.tip
+		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_immoral }
+	}
+}
+
 
 # Digitally Eternal New Uploaded AI NPC
 country_event = {
