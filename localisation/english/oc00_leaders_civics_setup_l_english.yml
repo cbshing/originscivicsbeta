@@ -154,13 +154,14 @@
  origins_civics_leader_quest_events.111.desc:0 "As the neural interface device disconnects from [ruler.GetHerHis]'s now lifeless body, the central core is rebooted with [root.GetRulerTitle] [ruler.GetName] fully integrated into our systems. The unique neural patterns of [ruler.GetName] are already making a mark on our empire, with a renewed sense of stability washing over our empire. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicates an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
  origins_civics_leader_quest_events.112.name:0 "A New Upload?"
  origins_civics_leader_quest_events.112.desc:0 "While archiving the computer core, one of the apprentice technicians discovered a marked file located in a hidden subdirectory. Upon opening this file what she discovered were the blueprint designs for the original neural interface device created by [firsteternalruler.GetName], that device which allowed [firsteternalruler.GetHerHim] to upload [firsteternalruler.GetHerHis] personality into the central core. With this discovery our engineers feel they could recreate the neural interface, allowing us to upload a new consciousness to lead our people. [root.GetRulerTitle] [root.GetRulerName] volunteers to permanently lead our nation."
- origins_civics_leader_quest_events.113.name:0 "Uploaded: Progress Report"
+ origins_civics_leader_quest_events.113.name:0 "Upload: Progress Report"
  origins_civics_leader_quest_events.113.desc:0 "As the consciousness of [root.GetRulerName] uploads into the central core, our engineers can tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
  origins_civics_leader_quest_events.113.desc.first:0 "As the consciousness of [root.GetRulerName] uploads into the central core, a thought passes through the lead engineer's mind. He believes that he may be able to tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?
  origins_civics_leaders_quest_events.113.a:0 "Emphasize Research"
  origins_civics_leaders_quest_events.113.b:0 "Emphasize Military"
  origins_civics_leaders_quest_events.113.c:0 "Emphasize Specialists"
  origins_civics_leaders_quest_events.113.d:0 "This is immoral."
+ origins_civics_leaders_quest_events.113.d.tip:0 "We will never attempt to tweak a leader's personality again in the future."
  
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
  origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge."
