@@ -157,9 +157,9 @@
  origins_civics_leader_quest_events.113.name:0 "Uploaded: Progress Report"
  origins_civics_leader_quest_events.113.desc:0 "As the consciousness of [root.GetRulerName] uploads into the central core, our engineers can tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
  origins_civics_leader_quest_events.113.desc.first:0 "As the consciousness of [root.GetRulerName] uploads into the central core, a thought passes through the lead engineer's mind. He believes that he may be able to tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?
- origins_civics_leaders_quest_events.113.a:0 "Emphasis on Research"
- origins_civics_leaders_quest_events.113.b:0 "Emphasis on Military"
- origins_civics_leaders_quest_events.113.c:0 "Emphasis on Specialist"
+ origins_civics_leaders_quest_events.113.a:0 "Emphasize Research"
+ origins_civics_leaders_quest_events.113.b:0 "Emphasize Military"
+ origins_civics_leaders_quest_events.113.c:0 "Emphasize Specialists"
  origins_civics_leaders_quest_events.113.d:0 "This is immoral."
  
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
