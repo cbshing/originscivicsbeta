@@ -89,7 +89,7 @@ oc_eternal_boost_passive_large = {
 
 oc_eternal_boost_science = {
 	all_technology_research_speed = 0.15
-	pop_government_ethic_attraction = 1
+	#pop_government_ethic_attraction = 1
 }
 oc_eternal_boost_military = {
 	ship_weapon_range_mult = 0.15

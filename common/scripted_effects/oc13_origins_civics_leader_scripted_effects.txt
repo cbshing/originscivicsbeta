@@ -21,8 +21,7 @@ roll_eternal_boon_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				#factor = 100
-				factor = 1
+				factor = 100
 				galaxy_percentage < 0.05
 			}
 		}
@@ -86,8 +85,7 @@ roll_eternal_boon_effect = {
 		}
 		1 = { #kill leader & death modifier
 			modifier = {
-				#factor = 0
-				factor = 90
+				factor = 0
 				galaxy_percentage < 0.40
 			}
 			modifier = {
@@ -142,6 +140,7 @@ roll_eternal_optimization_effect = {
 		60 = { # do nothing 
 			modifier = {
 				factor = 100
+				#factor = 1
 				galaxy_percentage < 0.05
 			}
 		}
@@ -206,6 +205,7 @@ roll_eternal_optimization_effect = {
 		2 = { #death modifier
 			modifier = {
 				factor = 0
+				#factor = 100
 				galaxy_percentage < 0.40
 			}
 			modifier = {

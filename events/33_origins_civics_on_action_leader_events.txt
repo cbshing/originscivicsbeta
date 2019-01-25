@@ -34,8 +34,9 @@ country_event = {
 					is_ai = no
 				}
 				hidden_effect = { from = { save_event_target_as = firsteternalleader } }
+				#hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
 				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
-				country_event = { id = origins_civics_leader_quest_events.103 days = 30 } # Eternal Mausoleum Construction
+				country_event = { id = origins_civics_leader_quest_events.102 days = 30 } # Eternal Mausoleum Construction
 
 			}
 			else_if = {
@@ -68,9 +69,10 @@ country_event = {
 					is_ai = no
 				}
 				hidden_effect = { from = { save_event_target_as = firsteternalleader } }
+				#hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
 				#country_event = { id = origins_civics_on_action_leader_events.105 days = -1 } # Leader Death Notification
-				country_event = { id = origins_civics_leader_quest_events.113 days = 1800 random = 1755 } # Leader First Death Revival Special Project
-
+				country_event = { id = origins_civics_leader_quest_events.112 days = 1800 random = 1755 } # Leader First Death Revival Special Project
+				#country_event = { id = origins_civics_leader_quest_events.112 days = 30 random = 15 } # Leader First Death Revival Special Project
 			}			
 			else = {
 				#country_event = { id = origins_civics_on_action_leader_events.105 days = -1 } # Leader Death Notification
@@ -207,7 +209,7 @@ country_event = {
 country_event = {
 	id = origins_civics_on_action_leader_events.104
 	title = "origins_civics_on_action_leader_events.104.name"
-	picture = GFX_evt_throne_room
+	picture = GFX_evt_space_funeral
 	show_sound = event_life_support_fail
 	location = FROM
 	desc = {
@@ -307,7 +309,7 @@ country_event = {
 country_event = {
 	id = origins_civics_on_action_leader_events.105
 	title = "origins_civics_on_action_leader_events.105.name"
-	picture = GFX_evt_throne_room
+	picture = GFX_evt_sapient_AI
 	show_sound = event_red_alert
 	location = FROM
 	desc = {
@@ -355,7 +357,7 @@ country_event = {
 	}
 		
 	option = {
-		name = WORRYING
+		name = TERRIBLE
 		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
 			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
 		}
