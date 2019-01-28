@@ -11,6 +11,13 @@ country_event = {
 	
 	trigger = {
 		oc_has_immortal_rulers_civics = yes
+		from = { 
+			leader_class = ruler 
+			OR = {
+				has_ruler_trait = leader_trait_oc_eternal_leader
+				has_ruler_trait = leader_trait_oc_digitally_eternal
+			}		
+		}	
 	}
 	
 	immediate = {
@@ -23,7 +30,7 @@ country_event = {
 					NOT = { has_country_flag = eternal_leader_death_by_chosen_one } 
 					is_ai = yes 
 				} 
-				country_event = { id = origins_civics_leader_quest_events.1100 days = 2700 random = 900 } # AI Leader Revival Project
+				country_event = { id = origins_civics_leader_quest_events.1100 days = 3600 random = 900 } # AI Leader Revival Project
 			}
 			else_if = {
 				limit = { 
@@ -34,8 +41,6 @@ country_event = {
 					is_ai = no
 				}
 				hidden_effect = { from = { save_event_target_as = firsteternalleader } }
-				#hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
-				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.102 days = 30 } # Eternal Mausoleum Construction
 
 			}
@@ -44,11 +49,9 @@ country_event = {
 					has_country_flag = eternal_leader_death_by_chosen_one
 					is_ai = no 
 				}
-				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.107 days = 30 } # Chosen One Killed Eternal Leader permadeath
 			}
 			else = { 
-				#country_event = { id = origins_civics_on_action_leader_events.104 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.100 days = 30 } # Leader Death Revival Special Project
 			} 
 		}
@@ -58,7 +61,7 @@ country_event = {
 			hidden_effect = { set_country_flag = oc_eternal_leader_is_died }
 			if = {
 				limit = { is_ai = yes } 
-				country_event = { id = origins_civics_leader_quest_events.1110 days = 30 } # AI Leader Revival Project
+				country_event = { id = origins_civics_leader_quest_events.1110 days = 3600 random = 900 } # AI Leader Revival Project
 			}
 			else_if = {
 				limit = { 
@@ -69,13 +72,9 @@ country_event = {
 					is_ai = no
 				}
 				hidden_effect = { from = { save_event_target_as = firsteternalleader } }
-				#hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
-				#country_event = { id = origins_civics_on_action_leader_events.105 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.112 days = 1800 random = 1755 } # Leader First Death Revival Special Project
-				#country_event = { id = origins_civics_leader_quest_events.112 days = 30 random = 15 } # Leader First Death Revival Special Project
 			}			
 			else = {
-				#country_event = { id = origins_civics_on_action_leader_events.105 days = -1 } # Leader Death Notification
 				country_event = { id = origins_civics_leader_quest_events.110 days = 30 } # Leader Death Revival Special Project
 			}
 		}

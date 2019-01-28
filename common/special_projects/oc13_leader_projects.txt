@@ -24,7 +24,35 @@ special_project = {
 	}
 	
 	on_progress_50 = {
-		owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
+		#owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
+	}
+	
+	on_success = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "OC_DE_UPLOAD_PROJECT"
+	cost = {
+		base = 5000
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_cybernetics
+	
+	event_scope = planet_event
+	
+	event_chain = DIGITALLY_ETERNAL_UPLOAD
+	
+	requirements = {
+	}
+	
+	on_progress_50 = {
+		#owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
 	}
 	
 	on_success = {

@@ -5,47 +5,98 @@ namespace = origins_civics_leader_quest_events
 # Eternal Death
 # Digital Death
 
-# Eternal Leader New Eternal Start Special Project
+# First Eternal Death Building Enabled Event
 country_event = {
 	id = origins_civics_leader_quest_events.100
-	title = "origins_civics_leader_quest_events.110.name"
-	picture = GFX_evt_sapient_AI
-	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
+	title = "origins_civics_leader_quest_events.100.name"
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_factions
+	desc = {
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
+		text = origins_civics_leader_quest_events.100.a
+	}
+	desc = {
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+		text = origins_civics_leader_quest_events.100.b
+	}
 	location = capital_scope
-	trackable = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_country_flag = oc_first_eternal_leader_died
 		has_country_flag = oc_eternal_leader_is_died
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+		oc_has_immortal_rulers_civics = yes
 	}
 	
 	option = {
+		name = origins_civics_leaders_quest_events.100.a
+		custom_tooltip = origins_civics_leaders_quest_events.100.a.tip
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
+		hidden_effect = { set_country_flag = oc_first_eternal_leader_monument }
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.100.b
+		custom_tooltip = origins_civics_leaders_quest_events.100.b.tip
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+		hidden_effect = { set_country_flag = oc_first_eternal_leader_institute }
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.100.c
+		custom_tooltip = origins_civics_leaders_quest_events.100.c.tip
+		hidden_effect = { set_country_flag = oc_refused_monument_to_eternal }
 	}
 }
 
-# Eternal Leader New Eternal Start Special Project
-country_event = {
+# First Eternal Death Building Complete
+planet_event = {
 	id = origins_civics_leader_quest_events.101
-	title = "origins_civics_leader_quest_events.110.name"
-	picture = GFX_evt_sapient_AI
+	title = "origins_civics_leader_quest_events.101.name"
+	picture = GFX_evt_news_room
 	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
-	location = capital_scope
-	trackable = yes
+	desc = {
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
+		text = origins_civics_leader_quest_events.101.a
+	}
+	desc = {
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+		text = origins_civics_leader_quest_events.101.b
+	}
+	location = root
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_country_flag = oc_first_eternal_leader_died
 		has_country_flag = oc_eternal_leader_is_died
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+		oc_has_immortal_rulers_civics = yes
+		OR = {
+			has_building = building_oc_eternal_institute
+			has_building = building_oc_eternal_mausoleum
+		}
 	}
 	
 	option = {
+		name = EXCELLENT
+		hidden_effect = { 
+			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+		}
 	}
 }
 
@@ -63,8 +114,9 @@ country_event = {
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_country_flag = oc_first_eternal_leader_died
 		has_country_flag = oc_eternal_leader_is_died
+		oc_has_immortal_rulers_civics = yes
 	}
 	
 	option = {

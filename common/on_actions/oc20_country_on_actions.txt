@@ -23,3 +23,11 @@ on_leader_death = {
 		origins_civics_on_action_leader_events.105 # Digitally Eternal Leader Death Text
 	}
 }
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		origins_civics_leader_quest_events.101 # Constructed Eternal Building
+	}
+}

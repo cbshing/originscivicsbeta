@@ -14,14 +14,14 @@ building_oc_eternal_mausoleum = {
 	potential = {
 		exists = planet
 		planet = { is_capital = yes }
-		owner = { has_country_flag = oc_first_eternal_leader_died }
-		owner = { oc_requires_eternal_leader_ruler_trait = yes }
+		owner = { has_country_flag = oc_first_eternal_leader_monument }
+		owner = { has_oc_eternal_leader_civic = yes }
 	}	
 	
 	planet_modifier  = {
-		job_high_priest_add = 2
-		job_priest_add = 10
-		pop_ethic_spiritualist_attraction_mult = 0.20
+		job_high_priest_add = 1
+		job_priest_add = 5
+		pop_ethic_spiritualist_attraction_mult = 1
 	}
 	
 	resources = {
@@ -33,7 +33,7 @@ building_oc_eternal_mausoleum = {
 			energy = 6
 		}
 		produces = {
-			unity = 1
+			unity = 15
 		}	
 	}
 	
@@ -49,3 +49,54 @@ building_oc_eternal_mausoleum = {
 		factor = 0
 	}
 }
+
+building_oc_eternal_institute = {
+	base_buildtime = 900
+	base_cap_amount = 1	
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	
+	icon = building_eternal_institute
+	
+	potential = {
+		exists = planet
+		planet = { is_capital = yes }
+		owner = { has_country_flag = oc_first_eternal_leader_institute }
+		owner = { has_oc_digitally_eternal_civic = yes }
+	}	
+	
+	planet_modifier  = {
+		job_head_researcher_add = 1
+		job_researcher_add = 5
+		pop_ethic_materialist_attraction_mult = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineer_research = 5
+		}	
+	}
+	
+	triggered_desc = {
+		text = job_researcher_effect_desc
+	}
+	
+	triggered_desc = {
+		text = job_head_researcher_effect_desc
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+

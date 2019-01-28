@@ -126,7 +126,12 @@ roll_eternal_boon_effect = {
 				owner_species = { has_trait = trait_psionic } 
 				owner = { has_ascension_perk = ap_transcendence }
 			}
-			#custom_tooltip = eternal_leader_death
+			if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					save_event_target_as = firsteternalleader
+				}
+			}
 			kill_leader = { type = ruler }
 			hidden_effect = { set_country_flag = eternal_leader_death_by_boon }
 			#country_event = { id = origins_civics_on_action_leader_events.104 days = 1 }
@@ -139,8 +144,8 @@ roll_eternal_optimization_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				factor = 100
-				#factor = 1
+				#factor = 100
+				factor = 1
 				galaxy_percentage < 0.05
 			}
 		}
@@ -204,8 +209,8 @@ roll_eternal_optimization_effect = {
 		}
 		2 = { #death modifier
 			modifier = {
-				factor = 0
-				#factor = 100
+				#factor = 0
+				factor = 100
 				galaxy_percentage < 0.40
 			}
 			modifier = {
@@ -246,7 +251,12 @@ roll_eternal_optimization_effect = {
 				owner_species = { has_trait = trait_mechanical } 
 				owner = { has_ascension_perk = ap_synthetic_evolution }
 			}
-			#custom_tooltip = digitally_eternal_crash
+			if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					save_event_target_as = firsteternalleader
+				}
+			}
 			kill_leader = { type = ruler }
 			hidden_effect = { set_country_flag = eternal_leader_death_by_boon }
 			#hidden_effect = { country_event = { id = origins_civics_on_action_leader_events.105 days = 1 }	}
