@@ -1,0 +1,13 @@
+# Leader related event chains.
+
+# First New Eternal Leader Revival Chain
+oc_first_new_eternal_leader_chain = {
+	picture = GFX_evt_throne_room
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+}
+
+# First New Digitally Eternal Revival Chain
+oc_first_new_digitally_eternal_chain = {
+	picture = GFX_evt_throne_room
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+}

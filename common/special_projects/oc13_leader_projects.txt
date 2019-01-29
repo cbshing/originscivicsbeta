@@ -1,3 +1,102 @@
+# Eternal Leader Oracle Project
+special_project = {
+	key = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
+	cost = {
+		base = 5
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 1
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_psionics
+	
+	event_scope = planet_event
+	
+	event_chain = oc_first_new_eternal_leader_chain
+	
+	requirements = {
+	}
+	
+	on_success = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+	}
+	
+	on_fail = {
+	}
+}
+
+
+
+# Digitally Eternal Decipher Upload Project
+special_project = {
+	key = "OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT"
+	cost = {
+		base = 3000
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_synth_sabotage
+	
+	event_scope = planet_event
+	
+	event_chain = oc_first_new_digitally_eternal_chain
+	
+	requirements = {
+	}
+	
+	on_success = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+	}
+	
+	on_fail = {
+	}
+}
+
+
+
+# Eternal Leader Search Project
+special_project = {
+	key = "OC_EL_SEARCH_LEADER_PROJECT"
+	cost = {
+		base = 500
+		#base = 10
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 25
+			#add = 1
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_cybernetics
+	
+	event_scope = planet_event
+	
+	requirements = {
+	}
+	
+	on_progress_50 = {
+		#owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
+	}
+	
+	on_success = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+	}
+	
+	on_fail = {
+	}
+}
+
+
+# Digitally Eternal Leader Upload Project
 special_project = {
 	key = "OC_DE_UPLOAD_LEADER_PROJECT"
 	cost = {
@@ -17,36 +116,6 @@ special_project = {
 	picture = GFX_evt_cybernetics
 	
 	event_scope = planet_event
-	
-	#event_chain = DIGITALLY_ETERNAL_UPLOAD
-	
-	requirements = {
-	}
-	
-	on_progress_50 = {
-		#owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
-	}
-	
-	on_success = {
-		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
-	}
-	
-	on_fail = {
-	}
-}
-
-special_project = {
-	key = "OC_DE_UPLOAD_PROJECT"
-	cost = {
-		base = 5000
-	}
-	tech_department = engineering_technology
-	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_cybernetics
-	
-	event_scope = planet_event
-	
-	event_chain = DIGITALLY_ETERNAL_UPLOAD
 	
 	requirements = {
 	}

@@ -15,13 +15,13 @@ country_event = {
 		trigger = {
 			has_oc_eternal_leader_civic = yes
 		}
-		text = origins_civics_leader_quest_events.100.a
+		text = origins_civics_leader_quest_events.100.desc.eternal
 	}
 	desc = {
 		trigger = {
 			has_oc_digitally_eternal_civic = yes
 		}
-		text = origins_civics_leader_quest_events.100.b
+		text = origins_civics_leader_quest_events.100.desc.digital
 	}
 	location = capital_scope
 	
@@ -63,7 +63,7 @@ planet_event = {
 	id = origins_civics_leader_quest_events.101
 	title = "origins_civics_leader_quest_events.101.name"
 	picture = GFX_evt_news_room
-	show_sound = event_conversation
+	show_sound = event_cityscape
 	desc = {
 		trigger = {
 			has_oc_eternal_leader_civic = yes
@@ -94,21 +94,32 @@ planet_event = {
 	
 	option = {
 		name = EXCELLENT
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
 		hidden_effect = { 
 			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
 		}
 	}
+	option = {
+		name = EXCELLENT
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+		hidden_effect = { 
+			owner = { country_event = { id = origins_civics_leader_quest_events.103 days = 1080 random = 900 } }
+		}
+	}
 }
 
-# Eternal Leader New Eternal Start Special Project
+# First Eternal Leader Nightmare Oracle
 country_event = {
 	id = origins_civics_leader_quest_events.102
-	title = "origins_civics_leader_quest_events.110.name"
-	picture = GFX_evt_sapient_AI
-	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
+	title = "origins_civics_leader_quest_events.102.name"
+	picture = GFX_evt_surreal_visions
+	show_sound = event_mystic_reveal
+	desc = origins_civics_leader_quest_events.102.desc
 	location = capital_scope
-	trackable = yes
 	
 	is_triggered_only = yes
 	
@@ -116,32 +127,73 @@ country_event = {
 		is_ai = no
 		has_country_flag = oc_first_eternal_leader_died
 		has_country_flag = oc_eternal_leader_is_died
-		oc_has_immortal_rulers_civics = yes
+		has_oc_eternal_leader_civic = yes
 	}
 	
 	option = {
+		name = origins_civics_leader_quest_events.102.a
+		trigger = {
+			is_materialist = no
+		}
+		begin_event_chain = {
+			event_chain = oc_first_new_eternal_leader_chain
+			target = root.owner
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.102.b
+		hidden_effect = { 
+			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+		}
 	}
 }
 
-# Eternal Leader New Eternal Start Special Project
+# First Digitally Eternal Leader Decipher
 country_event = {
 	id = origins_civics_leader_quest_events.103
-	title = "origins_civics_leader_quest_events.110.name"
-	picture = GFX_evt_sapient_AI
-	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
+	title = "origins_civics_leader_quest_events.103.name"
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_administrative_work
+	desc = origins_civics_leader_quest_events.103.desc
 	location = capital_scope
-	trackable = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_oc_digitally_eternal_civic = yes
 		has_country_flag = oc_eternal_leader_is_died
 	}
 	
 	option = {
+		name = origins_civics_leader_quest_events.102.a
+		trigger = {
+			is_spiritualist = no
+		}
+		begin_event_chain = {
+			event_chain = oc_first_new_eternal_leader_chain
+			target = root.owner
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.102.b
+		hidden_effect = { 
+			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+		}
 	}
 }
 
@@ -164,34 +216,6 @@ country_event = {
 	}
 	
 	option = {
-	}
-}
-
-# Eternal Leader New Eternal Start Special Project
-country_event = {
-	id = origins_civics_leader_quest_events.1100
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = yes
-		has_oc_eternal_leader_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = synthetic_empire }}
-				random_owned_leader = {
-					limit = { leader_class = ruler }
-					add_trait = leader_trait_oc_eternal_leader
-					add_ruler_trait = leader_trait_oc_eternal_leader
-				}
-			}
-			remove_country_flag = oc_eternal_leader_is_died
-			remove_modifier = oc_eternal_mourning
-		}
 	}
 }
 
@@ -366,6 +390,36 @@ country_event = {
 	}
 }
 
+# Eternal Leader New Eternal AI NPC
+country_event = {
+	id = origins_civics_leader_quest_events.1100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		has_oc_eternal_leader_civic = yes
+		has_country_flag = oc_eternal_leader_is_died
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				70 = { 
+					random_owned_leader = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_oc_eternal_leader
+						add_ruler_trait = leader_trait_oc_eternal_leader
+					}
+					remove_country_flag = oc_eternal_leader_is_died
+					remove_modifier = oc_eternal_mourning
+				}
+				30 = {
+				}			
+			}
+		}
+	}
+}
 
 # Digitally Eternal New Uploaded AI NPC
 country_event = {

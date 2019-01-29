@@ -103,14 +103,7 @@
  oc_eternal_boost_passive_medium:0 "Cybernetic Connection"
  oc_eternal_boost_passive_medium_desc:0 "Having connected the members our species through advanced cybernetics, many of our citizens are able to benefit from the Uploaded's calculations."
  oc_eternal_boost_passive_large:0 "Synthetic Uplink"
- oc_eternal_boost_passive_large_desc:0 "Having uploaded our species to a mechanical existence, our empire benefits from being able to simultaneously connect to our omniscient leader."
- oc_eternal_boost_science:0 "Research Prioritization"
- oc_eternal_boost_science_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting research throughout our empire."
- oc_eternal_boost_military:0 "Military Prioritization"
- oc_eternal_boost_military_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our empire's military capabilities."
- oc_eternal_boost_specialist:0 "Specialist Prioritization"
- oc_eternal_boost_specialist_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our specialists output throughout our empire."
- 
+ oc_eternal_boost_passive_large_desc:0 "Having uploaded our species to a mechanical existence, our empire benefits from being able to simultaneously connect to our omniscient leader." 
  oc_eternal_error:0 "Uploaded Crashed"
  oc_eternal_error_desc:0 "The Uploaded has faulted while attempting the latest optimization calculations and is currently running diagnostic programs on itself to identify the root cause." 
  oc_eternal_crash:0 "Uploaded Offline"
@@ -135,8 +128,10 @@
  # Origins Buildings
  ####################################
  building_oc_eternal_mausoleum:0 "Mausoleum of the Eternal"
- building_oc_eternal_mausoleum_desc:0 "A massive complex lay in the center of the capital city, enshrining the Eternal and all the principles our fallen leader stood for."
- 
+ building_oc_eternal_mausoleum_desc:0 "A massive shrine complex lay in the center of our capital city, enshrining our Eternal leader and all the principles our fallen ruler stood for."
+ building_oc_eternal_institute:0 "Eternal Institute"
+ building_oc_eternal_institute_desc:0 "A massive research complex lay in the center of our capital city, enshrining our Digital leader and all the principles our fallen ruler stood for."
+
  ####################################
  # Origins Special Projects & Event Chains
  ####################################
@@ -147,6 +142,17 @@
  # Origins Events
  ####################################
  SHALL_BE_DONE:0 "It shall be done"
+ 
+ origins_civics_leader_quest_events.100.name:0 "In Memory Of..."
+ origins_civics_leader_quest_events.100.desc.eternal:0 "Walking through the large ancient doors to the ceremonial balcony, [root.GetRulerTitle] [root.GetRulerName] solemnly approaches the balustrade. Before [ruler.GetHerHim] lay a sea of mourning citizens. The sudden death of our Eternal leader was a shock to the nation, and now the citizens have gathered in the capital square to look towards [root.GetRulerTitle] [root.GetRulerName] for guidance for the future.\n\nRaising [ruler.GetHerHis] [root.GetSpeciesHandName]s, [root.GetRulerTitle] [root.GetRulerName] delivers [ruler.GetHerHis] vision for the future of the [root.GetName]."
+ origins_civics_leader_quest_events.100.desc.digital:0 ""
+ origins_civics_leader_quest_events.100.a:0 "The Eternal shall be honored."
+ origins_civics_leaders_quest_events.100.a.tip:0 "Allow the construction of the §Y$building_oc_eternal_mausoleum$§!, a massive shrine to our fallen leader."
+ origins_civics_leader_quest_events.100.b:0 "The Uploaded shall be honored"
+ origins_civics_leaders_quest_events.100.b.tip:0 "Allow the construction of the §Y$building_oc_eternal_institute$§!, a massive complex dedicated to our fallen leader."
+ origins_civics_leader_quest_events.100.c:0 "We shall forge our own path."
+ 
+ origins_civics_leader_quest_events.101.name:0 "Memorial Completed"
  
  origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
  origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the central core continuously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
@@ -220,6 +226,14 @@
  oc_eternal_optimization_development_desc:0 "The Uploaded is optimizing planetary development, reducing costs and increasing our citizens productivity."
  oc_eternal_optimization_development_neg:0 "Optimization Error: Development"
  oc_eternal_optimization_development_neg_desc:0 "The Uploaded has faulted, throwing our planetary development and citizens into chaos."
+ 
+ oc_eternal_boost_science:0 "Research Prioritization"
+ oc_eternal_boost_science_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting research throughout our empire."
+ oc_eternal_boost_military:0 "Military Prioritization"
+ oc_eternal_boost_military_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our empire's military capabilities."
+ oc_eternal_boost_specialist:0 "Specialist Prioritization"
+ oc_eternal_boost_specialist_desc:0 "Our engineers have tweaked the Uploaded's personality so that it will focus on boosting our specialists output throughout our empire."
+
  
  ####################################
  # Origins Edicts - Old
