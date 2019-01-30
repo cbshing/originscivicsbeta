@@ -159,7 +159,18 @@
  origins_civics_leader_quest_events.101.desc.digital:0 "To the whir of a generator, [root.GetRulerTitle] [root.GetRulerName] leads a crowd of researcher, high officials, and news reporters towards a monitor displaying the status of the §WCentral Core§!. Though corrupted during the loss of the Uploaded, the lights on the §WCentral Core§! slowly turn on one by one. With a sigh of relief, our researchers believe they may be able to analyze and reverse engineer the secrets of our Uploaded leader.\n\nWith the §WCentral Core§! at its heart, the §Y$building_oc_eternal_institute$§! is officially completed."
  
  origins_civics_leader_quest_events.102.name:0 "Eternal Dreams"
- origins_civics_leader_quest_events.102.desc:0 ""§PRETURN!§!" resounds a ghostly voice throughout the bed chamber of [root.GetRulerTitle] [root.GetRulerName], startling the sleeping ruler out of bed.\n\n"§PRETURN ME!§!" the voice repeats."
+ origins_civics_leader_quest_events.102.desc:0 ""§PRETURN!§!" resounds a ghostly voice throughout the bed chamber of [root.GetRulerTitle] [root.GetRulerName], startling the sleeping ruler out of bed.\n\n"§PRETURN ME!§!" the voice repeats as a wave of psionic energy washes over [root.GetRulerName]."
+ origins_civics_leader_quest_events.102.a:0 "..."
+ 
+ origins_civics_leader_quest_events.103.desc:0 "..."
+ origins_civics_leader_quest_events.103.a:0 "Who are you?"
+ origins_civics_leader_quest_events.103.a.response:0 "...§PRETURN!§!..."
+ origins_civics_leader_quest_events.103.b:0 "Why should you be returned?"
+ origins_civics_leader_quest_events.103.b.response:0 "...§PRETURN ME!§!..."
+ origins_civics_leader_quest_events.103.c:0 "How can we return you?"
+ origins_civics_leader_quest_events.103.c.response:0 "...§PRETURN ME!§!..."
+ origins_civics_leader_quest_events.103.d:0 "How can we return you?"
+ origins_civics_leader_quest_events.103.e:0 "How can we return you?" 
  
  origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
  origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the §WCentral Core§! continuously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
