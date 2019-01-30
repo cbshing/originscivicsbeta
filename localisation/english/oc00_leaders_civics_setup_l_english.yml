@@ -119,11 +119,13 @@
  # Origins Start Messages
  ####################################
  START_SCREEN_PART_TWO_ETERNAL_LEADER:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of stability and scientific progress followed."
- START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network, [ruler.GetSheHe] optimized our society to reach its full potential, and an era of stability and scientific progress followed."
- START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
  START_SCREEN_PART_TWO_CLINICALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Longevity formula was discovered. Monopolizing its potentials, the clinically immortal ruling class unified our society, and an era of stability and scientific progress followed."
 
+ #Unused
+ START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
+ START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
+ 
  ####################################
  # Origins Buildings
  ####################################
@@ -141,7 +143,7 @@
  ####################################
  # Origins Events
  ####################################
- SHALL_BE_DONE:0 "It shall be done"
+ SHALL_BE_DONE:0 "It shall be done."
  
  origins_civics_leader_quest_events.100.name:0 "In Memory Of..."
  origins_civics_leader_quest_events.100.desc.eternal:0 "Walking through the large ancient doors of the Eternal Palace and up the stairs of the ceremonial platform, [root.GetRulerTitle] [root.GetRulerName] solemnly approaches the crowd. Before [ruler.GetHerHim] lay a sea of mourning citizens shocked by the sudden death of our eternal leader. Lost and afraid, the citizens gathered in the Eternal Square to look upon their new [root.GetRulerTitle] for guidance in these dark times.\n\nRaising both of [ruler.GetHerHis] [root.GetSpeciesHandName]s, [root.GetRulerTitle] [root.GetRulerName] delivers [ruler.GetHerHis] vision for the future of the [root.GetName]."
@@ -153,7 +155,7 @@
  origins_civics_leader_quest_events.100.c:0 "We shall forge our own path."
  
  origins_civics_leader_quest_events.101.name:0 "Memorial Completed"
- origins_civics_leader_quest_events.101.desc.eternal:0 "To the sound of bells and somber singing, [root.GetRulerTitle] [root.GetRulerName] leads the procession of priests, high officials, and citizens in prayers at the feet of our fallen leader's tomb. A large, multistory statue of the Eternal leader sits on a massive representation of the Everlasting Throne, overlooking the skyline of our capital city.\n\nThis small ceremony honoring our Eternal leader calms the troubled hearts of our citizens and marks the completion of the skyline dominating §Y$building_oc_eternal_mausoleum$§!."
+ origins_civics_leader_quest_events.101.desc.eternal:0 "To the sound of tolling bells and somber singing, [root.GetRulerTitle] [root.GetRulerName] leads a procession of priests, high officials, and local citizens up the monumental staircase to the tomb of our fallen leader. Upon reaching the central chamber, the procession is received by a mulistory statue of our Eternal [root.GetRulerTitle] seated on the Everlasting Throne overlooking the glass coffin. A grand ceremony is performed, where the priests and many of the citizens offer prayers to our Eternal while [root.GetRulerTitle] [root.GetRulername] watches on.\n\nAs the last citizen descends the grand staircase and doors to the §Y$building_oc_eternal_mausoleum$§! close, a wave of calm washes over the capital as they know they have truly honored the Eternal one."
  origins_civics_leader_quest_events.101.desc.digital:0 "To the whir of a generator, [root.GetRulerTitle] [root.GetRulerName] leads a crowd of researcher, high officials, and news reporters towards a monitor displaying the status of the §WCentral Core§!. Though corrupted during the loss of the Uploaded, the lights on the §WCentral Core§! slowly turn on one by one. With a sigh of relief, our researchers believe they may be able to analyze and reverse engineer the secrets of our Uploaded leader.\n\nWith the §WCentral Core§! at its heart, the §Y$building_oc_eternal_institute$§! is officially completed."
  
  origins_civics_leader_quest_events.102.name:0 "Eternal Nightmare"
