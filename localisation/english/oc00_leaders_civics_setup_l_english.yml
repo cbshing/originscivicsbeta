@@ -122,7 +122,7 @@
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network, [ruler.GetSheHe] optimized our society to reach its full potential, and an era of stability and scientific progress followed."
  START_SCREEN_PART_TWO_CLINICALLY_ETERNAL:0 "The early chaotic periods of our history saw many nation states vying with each other for power, until the Longevity formula was discovered. Monopolizing its potentials, the clinically immortal ruling class unified our society, and an era of stability and scientific progress followed."
 
- #Unused
+ # Corporate Civics (Unused)
  START_SCREEN_PART_TWO_ETERNAL_LEADER_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until the Eternal [GetRulerTitle] [GetRulerName] arrived. Only when guided by a single vision could we reach our full potential, and an era of unmatched profits and progress followed."
  START_SCREEN_PART_TWO_DIGITALLY_ETERNAL_CORP:0 "The early chaotic periods of our history saw many corporations and nation states vying for power, until [GetRulerTitle] [GetRulerName] arrived. Having uploaded [ruler.GetHerHis] consciousness into the global computing network our society was optimized to reach our full potential, and an era of unmatched profits and progress followed."
  
@@ -159,7 +159,7 @@
  origins_civics_leader_quest_events.101.desc.digital:0 "To the whir of a generator, [root.GetRulerTitle] [root.GetRulerName] leads a crowd of researcher, high officials, and news reporters towards a monitor displaying the status of the §WCentral Core§!. Though corrupted during the loss of the Uploaded, the lights on the §WCentral Core§! slowly turn on one by one. With a sigh of relief, our researchers believe they may be able to analyze and reverse engineer the secrets of our Uploaded leader.\n\nWith the §WCentral Core§! at its heart, the §Y$building_oc_eternal_institute$§! is officially completed."
  
  origins_civics_leader_quest_events.102.name:0 "Eternal Nightmare"
- origins_civics_leader_quest_events.102.desc:0 ""
+ origins_civics_leader_quest_events.102.desc:0 ""§PRETURN!§!" resounds a ghostly voice throughout the bed chamber of [root.GetRulerTitle] [root.GetRulerName], startling the sleeping ruler out of bed.\n\n"§PRETURN ME!§!" the voice repeats."
  
  origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
  origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the §WCentral Core§! continuously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
