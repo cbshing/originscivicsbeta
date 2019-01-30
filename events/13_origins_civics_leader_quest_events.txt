@@ -109,18 +109,18 @@ planet_event = {
 		}
 		remove_modifier = oc_eternal_offline
 		hidden_effect = { 
-			owner = { country_event = { id = origins_civics_leader_quest_events.103 days = 1080 random = 900 } }
+			owner = { country_event = { id = origins_civics_leader_quest_events.104 days = 1080 random = 900 } }
 		}
 	}
 }
 
-# First Eternal Leader Nightmare Oracle
+# First Eternal Leader Dream
 country_event = {
 	id = origins_civics_leader_quest_events.102
 	title = "origins_civics_leader_quest_events.102.name"
+	desc = origins_civics_leader_quest_events.102.desc
 	picture = GFX_evt_surreal_visions
 	show_sound = event_mystic_reveal
-	desc = origins_civics_leader_quest_events.102.desc
 	location = capital_scope
 	
 	is_triggered_only = yes
@@ -130,12 +130,134 @@ country_event = {
 		has_country_flag = oc_first_eternal_leader_died
 		has_country_flag = oc_eternal_leader_is_died
 		has_oc_eternal_leader_civic = yes
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
 	}
 	
 	option = {
 		name = origins_civics_leader_quest_events.102.a
+		hidden_effect = { 
+			country_event = { id = origins_civics_leader_quest_events.103 }
+		}
+	}
+}
+
+# First Eternal Leader Dream Communicates
+country_event = {
+	id = origins_civics_leader_quest_events.103
+	title = "origins_civics_leader_quest_events.102.name"
+	desc = origins_civics_leader_quest_events.103.desc
+	
+	diplomatic = yes
+	force_open = yes
+	
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_first_eternal_leader_died
+		has_country_flag = oc_eternal_leader_is_died
+		has_oc_eternal_leader_civic = yes
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+	}
+	
+	option = {
+		name = origins_civics_leader_quest_events.103.a
 		trigger = {
-			is_materialist = no
+			NOT = { 
+				owner_species = {
+					OR = {
+						has_trait = trait_psionic 
+						has_trait = trait_latent_psionic 
+					}
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.b
+		trigger = {
+			NOT = { 
+				owner_species = {
+					OR = {
+						has_trait = trait_psionic 
+						has_trait = trait_latent_psionic 
+					}
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.c
+		trigger = {
+			NOT = { 
+				owner_species = {
+					OR = {
+						has_trait = trait_psionic 
+						has_trait = trait_latent_psionic 
+					}
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.d
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_psionic 
+					has_trait = trait_latent_psionic 
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.e
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_psionic 
+					has_trait = trait_latent_psionic 
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.f
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_psionic 
+					has_trait = trait_latent_psionic 
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.f.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.d
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_psionic 
+					has_trait = trait_latent_psionic 
+				}
+			}
 		}
 		begin_event_chain = {
 			event_chain = oc_first_new_eternal_leader_chain
@@ -150,20 +272,20 @@ country_event = {
 		}
 	}
 	option = {
-		name = origins_civics_leader_quest_events.102.b
+		name = origins_civics_leader_quest_events.103.e
 		hidden_effect = { 
-			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+			#add modifier
 		}
 	}
 }
 
 # First Digitally Eternal Leader Decipher
 country_event = {
-	id = origins_civics_leader_quest_events.103
-	title = "origins_civics_leader_quest_events.103.name"
+	id = origins_civics_leader_quest_events.104
+	title = "origins_civics_leader_quest_events.104.name"
 	picture = GFX_evt_synth_sabotage
 	show_sound = event_administrative_work
-	desc = origins_civics_leader_quest_events.103.desc
+	desc = origins_civics_leader_quest_events.104.desc
 	location = capital_scope
 	
 	is_triggered_only = yes
