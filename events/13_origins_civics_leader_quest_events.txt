@@ -68,13 +68,13 @@ planet_event = {
 		trigger = {
 			has_oc_eternal_leader_civic = yes
 		}
-		text = origins_civics_leader_quest_events.101.a
+		text = origins_civics_leader_quest_events.101.desc.eternal
 	}
 	desc = {
 		trigger = {
 			has_oc_digitally_eternal_civic = yes
 		}
-		text = origins_civics_leader_quest_events.101.b
+		text = origins_civics_leader_quest_events.101.desc.digital
 	}
 	location = root
 	
@@ -97,6 +97,7 @@ planet_event = {
 		trigger = {
 			has_oc_eternal_leader_civic = yes
 		}
+		remove_modifier = oc_eternal_mourning 
 		hidden_effect = { 
 			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
 		}
@@ -106,6 +107,7 @@ planet_event = {
 		trigger = {
 			has_oc_digitally_eternal_civic = yes
 		}
+		remove_modifier = oc_eternal_offline
 		hidden_effect = { 
 			owner = { country_event = { id = origins_civics_leader_quest_events.103 days = 1080 random = 900 } }
 		}
