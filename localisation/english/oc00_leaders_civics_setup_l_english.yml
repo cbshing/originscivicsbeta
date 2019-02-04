@@ -137,6 +137,19 @@
  ####################################
  # Origins Special Projects & Event Chains
  ####################################
+ oc_first_new_eternal_leader_chain_title:0 "Eternal Search"
+ oc_first_new_eternal_leader_chain_desc:0 "In a dream a voice reached out to our [root.GetRulerTitle], seeking help. This strong psionic voice must be answered."
+ oc_first_new_digitally_eternal_chain_title:0 "Eternal Secrets"
+ oc_first_new_digitally_eternal_chain_desc:0 "Only through deciphering the secrets of our fallen Uploaded [root.GetRulerTitle], we may be able to restore the §WCentral Core§!."
+ 
+ OC_ETERNAL_LEADER_ORACLE_PROJECT:0 "Eternal Oracle"
+ OC_ETERNAL_LEADER_ORACLE_PROJECT_DESC:0 "We will summon an Oracle to the capital to interpret the [root.GetRulerTitle] and search for what must be returned."  
+ 
+ OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT:0 "Eternal Decipher"
+ OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_DESC:0 "We will put the resources of our greatest scientists to crack the achieve of our fallen Uploaded."
+ OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_2:0 "$OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT$"
+ OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_2_DESC:0 "$OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_2$"
+ 
  OC_DE_UPLOAD_LEADER_PROJECT:0 "Upload Leader"
  OC_DE_UPLOAD_LEADER_PROJECT_DESC:0 "To restore stability and order in [root.GetName], it is with utmost impertinence that we begin the upload process of [root.GetRulerName]. [ruler.GetHerHis] mind will live on forever as the core of the [root.GetName]."
 
@@ -147,21 +160,18 @@
  
  origins_civics_leader_quest_events.100.name:0 "In Memory Of..."
  origins_civics_leader_quest_events.100.desc.eternal:0 "Walking through the large ancient doors of the Eternal Palace and up the stairs of the ceremonial platform, [root.GetRulerTitle] [root.GetRulerName] solemnly approaches the crowd. Before [ruler.GetHerHim] lay a sea of mourning citizens shocked by the sudden death of our eternal leader. Lost and afraid, the citizens gathered in the Eternal Square to look upon their new [root.GetRulerTitle] for guidance in these dark times.\n\nRaising both of [ruler.GetHerHis] [root.GetSpeciesHandName]s, [root.GetRulerTitle] [root.GetRulerName] delivers [ruler.GetHerHis] vision for the future of the [root.GetName]."
- origins_civics_leader_quest_events.100.desc.digital:0 "Climbing up the stairs to the recently constructed remembrance platform in front of the §WCentral Core§!, [root.GetRulerTitle] [root.GetRulerName] solemnly approaches the crowd. Before [ruler.GetHerHim] stood a sea of mourning citizens shocked by the sudden death of our digitally eternal leader. Lost and worried, the citizens gathered at the §WCentral Core§! to look upon their new [root.GetRulerTitle] for guidance in these dark times.\n\nRaising both of [ruler.GetHerHis] [root.GetSpeciesHandName]s, [root.GetRulerTitle] [root.GetRulerName] delivers [ruler.GetHerHis] vision for the future of the [root.GetName]."
+ origins_civics_leader_quest_events.100.desc.digital:0 "Climbing up the stairs to the recently constructed platform in front of the §WCentral Core§!, [root.GetRulerTitle] [root.GetRulerName] solemnly approaches the crowd. Before [ruler.GetHerHim] stood a sea of mourning citizens shocked by the sudden death of our digitally eternal leader. Lost and worried, the citizens gathered at the §WCentral Core§! to look upon their new [root.GetRulerTitle] for guidance in these dark times.\n\nRaising both of [ruler.GetHerHis] [root.GetSpeciesHandName]s, [root.GetRulerTitle] [root.GetRulerName] delivers [ruler.GetHerHis] vision for the future of the [root.GetName]."
  origins_civics_leader_quest_events.100.a:0 "An Eternity lies ahead of us."
  origins_civics_leaders_quest_events.100.a.tip:0 "Allow the construction of the §Y$building_oc_eternal_mausoleum$§!, a massive shrine to our fallen leader."
  origins_civics_leader_quest_events.100.b:0 "$origins_civics_leader_quest_events.100.a$"
  origins_civics_leaders_quest_events.100.b.tip:0 "Allow the construction of the §Y$building_oc_eternal_institute$§!, a massive complex dedicated to our fallen leader."
  origins_civics_leader_quest_events.100.c:0 "We shall forge our own path."
- 
  origins_civics_leader_quest_events.101.name:0 "Memorial Completed"
- origins_civics_leader_quest_events.101.desc.eternal:0 "To the sound of tolling bells and somber singing, [root.GetRulerTitle] [root.GetRulerName] leads a procession of priests, high officials, and local citizens up the monumental staircase to the tomb of our fallen leader. Upon reaching the central chamber, the procession is received by a mulistory statue of our Eternal [root.GetRulerTitle] seated on the Everlasting Throne overlooking the glass coffin. A grand ceremony is performed, where the priests and many of the citizens offer prayers to our Eternal while [root.GetRulerTitle] [root.GetRulername] watches on.\n\nAs the last citizen descends the grand staircase and doors to the §Y$building_oc_eternal_mausoleum$§! close, a wave of calm washes over the capital as they know they have truly honored the Eternal one."
+ origins_civics_leader_quest_events.101.desc.eternal:0 "To the sound of tolling bells and somber singing, [root.GetRulerTitle] [root.GetRulerName] leads a procession of priests, high officials, and local citizens up the monumental staircase to the tomb of our fallen leader. Upon reaching the central chamber, the procession is received by a multistory statue of our Eternal [root.GetRulerTitle] seated on the Everlasting Throne overlooking the glass coffin. A grand ceremony is performed, where the priests and many of the citizens offer prayers to our Eternal while [root.GetRulerTitle] [root.GetRulername] watches on.\n\nAs the last citizen descends the grand staircase and doors to the §Y$building_oc_eternal_mausoleum$§! close, a wave of calm washes over the capital as they know they have truly honored the Eternal one."
  origins_civics_leader_quest_events.101.desc.digital:0 "To the whir of a generator, [root.GetRulerTitle] [root.GetRulerName] leads a crowd of researcher, high officials, and news reporters towards a monitor displaying the status of the §WCentral Core§!. Though corrupted during the loss of the Uploaded, the lights on the §WCentral Core§! slowly turn on one by one. With a sigh of relief, our researchers believe they may be able to analyze and reverse engineer the secrets of our Uploaded leader.\n\nWith the §WCentral Core§! at its heart, the §Y$building_oc_eternal_institute$§! is officially completed."
- 
- origins_civics_leader_quest_events.102.name:0 "Eternal Dreams"
- origins_civics_leader_quest_events.102.desc:0 ""§PRETURN!§!" resounds a ghostly voice throughout the bed chamber of [root.GetRulerTitle] [root.GetRulerName], startling the sleeping ruler out of bed.\n\n"§PRETURN ME!§!" the voice repeats as a wave of psionic energy washes over [root.GetRulerName]."
+ origins_civics_leader_quest_events.102.name:0 "Eternity"
+ origins_civics_leader_quest_events.102.desc:0 ""§PRETURN!§!" resounds a ghostly psionic voice into the resting head of [root.GetRulerTitle] [root.GetRulerName], startling the sleeping ruler out of bed.\n\n"§PRETURN ME!§!" the voice repeats as a wave of psionic energy washes over [root.GetRulerName]."
  origins_civics_leader_quest_events.102.a:0 "..."
- 
  origins_civics_leader_quest_events.103.desc:0 "..."
  origins_civics_leader_quest_events.103.a:0 "Who are you?"
  origins_civics_leader_quest_events.103.a.response:0 "...§PRETURN!§!..."
@@ -169,26 +179,21 @@
  origins_civics_leader_quest_events.103.b.response:0 "...§PRETURN ME!§!..."
  origins_civics_leader_quest_events.103.c:0 "How can we return you?"
  origins_civics_leader_quest_events.103.c.response:0 "...§PRETURN ME!§!..."
- origins_civics_leader_quest_events.103.d:0 "How can we return you?"
- origins_civics_leader_quest_events.103.e:0 "How can we return you?" 
+ origins_civics_leader_quest_events.103.d:0 "Let's seek an §WOracle§!"
+ origins_civics_leader_quest_events.103.e:0 "Who are you?"
+ origins_civics_leader_quest_events.103.e.response:0 "...it is I...the §PREternal!§!..."
+ origins_civics_leader_quest_events.103.f:0 "Why should we return you?"
+ origins_civics_leader_quest_events.103.f.response:0 "...Eternity is...a §Pbeginning§!..."
+ origins_civics_leader_quest_events.103.g:0 "How can we return you?"
+ origins_civics_leader_quest_events.103.g.response:0 "...seek...falling star...I...§Preborn§!..."
+ origins_civics_leader_quest_events.103.h:0 "We will find you."
+ origins_civics_leader_quest_events.103.i:0 "It was only a dream."
  
- origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
- origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the §WCentral Core§! continuously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
- origins_civics_leader_quest_events.111.name:0 "[ruler.GetName] Uploaded"
- origins_civics_leader_quest_events.111.desc:0 "As the neural interface device disconnects from [ruler.GetHerHis] now lifeless body, the §WCentral Core§! is rebooted with [root.GetRulerTitle] [ruler.GetName] fully integrated into our systems.\n\nThe unique neural patterns of [ruler.GetName] are already making a mark on our empire, with a renewed sense of stability washing over our empire. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicates an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
- origins_civics_leader_quest_events.112.name:0 "A New Upload?"
- origins_civics_leader_quest_events.112.desc:0 "While archiving the computer core, one of the apprentice technicians discovered a marked file located in a hidden subdirectory. Upon opening this file what she discovered were the blueprint designs for the original neural interface device created by [firsteternalleader.GetName], that device which allowed [firsteternalleader.GetHerHim] to upload [firsteternalleader.GetHerHis] personality into the §WCentral Core§!. With this discovery our engineers feel they could recreate the neural interface, allowing us to upload a new consciousness to lead our people.\n\n[root.GetRulerTitle] [root.GetRulerName] volunteers to permanently lead our nation."
- origins_civics_leader_quest_events.113.name:0 "Upload: Progress Report"
- origins_civics_leader_quest_events.113.desc:0 "As the consciousness of [root.GetRulerName] uploads into the §WCentral Core§!, our engineers can tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
- origins_civics_leader_quest_events.113.desc.first:0 "As the consciousness of [root.GetRulerName] uploads into the §WCentral Core§!, a thought passes through the lead engineer's mind. He believes that he may be able to tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
- origins_civics_leaders_quest_events.113.a:0 "Emphasize Research"
- origins_civics_leaders_quest_events.113.a.tip:0 "We will attempt to tweak a leader's priorities to focus on advancing research."
- origins_civics_leaders_quest_events.113.b:0 "Emphasize Military"
- origins_civics_leaders_quest_events.113.b.tip:0 "We will attempt to tweak a leader's priorities to focus on supplementing our military."
- origins_civics_leaders_quest_events.113.c:0 "Emphasize Specialists"
- origins_civics_leaders_quest_events.113.c.tip:0 "We will attempt to tweak a leader's priorities to focus on promoting our specialists."
- origins_civics_leaders_quest_events.113.d:0 "This is immoral."
- origins_civics_leaders_quest_events.113.d.tip:0 "This and every future leader's personality will never be modified.\n\n§YLose the ability to modify any potential future leaders.§!"
+ origins_civics_leader_quest_events.104.name:0 "Eternal Secret"
+ origins_civics_leader_quest_events.104.desc:0 "While cataloging the numerous fragmented files on the §WCentral Core§!, a young researcher comes across a hidden subdirectory. When opening the subdirectory, the researcher discovered what appeared to be original notes from our fallen Uploaded. Amongst the notes included technical drawings and scientific theories, some which discuss the original mechanisms of the §WCentral Core§!.\n\nThese may be the secrets to restarting the Uploaded program!"
+ origins_civics_leader_quest_events.104.a:0 "We will decipher these notes!"
+ origins_civics_leader_quest_events.104.b:0 "$origins_civics_leader_quest_events.104.a$"
+ origins_civics_leader_quest_events.104.c:0 "Delete these notes. The Uploaded is in the past."
  
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
  origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge."
@@ -273,3 +278,25 @@
  edict_oc_edict_optimization_eternal_military_desc:0 "The Uploaded will focus on optimizing our military command, increasing our military's overall accuracy and fire power.\n\n§YBoon length is not determined by edict length§!"
  edict_oc_edict_optimization_eternal_development:0 "$oc_eternal_optimization_development$"
  edict_oc_edict_optimization_eternal_development_desc:0 "The Uploaded will focus on optimizing planetary development, encouraging construction and increasing production.\n\n§YBoon length is not determined by edict length§!"
+
+ ####################################
+ # Origins Events - Old
+ ####################################
+ origins_civics_leader_quest_events.110.name:0 "Need for a New Upload"
+ origins_civics_leader_quest_events.110.desc:0 "The loss of the Uploaded and the §WCentral Core§! continuously challenges our nation. Without the continuous support provided by the [root.GetSpeciesName]-Machine interface, scientific and economic progress of [root.GetName] has ground to a halt.\n\nNow, with the selection of a new and willing leader we can rectify what was lost when the Uploaded went offline. By overwriting the cognitive patterns of the Uploaded with this chosen leader, we will be able to restore functionality to our systems. [root.GetRulerTitle] [root.GetRulerName] mind will becoming the core of our empire."
+ origins_civics_leader_quest_events.111.name:0 "[ruler.GetName] Uploaded"
+ origins_civics_leader_quest_events.111.desc:0 "As the neural interface device disconnects from [ruler.GetHerHis] now lifeless body, the §WCentral Core§! is rebooted with [root.GetRulerTitle] [ruler.GetName] fully integrated into our systems.\n\nThe unique neural patterns of [ruler.GetName] are already making a mark on our empire, with a renewed sense of stability washing over our empire. A readout of flash polls conducted by [root.GetRulerTitle] [ruler.GetName] already indicates an increase in citizen satisfaction now that [ruler.GetSheHe] is in charge."
+ origins_civics_leader_quest_events.112.name:0 "A New Upload?"
+ origins_civics_leader_quest_events.112.desc:0 "While archiving the computer core, one of the apprentice technicians discovered a marked file located in a hidden subdirectory. Upon opening this file what she discovered were the blueprint designs for the original neural interface device created by [firsteternalleader.GetName], that device which allowed [firsteternalleader.GetHerHim] to upload [firsteternalleader.GetHerHis] personality into the §WCentral Core§!. With this discovery our engineers feel they could recreate the neural interface, allowing us to upload a new consciousness to lead our people.\n\n[root.GetRulerTitle] [root.GetRulerName] volunteers to permanently lead our nation."
+ origins_civics_leader_quest_events.113.name:0 "Upload: Progress Report"
+ origins_civics_leader_quest_events.113.desc:0 "As the consciousness of [root.GetRulerName] uploads into the §WCentral Core§!, our engineers can tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
+ origins_civics_leader_quest_events.113.desc.first:0 "As the consciousness of [root.GetRulerName] uploads into the §WCentral Core§!, a thought passes through the lead engineer's mind. He believes that he may be able to tweak [ruler.GetHerHis] personality priorities to better suit our empire's needs. The question becomes, what priorities should we emphasize in our eternal leader?"
+ origins_civics_leaders_quest_events.113.a:0 "Emphasize Research"
+ origins_civics_leaders_quest_events.113.a.tip:0 "We will attempt to tweak a leader's priorities to focus on advancing research."
+ origins_civics_leaders_quest_events.113.b:0 "Emphasize Military"
+ origins_civics_leaders_quest_events.113.b.tip:0 "We will attempt to tweak a leader's priorities to focus on supplementing our military."
+ origins_civics_leaders_quest_events.113.c:0 "Emphasize Specialists"
+ origins_civics_leaders_quest_events.113.c.tip:0 "We will attempt to tweak a leader's priorities to focus on promoting our specialists."
+ origins_civics_leaders_quest_events.113.d:0 "This is immoral."
+ origins_civics_leaders_quest_events.113.d.tip:0 "This and every future leader's personality will never be modified.\n\n§YLose the ability to modify any potential future leaders.§!"
+ 

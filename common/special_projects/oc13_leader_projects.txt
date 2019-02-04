@@ -1,3 +1,7 @@
+# Origins Civics Special Projects - Leaders
+# by cbshing
+
+### New First Eternal Leaders Special Projects
 # Eternal Leader Oracle Project
 special_project = {
 	key = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
@@ -23,7 +27,7 @@ special_project = {
 	}
 	
 	on_success = {
-		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+		owner = { country_event = { id = origins_civics_leader_quest_events.105 } }
 	}
 	
 	on_fail = {
@@ -31,12 +35,85 @@ special_project = {
 }
 
 
+# Eternal Leader Search Project
+special_project = {
+	key = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_1"
+	event_chain = oc_first_new_eternal_leader_chain
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_busy_spaceport
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		ship_event = { id = origins_civics_leader_quest_events.106 }
+	}
+	
+	on_fail = {
+	}
+}
+
+# Eternal Leader Search Project
+special_project = {
+	key = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_2"
+	event_chain = oc_first_new_eternal_leader_chain
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_busy_spaceport
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		ship_event = { id = origins_civics_leader_quest_events.106 }
+	}
+	
+	on_fail = {
+	}
+}
+
+# Eternal Leader Search Project
+special_project = {
+	key = "OC_ETERNAL_LEADER_SEARCH_FOUND"
+	event_chain = oc_first_new_eternal_leader_chain
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_busy_spaceport
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		ship_event = { id = origins_civics_leader_quest_events.107 }
+	}
+	
+	on_fail = {
+	}
+}
+
 
 # Digitally Eternal Decipher Upload Project
 special_project = {
 	key = "OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT"
 	cost = {
 		base = 3000
+		
 	}
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
@@ -57,8 +134,37 @@ special_project = {
 	}
 }
 
+# Digitally Eternal Decipher Upload Project
+special_project = {
+	key = "OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_2"
+	cost = {
+		base = 1500
+	}
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_synth_sabotage
+	
+	event_scope = planet_event
+	
+	event_chain = oc_first_new_digitally_eternal_chain
+	
+	requirements = {
+	}
+	
+	on_progress_20 = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
+	}
+	
+	on_success = {
+		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+	}
+	
+	on_fail = {
+	}
+}
 
 
+### Subsequent Eternal Leaders Special Projects
 # Eternal Leader Search Project
 special_project = {
 	key = "OC_EL_SEARCH_LEADER_PROJECT"

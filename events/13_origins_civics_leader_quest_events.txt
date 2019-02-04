@@ -213,15 +213,26 @@ country_event = {
 	option = {
 		name = origins_civics_leader_quest_events.103.d
 		trigger = {
-			owner_species = {
-				OR = {
-					has_trait = trait_psionic 
-					has_trait = trait_latent_psionic 
+			NOT = { 
+				owner_species = {
+					OR = {
+						has_trait = trait_psionic 
+						has_trait = trait_latent_psionic 
+					}
 				}
 			}
 		}
-		response_text = origins_civics_leader_quest_events.103.d.response
-		is_dialog_only = yes
+		begin_event_chain = {
+			event_chain = oc_first_new_eternal_leader_chain
+			target = root
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
 	}
 	option = {
 		name = origins_civics_leader_quest_events.103.e
@@ -250,7 +261,20 @@ country_event = {
 		is_dialog_only = yes
 	}
 	option = {
-		name = origins_civics_leader_quest_events.103.d
+		name = origins_civics_leader_quest_events.103.g
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_psionic 
+					has_trait = trait_latent_psionic 
+				}
+			}
+		}
+		response_text = origins_civics_leader_quest_events.103.g.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = origins_civics_leader_quest_events.103.h
 		trigger = {
 			owner_species = {
 				OR = {
@@ -261,21 +285,58 @@ country_event = {
 		}
 		begin_event_chain = {
 			event_chain = oc_first_new_eternal_leader_chain
-			target = root.owner
+			target = root
 		}
-		capital_scope = {
-			enable_special_project = {
-				name = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
-				location = this
-				owner = root
+		hidden_effect = {
+			random_owned_planet = { # No Eternal
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here_2
+						has_planet_flag = oc_new_eternal_leader_here
+					}
+				}
+				set_planet_flag = oc_no_eternal_leader_here
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_1"
+					location = this
+					owner = root
+				}
 			}
+			random_owned_planet = { # No Eternal
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here
+						has_planet_flag = oc_new_eternal_leader_here
+					}
+				}
+				set_planet_flag = oc_no_eternal_leader_here_2
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_2"
+					location = this
+					owner = root
+				}
+			}
+			random_owned_planet = { # No Eternal
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here
+						has_planet_flag = oc_no_eternal_leader_here_2
+					}
+				}
+				set_planet_flag = oc_new_eternal_leader_here
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_FOUND"
+					location = this
+					owner = root
+				}
+			}		
 		}
 	}
 	option = {
-		name = origins_civics_leader_quest_events.103.e
-		hidden_effect = { 
-			#add modifier
-		}
+		name = origins_civics_leader_quest_events.103.i
 	}
 }
 
@@ -297,33 +358,182 @@ country_event = {
 	}
 	
 	option = {
-		name = origins_civics_leader_quest_events.102.a
+		name = origins_civics_leader_quest_events.104.a
 		trigger = {
-			is_spiritualist = no
+			NOT = { 
+				owner_species = {
+					OR = {
+						has_trait = trait_mechanical 
+						has_trait = trait_cybernetic
+					}
+				}
+			}
 		}
 		begin_event_chain = {
-			event_chain = oc_first_new_eternal_leader_chain
-			target = root.owner
+			event_chain = oc_first_new_digitally_eternal_chain
+			target = root
 		}
 		capital_scope = {
 			enable_special_project = {
-				name = "OC_ETERNAL_LEADER_ORACLE_PROJECT"
+				name = "OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT"
 				location = this
 				owner = root
 			}
 		}
 	}
 	option = {
-		name = origins_civics_leader_quest_events.102.b
-		hidden_effect = { 
-			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+		name = origins_civics_leader_quest_events.104.b
+		trigger = {
+			owner_species = {
+				OR = {
+					has_trait = trait_mechanical 
+					has_trait = trait_cybernetic 
+				}
+			}
 		}
+		begin_event_chain = {
+			event_chain = oc_first_new_digitally_eternal_chain
+			target = root
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_DIGITALLY_ETERNAL_DECIPHER_ARCHIVE_PROJECT_2"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.104.c
+	}
+}
+
+# Eternal Leader Oracle Project Complete
+country_event = {
+	id = origins_civics_leader_quest_events.105
+	title = "origins_civics_leader_quest_events.105.name"
+	picture = GFX_evt_star_chart
+	show_sound = event_mystic_reveal
+	desc = origins_civics_leader_quest_events.105.desc
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_first_eternal_leader_died
+		has_country_flag = oc_eternal_leader_is_died
+		has_oc_eternal_leader_civic = yes
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+	}
+	
+	option = {
+		origins_civics_leader_quest_events.105.a
+		begin_event_chain = {
+			event_chain = oc_first_new_eternal_leader_chain
+			target = root
+		}
+		hidden_effect = {
+			random_owned_planet = { # No Eternal
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here_2
+						has_planet_flag = oc_new_eternal_leader_here
+					}
+				}
+				set_planet_flag = oc_no_eternal_leader_here
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_1"
+					location = this
+					owner = root
+				}
+			}
+			random_owned_planet = { # No Eternal
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here
+						has_planet_flag = oc_new_eternal_leader_here
+					}
+				}
+				set_planet_flag = oc_no_eternal_leader_here_2
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_NOT_FOUND_2"
+					location = this
+					owner = root
+				}
+			}
+			random_owned_planet = { # Eternal Here
+				limit = {
+					is_capital = no
+					NOR = {
+						has_planet_flag = oc_no_eternal_leader_here
+						has_planet_flag = oc_no_eternal_leader_here_2
+					}
+				}
+				set_planet_flag = oc_new_eternal_leader_here
+				enable_special_project = {
+					name = "OC_ETERNAL_LEADER_SEARCH_FOUND"
+					location = this
+					owner = root
+				}
+			}	
+		}
+	}
+}
+
+# Eternal Leader Not Found New Leader
+country_event = {
+	id = origins_civics_leader_quest_events.106
+	title = "origins_civics_leader_quest_events.106.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_ship_bridge
+	desc = origins_civics_leader_quest_events.106.desc
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_first_eternal_leader_died
+		has_country_flag = oc_eternal_leader_is_died
+		has_oc_eternal_leader_civic = yes
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+	}
+	
+	option = {
+		origins_civics_leader_quest_events.106.a
+	}
+}
+
+# Eternal Leader Found New Leader
+country_event = {
+	id = origins_civics_leader_quest_events.107
+	title = "origins_civics_leader_quest_events.107.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_ship_bridge
+	desc = origins_civics_leader_quest_events.107.desc
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_first_eternal_leader_died
+		has_country_flag = oc_eternal_leader_is_died
+		has_oc_eternal_leader_civic = yes
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+	}
+	
+	option = {
+		origins_civics_leader_quest_events.107.a
 	}
 }
 
 # Eternal Leader New Eternal Start Special Project
 country_event = {
-	id = origins_civics_leader_quest_events.107
+	id = origins_civics_leader_quest_events.108
 	title = "origins_civics_leader_quest_events.110.name"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_conversation
