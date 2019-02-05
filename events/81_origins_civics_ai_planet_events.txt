@@ -31,7 +31,7 @@ planet_event = {
 		}
 		NOT ={ 
 			owner = { has_country_flag = restore_homeworld_country_true }
-			owner = { has_country_flag = restore_homeworld_country_events_chain_initiated }
+			#owner = { has_country_flag = restore_homeworld_country_events_chain_initiated }
 		}
 		NOR = {
 			is_planet_class = pc_gaia # this is added if someone has terraformed their homeworld to gaia instead.
@@ -43,5 +43,6 @@ planet_event = {
 	
 	immediate = {
 		change_to_pc_owner_class = yes
+		set_country_flag = restore_homeworld_country_true
 	}
 }

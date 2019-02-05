@@ -412,7 +412,7 @@ country_event = {
 country_event = {
 	id = origins_civics_leader_quest_events.105
 	title = "origins_civics_leader_quest_events.105.name"
-	picture = GFX_evt_star_chart
+	picture = GFX_evt_throne_room
 	show_sound = event_mystic_reveal
 	desc = origins_civics_leader_quest_events.105.desc
 	location = capital_scope
@@ -484,22 +484,35 @@ country_event = {
 }
 
 # Eternal Leader Not Found New Leader
-country_event = {
+ship_event = {
 	id = origins_civics_leader_quest_events.106
 	title = "origins_civics_leader_quest_events.106.name"
-	picture = GFX_evt_throne_room
+	picture = GFX_evt_ship_in_orbit
 	show_sound = event_ship_bridge
-	desc = origins_civics_leader_quest_events.106.desc
-	location = capital_scope
+	desc = {
+		trigger = {
+			fromfrom = { has_planet_flag = oc_no_eternal_leader_here }
+		}
+		text = origins_civics_leader_quest_events.106.desc.a
+	}
+	desc = {
+		trigger = {
+			fromfrom = { has_planet_flag = oc_no_eternal_leader_here_2 }
+		}
+		text = origins_civics_leader_quest_events.106.desc.b
+	}
+	location = fromfrom
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		is_ai = no
-		has_country_flag = oc_first_eternal_leader_died
-		has_country_flag = oc_eternal_leader_is_died
-		has_oc_eternal_leader_civic = yes
-		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+		owner = {
+			is_ai = no
+			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = oc_eternal_leader_is_died
+			has_oc_eternal_leader_civic = yes
+			NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+		}
 	}
 	
 	option = {
@@ -511,10 +524,10 @@ country_event = {
 country_event = {
 	id = origins_civics_leader_quest_events.107
 	title = "origins_civics_leader_quest_events.107.name"
-	picture = GFX_evt_throne_room
+	picture = GFX_evt_atmospheric_entry
 	show_sound = event_ship_bridge
 	desc = origins_civics_leader_quest_events.107.desc
-	location = capital_scope
+	location = fromfrom
 	
 	is_triggered_only = yes
 	

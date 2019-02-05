@@ -42,7 +42,7 @@ special_project = {
 	cost = 0
 	days_to_research = 180
 	tech_department = society_technology
-	picture = GFX_evt_busy_spaceport
+	picture = GFX_evt_star_chart
 	
 	event_scope = ship_event
 	
@@ -66,7 +66,7 @@ special_project = {
 	cost = 0
 	days_to_research = 180
 	tech_department = society_technology
-	picture = GFX_evt_busy_spaceport
+	picture = GFX_evt_star_chart
 	
 	event_scope = ship_event
 	
@@ -90,7 +90,7 @@ special_project = {
 	cost = 0
 	days_to_research = 180
 	tech_department = society_technology
-	picture = GFX_evt_busy_spaceport
+	picture = GFX_evt_star_chart
 	
 	event_scope = ship_event
 	
