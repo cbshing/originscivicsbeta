@@ -436,7 +436,7 @@ country_event = {
 country_event = {
 	id = origins_civics_leader_quest_events.107
 	title = "origins_civics_leader_quest_events.107.name"
-	picture = GFX_evt_colony_settlement
+	picture = GFX_evt_throne_room
 	show_sound = event_cityscape
 	desc = origins_civics_leader_quest_events.107.desc
 	location = capital_scope
@@ -458,7 +458,7 @@ country_event = {
 			}
 			set_country_flag = oc_found_new_eternal_leader
 			remove_country_flag = oc_eternal_leader_is_died
-			country_event = { id = origins_civics_leader_quest_events.109 days = 5 }
+			country_event = { id = origins_civics_leader_quest_events.109 days = 3600 }
 		}
 	}
 }
@@ -482,6 +482,50 @@ country_event = {
 	}
 	
 	option = {
+	}
+}
+
+# Eternal Leader New Eternal Leader Comes to Power
+country_event = {
+	id = origins_civics_leader_quest_events.109
+	title = "origins_civics_leader_quest_events.109.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_celebration
+	desc = origins_civics_leader_quest_events.109.desc
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_eternal_leader_is_died
+		has_oc_eternal_leader_civic = yes
+	}
+	
+	option = {
+		name = origins_civics_leader_quest_events.109.a
+		end_event_chain = "oc_new_eternal_leader_chain"
+		hidden_effect = {
+			create_leader = {
+				class = ruler
+				species = owner_main_species
+				name = random
+				skill = 1
+				leader_age_min = 11
+				leader_age_max = 15
+				traits = {
+					leader_trait_oc_eternal_leader
+				}
+			}
+			set_leader = last_created_leader
+			random_owned_leader = {
+				limit = { leader_class = ruler }
+				add_ruler_trait = leader_trait_oc_eternal_leader
+			}
+			remove_country_flag = oc_eternal_leader_is_died
+			remove_modifier = oc_eternal_mourning
+			#observer_event = { id = oc_observer.100 }
+		}
 	}
 }
 
@@ -671,7 +715,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_list = {
-				70 = { 
+				99= { 
 					random_owned_leader = {
 						limit = { leader_class = ruler }
 						add_trait = leader_trait_oc_eternal_leader
@@ -679,8 +723,9 @@ country_event = {
 					}
 					remove_country_flag = oc_eternal_leader_is_died
 					remove_modifier = oc_eternal_mourning
+					#observer_event = { id = oc_observer.100 }
 				}
-				30 = {
+				1 = {
 				}			
 			}
 		}
@@ -689,7 +734,7 @@ country_event = {
 
 # Digitally Eternal New Uploaded AI NPC
 country_event = {
-	id = origins_civics_leader_quest_events.1110
+	id = origins_civics_leader_quest_events.1101
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -702,7 +747,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { has_country_flag = synthetic_empire }
+				limit = { NOT = { has_country_flag = synthetic_empire } }
 				create_digitally_eternal_robot_leader = yes
 			}
 			else = {
@@ -714,6 +759,7 @@ country_event = {
 			}
 			remove_country_flag = oc_eternal_leader_is_died
 			remove_modifier = oc_eternal_crash
+			#observer_event = { id = oc_observer.101 }
 		}
 	}
 }
