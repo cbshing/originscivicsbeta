@@ -459,6 +459,7 @@ country_event = {
 			set_country_flag = oc_found_new_eternal_leader
 			remove_country_flag = oc_eternal_leader_is_died
 			country_event = { id = origins_civics_leader_quest_events.109 days = 3600 }
+			country_event = { id = origins_civics_leader_quest_events.120 days = 5 }
 		}
 	}
 }
@@ -498,7 +499,7 @@ country_event = {
 	
 	trigger = {
 		is_ai = no
-		has_country_flag = oc_eternal_leader_is_died
+		has_country_flag = oc_found_new_eternal_leader
 		has_oc_eternal_leader_civic = yes
 	}
 	
@@ -522,12 +523,84 @@ country_event = {
 				limit = { leader_class = ruler }
 				add_ruler_trait = leader_trait_oc_eternal_leader
 			}
-			remove_country_flag = oc_eternal_leader_is_died
+			remove_country_flag = oc_found_new_eternal_leader
 			remove_modifier = oc_eternal_mourning
 			#observer_event = { id = oc_observer.100 }
 		}
 	}
 }
+
+
+
+# Eternal Leader New Eternal Ethics Choices
+country_event = {
+	id = origins_civics_leader_quest_events.120
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_found_new_eternal_leader
+		has_oc_eternal_leader_civic = yes
+	}
+	
+	immediate = {
+		random_list = {
+			50 = {
+				set_country_flag = oc_new_eternal_guidance_A
+			}
+			50 = {
+				set_country_flag = oc_new_eternal_guidance_B
+			}		
+		}
+		country_event = { id = origins_civics_leader_quest_events.121 days = 1000 }
+		country_event = { id = origins_civics_leader_quest_events.122 days = 1800 }
+		country_event = { id = origins_civics_leader_quest_events.123 days = 3000 }
+	}
+}
+
+# Eternal Leader New Eternal Leader First Toy
+country_event = {
+	id = origins_civics_leader_quest_events.121
+	title = "origins_civics_leader_quest_events.121.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_celebration
+	desc = {
+		trigger = { # spiritualist vs. materialist
+			has_country_flag = oc_new_eternal_guidance_A
+		}
+		text = origins_civics_leader_quest_events.121.desc.a
+	}
+	desc = {
+		trigger = { # pacifist vs. militarist
+			has_country_flag = oc_new_eternal_guidance_B
+		}
+		text = origins_civics_leader_quest_events.121.desc.b
+	}
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_found_new_eternal_leader
+		has_oc_eternal_leader_civic = yes
+	}
+	
+	option = {
+		name = origins_civics_leader_quest_events.121.a
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+# Eternal Leader New Eternal Leader First Friend
+#xenophobe vs xenophilia, pacifist vs. militarist
+
+# Eternal Leader New Eternal Leader First Speech
+#xenophobe vs xenophilia, spiritualist vs. materialist
 
 # Digitally Eternal New Uploaded Start Special Project
 country_event = {
