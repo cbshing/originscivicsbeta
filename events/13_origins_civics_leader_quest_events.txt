@@ -406,13 +406,13 @@ country_event = {
 		trigger = { 
 			NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
 		}
-		text = origins_civics_leader_quest_events.106.desc.first
+		text = origins_civics_leader_quest_events.106.desc.a
 	}
 	desc = {
 		trigger = { 
 			has_country_flag = oc_completed_first_eternal_leader_death_chain
 		}
-		text = origins_civics_leader_quest_events.106.desc.all
+		text = origins_civics_leader_quest_events.106.desc.b
 	}
 	location = capital_scope
 	
