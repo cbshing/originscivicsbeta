@@ -402,18 +402,7 @@ country_event = {
 	title = "origins_civics_leader_quest_events.106.name"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started_01
-	desc = {
-		trigger = { 
-			NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
-		}
-		text = origins_civics_leader_quest_events.106.desc.a
-	}
-	desc = {
-		trigger = { 
-			has_country_flag = oc_completed_first_eternal_leader_death_chain
-		}
-		text = origins_civics_leader_quest_events.106.desc.b
-	}
+	desc = origins_civics_leader_quest_events.106.desc.a
 	location = capital_scope
 	
 	is_triggered_only = yes
@@ -423,7 +412,7 @@ country_event = {
 		has_oc_digitally_eternal_civic = yes
 		has_country_flag = oc_eternal_leader_is_died
 		has_country_flag = oc_first_eternal_leader_died
-		
+		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
 	}
 	
 	option = {
@@ -448,7 +437,7 @@ country_event = {
 	id = origins_civics_leader_quest_events.107
 	title = "origins_civics_leader_quest_events.107.name"
 	picture = GFX_evt_throne_room
-	show_sound = event_cityscape
+	show_sound = event_conversations
 	desc = origins_civics_leader_quest_events.107.desc
 	location = capital_scope
 	
@@ -559,7 +548,69 @@ country_event = {
 	}
 }
 
-
+country_event = {
+	id = origins_civics_leader_quest_events.110
+	title = "origins_civics_leader_quest_events.110.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_factions
+	desc = {
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
+		text = origins_civics_leader_quest_events.110.desc.eternal
+	}
+	desc = {
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+		text = origins_civics_leader_quest_events.110.desc.digital
+	}
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		oc_has_immortal_rulers_civics = yes
+		has_country_flag = oc_eternal_leader_is_died
+		has_country_flag = oc_completed_first_eternal_leader_death_chain
+	}
+	
+	option = {
+		name = SHALL_BE_DONE
+		
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.110.a
+		begin_event_chain = {
+			event_chain = oc_new_eternal_leader_chain
+			target = root
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_ETERNAL_LEADER_SEARCH_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		trigger = {
+			has_oc_eternal_leader_civic = yes
+		}
+	}
+	option = {
+		name = origins_civics_leaders_quest_events.110.b
+		capital_scope = {
+			enable_special_project = {
+				name = "OC_DIGITALLY_ETERNAL_UPLOAD_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		trigger = {
+			has_oc_digitally_eternal_civic = yes
+		}
+	}
+}
 
 # Eternal Leader New Eternal Ethics Choices
 country_event = {
