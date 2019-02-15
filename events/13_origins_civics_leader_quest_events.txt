@@ -412,7 +412,7 @@ country_event = {
 		has_oc_digitally_eternal_civic = yes
 		has_country_flag = oc_eternal_leader_is_died
 		has_country_flag = oc_first_eternal_leader_died
-		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+		#NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
 	}
 	
 	option = {
@@ -467,22 +467,40 @@ country_event = {
 # Eternal Leader New Eternal Start Special Project
 country_event = {
 	id = origins_civics_leader_quest_events.108
-	title = "origins_civics_leader_quest_events.110.name"
+	title = "origins_civics_leader_quest_events.108.name"
 	picture = GFX_evt_sapient_AI
-	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
+	show_sound = event_ai_started
+	desc = origins_civics_leader_quest_events.108.desc
 	location = capital_scope
-	trackable = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_oc_digitally_eternal_civic = yes
 		has_country_flag = oc_eternal_leader_is_died
 	}
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = synthetic_empire }}
+				create_digitally_eternal_robot_leader = yes
+			}
+			else = {
+				random_owned_leader = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_oc_digitally_eternal
+					add_ruler_trait = leader_trait_oc_digitally_eternal
+				}
+			}
+			remove_country_flag = oc_eternal_leader_is_died
+		}
+	}
+	
 	option = {
+		name = EXCELLENT
+		remove_modifier = oc_eternal_crash
 	}
 }
 
