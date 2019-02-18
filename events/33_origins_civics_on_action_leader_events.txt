@@ -88,12 +88,22 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		any_country = { oc_has_immortal_rulers_civics = yes }
+		any_country = { 
+			OR = {
+				oc_has_immortal_rulers_civics = yes 
+				has_oc_clinically_eternal_civic = yes
+			}
+		}
 	}
 	
 	immediate = {
 		every_country = {
-			limit = { oc_has_immortal_rulers_civics = yes }
+			limit = { 
+				OR = {
+					oc_has_immortal_rulers_civics = yes 
+					has_oc_clinically_eternal_civic = yes
+				}
+			}
 			if = { 
 				limit = { 
 					has_oc_eternal_leader_civic = yes
@@ -118,6 +128,14 @@ event = {
 					NOT = { has_modifier = oc_eternal_crash }
 				}
 				add_modifier = { modifier = oc_eternal_boost_passive_medium days = -1 }
+			}
+			else_if = { 
+				limit = { 
+					has_oc_clinically_eternal_civic = yes
+					has_ascension_perk = ap_engineered_evolution
+					has_technology = tech_gene_seed_purification
+				}
+				#add_modifier = { modifier = oc_eternal_biological_passive_medium days = -1 }
 			}
 			else_if = { 
 				limit = { 
@@ -146,6 +164,16 @@ event = {
 				remove_modifier = oc_eternal_boost_passive_medium
 				add_modifier = { modifier = oc_eternal_boost_passive_large days = -1 }
 			}
+			else_if = { 
+				limit = { 
+					has_oc_clinically_eternal_civic = yes
+					has_ascension_perk = ap_evolutionary_mastery
+					has_technology = tech_genetic_resequencing
+				}
+				#remove_modifier = oc_eternal_biological_passive_medium
+				#add_modifier = { modifier = oc_eternal_biological_passive_large days = -1 }
+			}
+			
 		}
 	}
 }

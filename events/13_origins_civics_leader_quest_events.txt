@@ -577,10 +577,6 @@ country_event = {
 	}
 	
 	option = {
-		name = SHALL_BE_DONE
-		
-	}
-	option = {
 		name = origins_civics_leaders_quest_events.110.a
 		begin_event_chain = {
 			event_chain = oc_new_eternal_leader_chain

@@ -382,7 +382,7 @@ oc_requires_leader_ruler_traits = {
 # scope: country
 oc_requires_all_leader_traits = {
 	OR = {
-		oc_requires_clinically_eternal_leader_trait = yes
+		#oc_requires_clinically_eternal_leader_trait = yes
 	}
 }
 

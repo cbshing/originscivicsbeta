@@ -85,7 +85,7 @@ has_oc_eternal_leader_civic = {
 # scope: country 
 has_oc_clinically_eternal_civic = {
 	OR = {
-		#has_valid_civic = civic_oc_clinically_eternal
+		has_valid_civic = civic_oc_clinically_eternal
 		has_country_flag = clinically_eternal_country
 	}
 	host_has_dlc = "Utopia"

@@ -521,18 +521,18 @@ country_event = {
 		}
 		# Modify All Leaders
 		if = { limit = { oc_requires_all_leader_traits = yes }
-			if = { limit = { oc_requires_clinically_eternal_leader_trait = yes }
-				every_owned_leader = {
-					add_trait = leader_trait_oc_clinically_eternal
-					add_ruler_trait = leader_trait_oc_clinically_eternal_ruler
-					set_age = 111
-					set_skill = 3
-				}
-				every_pool_leader = {
-					add_trait = leader_trait_oc_clinically_eternal
-					add_ruler_trait = leader_trait_oc_clinically_eternal_ruler
-				}
-			}
+			#if = { limit = { oc_requires_clinically_eternal_leader_trait = yes }
+				#every_owned_leader = {
+				#	add_trait = leader_trait_oc_clinically_eternal
+				#	add_ruler_trait = leader_trait_oc_clinically_eternal_ruler
+				#	set_age = 111
+				#	set_skill = 3
+				#}
+				#every_pool_leader = {
+				#	add_trait = leader_trait_oc_clinically_eternal
+				#	add_ruler_trait = leader_trait_oc_clinically_eternal_ruler
+				#}
+			#}
 		}
 	}
 }
