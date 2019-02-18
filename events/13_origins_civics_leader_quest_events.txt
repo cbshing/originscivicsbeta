@@ -477,8 +477,9 @@ country_event = {
 	
 	trigger = {
 		is_ai = no
-		has_oc_eternal_leader_civic = yes
+		has_oc_digitally_eternal_civic = yes
 		has_country_flag = oc_eternal_leader_is_died
+		has_country_flag = oc_first_eternal_leader_died
 	}
 	
 	option = {
