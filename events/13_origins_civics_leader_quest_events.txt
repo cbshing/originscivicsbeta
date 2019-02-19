@@ -402,7 +402,7 @@ country_event = {
 	title = "origins_civics_leader_quest_events.106.name"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started_01
-	desc = origins_civics_leader_quest_events.106.desc.a
+	desc = origins_civics_leader_quest_events.106.desc
 	location = capital_scope
 	
 	is_triggered_only = yes
@@ -459,7 +459,7 @@ country_event = {
 			set_country_flag = oc_found_new_eternal_leader
 			remove_country_flag = oc_eternal_leader_is_died
 			country_event = { id = origins_civics_leader_quest_events.109 days = 3600 }
-			country_event = { id = origins_civics_leader_quest_events.120 days = 5 }
+			#country_event = { id = origins_civics_leader_quest_events.120 days = 5 }
 		}
 	}
 }
@@ -499,7 +499,11 @@ country_event = {
 	}
 	
 	option = {
-		name = EXCELLENT
+		name = origins_civics_leader_quest_events.108.a
+		if = { 
+			limit = { has_event_chain = oc_first_new_digitally_eternal_chain }
+			end_event_chain = "oc_first_new_digitally_eternal_chain"
+		}
 		remove_modifier = oc_eternal_crash
 	}
 }
@@ -594,7 +598,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = origins_civics_leaders_quest_events.110.b
+		name = SHALL_BE_DONE
 		capital_scope = {
 			enable_special_project = {
 				name = "OC_DIGITALLY_ETERNAL_UPLOAD_PROJECT"
@@ -677,177 +681,6 @@ country_event = {
 
 # Eternal Leader New Eternal Leader First Speech
 #xenophobe vs xenophilia, spiritualist vs. materialist
-
-# Digitally Eternal New Uploaded Start Special Project
-country_event = {
-	id = origins_civics_leader_quest_events.110
-	title = "origins_civics_leader_quest_events.110.name"
-	picture = GFX_evt_sapient_AI
-	show_sound = event_conversation
-	desc = origins_civics_leader_quest_events.110.desc
-	location = capital_scope
-	trackable = yes
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	option = {
-		name = SHALL_BE_DONE
-		capital_scope = {
-			enable_special_project = {
-				name = "OC_DE_UPLOAD_LEADER_PROJECT"
-				location = this
-				owner = root
-			}
-		}
-	}
-}
-
-# Digitally Eternal New Uploaded End Special Project
-country_event = {
-	id = origins_civics_leader_quest_events.111
-	title = "origins_civics_leader_quest_events.111.name"
-	picture = GFX_evt_machine_sapience
-	show_sound = event_ai_started
-	desc = origins_civics_leader_quest_events.111.desc
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = synthetic_empire }}
-				create_digitally_eternal_robot_leader = yes
-			}
-			else = {
-				random_owned_leader = {
-					limit = { leader_class = ruler }
-					add_trait = leader_trait_oc_digitally_eternal
-					add_ruler_trait = leader_trait_oc_digitally_eternal
-				}
-			}
-			remove_country_flag = oc_eternal_leader_is_died
-		}
-	}
-	
-	option = {
-		name = EXCELLENT
-		remove_modifier = oc_eternal_crash
-		if = {
-			limit = { has_country_flag = oc_digitally_eternal_modification_research }
-			remove_country_flag = oc_digitally_eternal_modification_research
-			add_modifier = { modifier = oc_eternal_boost_science days = -1 }
-		}
-		else_if = {
-			limit = { has_country_flag = oc_digitally_eternal_modification_military }
-			remove_country_flag = oc_digitally_eternal_modification_military
-			add_modifier = { modifier = oc_eternal_boost_military days = -1 }
-		}
-		else_if = {
-			limit = { has_country_flag = oc_digitally_eternal_modification_specialist }
-			remove_country_flag = oc_digitally_eternal_modification_specialist
-			add_modifier = { modifier = oc_eternal_boost_specialist days = -1 }
-		}
-	}
-}
-
-# Digitally Eternal First New Uploaded Start Special Project
-country_event = {
-	id = origins_civics_leader_quest_events.112
-	title = "origins_civics_leader_quest_events.112.name"
-	picture = GFX_evt_synth_sabotage
-	show_sound = event_administrative_work
-	desc = origins_civics_leader_quest_events.112.desc
-	location = capital_scope
-	trackable = yes
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-	}
-	
-	immediate = {
-		set_country_flag = first_digitally_eternal_revival
-	}
-	
-	option = {
-		name = SHALL_BE_DONE
-		capital_scope = {
-			enable_special_project = {
-				name = "OC_DE_UPLOAD_LEADER_PROJECT"
-				location = this
-				owner = root
-			}
-		}
-	}
-}
-
-# Digitally Eternal Mid Special Project
-country_event = {
-	id = origins_civics_leader_quest_events.113
-	title = "origins_civics_leader_quest_events.113.name"
-	picture = GFX_evt_cybernetics
-	show_sound = event_laboratory_sound
-	desc = {
-		text = origins_civics_leader_quest_events.113.desc
-		trigger = { NOT = { has_country_flag = first_digitally_eternal_revival } }
-	}
-	desc = {
-		text = origins_civics_leader_quest_events.113.desc.first
-		trigger = { has_country_flag = first_digitally_eternal_revival }
-	}
-	location = capital_scope
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ai = no
-		has_oc_digitally_eternal_civic = yes
-		has_country_flag = oc_eternal_leader_is_died
-		NOT = { has_country_flag = oc_digitally_eternal_modification_immoral }
-	}
-	
-	immediate = {
-		if = { limit = { has_country_flag = first_digitally_eternal_revival }
-			remove_country_flag = first_digitally_eternal_revival
-		}
-	}
-	
-	option = {
-		name = origins_civics_leaders_quest_events.113.a
-		custom_tooltip = origins_civics_leaders_quest_events.113.a.tip
-		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_research }
-	}
-	option = {
-		name = origins_civics_leaders_quest_events.113.b
-		custom_tooltip = origins_civics_leaders_quest_events.113.b.tip
-		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_military }
-	}
-	option = {
-		name = origins_civics_leaders_quest_events.113.c
-		custom_tooltip = origins_civics_leaders_quest_events.113.c.tip
-		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_specialist }
-	}
-	option = {
-		name = origins_civics_leaders_quest_events.113.d
-		custom_tooltip = origins_civics_leaders_quest_events.113.d.tip
-		hidden_effect = { set_country_flag = oc_digitally_eternal_modification_immoral }
-	}
-}
 
 # Eternal Leader New Eternal AI NPC
 country_event = {
