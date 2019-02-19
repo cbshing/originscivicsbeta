@@ -10,6 +10,13 @@ building_energy_grid = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			#NOT = { is_planet_class = pc_habitat }
+			AND = {
+				exists = owner
+				owner = { is_gestalt = yes }
+			}
+		}
 	}
 
 	base_cap_amount = 1
