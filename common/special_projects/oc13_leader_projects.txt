@@ -21,7 +21,7 @@ special_project = {
 	
 	event_scope = planet_event
 	
-	event_chain = oc_new_eternal_leader_chain
+	event_chain = oc_first_new_eternal_leader_chain
 	
 	requirements = {
 	}
@@ -54,7 +54,7 @@ special_project = {
 	
 	event_scope = planet_event
 	
-	event_chain = oc_new_digitally_eternal_chain
+	event_chain = oc_first_new_digitally_eternal_chain
 	
 	requirements = {
 	}
@@ -80,7 +80,7 @@ special_project = {
 	
 	event_scope = planet_event
 	
-	event_chain = oc_new_digitally_eternal_chain
+	event_chain = oc_first_new_digitally_eternal_chain
 	
 	requirements = {
 	}
@@ -105,17 +105,13 @@ special_project = {
 	
 	event_scope = planet_event
 	
-	event_chain = oc_new_digitally_eternal_chain
+	event_chain = oc_first_new_digitally_eternal_chain
 	
 	requirements = {
 	}
 	
-	on_progress_20 = {
-		owner = { country_event = { id = origins_civics_leader_quest_events.113 } }
-	}
-	
 	on_success = {
-		owner = { country_event = { id = origins_civics_leader_quest_events.111 } }
+		owner = { country_event = { id = origins_civics_leader_quest_events.106 } }
 	}
 	
 	on_fail = {

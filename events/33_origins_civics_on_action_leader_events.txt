@@ -42,6 +42,7 @@ country_event = {
 				}
 				hidden_effect = { from = { save_event_target_as = firsteternalleader } }
 				country_event = { id = origins_civics_leader_quest_events.100 days = 45 } # Eternal Mausoleum Construction
+				#country_event = { id = origins_civics_leader_quest_events.100 days = 5 } # Eternal Mausoleum Construction
 
 			}
 			else_if = {
@@ -52,7 +53,7 @@ country_event = {
 				#country_event = { id = origins_civics_leader_quest_events.130 days = 30 } # Chosen One Killed Eternal Leader permadeath
 			}
 			else = { 
-				country_event = { id = origins_civics_leader_quest_events.105 days = 45 } # Leader Death Revival Special Project
+				country_event = { id = origins_civics_leader_quest_events.110 days = 45 } # Leader Death Revival Special Project
 			} 
 		}
 		else_if = {
@@ -67,7 +68,7 @@ country_event = {
 				limit = { 
 					NOR = { 
 						has_country_flag = oc_first_eternal_leader_died
-						has_country_flag = synthetic_empire 
+						#has_country_flag = synthetic_empire 
 					}
 					is_ai = no
 				}
@@ -75,7 +76,7 @@ country_event = {
 				country_event = { id = origins_civics_leader_quest_events.100 days = 45 } # Eternal Institute
 			}			
 			else = {
-				country_event = { id = origins_civics_leader_quest_events.106 days = 45 } # Leader Death Revival Special Project
+				country_event = { id = origins_civics_leader_quest_events.110 days = 45 } # Leader Death Revival Special Project
 			}
 		}
 	}
@@ -366,24 +367,6 @@ country_event = {
 		name = TERRIBLE
 		if = { limit = { NOT = { has_country_flag = oc_first_eternal_leader_died } }
 			hidden_effect = { set_country_flag = oc_first_eternal_leader_died }
-		}
-	}
-}
-
-# New Leaders Get Clinically Eternal Trait
-country_event = {
-	id = origins_civics_on_action_leader_events.140
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_oc_clinically_eternal_civic = yes
-	}
-
-	immediate = {
-		from = {
-			add_trait = leader_trait_oc_clinically_eternal
-			add_ruler_trait = leader_trait_oc_clinically_eternal
 		}
 	}
 }

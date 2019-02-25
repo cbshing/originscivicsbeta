@@ -36,24 +36,24 @@ country_event = {
 	}
 	
 	option = {
-		name = origins_civics_leaders_quest_events.100.a
-		custom_tooltip = origins_civics_leaders_quest_events.100.a.tip
+		name = origins_civics_leader_quest_events.100.a
+		custom_tooltip = origins_civics_leader_quest_events.100.a.tip
 		trigger = {
 			has_oc_eternal_leader_civic = yes
 		}
 		hidden_effect = { set_country_flag = oc_first_eternal_leader_monument }
 	}
 	option = {
-		name = origins_civics_leaders_quest_events.100.b
-		custom_tooltip = origins_civics_leaders_quest_events.100.b.tip
+		name = origins_civics_leader_quest_events.100.b
+		custom_tooltip = origins_civics_leader_quest_events.100.b.tip
 		trigger = {
 			has_oc_digitally_eternal_civic = yes
 		}
 		hidden_effect = { set_country_flag = oc_first_eternal_leader_institute }
 	}
 	option = {
-		name = origins_civics_leaders_quest_events.100.c
-		custom_tooltip = origins_civics_leaders_quest_events.100.c.tip
+		name = origins_civics_leader_quest_events.100.c
+		custom_tooltip = origins_civics_leader_quest_events.100.c.tip
 		hidden_effect = { set_country_flag = oc_refused_monument_to_eternal }
 	}
 }
@@ -81,33 +81,41 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		is_ai = no
-		has_country_flag = oc_first_eternal_leader_died
-		has_country_flag = oc_eternal_leader_is_died
-		NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
-		oc_has_immortal_rulers_civics = yes
+		owner = { 
+			is_ai = no
+			has_country_flag = oc_first_eternal_leader_died
+			has_country_flag = oc_eternal_leader_is_died
+			NOT = { has_country_flag = oc_completed_first_eternal_leader_death_chain }
+			NOT = { has_country_flag = constructed_eternal_building }
+			oc_has_immortal_rulers_civics = yes
+		}
 		OR = {
 			has_building = building_oc_eternal_institute
 			has_building = building_oc_eternal_mausoleum
 		}
 	}
 	
+	immediate = {
+		owner = { set_country_flag = constructed_eternal_building }
+	}
+	
 	option = {
 		name = EXCELLENT
 		trigger = {
-			has_oc_eternal_leader_civic = yes
+			owner = { has_oc_eternal_leader_civic = yes }
 		}
-		remove_modifier = oc_eternal_mourning 
+		owner = { remove_modifier = oc_eternal_mourning }
 		hidden_effect = { 
 			owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 1080 random = 900 } }
+			#owner = { country_event = { id = origins_civics_leader_quest_events.102 days = 5 } }
 		}
 	}
 	option = {
 		name = EXCELLENT
 		trigger = {
-			has_oc_digitally_eternal_civic = yes
+			owner =  { has_oc_digitally_eternal_civic = yes }
 		}
-		remove_modifier = oc_eternal_offline
+		owner = { remove_modifier = oc_eternal_crash }
 		hidden_effect = { 
 			owner = { country_event = { id = origins_civics_leader_quest_events.104 days = 1080 random = 900 } }
 		}
@@ -275,7 +283,7 @@ country_event = {
 			}
 		}
 		begin_event_chain = {
-			event_chain = oc_new_eternal_leader_chain
+			event_chain = oc_first_new_eternal_leader_chain
 			target = root
 		}
 		capital_scope = {
@@ -383,7 +391,7 @@ country_event = {
 	option = {
 		name = origins_civics_leader_quest_events.105.a
 		begin_event_chain = {
-			event_chain = oc_new_eternal_leader_chain
+			event_chain = oc_first_new_eternal_leader_chain
 			target = root
 		}
 		capital_scope = {
@@ -459,6 +467,7 @@ country_event = {
 			set_country_flag = oc_found_new_eternal_leader
 			remove_country_flag = oc_eternal_leader_is_died
 			country_event = { id = origins_civics_leader_quest_events.109 days = 3600 }
+			#country_event = { id = origins_civics_leader_quest_events.109 days = 10 }
 			#country_event = { id = origins_civics_leader_quest_events.120 days = 5 }
 		}
 	}
@@ -527,7 +536,7 @@ country_event = {
 	
 	option = {
 		name = origins_civics_leader_quest_events.109.a
-		end_event_chain = "oc_new_eternal_leader_chain"
+		end_event_chain = "oc_first_new_eternal_leader_chain"
 		hidden_effect = {
 			create_leader = {
 				class = ruler
@@ -537,7 +546,7 @@ country_event = {
 				leader_age_min = 11
 				leader_age_max = 15
 				traits = {
-					leader_trait_oc_eternal_leader
+					trait = leader_trait_oc_eternal_leader
 				}
 			}
 			set_leader = last_created_leader
@@ -583,7 +592,7 @@ country_event = {
 	option = {
 		name = origins_civics_leaders_quest_events.110.a
 		begin_event_chain = {
-			event_chain = oc_new_eternal_leader_chain
+			event_chain = oc_first_new_eternal_leader_chain
 			target = root
 		}
 		capital_scope = {

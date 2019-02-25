@@ -526,10 +526,10 @@ country_event = {
 					set_skill = 3
 					random_list = {
 						20 = { set_age = 111 }
-						20 = { set_age = 88 }
-						20 = { set_age = 99 }
-						20 = { set_age = 122 }
-						20 = { set_age = 105 }
+						20 = { set_age = 199 }
+						20 = { set_age = 160 }
+						20 = { set_age = 140 }
+						20 = { set_age = 172 }
 					}
 				}
 			}

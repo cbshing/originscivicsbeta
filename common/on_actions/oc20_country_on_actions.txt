@@ -5,14 +5,6 @@ on_monthly_pulse = {
 	}
 }
 
-# a new leader is generated for an empire, to be available for recruitment
-# scope: country, from: leader
-on_leader_spawned = {
-	events = {
-		origins_civics_on_action_leader_events.140 # Clinically Eternal gets trait
-	}
-}
-
 # Executed as a leader has died
 # This = Country
 # From = Leader
