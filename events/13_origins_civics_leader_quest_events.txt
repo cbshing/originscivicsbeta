@@ -687,9 +687,79 @@ country_event = {
 
 # Eternal Leader New Eternal Leader First Friend
 #xenophobe vs xenophilia, pacifist vs. militarist
+country_event = {
+	id = origins_civics_leader_quest_events.122
+	title = "origins_civics_leader_quest_events.122.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_celebration
+	desc = {
+		trigger = { # spiritualist vs. materialist
+			has_country_flag = oc_new_eternal_guidance_A
+		}
+		text = origins_civics_leader_quest_events.122.desc.a
+	}
+	desc = {
+		trigger = { # pacifist vs. militarist
+			has_country_flag = oc_new_eternal_guidance_B
+		}
+		text = origins_civics_leader_quest_events.122.desc.b
+	}
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_found_new_eternal_leader
+		has_oc_eternal_leader_civic = yes
+	}
+	
+	option = {
+		name = origins_civics_leader_quest_events.122.a
+
+		hidden_effect = {
+			
+		}
+	}
+}
 
 # Eternal Leader New Eternal Leader First Speech
 #xenophobe vs xenophilia, spiritualist vs. materialist
+country_event = {
+	id = origins_civics_leader_quest_events.123
+	title = "origins_civics_leader_quest_events.123.name"
+	picture = GFX_evt_throne_room
+	show_sound = event_celebration
+	desc = {
+		trigger = { # spiritualist vs. materialist
+			has_country_flag = oc_new_eternal_guidance_A
+		}
+		text = origins_civics_leader_quest_events.123.desc.a
+	}
+	desc = {
+		trigger = { # pacifist vs. militarist
+			has_country_flag = oc_new_eternal_guidance_B
+		}
+		text = origins_civics_leader_quest_events.123.desc.b
+	}
+	location = capital_scope
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = oc_found_new_eternal_leader
+		has_oc_eternal_leader_civic = yes
+	}
+	
+	option = {
+		name = origins_civics_leader_quest_events.123.a
+
+		hidden_effect = {
+			
+		}
+	}
+}
 
 # Eternal Leader New Eternal AI NPC
 country_event = {

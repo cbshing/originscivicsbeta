@@ -109,6 +109,11 @@
  oc_eternal_crash:0 "Uploaded Offline"
  oc_eternal_crash_desc:0 "The fatal crash of our Uploaded is a great setback for our nation."
  
+ oc_eternal_biological_passive_medium:0 "Bio-engineered"
+ oc_eternal_biological_passive_medium_desc:0 "Advancements in nucleotide purification techniques has reduced the cost of eternity."
+ oc_eternal_biological_passive_large:0 "Longevity Vaccine"
+ oc_eternal_biological_passive_large_desc:0 "Through the free sculpting of our genetic code access to eternity is now in our reach."
+ 
  ####################################
  # Origins Tooltips
  ####################################
