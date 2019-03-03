@@ -144,8 +144,8 @@ roll_eternal_optimization_effect = {
 	random_list = {
 		60 = { # do nothing 
 			modifier = {
-				#factor = 100
-				factor = 1
+				factor = 100
+				#factor = 1
 				galaxy_percentage < 0.05
 			}
 		}
@@ -209,8 +209,8 @@ roll_eternal_optimization_effect = {
 		}
 		2 = { #death modifier
 			modifier = {
-				#factor = 0
-				factor = 100
+				factor = 0
+				#factor = 100
 				galaxy_percentage < 0.40
 			}
 			modifier = {

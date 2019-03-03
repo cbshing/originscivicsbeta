@@ -7,11 +7,11 @@
  #Regular Empire
  civic_cbshing_eternal_leader:0 "Eternal Leader"
  civic_cbshing_eternal_leader_desc:0 "This society has been long guided by a ruler who is Eternal."
- civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic blessings.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ civic_tooltip_oc_eternal_leader_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_eternal_leader$§! trait, thereby being Immortal, and the ability to access his/her unique psionic blessings.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20§!"
  
  civic_oc_digitally_eternal:0 "Digitally Eternal"
  civic_oc_digitally_eternal_desc:0 "This society has been long guided by a ruler who uploaded their consciousness to a computer long ago."
- civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being a Machine Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20%§!"
+ civic_tooltip_oc_digitally_eternal_effects:1 "Start the game with your ruler having the §Y$leader_trait_oc_digitally_eternal$§! trait, thereby being a Machine Immortal, and the ability to access his/her unique optimization boons.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20§!"
 
  civic_oc_clinically_eternal:0 "Clinically Eternal"
  civic_oc_clinically_eternal_desc:0 "This society plans to live forever, of course, but barring that, even five hundred years would be pretty nice."
