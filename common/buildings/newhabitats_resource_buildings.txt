@@ -14,7 +14,7 @@ building_energy_grid = {
 			#NOT = { is_planet_class = pc_habitat }
 			AND = {
 				exists = owner
-				owner = { is_gestalt = yes }
+				#owner = { is_gestalt = yes }
 			}
 		}
 	}
