@@ -218,6 +218,13 @@
  origins_civics_leader_quest_events.110.desc.digital:0 "While the loss of the Uploaded is again a great shock to our nation, our researchers are already preparing [root.GetRulerTitle] [root.GetRulerName] to be uploaded to the §WCentral Core§!.\n\nThe nation deserves the guidance only the Uploaded's mind can provide."
  origins_civics_leader_quest_events.110.a:0 "The §MEternal One§! shall be returned."
  origins_civics_leader_quest_events.110.c:0 "We cannot accept Eternity anymore."
+ 
+ origins_civics_leader_quest_events.121.name:0 "Eternal's First Toy"
+ origins_civics_leader_quest_events.121.desc.a:0 "[root.GetRulerTitle] [root.GetRulerName] watches as the young Eternal teeters through to the Hall of Infinity, playfully wobbling through the crowd of officials that have gathered for the morning court session. The Eternal's mother sits "
+ origins_civics_leader_quest_events.121.desc.b:0 "While the loss of the Eternal is again a great shock to our nation, our priests are already preparing the census and astronomical data to search for the Eternal's vessel yet again.\n\nThe nation needs the Eternal's guidance and we must heed that call."
+ origins_civics_leader_quest_events.122.name:0 "Eternal's First Friend"
+ 
+ origins_civics_leader_quest_events.123.name:0 "Eternal's First Speech"
 
  origins_civics_on_action_leader_events.102.name:0 "Eternal Exhausted"
  origins_civics_on_action_leader_events.102.a:0 "Our Eternal [root.GetRulerTitle] [root.GetRulerName] has exhausted [ruler.GetHerHis] psionic powers while attempting the latest blessing ritual to benefit our empire. [ruler.GetSheHe] has declared [ruler.GetSheHe] shall now retreat to [ruler.GetHerHis] chamber to rest and recharge."
@@ -237,7 +244,9 @@
  origins_civics_on_action_leader_events.105.a:0 "Amongst the flashing lights and blaring klaxon, the technicians watch in horror as the holoavatar of [root.GetRulerTitle] [from.GetName] dims. One by one, the server banks that comprise our Uploaded leader shut down until finally the §WCentral Core§! and the neural interface winks out.\n\nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. Without the original information from [from.GetName] on how [from.GetSheHe] uploaded [from.GetHerHim]self into the §WCentral Core§!, our nation may never be as perfect as before."
  origins_civics_on_action_leader_events.105.b:0 "Amongst the flashing lights and blaring klaxon, the technicians watch the as the holoavatar of [root.GetRulerTitle] [from.GetName] dims. One by one, the server banks that comprise our Uploaded leader shut down until finally the §WCentral Core§! and the neural interface, winks out.\n\nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. While our nation may never be as perfect as before, our technology has advanced to the point that [from.GetName] can be replaced."
  origins_civics_on_action_leader_events.105.c:0 "To the tune of the blaring klaxon and flashing lights, the holoavatar of [root.GetRulerTitle] [from.GetName] fades away. Our technicians hopelessly watch as the server bank that comprises our Uploaded leader shuts down as the §WCentral Core§! attempts to protect the neural interface from a crash.\n\nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. It will take some time for our scientists to upload and interface a new personality into the §WCentral Core§!."
-  
+ 
+ origins_civics_random_leader_events.101.name:0 "Diplomatic Gesture"
+ 
  ####################################
  # Origins Modifiers - Old
  ####################################
