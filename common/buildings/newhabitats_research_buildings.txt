@@ -90,5 +90,16 @@ building_research_lab_1 = {
 	
 	ai_weight = {
 		weight = 2
+		modifier = {
+			factor = 0
+			num_buildings = { type = building_research_lab_1 value >= 2 }
+		}
+		# There are already unworked jobs
+		# Blocks buildings unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
 	}
 }

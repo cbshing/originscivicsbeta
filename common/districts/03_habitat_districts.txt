@@ -549,10 +549,17 @@ district_hab_cultural = {
 	ai_weight = {
 		weight = 1
 
-		modifier = 
-		{
+		modifier = {
 			factor = 3
 			free_amenities < 2
+		}
+
+		# There are already unworked jobs
+		# Blocks districts unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
 		}
 	}
 
@@ -734,6 +741,14 @@ district_hab_science = {
 	
 	ai_weight = {
 		weight = 2
+
+		# There are already unworked jobs
+		# Blocks districts unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
 	}
 
 	#ai_resource_production = {
@@ -831,10 +846,17 @@ district_hab_commercial = {
 	ai_weight = {
 		weight = 1
 
-		modifier = 
-		{
+		modifier = {
 			factor = 5
 			free_amenities < 2
+		}
+
+		# There are already unworked jobs
+		# Blocks districts unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
 		}
 	}
 
@@ -1019,8 +1041,7 @@ district_hab_foundry = {
 	
 	ai_weight = {
 		weight = 1
-		modifier = 
-		{
+		modifier = {
 			factor = 4
 			owner = { 
 				has_monthly_income = {
@@ -1028,6 +1049,14 @@ district_hab_foundry = {
 					value < 15
 				}
 			}
+		}
+
+		# There are already unworked jobs
+		# Blocks districts unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
 		}
 	}
 

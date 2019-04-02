@@ -63,6 +63,11 @@ building_luxury_residence = {
 			factor = 3
 			free_amenities < -5
 		}
+		
+		modifier = {
+			factor = 0
+			free_housing > 1
+		}
 	}
 }
 
@@ -139,6 +144,16 @@ building_paradise_dome = {
 			factor = 3
 			free_amenities < 0
 		}
+		
+		modifier = {
+			factor = 5
+			free_housing < 1
+		}
+		
+		modifier = {
+			factor = 0
+			free_housing > 1
+		}
 	}
 }
 
@@ -204,6 +219,15 @@ building_communal_housing = {
 		modifier = {
 			factor = 3
 			free_amenities < 2
+		}
+		
+		modifier = {
+			factor = 0
+			free_housing > 1
+		}
+		modifier = {
+			factor = 0.5
+			free_district_slots > 1
 		}
 	}
 }
@@ -290,6 +314,11 @@ building_communal_housing_large = {
 			factor = 3
 			free_amenities < 2
 		}
+		
+		modifier = {
+			factor = 0
+			free_housing > 1
+		}
 	}
 }
 
@@ -299,13 +328,42 @@ building_holo_theatres = {
 	category = amenity
 	
 	potential = {
-		#NOT = { is_planet_class = pc_habitat }
-		NOT = { has_modifier = slave_colony }		
+		NOR = {
+			#is_planet_class = pc_habitat
+			has_modifier = slave_colony
+		}		
 		owner = { is_regular_empire = yes }
 	}
+	
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
 		
-	planet_modifier = {
-		job_entertainer_add = 2
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}					
+		}
+		modifier = {
+			job_entertainer_add = 2		
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}					
+		}
+		modifier = {
+			job_duelist_add = 2	
+		}
 	}
 
 	resources = {
@@ -326,8 +384,24 @@ building_holo_theatres = {
 		"tech_holo_entertainment"
 	}
 	
-	triggered_desc = {
+	triggered_desc = {		
+		trigger = {
+			exists = owner
+			owner = { 
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
 		text = job_entertainer_effect_desc
+	}
+	
+	triggered_desc = {		
+		trigger = {
+			exists = owner
+			owner = { 
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		text = job_duelist_effect_desc
 	}
 
 	ai_weight = {
@@ -337,6 +411,13 @@ building_holo_theatres = {
 		{
 			factor = 5
 			free_amenities < 2
+		}
+		# There are already unworked jobs
+		# Blocks buildings unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0 
 		}
 	}
 }

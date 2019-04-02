@@ -655,13 +655,13 @@ country_event = {
 	picture = GFX_evt_throne_room
 	show_sound = event_celebration
 	desc = {
-		trigger = { # spiritualist vs. materialist
+		trigger = { # spiritualist vs. pacifist
 			has_country_flag = oc_new_eternal_guidance_A
 		}
 		text = origins_civics_leader_quest_events.121.desc.a
 	}
 	desc = {
-		trigger = { # pacifist vs. militarist
+		trigger = { # materialist vs. militarist
 			has_country_flag = oc_new_eternal_guidance_B
 		}
 		text = origins_civics_leader_quest_events.121.desc.b
@@ -678,9 +678,74 @@ country_event = {
 	
 	option = {
 		name = origins_civics_leader_quest_events.121.a
-
+		trigger = {
+			has_country_flag = oc_new_eternal_guidance_A
+		}
 		hidden_effect = {
-			
+			while = {
+					count = 30			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_spiritualist" }
+						}
+						pop_change_ethic = "ethic_spiritualist"
+					}
+				}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.121.b
+		trigger = {
+			has_country_flag = oc_new_eternal_guidance_A
+		}
+		hidden_effect = {
+			while = {
+					count = 30			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_pacifist" }
+						}
+						pop_change_ethic = "ethic_pacifist"
+					}
+				}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.121.c
+		trigger = {
+			has_country_flag = oc_new_eternal_guidance_B
+		}
+		hidden_effect = {
+			while = {
+					count = 30			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_materialist" }
+						}
+						pop_change_ethic = "ethic_materialist"
+					}
+				}
+		}
+	}
+	option = {
+		name = origins_civics_leader_quest_events.121.d
+		trigger = {
+			has_country_flag = oc_new_eternal_guidance_B
+		}
+		hidden_effect = {
+			while = {
+					count = 30			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_militarist" }
+						}
+						pop_change_ethic = "ethic_militarist"
+					}
+				}
 		}
 	}
 }
