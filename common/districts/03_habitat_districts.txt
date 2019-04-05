@@ -442,6 +442,10 @@ district_hab_cultural = {
 		}
 	}
 	
+	convert_to = {
+		district_hab_energy
+	}
+	
 	resources = {
 		category = planet_districts
 		cost = {
@@ -465,6 +469,31 @@ district_hab_cultural = {
 		modifier = {
 			planet_housing_add = 2
 			job_entertainer_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_warrior_culture }
+		}
+		modifier = {
+			job_duelist_add = 4
+			job_entertainer_add = -4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_valid_civic = civic_warrior_culture
+				has_ascension_perk = ap_voidborn
+			}
+		}
+		modifier = {
+			job_duelist_add = 2
+			job_entertainer_add = -2
 		}
 	}
 	
@@ -515,8 +544,20 @@ district_hab_cultural = {
 	
 	
 	triggered_desc = {
-		text = job_entertainer_effect_desc
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_warrior_culture }
+		}
+		text = job_duelist_effect_desc
 	}	
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
+		}
+		text = job_entertainer_effect_desc
+	}
 	
 	triggered_desc = {
 		trigger = {
