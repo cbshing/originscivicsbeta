@@ -226,7 +226,8 @@
  origins_civics_leader_quest_events.121.b:0 "The Cultural Affairs Minister shall be the Eternal's Tutor."
  origins_civics_leader_quest_events.121.c:0 "The Finance Minister shall be the Eternal's Tutor."
  origins_civics_leader_quest_events.121.d:0 "The Military Affairs Officer shall be the Eternal's Tutor."
- origins_civics_leader_quest_events.122.name:0 "Eternal's New Friend"
+ origins_civics_leader_quest_events.122.name:0 "Eternal's Friendship"
+ origins_civics_leader_quest_events.122.desc.a:0 ""
  
  origins_civics_leader_quest_events.123.name:0 "Eternal's New Teacher"
 
@@ -249,7 +250,7 @@
  origins_civics_on_action_leader_events.105.b:0 "Amongst the flashing lights and blaring klaxon, the technicians watch the as the holoavatar of [root.GetRulerTitle] [from.GetName] dims. One by one, the server banks that comprise our Uploaded leader shut down until finally the §WCentral Core§! and the neural interface, winks out.\n\nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. While our nation may never be as perfect as before, our technology has advanced to the point that [from.GetName] can be replaced."
  origins_civics_on_action_leader_events.105.c:0 "To the tune of the blaring klaxon and flashing lights, the holoavatar of [root.GetRulerTitle] [from.GetName] fades away. Our technicians hopelessly watch as the server bank that comprises our Uploaded leader shuts down as the §WCentral Core§! attempts to protect the neural interface from a crash.\n\nEfforts by our scientists to restore and reboot [root.GetRulerTitle] [from.GetName] have proven fruitless, with only fragmented pieces of [from.GetName]'s personality occasionally resurfacing. It will take some time for our scientists to upload and interface a new personality into the §WCentral Core§!."
  
- origins_civics_random_leader_events.101.name:0 "Diplomatic Gesture"
+ origins_civics_diplomatic_events.101.name:0 "Diplomatic Gesture"
  
  ####################################
  # Origins Modifiers - Old
