@@ -63,7 +63,7 @@ civic_cbshing_eco_shift = {
 
 civic_cbshing_nuclear_vault = {
 	playable = { host_has_dlc = "Apocalypse" }
-	#homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = {
@@ -112,7 +112,9 @@ civic_cbshing_nuclear_vault = {
 
 civic_cbshing_nuclear_mutation = {
 	playable = { host_has_dlc = "Apocalypse" }
-	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	habitability_preference = pc_nuked
+	preferred_planet_class_neighbor = no
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = {

@@ -20,7 +20,7 @@
 civic_oc_hive_post_apocalyptic = {
 	icon = "gfx/interface/icons/governments/civics/civic_post_apocalyptic.dds"
 	playable = { host_has_dlc = "Apocalypse" }
-	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		civics = {
@@ -56,7 +56,9 @@ civic_oc_hive_post_apocalyptic = {
 civic_oc_hive_life_seeded = {
 	playable = { host_has_dlc = "Apocalypse" }
 	modification = no
-	homeworld = pc_gaia # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_gaia
+	habitability_preference = pc_gaia
+	preferred_planet_class_neighbor = no
 	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
@@ -91,7 +93,7 @@ civic_oc_hive_life_seeded = {
 
 civic_oc_hive_nuclear_vault = {
 	playable = { host_has_dlc = "Apocalypse" }
-	#homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
 	potential = { authority = { value = auth_hive_mind } }
@@ -130,7 +132,9 @@ civic_oc_hive_nuclear_vault = {
 
 civic_oc_hive_nuclear_mutation = {
 	playable = { host_has_dlc = "Apocalypse" }
-	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	habitability_preference = pc_nuked
+	preferred_planet_class_neighbor = no
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
 	potential = { authority = { value = auth_hive_mind } }
@@ -166,7 +170,7 @@ civic_oc_hive_nuclear_mutation = {
 
 civic_oc_hive_hive_world = {
 	playable = { host_has_dlc = "Utopia" }
-	#homeworld = pc_hive # Changes homeworld class regardless of what is picked for empire
+	starting_colony = pc_hive # Changes homeworld class regardless of what is picked for empire
 	modification = no
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
