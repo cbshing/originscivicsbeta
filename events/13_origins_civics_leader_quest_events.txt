@@ -648,12 +648,12 @@ country_event = {
 	}
 }
 
-# Eternal Leader New Eternal Leader First Toy
+# Eternal Leader New Eternal Leader Tutor
 country_event = {
 	id = origins_civics_leader_quest_events.121
 	title = "origins_civics_leader_quest_events.121.name"
 	picture = GFX_evt_throne_room
-	show_sound = event_celebration
+	show_sound = event_factions
 	desc = {
 		trigger = { # spiritualist vs. pacifist
 			has_country_flag = oc_new_eternal_guidance_A
@@ -683,7 +683,7 @@ country_event = {
 		}
 		hidden_effect = {
 			while = {
-					count = 30			
+					count = 12			
 					random_owned_pop = {
 						limit = {
 							is_same_species = owner.species
@@ -701,7 +701,7 @@ country_event = {
 		}
 		hidden_effect = {
 			while = {
-					count = 30			
+					count = 12			
 					random_owned_pop = {
 						limit = {
 							is_same_species = owner.species
@@ -719,7 +719,7 @@ country_event = {
 		}
 		hidden_effect = {
 			while = {
-					count = 30			
+					count = 12			
 					random_owned_pop = {
 						limit = {
 							is_same_species = owner.species
@@ -737,7 +737,7 @@ country_event = {
 		}
 		hidden_effect = {
 			while = {
-					count = 30			
+					count = 12			
 					random_owned_pop = {
 						limit = {
 							is_same_species = owner.species
@@ -750,21 +750,20 @@ country_event = {
 	}
 }
 
-# Eternal Leader New Eternal Leader First Friend
-#xenophobe vs xenophilia, pacifist vs. militarist
+# Eternal Leader New Eternal Leader Friend
 country_event = {
 	id = origins_civics_leader_quest_events.122
 	title = "origins_civics_leader_quest_events.122.name"
-	picture = GFX_evt_throne_room
-	show_sound = event_celebration
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_alien_nature
 	desc = {
-		trigger = { # spiritualist vs. materialist
+		trigger = { # xenophilia &. militarist
 			has_country_flag = oc_new_eternal_guidance_A
 		}
 		text = origins_civics_leader_quest_events.122.desc.a
 	}
 	desc = {
-		trigger = { # pacifist vs. militarist
+		trigger = { # xenophobe &. pacifist
 			has_country_flag = oc_new_eternal_guidance_B
 		}
 		text = origins_civics_leader_quest_events.122.desc.b
@@ -777,6 +776,14 @@ country_event = {
 		is_ai = no
 		has_country_flag = oc_found_new_eternal_leader
 		has_oc_eternal_leader_civic = yes
+		num_empires > 2
+		num_communications > 1
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = { has_communications = root }
+		}
 	}
 	
 	option = {
@@ -793,7 +800,7 @@ country_event = {
 country_event = {
 	id = origins_civics_leader_quest_events.123
 	title = "origins_civics_leader_quest_events.123.name"
-	picture = GFX_evt_throne_room
+	picture = GFX_evt_arguing_senate
 	show_sound = event_celebration
 	desc = {
 		trigger = { # spiritualist vs. materialist

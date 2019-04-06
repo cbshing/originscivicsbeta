@@ -228,8 +228,8 @@ planet_event = {
 			owner = {
 				random_owned_planet = {
 					limit = { is_capital = yes is_planet_class = pc_habitat }
-					#reset_start_buildings_and_blockers_habitat = yes
-					#add_pops_on_planet = yes
+					oc_generate_start_buildings_and_districts_habitats = yes
+					oc_generate_habitat_start_pops = yes
 				}
 			}
 		}
@@ -379,6 +379,7 @@ planet_event = {
 			oc_generate_special_planet_start_deposits_and_blockers = yes
 		}
 		
+		#Resets Districts and Buildings on Planet
 		if = { limit = { owner = { oc_requires_reset_buildings_and_districts = yes } }
 			oc_generate_start_districts = yes
 		}

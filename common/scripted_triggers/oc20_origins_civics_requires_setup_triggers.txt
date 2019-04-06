@@ -555,7 +555,7 @@ oc_requires_homeworld_class_to_change_to_nuked = {
 		has_valid_civic = civic_machine_terminator 
 	}
 	OR = {
-		oc_is_nuked_country = yes
+		#oc_is_nuked_country = yes
 		has_country_flag = starts_on_nuked_world
 	}
 	host_has_dlc = "Apocalypse" 
@@ -565,7 +565,7 @@ oc_requires_homeworld_class_to_change_to_nuked = {
 oc_requires_homeworld_class_to_change_to_gaia = {
 	NOT = { has_valid_civic = civic_life_seeded }
 	OR = {
-		oc_is_gaia_country = yes
+		#oc_is_gaia_country = yes
 		has_country_flag = starts_on_gaia_world
 	}
 	host_has_dlc = "Apocalypse" 
@@ -574,7 +574,7 @@ oc_requires_homeworld_class_to_change_to_gaia = {
 # scope: country 
 oc_requires_homeworld_class_to_change_to_machine = {
 	OR = {
-		oc_is_machine_world_country = yes
+		#oc_is_machine_world_country = yes
 		has_country_flag = starts_on_machine_world
 	}
 	host_has_dlc = "Synthetic Dawn Story Pack"
@@ -583,7 +583,7 @@ oc_requires_homeworld_class_to_change_to_machine = {
 # scope: country 
 oc_requires_homeworld_class_to_change_to_hive = {
 	OR = {
-		oc_is_hive_world_country = yes
+		#oc_is_hive_world_country = yes
 		has_country_flag = starts_on_hive_world
 	}
 	host_has_dlc = "Utopia"
@@ -789,8 +789,8 @@ oc_requires_all_planets_class_to_change_to_nuked = {
 # scope: country 
 oc_requires_habitat_preference = {
 	OR = {
-		has_oc_voidborne_civic = yes
-		has_oc_hive_voidborne_civic = yes
+		#has_oc_voidborne_civic = yes
+		#has_oc_hive_voidborne_civic = yes
 		has_country_flag = starts_with_habitat_preference
 	}
 	host_has_dlc = "Utopia" 
@@ -799,7 +799,7 @@ oc_requires_habitat_preference = {
 # scope: country 
 oc_requires_gaia_preference = {
 	OR = {
-		has_oc_hive_life_seeded_civic = yes
+		#has_oc_hive_life_seeded_civic = yes
 		has_country_flag = starts_with_gaia_preference
 	}
 	host_has_dlc = "Apocalypse" 
@@ -808,9 +808,9 @@ oc_requires_gaia_preference = {
 # scope: country 
 oc_requires_nuked_preference = {
 	OR = {
-		has_oc_nuclear_mutation_civic = yes
-		has_oc_worm_loved_civic = yes
-		has_oc_hive_nuclear_mutation_civic = yes
+		#has_oc_nuclear_mutation_civic = yes
+		#has_oc_worm_loved_civic = yes
+		#has_oc_hive_nuclear_mutation_civic = yes
 		has_country_flag = starts_with_nuked_preference
 	}
 	host_has_dlc = "Apocalypse" 
@@ -819,7 +819,7 @@ oc_requires_nuked_preference = {
 # scope: country 
 oc_requires_continental_preference = {
 	OR = {
-		has_oc_colony_of_man_civic = yes
+		#has_oc_colony_of_man_civic = yes
 		has_country_flag = starts_with_continental_preference
 	}
 }
@@ -957,7 +957,7 @@ oc_requires_lonely_capital = {
 	OR = {
 		has_oc_voidborne_civic = yes
 		has_oc_hive_voidborne_civic = yes
-		has_oc_hive_life_seeded_civic = yes
+		#has_oc_hive_life_seeded_civic = yes
 		has_country_flag = starts_with_no_colonies
 	}
 }

@@ -939,7 +939,7 @@ add_vault_complex_deposit = {
 	add_deposit = d_oc_vault_complex 
 }
 
-### Buildings ###
+### Districts ###
 oc_generate_start_districts = {
 	if = {
 		limit = { owner = { is_regular_empire = yes } }
@@ -998,7 +998,7 @@ oc_generate_start_districts = {
 		
 		# 6 jobs
 		add_district = district_generator
-		add_district = district_generator		
+		add_district = district_generator	
 	}
 	
 	# Replace capital building for machine empires
@@ -1021,7 +1021,6 @@ oc_generate_start_districts = {
 		add_district = district_generator
 		add_district = district_generator
 		add_district = district_generator
-		add_district = district_generator
 		
 		#Assimilators
 		if = {
@@ -1034,9 +1033,140 @@ oc_generate_start_districts = {
 			limit = { owner = { has_civic = civic_machine_servitor } }
 			add_district = district_farming	
 			add_district = district_generator
-			add_district = district_generator
-			remove_district = district_nexus
-			remove_district = district_nexus
+		}
+	}
+}
+
+oc_generate_start_buildings_and_districts_habitats = {
+	if = {
+		limit = { owner = { is_regular_empire = yes } }
+		
+		# total - 24 jobs
+		
+		# 8 jobs (20 house)
+		add_district = district_hab_housing 
+		add_district = district_hab_housing 
+		
+		if = {
+			limit = {
+				owner = { is_megacorp = yes }
+			}
+			
+			# 4 jobs (4 house)
+			add_district = district_hab_commercial 		
+			set_planet_flag = trade_habitat
+		}	
+		else = {
+			# 3 jobs (4 house)
+			add_district = district_hab_energy 
+			set_planet_flag = energy_habitat
+		}
+		
+		# 3 jobs (2 house)
+		add_district = district_hab_foundry 
+		set_planet_flag = foundry_habitat
+
+		# 3 jobs (2 house)
+		add_district = district_hab_science 	
+		set_planet_flag = research_habitat		
+
+		# 1 jobs (3 house)
+		add_building = building_hab_capital 
+		
+		# 2 jobs
+		add_building = building_factory_1
+		
+		# 4 jobs
+		add_building = building_hydroponics_farm 
+		add_building = building_hydroponics_farm 
+		
+	}
+	
+	if = {
+		limit = { owner = { is_hive_empire = yes } }
+		
+		# total - 27 jobs
+		
+		# 4 jobs (20 house)
+		add_district = district_hab_housing 
+		add_district = district_hab_housing 
+		
+		# 8 jobs (2 house)
+		add_district = district_hab_energy 
+		add_district = district_hab_energy 
+		set_planet_flag = energy_habitat
+		
+		# 3 jobs (2 house)
+		add_district = district_hab_foundry 
+		set_planet_flag = foundry_habitat
+
+		# 3 jobs (2 house)
+		add_district = district_hab_science 	
+		set_planet_flag = research_habitat			
+
+		# 1 jobs (3 house)
+		add_building = building_hab_capital 
+		
+		# 3 jobs
+		add_building = building_maintenance_depot
+		
+		# 1 jobs
+		add_building = building_spawning_pool
+		
+		# 4 jobs
+		add_building = building_hydroponics_farm 
+		add_building = building_hydroponics_farm 	
+
+	}
+	
+	# Replace capital building for machine empires
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		
+		# total - 23 jobs
+		
+		# 4 jobs (20 house)
+		add_district = district_hab_housing 
+		add_district = district_hab_housing 
+		
+		# 8 jobs (4 house)
+		add_district = district_hab_energy 
+		add_district = district_hab_energy 
+		set_planet_flag = energy_habitat
+		
+		# 3 jobs (2 house)
+		add_district = district_hab_foundry 
+		set_planet_flag = foundry_habitat
+
+		# 3 jobs (2 house)
+		add_district = district_hab_science 	
+		set_planet_flag = research_habitat			
+
+		# 1 jobs (3 house)
+		add_building = building_hab_capital 
+		
+		# 6 jobs
+		add_building = building_maintenance_depot
+		add_building = building_maintenance_depot
+		
+		# 1 job
+		add_building = building_machine_assembly_plant
+		
+		
+		#Assimilators
+		if = {
+			limit = { owner = { has_civic = civic_machine_assimilator } }
+			remove_building = building_maintenance_depot
+			add_building = building_hydroponics_farm 
+		}
+
+		#Servitors
+		if = {
+			limit = { owner = { has_civic = civic_machine_servitor } }
+			# 7 jobs
+			remove_building = building_maintenance_depot
+			add_building = building_hydroponics_farm 
+			add_building = building_organic_sanctuary
 		}
 	}
 }
