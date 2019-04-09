@@ -681,7 +681,21 @@ country_event = {
 		trigger = {
 			has_country_flag = oc_new_eternal_guidance_A
 		}
-		hidden_effect = {
+		every_owned_planet = {
+			limit = { is_capital = no }
+			while = {
+					count = 5			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_spiritualist" }
+						}
+						pop_change_ethic = "ethic_spiritualist"
+					}
+				}
+		}
+		random_owned_planet = {
+			limit = { is_capital = yes }
 			while = {
 					count = 12			
 					random_owned_pop = {
@@ -699,7 +713,21 @@ country_event = {
 		trigger = {
 			has_country_flag = oc_new_eternal_guidance_A
 		}
-		hidden_effect = {
+		every_owned_planet = {
+			limit = { is_capital = no }
+			while = {
+					count = 5			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_pacifist" }
+						}
+						pop_change_ethic = "ethic_pacifist"
+					}
+				}
+		}
+		random_owned_planet = {
+			limit = { is_capital = yes }
 			while = {
 					count = 12			
 					random_owned_pop = {
@@ -717,7 +745,21 @@ country_event = {
 		trigger = {
 			has_country_flag = oc_new_eternal_guidance_B
 		}
-		hidden_effect = {
+		every_owned_planet = {
+			limit = { is_capital = no }
+			while = {
+					count = 5			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species
+							NOT = { has_ethic = "ethic_materialist" }
+						}
+						pop_change_ethic = "ethic_materialist"
+					}
+				}
+		}
+		random_owned_planet = {
+			limit = { is_capital = yes }
 			while = {
 					count = 12			
 					random_owned_pop = {
@@ -735,9 +777,10 @@ country_event = {
 		trigger = {
 			has_country_flag = oc_new_eternal_guidance_B
 		}
-		hidden_effect = {
+		every_owned_planet = {
+			limit = { is_capital = no }
 			while = {
-					count = 12			
+					count = 5			
 					random_owned_pop = {
 						limit = {
 							is_same_species = owner.species
@@ -747,23 +790,36 @@ country_event = {
 					}
 				}
 		}
+		random_owned_planet = {
+			limit = { is_capital = yes }
+			while = {
+					count = 12			
+					random_owned_pop = {
+						limit = {
+							is_same_species = owner.species # change to citizenship
+							NOT = { has_ethic = "ethic_materialist" }
+						}
+						pop_change_ethic = "ethic_materialist"
+					}
+				}
+		}
 	}
 }
 
-# Eternal Leader New Eternal Leader Friend
+# Eternal Leader New Eternal First Outing
 country_event = {
 	id = origins_civics_leader_quest_events.122
 	title = "origins_civics_leader_quest_events.122.name"
 	picture = GFX_evt_animal_wildlife
 	show_sound = event_alien_nature
 	desc = {
-		trigger = { # xenophilia &. militarist
+		trigger = { # entertainers
 			has_country_flag = oc_new_eternal_guidance_A
 		}
 		text = origins_civics_leader_quest_events.122.desc.a
 	}
 	desc = {
-		trigger = { # xenophobe &. pacifist
+		trigger = { # soldiers
 			has_country_flag = oc_new_eternal_guidance_B
 		}
 		text = origins_civics_leader_quest_events.122.desc.b
