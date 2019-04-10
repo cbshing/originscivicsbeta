@@ -227,16 +227,18 @@
  origins_civics_leader_quest_events.121.c:0 "The Finance Minister shall be the Eternal's Tutor."
  origins_civics_leader_quest_events.121.d:0 "The Military Affairs Officer shall be the Eternal's Tutor."
  origins_civics_leader_quest_events.122.name:0 "Eternal's Outting"
- origins_civics_leader_quest_events.122.desc.a:0 "For the first time in the five years since the Eternal arrived on [root.capital.GetName], the young leader desires to travel beyond the walls of the palace and explore the lives of the [root.GetName]'s citizens. For this momentous first journey, [root.GetRulerTitle] Regent [root.GetRulerName] decided to accompany the youth and the pair and palace guards set out to the city.\n\nAs the grand parade arrives at the Eternal Square, their caravan is stopped by a large and cheering crowd. On a makeshift platform in the center of the crowd a mixed assembly of alien troubadours are singing tales of their distant homeworlds and lost connections. The locals workers are completely enthralled by this outerworldly event. Even the young Eternal is entertained by these xeno bards."
- 
- origins_civics_leader_quest_events.122.a:0 "Invite the xenos to entertain the court." #xenophi
- origins_civics_leader_quest_events.122.b:0 "Clear a path through the square." #author
- origins_civics_leader_quest_events.122.c:0 "Arrest the xenos and all who listened." #xenopho
- origins_civics_leader_quest_events.122.d:0 "Execute the xenos and all who listened." #fan. xenopho
- origins_civics_leader_quest_events.122.e:0 "Encourage the Enforcers." #xenopho
- origins_civics_leader_quest_events.122.f:0 "Displine the Enforcers." #xenophi
- origins_civics_leader_quest_events.122.c:0 "We are the law. Arrest all who disobeyed." #fan. author
- origins_civics_leader_quest_events.122.d:0 "Execute the xenos and all who listened."
+ origins_civics_leader_quest_events.122.desc.a:0 "For the first time in the five years since the Eternal arrived on [root.capital.GetName], the young leader desires to travel beyond the walls of the palace and explore the lives of the [root.GetName]'s citizens. For this momentous first journey, [root.GetRulerTitle] Regent [root.GetRulerName] and palace guards accompany the youth as they set out to the capital city.\n\nAs the grand parade arrives at the Eternal Square, they come across a large and cheering crowd. In the center of the crowd a mixed assembly of alien entertainers are singing tales of distant homes and lost connections. The locals workers are completely enthralled by this outerworldly event. Even the young Eternal is entertained by these xenos and asks that the parade be stopped."
+ origins_civics_leader_quest_events.122.desc.b:0 "For the first time in the five years since the Eternal arrived on [root.capital.GetName], the young leader desires to travel beyond the walls of the palace and explore the lives of the [root.GetName]'s citizens. For this momentous first journey, [root.GetRulerTitle] Regent [root.GetRulerName] and palace guards accompany the youth as they set out to the capital city.\n\nAs the grand parade arrives at the Eternal Square, they hear shouting from amongst the crowd. In the center of the crowd the local Enforcers are attacking a group of alien protesters. Nearby a local market appears completely ruined, with injuries that are inconsistent to tell if they originate from the Enforcers or the protesters.\n\nConcerned by the growing turmoil in the nation's capital, the young Eternal asks that the parade be stopped."
+ origins_civics_leader_quest_events.122.a:0 "Stop. The Eternal shall join the crowd." #egal
+ origins_civics_leader_quest_events.122.b:0 "Stop. The Entertainers must join the parade." #xenophi
+ origins_civics_leader_quest_events.122.c:0 "We shall not stop. We are above these plebians!" #author
+ origins_civics_leader_quest_events.122.d:0 "We shall not stop. These songs are filth!" #xenopho
+ origins_civics_leader_quest_events.122.e:0 "This music is poison! Execute them!" #fan. xenopho 
+ origins_civics_leader_quest_events.122.f:0 "Stop. The protesters shall be disciplined." #xenopho
+ origins_civics_leader_quest_events.122.g:0 "Stop. The Enforcers shall be disciplined." #xenophi
+ origins_civics_leader_quest_events.122.h:0 "Stop. We shall hold court here." #egal
+ origins_civics_leader_quest_events.122.i:0 "We shall not step. They are doing their job." #author
+ origins_civics_leader_quest_events.122.j:0 "Xenos have no rights! Execute them!" #fan. xenopho 
  
  origins_civics_leader_quest_events.123.name:0 "Eternal's Declaration"
 
